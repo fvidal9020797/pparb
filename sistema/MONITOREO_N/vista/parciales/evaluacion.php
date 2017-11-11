@@ -1248,6 +1248,7 @@ session_start();
     				};
     			}
     			$.unblockUI();
+    			
 	    	});
 			
 		}
