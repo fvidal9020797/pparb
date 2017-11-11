@@ -1,0 +1,253 @@
+<?php session_start();set_time_limit(5000); ?>
+<HTML>
+<HEAD><TITLE></TITLE>
+<LINK href="../css/mdryt.css" type=text/css rel=stylesheet>
+<script language="javascript">
+//SALTO ENTRE CAMPOS PULSANDO ENTER
+//nombre del primer campo en la secuencia
+siguienteCampo = "field0"
+//nombre del formlario
+nombreForm = "formulario"
+//deteccion del navegador
+netscape = document.layers
+
+//funcion que gestiona el evento
+function TelcaPulsada( eventoPulsaTecla ) {
+   tecla = (netscape) ? eventoPulsaTecla.which : window.event.keyCode
+   if (tecla == 13) { 					//se pulso enter
+      if ( siguienteCampo == 'fin' ) {			//fin de la secuencia, hace el submit
+         alert('Envio del formulario.')			//eliminar este alert para uso normal
+         return false					//sustituir por return true para hacer el submit
+      } else { 						//da el foco al siguiente campo
+         eval('document.' + nombreForm + '.' + siguienteCampo + '.focus()')
+         return false
+      }
+   }
+}
+
+document.onkeydown = TelcaPulsada			//asigna el evento pulsacion tecla a la funcion
+</script>
+<script language="javascript">
+<!--
+    var nav4 = window.Event ? true : false;
+    function aceptaFecha( evt ) {
+	    var key = nav4 ? evt.which : evt.keyCode;
+		return (key == 45 || (key >= 48 && key <= 57));
+	}
+    function aceptaLetras( evt ) {
+	    var key = nav4 ? evt.which : evt.keyCode;
+		return ((key==165) || (key == 32) || (key == 44) || (key >= 65 && key <= 90));
+	}
+    function aceptaNum( evt ) {
+	    var key = nav4 ? evt.which : evt.keyCode;
+		return (key <= 13 || (key >= 48 && key <= 57));
+	}
+
+-->
+</script>
+</HEAD>
+<BODY>
+<?php
+include "../Valid.php"; 
+//$cn=Conexion();
+if ($_GET["Tablas"])
+	{$Tablas=$_GET["Tablas"];$Tablas1=$_GET["Tablas1"];}
+else
+	{$Tablas=$_POST["Tablas"];$Tablas1=$_POST["Tablas1"];}
+$Registros=$_GET["Registros"];
+$submitt=$_POST["submit"];$submitt1=$_POST["submit1"];$submitt2=$_POST["submit2"];
+echo "* ".$_POST["submit2"];
+if ($submitt2=='Grabar Nuevo Registro')
+	{$n=$_POST["campos"];
+	 $sql="Insert Into ".$Tablas1." Values (";
+	 for ($c=0;$c<$n;$c++)
+		{$aux="field".$c;
+		 
+		 $sql=$sql."'".$_POST[$aux]."'";
+		 if ($c==$n-1)
+			{}
+		 else
+			{$sql=$sql.",";}
+		}
+	 $sql=$sql.")";
+	 //echo $sql;
+	}
+elseif ($submitt=="Grabar Modificaciones")
+	{$n=$_POST["campos"];
+	 $sql="Update ".$Tablas1." Set ";
+	 $result7 = sql_ejecutar($cn,'select * from '.$Tablas1);
+	 $w=" Where ";
+	 $i = 0;
+	 $n1=pg_num_fields($result7);
+	 while ($i < $n1) 
+		{$aux="field".$i;
+		$meta = pg_fetch_object($result7, $i);
+		if ($i==0)
+			{$w=$w."$meta->name"."='".$_POST[$aux]."'";}
+		else
+			{$sql=$sql."$meta->name"."='".$_POST[$aux]."'";}
+		if ($i==$n1-1 || $i==0)
+			{}
+		 else
+			{$sql=$sql.",";}
+		$i++;
+		}
+	 $sql=$sql.$w;
+	 //echo $sql;
+	}
+elseif ($submitt1=="Eliminar Registro")
+	{$aux="field0";
+	 $sql="Delete From ".$Tablas1." Where ";
+	 $result7 = sql_ejecutar($cn,'select * from '.$Tablas1);
+	 $meta = pg_fetch_object($result7,0);
+	 $sql=$sql.$meta->name."='".$_POST[$aux]."'";
+	 //echo $sql;
+	}
+if (strlen($sql)>0)
+	{$ejecutar=sql_ejecutar($cn,$sql);
+	if ($ejecutar)
+		{echo "<br>OPERACION EJECUTADA CORRECTAMENTE ($submit)";}
+	else
+		{echo "<br>ERROR: ".mysql_error($cn);}
+	}
+?>
+<strong>Gestion de Tablas: <?php echo $Tablas; ?></strong>
+<div align="center">
+<form action="Parametricas.php" method="POST" name="formulario">
+<table class="taulaA" width="700" border="0" align="center">
+<tr><td colspan="2" align="left">
+<select name='Tablas' class='combos' onChange="location.href='Parametricas.php?Tablas=' + formulario.Tablas.options[formulario.Tablas.selectedIndex].value">
+<?php
+echo "<option value='0'>Elegir ... </option>";
+$sql = "SELECT tablename FROM pg_tables WHERE schemaname = 'public'";
+$result = sql_ejecutar($cn,$sql);
+if (!$result) {
+echo "DB Error, no existen tablas\nMySQL Error: ". mysql_error();
+exit;
+}
+while ($row = pg_fetch_row($result)) 
+{if ($Tablas==$row[0])
+	{echo "<option value='$row[0]' selected>$row[0]</option>";}
+ else
+	{echo "<option value='$row[0]'>$row[0]</option>";}
+}
+//	mysql_free_result($result);
+?>
+</select>
+<select name='Registros' class='combos' onChange="location.href='Parametricas.php?Tablas=' + formulario.Tablas.options[formulario.Tablas.selectedIndex].value + '&Registros=' + formulario.Registros.options[formulario.Registros.selectedIndex].value">
+<?php
+echo "<option value='0'>Elegir ... </option>";
+echo "<option value='9999999'>Nuevo Registro</option>";
+$sql = "Select * From ".$Tablas."";
+$result = sql_ejecutar($cn,$sql);
+if (!$result) 
+{echo "MySQL Error: ". mysql_error();exit;}
+while ($row = pg_fetch_row($result)) 
+{echo "<option value='$row[0]'>$row[1] - $row[2]</option>";}
+//mysql_free_result($result);
+//<input type='submit' name='submit' value='Ver' class='cabecera'>
+?>
+</select>
+</td></tr>
+</table>
+<table class="taulaA" width="700" border="1" cellspacing="0" align="center">
+<?php 
+if ($Registros>0)
+{
+$result = sql_ejecutar($cn,'select * from '.$Tablas);
+if (!$result) {
+	die('Query failed: ' . mysql_error());
+	}
+/* get column metadata */
+$result2 = sql_ejecutar($cn,'select * from '.$Tablas);
+$meta = pg_fetch_object($result2,0);
+$sql1="Select * From ".$Tablas." Where ".pg_field_name($result2, 0)."=".$Registros;
+$rs1=sql_ejecutar($cn,$sql1);
+$res1=sql_fetch($rs1);
+$i = 0;
+while ($i < pg_num_fields($result)) {
+	$meta = pg_fetch_object($result, $i);
+	if (!$meta) 
+		{echo "No information available<br>";}
+	echo "<tr class='texto'><td width='35%' bgcolor='#FFFFFF' class='borderTRblau' bordercolor='#FF0000'>".pg_field_name($result2, $i)." [".pg_field_type($result2, $i)."]
+	</td><td width='65%' bgcolor='#FFFFFF' class='borderTRblau' bordercolor='#FFFFFF'>";
+	if ($i == 0 && $Registros==9999999)
+		{$sql0="Select Max(id$Tablas) From ".$Tablas."";
+		 $rs0=sql_ejecutar($cn,$sql0);
+		 if ($rs0)
+		 	{$res0=sql_fetch($rs0);
+		 	 $id0=$res0[0]+1;
+		 	}
+		 else
+		 	{$sql0="Select * From ".$Tablas."";
+		 	 $rs0=sql_ejecutar($cn,$sql0);
+		 	 $num0=pg_num_rows($rs0);
+			 $id0=$num0+1;
+			} 
+		 echo "<input type='hidden' name='field$i' value='$id0'>&nbsp;id";
+		}
+	elseif (substr(pg_field_name($result2, $i),0,2) == "id" || pg_field_name($result2, $i)=="tipoperjuridica" || pg_field_name($result2, $i)=="tipodocidentidad" || pg_field_name($result2, $i)=="lugarci")
+		{$var=pg_field_name($result2, $i);
+		switch ($var)
+			{case "idpolitico": $tab="politico";$idc="0";$tag=""; break;
+			 case "idtipoprop": $tab="codificadores";$idc="1";$tag=""; break;
+			 case "idsituacionjuridica": $tab="codificadores";$idc="2";$tag=""; break;
+			 case "idclasificacion": $tab="codificadores";$idc="8";$tag=""; break;
+			 case "idasesoramiento": $tab="codificadores";$idc="16";$tag=""; break;
+			 case "idoficina": $tab="codificadores";$idc="20";$tag=""; break;
+			 case "idtipopersona": $tab="codificadores";$idc="4";$tag=""; break;
+			 case "tipoperjuridica": $tab="codificadores";$idc="11";$tag=""; break;
+			 case "idgenero": $tab="codificadores";$idc="6";$tag=""; break;
+			 case "lugarci": $tab="codificadores";$idc="5";$tag=""; break;
+			 case "tipodocidentidad": $tab="codificadores";$idc="10";$tag=""; break;
+			 case "idtipodocumento": $tab="codificadores";$idc="3";$tag=""; break;
+			 case "idrechazo": $tab="codificadores";$idc="7";$tag=""; break;
+			 case "idtiporestitucion": $tab="codificadores";$idc="17";$tag=""; break;
+			 case "idtipoesparcimiento": $tab="codificadores";$idc="9";$tag=""; break;
+			 case "cargo": $tab="codificadores";$idc="19";$tag=""; break;
+			 case "": $tab="codificadores";$idc="4";$tag=""; break;
+			 case "estado": $tab="codificadores";$idc="21";$tag=""; break; //135=HABILITADO, 136=EN EVALUACION (S), 137=
+			 //default: $tab="codificadores";$idc="1";break;
+			}
+		echo "<select name='$var' class='combos'>";
+		$rs_select=pg_query($cn,"Select * From $tab Where idclasificador=$idc");
+		while ($res_select=pg_fetch_array($rs_select))
+			{echo "<option value='".$res_select[0]."'>".$res_select[2]."</option>";}
+		echo "</select>";
+		/*tabla parcelas
+		persona.idpais tabla politico idpolitico=
+		especies.
+		idespeciecomun especies
+		superficiesel.idtiposel tabla codificadores idclasificador=15 //idtiposel: restituc / conserv
+		superficiesel.idparametrica tabla codificadores idclasificador=18 //idtiposel tipos
+		agenteauxiliar numregprof join con registro  /tecnico abt/ //copiar tabla importada con datos excel
+		*/
+		}
+	else
+		{echo "<input type='text' name='field$i' value='".$res1[$i];
+		 echo "' class='boxbusqueda'";
+	 	 if ($meta->type == "int")
+			{?> onKeyPress="return aceptaNum(event)"<?php }
+		 elseif ($meta->type == "date")
+			{?> onKeyPress="return aceptaFecha(event)"<?php }
+		 echo ">";
+		}
+	echo "</td></tr>";
+	$i++;
+	}
+//mysql_free_result($result);
+}
+?>
+<tr><td colspan="2" align="center">
+<input type='hidden' name='campos' value='<?php echo $i;?>'>
+<input type='hidden' name='Tablas1' value='<?php echo $Tablas;?>'>
+<?php if ($Registros==9999999)
+{ ?><input type='submit' name='submit2' id='submit2' value='Grabar Nuevo Registro'><?php  } 
+else 
+{ ?><input type='submit' name='submit' id='submit' value='Grabar Modificaciones'>
+ <input type='submit' name='submit1' id='submit1' value='Eliminar Registro'><?php } ?>
+</td></tr>		
+</table>
+</form><br>
+</div>
+</BODY></HTML>

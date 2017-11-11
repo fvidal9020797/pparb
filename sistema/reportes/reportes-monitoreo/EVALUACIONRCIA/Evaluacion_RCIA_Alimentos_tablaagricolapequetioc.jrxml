@@ -1,0 +1,1286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Evaluacion_RCIA_Alimentos_tablaganadera" language="groovy" pageWidth="612" pageHeight="792" columnWidth="500" leftMargin="56" rightMargin="56" topMargin="0" bottomMargin="0" uuid="0f1ff8ac-bba9-45a6-b867-eadb10105d02">
+	<property name="ireport.zoom" value="1.7715610000000088"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="124"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F5F5DC">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#FFFFBF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#F5F5DC">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#FFFFBF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TH" mode="Opaque" backcolor="#F5F5DC">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_CH" mode="Opaque" backcolor="#FFFFBF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Crosstab Data Text" hAlign="Center"/>
+	<style name="table 3">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 7">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 7_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 7_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 7_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 8">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 8_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 8_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 8_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 9">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 9_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 9_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 9_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 10">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 10_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 10_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 10_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 11">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 11_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 11_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 11_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="prueba" uuid="817b88a8-e070-4246-920e-252e48836f9e">
+		<parameter name="idmonitoreo" class="java.lang.Integer"/>
+		<queryString>
+			<![CDATA[select idevaluacionespecifica, parametroespecifico, valoracion, nombrecultivo, puntuacioncultivo, campania, compromiso, va.idmonitoreo
+from monitoreo.detallevalorcultivo as dc inner join monitoreo.valoracionalimentos as va on dc.idtablavalorali = va.idtablavaloracion inner join cultivo as c on c.idcultivo = dc.idcultivo
+inner join monitoreo.evaluacionespecifica as ee on ee.idevaluacionespecifica = va.idevalespecif
+where idmonitoreo = $P{idmonitoreo} and idevaluacionespecifica = 34
+order by idevaluacionespecifica asc]]>
+		</queryString>
+		<field name="idevaluacionespecifica" class="java.lang.Integer"/>
+		<field name="parametroespecifico" class="java.lang.String"/>
+		<field name="valoracion" class="java.lang.Integer"/>
+		<field name="nombrecultivo" class="java.lang.String"/>
+		<field name="puntuacioncultivo" class="java.lang.Integer"/>
+		<field name="campania" class="java.lang.String"/>
+		<field name="compromiso" class="java.lang.Integer"/>
+		<field name="idmonitoreo" class="java.lang.Integer"/>
+	</subDataset>
+	<subDataset name="notacultivo" uuid="921e3651-c3de-4640-b791-149e4b077309">
+		<parameter name="idmonitoreo" class="java.lang.Integer"/>
+		<queryString>
+			<![CDATA[select idmonitoreo, ponderacion,compromiso,campania,nombrecultivo,round(notacultivo) as notacultivo
+from monitoreo.ponderacionevalagricola as p inner join cultivo as c on c.idcultivo = p.idcultivo
+where idmonitoreo = $P{idmonitoreo}]]>
+		</queryString>
+		<field name="idmonitoreo" class="java.lang.Integer"/>
+		<field name="ponderacion" class="java.lang.Integer"/>
+		<field name="compromiso" class="java.lang.Integer"/>
+		<field name="campania" class="java.lang.String"/>
+		<field name="nombrecultivo" class="java.lang.String"/>
+		<field name="notacultivo" class="java.lang.Double"/>
+	</subDataset>
+	<subDataset name="prueba2" uuid="67d9bd15-9ff4-4bb6-bbe7-72dd19ec7c8d">
+		<parameter name="idmonitoreo" class="java.lang.Integer"/>
+		<queryString>
+			<![CDATA[select idevaluacionespecifica, parametroespecifico, valoracion, nombrecultivo, puntuacioncultivo, campania, compromiso, va.idmonitoreo
+from monitoreo.detallevalorcultivo as dc inner join monitoreo.valoracionalimentos as va on dc.idtablavalorali = va.idtablavaloracion inner join cultivo as c on c.idcultivo = dc.idcultivo
+inner join monitoreo.evaluacionespecifica as ee on ee.idevaluacionespecifica = va.idevalespecif
+where idmonitoreo = $P{idmonitoreo} and idevaluacionespecifica <> 34
+order by idevaluacionespecifica asc]]>
+		</queryString>
+		<field name="idevaluacionespecifica" class="java.lang.Integer"/>
+		<field name="parametroespecifico" class="java.lang.String"/>
+		<field name="valoracion" class="java.lang.Integer"/>
+		<field name="nombrecultivo" class="java.lang.String"/>
+		<field name="puntuacioncultivo" class="java.lang.Integer"/>
+		<field name="campania" class="java.lang.String"/>
+		<field name="compromiso" class="java.lang.Integer"/>
+		<field name="idmonitoreo" class="java.lang.Integer"/>
+	</subDataset>
+	<parameter name="idregistro" class="java.lang.Integer"/>
+	<parameter name="idmonitoreo" class="java.lang.Integer"/>
+	<queryString>
+		<![CDATA[select v.*
+from v_parcela as v inner join plancultivo as pc on v.idregistro = pc.idregistro
+where v.idregistro = $P{idregistro}
+and ("TipoProp" = 'Pequeña' or "TipoProp" = 'Comunidad o TIOC')
+limit 1]]>
+	</queryString>
+	<field name="idregistro" class="java.lang.Integer"/>
+	<field name="idparcela" class="java.lang.String"/>
+	<field name="nombre" class="java.lang.String"/>
+	<field name="superficie" class="java.lang.Double"/>
+	<field name="comp" class="java.lang.String"/>
+	<field name="nombrepolitico" class="java.lang.String"/>
+	<field name="TipoProp" class="java.lang.String"/>
+	<field name="SitJur" class="java.lang.String"/>
+	<field name="Clasificacion" class="java.lang.String"/>
+	<field name="idclasificacion" class="java.lang.String"/>
+	<field name="Oficina" class="java.lang.String"/>
+	<field name="estado" class="java.lang.String"/>
+	<field name="asesoramiento" class="java.lang.String"/>
+	<field name="fecharegistro" class="java.sql.Date"/>
+	<field name="clasificacionprog" class="java.lang.String"/>
+	<field name="departamento" class="java.lang.String"/>
+	<field name="provincia" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="98" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="b3a1ef0e-700b-4d35-a5c3-2a519b5b7c6d" x="3" y="33" width="120" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[NOMBRE PREDIO:]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="4a679db6-87b0-4048-b8ed-63a614d35f10" x="123" y="33" width="377" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="8defbad3-0c32-4a30-9407-5a7142a8d36f" x="3" y="53" width="120" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[CODIGO DE REGISTRO:]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="9dc2a262-a43f-4da5-a7e2-baaf0e75c099" x="123" y="53" width="377" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idparcela}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="7ccbd10c-cc2f-4bef-92ac-fda23380ddce" x="0" y="16" width="500" height="16"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[TABLA DE VALORACION AGRICOLA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8defbad3-0c32-4a30-9407-5a7142a8d36f" x="3" y="73" width="120" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[FECHA:]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="7636e24c-090e-44f6-b3fd-94ef8a6ad3c2" x="0" y="93" width="500" height="1"/>
+			</line>
+			<staticText>
+				<reportElement uuid="10e058c5-92ba-4f60-b7d3-815ff5243a27" x="0" y="0" width="500" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ANEXO]]></text>
+			</staticText>
+		</band>
+		<band height="403">
+			<staticText>
+				<reportElement uuid="4587369d-0d4f-4d50-9484-b1bfcd2239fe" style="table" x="41" y="235" width="59" height="40"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[Adquisición de insumos ecológicos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a8a8ca04-bf6f-4811-b9b4-13836de681f6" style="table 1_TH" x="41" y="75" width="59" height="40"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Parámetro Específico]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4587369d-0d4f-4d50-9484-b1bfcd2239fe" style="table" x="0" y="235" width="41" height="40"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[Uso de abonos e insumos ecológicos. ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a6f75132-280b-4f2f-a4be-d17e9e6bb8b5" style="table" x="100" y="115" width="26" height="40"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[70]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4587369d-0d4f-4d50-9484-b1bfcd2239fe" style="table" x="41" y="115" width="59" height="40"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[Superficie de siembra comprometida en el área deforestada sin autorización por cultivos estratégicos de acuerdo a programación (ha) ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4587369d-0d4f-4d50-9484-b1bfcd2239fe" style="table" x="0" y="155" width="41" height="80"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[Aplicación de técnicas y tecnologías sostenibles: Siembra Directa, Rotación de Cultivos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a8a8ca04-bf6f-4811-b9b4-13836de681f6" style="table 1_TH" x="0" y="75" width="41" height="40"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Parámetro General]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="aca38818-898c-433b-96cc-d845cb9a42bf" style="table 1_TH" x="100" y="54" width="26" height="61"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Valoración Máxima (%)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="2e309d64-5c81-423d-84b9-db12f96036a1" style="table 1_TH" x="0" y="54" width="100" height="21"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Evaluación Directriz Técnica General]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a6f75132-280b-4f2f-a4be-d17e9e6bb8b5" style="table" x="100" y="195" width="26" height="40"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[15]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4587369d-0d4f-4d50-9484-b1bfcd2239fe" style="table" x="0" y="115" width="41" height="40"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="5"/>
+				</textElement>
+				<text><![CDATA[Superficie de siembra comprometida en el área deforestada sin autorización  (ha) ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4587369d-0d4f-4d50-9484-b1bfcd2239fe" style="table" x="41" y="195" width="59" height="40"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[Compra y/o alquiler de maquinaria y herramientas de siembra directa y/o insumos que demuestre siembra directa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a6f75132-280b-4f2f-a4be-d17e9e6bb8b5" style="table" x="100" y="155" width="26" height="40"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[15]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4587369d-0d4f-4d50-9484-b1bfcd2239fe" style="table" x="41" y="155" width="59" height="40"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[Compra de semilla certificada y/o, venta de producto (que demuestren rotación de cultivo)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a6f75132-280b-4f2f-a4be-d17e9e6bb8b5" style="table" x="100" y="235" width="26" height="40"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[5]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="0d824723-07bd-49e9-a517-ec2fbe12a384" style="table" x="0" y="275" width="126" height="40"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[PONDERACION FINAL (%)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="5c4863f1-31d7-4431-895b-15fe755c826f" x="0" y="330" width="476" height="20"/>
+				<textElement/>
+				<text><![CDATA[ (*) La puntuación asignada esta en base a la documentación  presentada en el RCIA]]></text>
+			</staticText>
+			<break>
+				<reportElement uuid="2197248f-c168-454d-b1fb-c72c5733c31f" x="0" y="361" width="100" height="1"/>
+			</break>
+			<crosstab>
+				<reportElement uuid="0e2455e5-dc52-4e34-bd97-8447ea116ef7" x="126" y="275" width="374" height="40"/>
+				<crosstabDataset>
+					<dataset>
+						<datasetRun subDataset="notacultivo" uuid="97b30159-9aed-43fe-955f-a8bde732c319">
+							<datasetParameter name="idmonitoreo">
+								<datasetParameterExpression><![CDATA[$P{idmonitoreo}]]></datasetParameterExpression>
+							</datasetParameter>
+							<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+						</datasetRun>
+					</dataset>
+				</crosstabDataset>
+				<rowGroup name="idmonitoreo" width="0">
+					<bucket class="java.lang.Integer">
+						<bucketExpression><![CDATA[$F{idmonitoreo}]]></bucketExpression>
+					</bucket>
+					<crosstabRowHeader>
+						<cellContents backcolor="#F0F8FF" mode="Opaque">
+							<box>
+								<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textField>
+								<reportElement uuid="8530c823-52b4-4843-885f-55143f249cde" style="Crosstab Data Text" x="0" y="0" width="0" height="25"/>
+								<textElement/>
+								<textFieldExpression><![CDATA[$V{idmonitoreo}]]></textFieldExpression>
+							</textField>
+						</cellContents>
+					</crosstabRowHeader>
+					<crosstabTotalRowHeader>
+						<cellContents/>
+					</crosstabTotalRowHeader>
+				</rowGroup>
+				<columnGroup name="campania" height="0" totalPosition="End">
+					<bucket order="Descending" class="java.lang.String">
+						<bucketExpression><![CDATA[$F{campania}]]></bucketExpression>
+					</bucket>
+					<crosstabColumnHeader>
+						<cellContents backcolor="#F0F8FF" mode="Opaque">
+							<box>
+								<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textField>
+								<reportElement uuid="ab6339b5-b289-4749-883e-5ea87a2c23f9" style="Crosstab Data Text" x="0" y="0" width="40" height="0"/>
+								<textElement/>
+								<textFieldExpression><![CDATA[$V{campania}]]></textFieldExpression>
+							</textField>
+						</cellContents>
+					</crosstabColumnHeader>
+					<crosstabTotalColumnHeader>
+						<cellContents backcolor="#005FB3" mode="Opaque">
+							<box>
+								<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<staticText>
+								<reportElement uuid="9389039e-b279-44ab-bbf3-cff5cf02c90b" x="0" y="0" width="40" height="0" forecolor="#FFFFFF"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<text><![CDATA[Total campania]]></text>
+							</staticText>
+						</cellContents>
+					</crosstabTotalColumnHeader>
+				</columnGroup>
+				<columnGroup name="compromiso" height="0">
+					<bucket class="java.lang.String">
+						<bucketExpression><![CDATA[(
+    $F{compromiso} == 0? "NO COMPROMETIDO":
+    ($F{compromiso} == 1? "COMPROMETIDO":"")
+)]]></bucketExpression>
+					</bucket>
+					<crosstabColumnHeader>
+						<cellContents>
+							<textField>
+								<reportElement uuid="b0ce2e45-4ce8-4a49-8df3-9d47117432fd" style="Crosstab Data Text" x="0" y="0" width="40" height="0"/>
+								<textElement/>
+								<textFieldExpression><![CDATA[$V{compromiso}]]></textFieldExpression>
+							</textField>
+						</cellContents>
+					</crosstabColumnHeader>
+					<crosstabTotalColumnHeader>
+						<cellContents/>
+					</crosstabTotalColumnHeader>
+				</columnGroup>
+				<columnGroup name="nombrecultivo" height="0" totalPosition="End">
+					<bucket class="java.lang.String">
+						<bucketExpression><![CDATA[$F{nombrecultivo}]]></bucketExpression>
+					</bucket>
+					<crosstabColumnHeader>
+						<cellContents backcolor="#F0F8FF" mode="Opaque">
+							<box>
+								<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textField>
+								<reportElement uuid="4aec28cf-f154-4d50-a7ec-86e73f47e1d2" style="Crosstab Data Text" x="0" y="0" width="40" height="0"/>
+								<textElement/>
+								<textFieldExpression><![CDATA[$V{nombrecultivo}]]></textFieldExpression>
+							</textField>
+						</cellContents>
+					</crosstabColumnHeader>
+					<crosstabTotalColumnHeader>
+						<cellContents backcolor="#BFE1FF" mode="Opaque">
+							<box>
+								<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+						</cellContents>
+					</crosstabTotalColumnHeader>
+				</columnGroup>
+				<measure name="notacultivoMeasure" class="java.lang.Double">
+					<measureExpression><![CDATA[$F{notacultivo}]]></measureExpression>
+				</measure>
+				<measure name="measure1" class="java.lang.Float" calculation="Sum">
+					<measureExpression><![CDATA[$F{notacultivo}]]></measureExpression>
+				</measure>
+				<crosstabCell width="40" height="40">
+					<cellContents>
+						<box>
+							<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textField>
+							<reportElement uuid="1593ba48-61d2-4a45-97ae-cc89c82af211" style="Crosstab Data Text" x="0" y="0" width="40" height="40"/>
+							<textElement verticalAlignment="Middle">
+								<font size="8"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$V{notacultivoMeasure}]]></textFieldExpression>
+						</textField>
+					</cellContents>
+				</crosstabCell>
+				<crosstabCell height="25" rowTotalGroup="idmonitoreo">
+					<cellContents backcolor="#BFE1FF" mode="Opaque">
+						<box>
+							<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textField>
+							<reportElement uuid="945a415b-50d7-42ff-98a8-413ac6d4a168" style="Crosstab Data Text" x="0" y="0" width="50" height="25"/>
+							<textElement/>
+							<textFieldExpression><![CDATA[$V{notacultivoMeasure}]]></textFieldExpression>
+						</textField>
+					</cellContents>
+				</crosstabCell>
+				<crosstabCell width="40" height="40" columnTotalGroup="campania">
+					<cellContents backcolor="#005FB3" mode="Opaque">
+						<box>
+							<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textField>
+							<reportElement uuid="3644bc7d-d035-4bc9-add9-92dad78495b1" style="Crosstab Data Text" x="0" y="0" width="40" height="40" forecolor="#FFFFFF"/>
+							<textElement verticalAlignment="Middle">
+								<font size="8"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$V{measure1}]]></textFieldExpression>
+						</textField>
+					</cellContents>
+				</crosstabCell>
+				<crosstabCell rowTotalGroup="idmonitoreo" columnTotalGroup="campania">
+					<cellContents backcolor="#005FB3" mode="Opaque">
+						<box>
+							<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textField>
+							<reportElement uuid="895c9bd3-c822-4311-a0c9-b2ed424ccf28" style="Crosstab Data Text" x="0" y="0" width="50" height="25" forecolor="#FFFFFF"/>
+							<textElement/>
+							<textFieldExpression><![CDATA[$V{notacultivoMeasure}]]></textFieldExpression>
+						</textField>
+					</cellContents>
+				</crosstabCell>
+				<crosstabCell width="0" height="40" columnTotalGroup="nombrecultivo">
+					<cellContents backcolor="#BFE1FF" mode="Opaque">
+						<box>
+							<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+					</cellContents>
+				</crosstabCell>
+				<crosstabCell rowTotalGroup="idmonitoreo" columnTotalGroup="nombrecultivo">
+					<cellContents backcolor="#BFE1FF" mode="Opaque">
+						<box>
+							<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textField>
+							<reportElement uuid="abd47c87-686a-4752-8acc-c6b043be5cb6" style="Crosstab Data Text" x="0" y="0" width="50" height="25"/>
+							<textElement/>
+							<textFieldExpression><![CDATA[$V{notacultivoMeasure}]]></textFieldExpression>
+						</textField>
+					</cellContents>
+				</crosstabCell>
+				<crosstabCell columnTotalGroup="compromiso">
+					<cellContents/>
+				</crosstabCell>
+				<crosstabCell rowTotalGroup="idmonitoreo" columnTotalGroup="compromiso">
+					<cellContents/>
+				</crosstabCell>
+			</crosstab>
+			<elementGroup>
+				<elementGroup/>
+			</elementGroup>
+			<crosstab>
+				<reportElement uuid="90a0ea51-124f-4e6f-a261-927fde3d11d2" x="126" y="54" width="374" height="101"/>
+				<crosstabDataset>
+					<dataset>
+						<datasetRun subDataset="prueba" uuid="20fba06c-ff50-4a57-bd0d-302b6e717b34">
+							<datasetParameter name="idmonitoreo">
+								<datasetParameterExpression><![CDATA[$P{idmonitoreo}]]></datasetParameterExpression>
+							</datasetParameter>
+							<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+						</datasetRun>
+					</dataset>
+				</crosstabDataset>
+				<rowGroup name="idevaluacionespecifica" width="0">
+					<bucket class="java.lang.Integer">
+						<bucketExpression><![CDATA[$F{idevaluacionespecifica}]]></bucketExpression>
+					</bucket>
+					<crosstabRowHeader>
+						<cellContents backcolor="#F0F8FF" mode="Opaque">
+							<box>
+								<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textField>
+								<reportElement uuid="6f79e622-e0f1-461f-89fe-6ac3ace25837" style="Crosstab Data Text" x="0" y="0" width="0" height="25"/>
+								<textElement/>
+								<textFieldExpression><![CDATA[$V{idevaluacionespecifica}]]></textFieldExpression>
+							</textField>
+						</cellContents>
+					</crosstabRowHeader>
+					<crosstabTotalRowHeader>
+						<cellContents/>
+					</crosstabTotalRowHeader>
+				</rowGroup>
+				<columnGroup name="campania" height="20" totalPosition="End">
+					<bucket order="Descending" class="java.lang.String">
+						<bucketExpression><![CDATA[$F{campania}]]></bucketExpression>
+					</bucket>
+					<crosstabColumnHeader>
+						<cellContents backcolor="#F0F8FF" mode="Opaque">
+							<box>
+								<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textField>
+								<reportElement uuid="b54b842b-2fb1-4176-b975-30a463bf0eb9" style="Crosstab Data Text" x="0" y="0" width="40" height="20"/>
+								<textElement verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$V{campania}]]></textFieldExpression>
+							</textField>
+						</cellContents>
+					</crosstabColumnHeader>
+					<crosstabTotalColumnHeader>
+						<cellContents backcolor="#005FB3" mode="Opaque">
+							<box>
+								<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<staticText>
+								<reportElement uuid="bfd52ab8-6f91-4311-8623-889d75ed77ea" x="0" y="0" width="40" height="61" forecolor="#FFFFFF"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<text><![CDATA[Ponderación Final (%)]]></text>
+							</staticText>
+						</cellContents>
+					</crosstabTotalColumnHeader>
+				</columnGroup>
+				<columnGroup name="compromiso" height="19" totalPosition="End">
+					<bucket class="java.lang.String">
+						<bucketExpression><![CDATA[(
+    $F{compromiso} == 0? "NO COMPROMETIDO":
+    ($F{compromiso} == 1? "COMPROMETIDO":"")
+)]]></bucketExpression>
+					</bucket>
+					<crosstabColumnHeader>
+						<cellContents backcolor="#F0F8FF" mode="Opaque">
+							<box>
+								<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textField>
+								<reportElement uuid="75ebbd17-fe5c-45de-b89c-a6bb8dcc808f" style="Crosstab Data Text" x="0" y="0" width="40" height="19"/>
+								<textElement verticalAlignment="Middle">
+									<font size="5"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$V{compromiso}]]></textFieldExpression>
+							</textField>
+						</cellContents>
+					</crosstabColumnHeader>
+					<crosstabTotalColumnHeader>
+						<cellContents backcolor="#BFE1FF" mode="Opaque">
+							<box>
+								<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<staticText>
+								<reportElement uuid="83afe06f-b76c-42bb-8ff7-d5951a29f1e8" x="0" y="0" width="0" height="30"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<text><![CDATA[Total compromiso]]></text>
+							</staticText>
+						</cellContents>
+					</crosstabTotalColumnHeader>
+				</columnGroup>
+				<columnGroup name="cultivo" height="22">
+					<bucket class="java.lang.String">
+						<bucketExpression><![CDATA[$F{nombrecultivo}]]></bucketExpression>
+					</bucket>
+					<crosstabColumnHeader>
+						<cellContents backcolor="#F0F8FF" mode="Opaque" style="table">
+							<textField>
+								<reportElement uuid="24230e33-9b30-47e1-a3b1-945e05632b64" style="Crosstab Data Text" x="0" y="0" width="40" height="22"/>
+								<textElement verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$V{cultivo}]]></textFieldExpression>
+							</textField>
+						</cellContents>
+					</crosstabColumnHeader>
+					<crosstabTotalColumnHeader>
+						<cellContents/>
+					</crosstabTotalColumnHeader>
+				</columnGroup>
+				<measure name="puntuacioncultivoMeasure" class="java.lang.Integer">
+					<measureExpression><![CDATA[$F{puntuacioncultivo}]]></measureExpression>
+				</measure>
+				<crosstabCell width="40" height="40">
+					<cellContents>
+						<box>
+							<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textField>
+							<reportElement uuid="9d3fefcb-9005-4479-9f82-68c289674c8c" style="Crosstab Data Text" x="0" y="0" width="40" height="39"/>
+							<textElement verticalAlignment="Middle">
+								<font size="7"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$V{puntuacioncultivoMeasure}]]></textFieldExpression>
+						</textField>
+					</cellContents>
+				</crosstabCell>
+				<crosstabCell height="25" rowTotalGroup="idevaluacionespecifica">
+					<cellContents backcolor="#BFE1FF" mode="Opaque">
+						<box>
+							<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textField>
+							<reportElement uuid="53793e38-6858-429f-ac26-d9fedbab774c" style="Crosstab Data Text" x="0" y="0" width="50" height="25"/>
+							<textElement/>
+							<textFieldExpression><![CDATA[$V{puntuacioncultivoMeasure}]]></textFieldExpression>
+						</textField>
+					</cellContents>
+				</crosstabCell>
+				<crosstabCell width="40" height="40" columnTotalGroup="campania">
+					<cellContents backcolor="#CCCCCC" mode="Opaque">
+						<box>
+							<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textField isBlankWhenNull="true">
+							<reportElement uuid="7de59f77-d0a9-48cd-8da8-df5bf861e428" x="0" y="0" width="40" height="40" forecolor="#FFFFFF"/>
+							<textElement/>
+							<textFieldExpression><![CDATA[]]></textFieldExpression>
+						</textField>
+					</cellContents>
+				</crosstabCell>
+				<crosstabCell rowTotalGroup="idevaluacionespecifica" columnTotalGroup="campania">
+					<cellContents backcolor="#005FB3" mode="Opaque">
+						<box>
+							<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textField>
+							<reportElement uuid="a2d9d9d0-bd93-43b2-add2-960f47d90e52" style="Crosstab Data Text" x="0" y="0" width="50" height="25" forecolor="#FFFFFF"/>
+							<textElement/>
+							<textFieldExpression><![CDATA[$V{puntuacioncultivoMeasure}]]></textFieldExpression>
+						</textField>
+					</cellContents>
+				</crosstabCell>
+				<crosstabCell width="0" height="40" columnTotalGroup="compromiso">
+					<cellContents backcolor="#BFE1FF" mode="Opaque">
+						<box>
+							<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textField>
+							<reportElement uuid="512a2278-dc12-4021-8b87-ef960dc5a5ff" style="Crosstab Data Text" x="0" y="0" width="0" height="25"/>
+							<textElement/>
+							<textFieldExpression><![CDATA[$V{puntuacioncultivoMeasure}]]></textFieldExpression>
+						</textField>
+					</cellContents>
+				</crosstabCell>
+				<crosstabCell rowTotalGroup="idevaluacionespecifica" columnTotalGroup="compromiso">
+					<cellContents backcolor="#BFE1FF" mode="Opaque">
+						<box>
+							<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textField>
+							<reportElement uuid="04630d54-fed0-4b0b-8ad4-1ff98aff040a" style="Crosstab Data Text" x="0" y="0" width="50" height="25"/>
+							<textElement/>
+							<textFieldExpression><![CDATA[$V{puntuacioncultivoMeasure}]]></textFieldExpression>
+						</textField>
+					</cellContents>
+				</crosstabCell>
+				<crosstabCell columnTotalGroup="cultivo">
+					<cellContents/>
+				</crosstabCell>
+				<crosstabCell rowTotalGroup="idevaluacionespecifica" columnTotalGroup="cultivo">
+					<cellContents/>
+				</crosstabCell>
+			</crosstab>
+			<crosstab>
+				<reportElement uuid="6768b4f9-7e1c-4413-bc75-d738a4ec6a0f" x="126" y="10" width="374" height="33"/>
+				<crosstabDataset>
+					<dataset>
+						<datasetRun subDataset="notacultivo" uuid="3348c27b-81d5-43ed-bd7c-daa844ca40ca">
+							<datasetParameter name="idmonitoreo">
+								<datasetParameterExpression><![CDATA[$P{idmonitoreo}]]></datasetParameterExpression>
+							</datasetParameter>
+							<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+						</datasetRun>
+					</dataset>
+				</crosstabDataset>
+				<rowGroup name="idmonitoreo" width="0">
+					<bucket class="java.lang.Integer">
+						<bucketExpression><![CDATA[$F{idmonitoreo}]]></bucketExpression>
+					</bucket>
+					<crosstabRowHeader>
+						<cellContents backcolor="#F0F8FF" mode="Opaque">
+							<box>
+								<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textField>
+								<reportElement uuid="fd48ca7d-84de-46c2-9102-22352c8dfbde" style="Crosstab Data Text" x="0" y="0" width="0" height="16"/>
+								<textElement/>
+								<textFieldExpression><![CDATA[$V{idmonitoreo}]]></textFieldExpression>
+							</textField>
+						</cellContents>
+					</crosstabRowHeader>
+					<crosstabTotalRowHeader>
+						<cellContents/>
+					</crosstabTotalRowHeader>
+				</rowGroup>
+				<columnGroup name="campania" height="0">
+					<bucket order="Descending" class="java.lang.String">
+						<bucketExpression><![CDATA[$F{campania}]]></bucketExpression>
+					</bucket>
+					<crosstabColumnHeader>
+						<cellContents backcolor="#F0F8FF" mode="Opaque">
+							<box>
+								<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textField>
+								<reportElement uuid="aba49af6-439d-4e4a-9f3c-2862e335fa8f" style="Crosstab Data Text" x="0" y="0" width="38" height="0"/>
+								<textElement verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$V{campania}]]></textFieldExpression>
+							</textField>
+						</cellContents>
+					</crosstabColumnHeader>
+					<crosstabTotalColumnHeader>
+						<cellContents/>
+					</crosstabTotalColumnHeader>
+				</columnGroup>
+				<columnGroup name="compromiso" height="0">
+					<bucket class="java.lang.String">
+						<bucketExpression><![CDATA[(
+    $F{compromiso} == 0? "NO COMPROMETIDO":
+    ($F{compromiso} == 1? "COMPROMETIDO":"")
+)]]></bucketExpression>
+					</bucket>
+					<crosstabColumnHeader>
+						<cellContents backcolor="#F0F8FF" mode="Opaque">
+							<box>
+								<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textField>
+								<reportElement uuid="f0c18f4b-6875-4589-a8df-2c66b442a383" style="Crosstab Data Text" x="0" y="0" width="38" height="0"/>
+								<textElement/>
+								<textFieldExpression><![CDATA[$V{compromiso}]]></textFieldExpression>
+							</textField>
+						</cellContents>
+					</crosstabColumnHeader>
+					<crosstabTotalColumnHeader>
+						<cellContents/>
+					</crosstabTotalColumnHeader>
+				</columnGroup>
+				<columnGroup name="cultivo" height="16">
+					<bucket class="java.lang.String">
+						<bucketExpression><![CDATA[$F{nombrecultivo}]]></bucketExpression>
+					</bucket>
+					<crosstabColumnHeader>
+						<cellContents backcolor="#F0F8FF" mode="Opaque" style="table">
+							<textField>
+								<reportElement uuid="ff91488b-ab97-4856-9add-13061b30ac53" style="Crosstab Data Text" x="0" y="0" width="40" height="16"/>
+								<textElement verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$V{cultivo}]]></textFieldExpression>
+							</textField>
+						</cellContents>
+					</crosstabColumnHeader>
+					<crosstabTotalColumnHeader>
+						<cellContents/>
+					</crosstabTotalColumnHeader>
+				</columnGroup>
+				<measure name="ponderacionMeasure" class="java.lang.Integer">
+					<measureExpression><![CDATA[$F{ponderacion}]]></measureExpression>
+				</measure>
+				<crosstabCell width="40" height="17">
+					<cellContents>
+						<box>
+							<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textField>
+							<reportElement uuid="d5c7086e-aa8d-4288-af7c-4fd9fd65e718" style="Crosstab Data Text" x="0" y="0" width="40" height="17"/>
+							<textElement verticalAlignment="Middle">
+								<font size="7"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$V{ponderacionMeasure}]]></textFieldExpression>
+						</textField>
+					</cellContents>
+				</crosstabCell>
+				<crosstabCell height="25" rowTotalGroup="idmonitoreo">
+					<cellContents backcolor="#BFE1FF" mode="Opaque">
+						<box>
+							<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textField>
+							<reportElement uuid="2e9732a7-c548-4bd5-b75c-756cd1d34e23" style="Crosstab Data Text" x="0" y="0" width="50" height="25"/>
+							<textElement/>
+							<textFieldExpression><![CDATA[$V{ponderacionMeasure}]]></textFieldExpression>
+						</textField>
+					</cellContents>
+				</crosstabCell>
+				<crosstabCell width="50" columnTotalGroup="campania">
+					<cellContents backcolor="#005FB3" mode="Opaque">
+						<box>
+							<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textField>
+							<reportElement uuid="945e4c53-1eef-4721-bd61-517dba9e5de3" style="Crosstab Data Text" x="0" y="0" width="50" height="25" forecolor="#FFFFFF"/>
+							<textElement/>
+							<textFieldExpression><![CDATA[$V{ponderacionMeasure}]]></textFieldExpression>
+						</textField>
+					</cellContents>
+				</crosstabCell>
+				<crosstabCell rowTotalGroup="idmonitoreo" columnTotalGroup="campania">
+					<cellContents backcolor="#005FB3" mode="Opaque">
+						<box>
+							<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textField>
+							<reportElement uuid="ecbdbaa3-2c31-4a8e-b7a2-282a5398d973" style="Crosstab Data Text" x="0" y="0" width="50" height="25" forecolor="#FFFFFF"/>
+							<textElement/>
+							<textFieldExpression><![CDATA[$V{ponderacionMeasure}]]></textFieldExpression>
+						</textField>
+					</cellContents>
+				</crosstabCell>
+				<crosstabCell width="50" columnTotalGroup="compromiso">
+					<cellContents backcolor="#BFE1FF" mode="Opaque">
+						<box>
+							<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textField>
+							<reportElement uuid="7940606e-e395-4d76-913f-2a29523788fe" style="Crosstab Data Text" x="0" y="0" width="50" height="25"/>
+							<textElement/>
+							<textFieldExpression><![CDATA[$V{ponderacionMeasure}]]></textFieldExpression>
+						</textField>
+					</cellContents>
+				</crosstabCell>
+				<crosstabCell rowTotalGroup="idmonitoreo" columnTotalGroup="compromiso">
+					<cellContents backcolor="#BFE1FF" mode="Opaque">
+						<box>
+							<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textField>
+							<reportElement uuid="21a60baa-fb22-4148-8116-d71aa45ac39a" style="Crosstab Data Text" x="0" y="0" width="50" height="25"/>
+							<textElement/>
+							<textFieldExpression><![CDATA[$V{ponderacionMeasure}]]></textFieldExpression>
+						</textField>
+					</cellContents>
+				</crosstabCell>
+				<crosstabCell columnTotalGroup="cultivo">
+					<cellContents/>
+				</crosstabCell>
+				<crosstabCell rowTotalGroup="idmonitoreo" columnTotalGroup="cultivo">
+					<cellContents/>
+				</crosstabCell>
+			</crosstab>
+			<staticText>
+				<reportElement uuid="0d824723-07bd-49e9-a517-ec2fbe12a384" style="table" x="0" y="10" width="126" height="33"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Porcentaje de Valoración por Cultivo.]]></text>
+			</staticText>
+			<crosstab>
+				<reportElement uuid="90a0ea51-124f-4e6f-a261-927fde3d11d2" x="126" y="155" width="374" height="120"/>
+				<crosstabDataset>
+					<dataset>
+						<datasetRun subDataset="prueba2" uuid="20fba06c-ff50-4a57-bd0d-302b6e717b34">
+							<datasetParameter name="idmonitoreo">
+								<datasetParameterExpression><![CDATA[$P{idmonitoreo}]]></datasetParameterExpression>
+							</datasetParameter>
+							<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+						</datasetRun>
+					</dataset>
+				</crosstabDataset>
+				<rowGroup name="idevaluacionespecifica" width="0">
+					<bucket class="java.lang.Integer">
+						<bucketExpression><![CDATA[$F{idevaluacionespecifica}]]></bucketExpression>
+					</bucket>
+					<crosstabRowHeader>
+						<cellContents backcolor="#F0F8FF" mode="Opaque">
+							<box>
+								<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textField>
+								<reportElement uuid="6f79e622-e0f1-461f-89fe-6ac3ace25837" style="Crosstab Data Text" x="0" y="0" width="0" height="25"/>
+								<textElement/>
+								<textFieldExpression><![CDATA[$V{idevaluacionespecifica}]]></textFieldExpression>
+							</textField>
+						</cellContents>
+					</crosstabRowHeader>
+					<crosstabTotalRowHeader>
+						<cellContents/>
+					</crosstabTotalRowHeader>
+				</rowGroup>
+				<columnGroup name="campania" height="0" totalPosition="End">
+					<bucket order="Descending" class="java.lang.String">
+						<bucketExpression><![CDATA[$F{campania}]]></bucketExpression>
+					</bucket>
+					<crosstabColumnHeader>
+						<cellContents backcolor="#F0F8FF" mode="Opaque">
+							<box>
+								<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textField>
+								<reportElement uuid="b54b842b-2fb1-4176-b975-30a463bf0eb9" style="Crosstab Data Text" x="0" y="0" width="40" height="0"/>
+								<textElement verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$V{campania}]]></textFieldExpression>
+							</textField>
+						</cellContents>
+					</crosstabColumnHeader>
+					<crosstabTotalColumnHeader>
+						<cellContents backcolor="#005FB3" mode="Opaque">
+							<box>
+								<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+						</cellContents>
+					</crosstabTotalColumnHeader>
+				</columnGroup>
+				<columnGroup name="compromiso" height="0" totalPosition="End">
+					<bucket class="java.lang.String">
+						<bucketExpression><![CDATA[(
+    $F{compromiso} == 0? "NO COMPROMETIDO":
+    ($F{compromiso} == 1? "COMPROMETIDO":"")
+)]]></bucketExpression>
+					</bucket>
+					<crosstabColumnHeader>
+						<cellContents backcolor="#F0F8FF" mode="Opaque">
+							<box>
+								<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textField>
+								<reportElement uuid="75ebbd17-fe5c-45de-b89c-a6bb8dcc808f" style="Crosstab Data Text" x="0" y="0" width="40" height="0"/>
+								<textElement verticalAlignment="Middle">
+									<font size="5"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$V{compromiso}]]></textFieldExpression>
+							</textField>
+						</cellContents>
+					</crosstabColumnHeader>
+					<crosstabTotalColumnHeader>
+						<cellContents backcolor="#BFE1FF" mode="Opaque">
+							<box>
+								<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<staticText>
+								<reportElement uuid="83afe06f-b76c-42bb-8ff7-d5951a29f1e8" x="0" y="0" width="0" height="0"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<text><![CDATA[Total compromiso]]></text>
+							</staticText>
+						</cellContents>
+					</crosstabTotalColumnHeader>
+				</columnGroup>
+				<columnGroup name="cultivo" height="0">
+					<bucket class="java.lang.String">
+						<bucketExpression><![CDATA[$F{nombrecultivo}]]></bucketExpression>
+					</bucket>
+					<crosstabColumnHeader>
+						<cellContents backcolor="#F0F8FF" mode="Opaque" style="table">
+							<textField>
+								<reportElement uuid="24230e33-9b30-47e1-a3b1-945e05632b64" style="Crosstab Data Text" x="0" y="0" width="40" height="0"/>
+								<textElement verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$V{cultivo}]]></textFieldExpression>
+							</textField>
+						</cellContents>
+					</crosstabColumnHeader>
+					<crosstabTotalColumnHeader>
+						<cellContents/>
+					</crosstabTotalColumnHeader>
+				</columnGroup>
+				<measure name="puntuacioncultivoMeasure1" class="java.lang.Integer">
+					<measureExpression><![CDATA[$F{puntuacioncultivo}]]></measureExpression>
+				</measure>
+				<crosstabCell width="40" height="40">
+					<cellContents>
+						<box>
+							<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textField>
+							<reportElement uuid="9d3fefcb-9005-4479-9f82-68c289674c8c" style="Crosstab Data Text" x="0" y="0" width="40" height="39"/>
+							<textElement verticalAlignment="Middle">
+								<font size="7"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$V{puntuacioncultivoMeasure1}]]></textFieldExpression>
+						</textField>
+					</cellContents>
+				</crosstabCell>
+				<crosstabCell height="25" rowTotalGroup="idevaluacionespecifica">
+					<cellContents backcolor="#BFE1FF" mode="Opaque">
+						<box>
+							<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textField>
+							<reportElement uuid="53793e38-6858-429f-ac26-d9fedbab774c" style="Crosstab Data Text" x="0" y="0" width="50" height="25"/>
+							<textElement/>
+							<textFieldExpression><![CDATA[$V{puntuacioncultivoMeasure1}]]></textFieldExpression>
+						</textField>
+					</cellContents>
+				</crosstabCell>
+				<crosstabCell width="40" height="40" columnTotalGroup="campania">
+					<cellContents backcolor="#CCCCCC" mode="Opaque">
+						<box>
+							<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textField isBlankWhenNull="true">
+							<reportElement uuid="7de59f77-d0a9-48cd-8da8-df5bf861e428" x="0" y="0" width="40" height="40" forecolor="#FFFFFF"/>
+							<textElement/>
+							<textFieldExpression><![CDATA[]]></textFieldExpression>
+						</textField>
+					</cellContents>
+				</crosstabCell>
+				<crosstabCell rowTotalGroup="idevaluacionespecifica" columnTotalGroup="campania">
+					<cellContents backcolor="#005FB3" mode="Opaque">
+						<box>
+							<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textField>
+							<reportElement uuid="a2d9d9d0-bd93-43b2-add2-960f47d90e52" style="Crosstab Data Text" x="0" y="0" width="50" height="25" forecolor="#FFFFFF"/>
+							<textElement/>
+							<textFieldExpression><![CDATA[$V{puntuacioncultivoMeasure1}]]></textFieldExpression>
+						</textField>
+					</cellContents>
+				</crosstabCell>
+				<crosstabCell width="0" height="40" columnTotalGroup="compromiso">
+					<cellContents backcolor="#BFE1FF" mode="Opaque">
+						<box>
+							<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textField>
+							<reportElement uuid="512a2278-dc12-4021-8b87-ef960dc5a5ff" style="Crosstab Data Text" x="0" y="0" width="0" height="25"/>
+							<textElement/>
+							<textFieldExpression><![CDATA[$V{puntuacioncultivoMeasure1}]]></textFieldExpression>
+						</textField>
+					</cellContents>
+				</crosstabCell>
+				<crosstabCell rowTotalGroup="idevaluacionespecifica" columnTotalGroup="compromiso">
+					<cellContents backcolor="#BFE1FF" mode="Opaque">
+						<box>
+							<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textField>
+							<reportElement uuid="04630d54-fed0-4b0b-8ad4-1ff98aff040a" style="Crosstab Data Text" x="0" y="0" width="50" height="25"/>
+							<textElement/>
+							<textFieldExpression><![CDATA[$V{puntuacioncultivoMeasure1}]]></textFieldExpression>
+						</textField>
+					</cellContents>
+				</crosstabCell>
+				<crosstabCell columnTotalGroup="cultivo">
+					<cellContents/>
+				</crosstabCell>
+				<crosstabCell rowTotalGroup="idevaluacionespecifica" columnTotalGroup="cultivo">
+					<cellContents/>
+				</crosstabCell>
+			</crosstab>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

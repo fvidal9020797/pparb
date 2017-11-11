@@ -1,0 +1,979 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Evaluacion_RCIA_Alimentos_hojaAgricola" language="groovy" pageWidth="572" pageHeight="752" columnWidth="488" leftMargin="56" rightMargin="28" topMargin="0" bottomMargin="0" uuid="516f23c6-5bc1-4d06-b86e-fee47b8574dc">
+	<property name="ireport.zoom" value="1.9487171000000019"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#CCCCCC"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#696969">
+		<box>
+			<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#FFBFBF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#F5F5DC">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#FFFFBF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TH" mode="Opaque" backcolor="#F5F5DC">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_CH" mode="Opaque" backcolor="#FFFFBF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TH" mode="Opaque" backcolor="#F5F5DC">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_CH" mode="Opaque" backcolor="#FFFFBF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_TH" mode="Opaque" backcolor="#F5F5DC">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_CH" mode="Opaque" backcolor="#FFFFBF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_TH" mode="Opaque" backcolor="#F5F5DC">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_CH" mode="Opaque" backcolor="#FFFFBF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6_TH" mode="Opaque" backcolor="#F5F5DC">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6_CH" mode="Opaque" backcolor="#FFFFBF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 7">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 7_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 7_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 7_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 8">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 8_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 8_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 8_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 9">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 9_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 9_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 9_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 10">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 10_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 10_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 10_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 11">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 11_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 11_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 11_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="compganado" uuid="7adb8192-e494-4e4e-ae18-e40a9b0f0550">
+		<parameter name="anocomp" class="java.lang.Integer"/>
+		<parameter name="idregistro" class="java.lang.Integer"/>
+		<queryString>
+			<![CDATA[select a.idregistro, 'Compra de Ganado en Cabezas'::text indicador, a.lineabase,b.compromiso, c.ejecutado, ''::text as verificacion, ''::text as obs
+from
+(select idregistro, compraganado as lineabase from planproduccionganadera where  anoprodganadera = 0) a
+inner join
+(select idregistro, compraganado as compromiso from planproduccionganadera where  anoprodganadera = $P{anocomp}) b  on a.idregistro = b.idregistro
+inner join
+(select m.idregistro, mppg.compraganado as ejecutado from monitoreo.monitoreo as m inner join monitoreo.planproduccionganadera as mppg on m.idmonitoreo = mppg.idmonitoreo
+where m.anho = $P{anocomp}) as c on a.idregistro = c.idregistro
+where a.idregistro = $P{idregistro}
+union
+select a.idregistro, 'Total cabezas de Terneros'::text indicador, a.lineabase,b.compromiso, c.ejecutado, ''::text as verificacion, ''::text as obs
+from
+(select idregistro, cantternero as lineabase from planproduccionganadera where  anoprodganadera = 0) a
+inner join
+(select idregistro, cantternero as compromiso from planproduccionganadera where  anoprodganadera = $P{anocomp}) b  on a.idregistro = b.idregistro
+inner join
+(select m.idregistro, mppg.cantternero as ejecutado from monitoreo.monitoreo as m inner join monitoreo.planproduccionganadera as mppg on m.idmonitoreo = mppg.idmonitoreo
+where m.anho = $P{anocomp}) as c on a.idregistro = c.idregistro
+where a.idregistro = $P{idregistro}
+union
+select a.idregistro, 'Total Cabezas de Ganado Mayor'::text indicador, a.lineabase,b.compromiso, c.ejecutado, ''::text as verificacion, ''::text as obs
+from
+(select idregistro, cantganado as lineabase from planproduccionganadera where  anoprodganadera = 0) a
+inner join
+(select idregistro, cantganado as compromiso from planproduccionganadera where  anoprodganadera = $P{anocomp}) b  on a.idregistro = b.idregistro
+inner join
+(select m.idregistro, mppg.cantganado as ejecutado from monitoreo.monitoreo as m inner join monitoreo.planproduccionganadera as mppg on m.idmonitoreo = mppg.idmonitoreo
+where m.anho = $P{anocomp}) as c on a.idregistro = c.idregistro
+where a.idregistro = $P{idregistro}
+union
+select a.idregistro, 'Cantidad de ganado en pie para la Venta'::text indicador, a.lineabase,b.compromiso, c.ejecutado, ''::text as verificacion, ''::text as obs
+from
+(select idregistro, cantganadopie as lineabase from planproduccionganadera where  anoprodganadera = 0) a
+inner join
+(select idregistro, cantganadopie as compromiso from planproduccionganadera where  anoprodganadera = $P{anocomp}) b  on a.idregistro = b.idregistro
+inner join
+(select m.idregistro, mppg.cantganadopie as ejecutado from monitoreo.monitoreo as m inner join monitoreo.planproduccionganadera as mppg on m.idmonitoreo = mppg.idmonitoreo
+where m.anho = $P{anocomp}) as c on a.idregistro = c.idregistro
+where a.idregistro = $P{idregistro}
+union
+select a.idregistro, 'Cantidad de ganado para faeneo'::text indicador, a.lineabase,b.compromiso, c.ejecutado, ''::text as verificacion, ''::text as obs
+from
+(select idregistro, cantganadofaineo as lineabase from planproduccionganadera where  anoprodganadera = 0) a
+inner join
+(select idregistro, cantganadofaineo as compromiso from planproduccionganadera where  anoprodganadera = $P{anocomp}) b  on a.idregistro = b.idregistro
+inner join
+(select m.idregistro, mppg.cantganadofaineo as ejecutado from monitoreo.monitoreo as m inner join monitoreo.planproduccionganadera as mppg on m.idmonitoreo = mppg.idmonitoreo
+where m.anho = $P{anocomp}) as c on a.idregistro = c.idregistro
+where a.idregistro = $P{idregistro}
+union
+select a.idregistro, 'Producción estimada de carne (kg/ha)'::text indicador, a.lineabase,b.compromiso, c.ejecutado, ''::text as verificacion, ''::text as obs
+from
+(select idregistro, cantprodcarne as lineabase from planproduccionganadera where  anoprodganadera = 0) a
+inner join
+(select idregistro, cantprodcarne as compromiso from planproduccionganadera where  anoprodganadera = $P{anocomp}) b  on a.idregistro = b.idregistro
+inner join
+(select m.idregistro, mppg.cantprodcarne as ejecutado from monitoreo.monitoreo as m inner join monitoreo.planproduccionganadera as mppg on m.idmonitoreo = mppg.idmonitoreo
+where m.anho = $P{anocomp}) as c on a.idregistro = c.idregistro
+where a.idregistro = $P{idregistro}
+order by indicador asc]]>
+		</queryString>
+		<field name="idregistro" class="java.lang.Integer"/>
+		<field name="indicador" class="java.lang.String"/>
+		<field name="lineabase" class="java.lang.Double"/>
+		<field name="compromiso" class="java.lang.Double"/>
+		<field name="ejecutado" class="java.math.BigDecimal"/>
+		<field name="verificacion" class="java.lang.String"/>
+		<field name="obs" class="java.lang.String"/>
+	</subDataset>
+	<subDataset name="compinfgan" uuid="fe804b6c-c55c-4371-b1dd-fb26c246f13f">
+		<parameter name="anocomp" class="java.lang.Integer"/>
+		<parameter name="idregistro" class="java.lang.Integer"/>
+		<queryString>
+			<![CDATA[select a.idregistro, 'Potreros con Alambrada'::text indicador, a.lineabase,b.compromiso, c.ejecutado, ''::text as verificacion, ''::text as obs
+from
+(select idregistro, potrero as lineabase from planproduccionganadera where  anoprodganadera = 0) a
+inner join
+(select idregistro, potrero as compromiso from planproduccionganadera where  anoprodganadera = $P{anocomp}) b  on a.idregistro = b.idregistro
+inner join
+(select m.idregistro, mppg.potrero as ejecutado from monitoreo.monitoreo as m inner join monitoreo.planproduccionganadera as mppg on m.idmonitoreo = mppg.idmonitoreo
+where m.anho = $P{anocomp}) as c on a.idregistro = c.idregistro
+where a.idregistro = $P{idregistro}
+union
+select a.idregistro, 'Aguadas, pozas o atajados'::text indicador, a.lineabase,b.compromiso, c.ejecutado, ''::text as verificacion, ''::text as obs
+from
+(select idregistro, pozas as lineabase from planproduccionganadera where  anoprodganadera = 0) a
+inner join
+(select idregistro, pozas as compromiso from planproduccionganadera where  anoprodganadera = $P{anocomp}) b  on a.idregistro = b.idregistro
+inner join
+(select m.idregistro, mppg.pozas as ejecutado from monitoreo.monitoreo as m inner join monitoreo.planproduccionganadera as mppg on m.idmonitoreo = mppg.idmonitoreo
+where m.anho = $P{anocomp}) as c on a.idregistro = c.idregistro
+where a.idregistro = $P{idregistro}
+union
+select a.idregistro, 'Saleros (Unidades)'::text indicador, a.lineabase,b.compromiso, c.ejecutado, ''::text as verificacion, ''::text as obs
+from
+(select idregistro, saleros as lineabase from planproduccionganadera where  anoprodganadera = 0) a
+inner join
+(select idregistro, saleros as compromiso from planproduccionganadera where  anoprodganadera = $P{anocomp}) b  on a.idregistro = b.idregistro
+inner join
+(select m.idregistro, mppg.saleros as ejecutado from monitoreo.monitoreo as m inner join monitoreo.planproduccionganadera as mppg on m.idmonitoreo = mppg.idmonitoreo
+where m.anho = $P{anocomp}) as c on a.idregistro = c.idregistro
+where a.idregistro = $P{idregistro}
+union
+select a.idregistro, 'Bebederos (Unidades)'::text indicador, a.lineabase,b.compromiso, c.ejecutado, ''::text as verificacion, ''::text as obs
+from
+(select idregistro, bebederos as lineabase from planproduccionganadera where  anoprodganadera = 0) a
+inner join
+(select idregistro, bebederos as compromiso from planproduccionganadera where  anoprodganadera = $P{anocomp}) b  on a.idregistro = b.idregistro
+inner join
+(select m.idregistro, mppg.bebederos as ejecutado from monitoreo.monitoreo as m inner join monitoreo.planproduccionganadera as mppg on m.idmonitoreo = mppg.idmonitoreo
+where m.anho = $P{anocomp}) as c on a.idregistro = c.idregistro
+where a.idregistro = $P{idregistro}
+union
+select a.idregistro, 'Brete'::text indicador, a.lineabase,b.compromiso, c.ejecutado, ''::text as verificacion, ''::text as obs
+from
+(select idregistro, brete as lineabase from planproduccionganadera where  anoprodganadera = 0) a
+inner join
+(select idregistro, brete as compromiso from planproduccionganadera where  anoprodganadera = $P{anocomp}) b  on a.idregistro = b.idregistro
+inner join
+(select m.idregistro, mppg.brete as ejecutado from monitoreo.monitoreo as m inner join monitoreo.planproduccionganadera as mppg on m.idmonitoreo = mppg.idmonitoreo
+where m.anho = $P{anocomp}) as c on a.idregistro = c.idregistro
+where a.idregistro = $P{idregistro}
+union
+select a.idregistro, 'Corral'::text indicador, a.lineabase,b.compromiso, c.ejecutado, ''::text as verificacion, ''::text as obs
+from
+(select idregistro, corral as lineabase from planproduccionganadera where  anoprodganadera = 0) a
+inner join
+(select idregistro, corral as compromiso from planproduccionganadera where  anoprodganadera = $P{anocomp}) b  on a.idregistro = b.idregistro
+inner join
+(select m.idregistro, mppg.corral as ejecutado from monitoreo.monitoreo as m inner join monitoreo.planproduccionganadera as mppg on m.idmonitoreo = mppg.idmonitoreo
+where m.anho = $P{anocomp}) as c on a.idregistro = c.idregistro
+where a.idregistro = $P{idregistro}
+union
+select a.idregistro, 'Silo para forrajes'::text indicador, a.lineabase,b.compromiso, c.ejecutado, ''::text as verificacion, ''::text as obs
+from
+(select idregistro, forraje as lineabase from planproduccionganadera where  anoprodganadera = 0) a
+inner join
+(select idregistro, forraje as compromiso from planproduccionganadera where  anoprodganadera = $P{anocomp}) b  on a.idregistro = b.idregistro
+inner join
+(select m.idregistro, mppg.forraje as ejecutado from monitoreo.monitoreo as m inner join monitoreo.planproduccionganadera as mppg on m.idmonitoreo = mppg.idmonitoreo
+where m.anho = $P{anocomp}) as c on a.idregistro = c.idregistro
+where a.idregistro = $P{idregistro}
+order by indicador asc]]>
+		</queryString>
+		<field name="idregistro" class="java.lang.Integer"/>
+		<field name="indicador" class="java.lang.String"/>
+		<field name="lineabase" class="java.lang.Integer"/>
+		<field name="compromiso" class="java.lang.Integer"/>
+		<field name="ejecutado" class="java.lang.Integer"/>
+		<field name="verificacion" class="java.lang.String"/>
+		<field name="obs" class="java.lang.String"/>
+	</subDataset>
+	<subDataset name="sistemaprodgan" uuid="5097783a-c138-4866-8715-d2706313e26b">
+		<parameter name="idregistro" class="java.lang.Integer"/>
+		<queryString>
+			<![CDATA[select idregistro, c.nombrecodificador, s.cantidad
+from sistprodganadera as s inner join codificadores as c on s.idsistproductivo = c.idcodificadores
+where idregistro = $P{idregistro} and idsistproductivo > 75 and idsistproductivo < 112]]>
+		</queryString>
+		<field name="idregistro" class="java.lang.Integer"/>
+		<field name="nombrecodificador" class="java.lang.String"/>
+		<field name="cantidad" class="java.lang.Integer"/>
+	</subDataset>
+	<subDataset name="documentos" uuid="c3bc1d83-85e2-4408-8112-721637172ed9">
+		<parameter name="idmonitoreo" class="java.lang.Integer"/>
+		<parameter name="iddocumento" class="java.lang.Integer"/>
+		<queryString>
+			<![CDATA[select * from
+monitoreo.documentacion
+where tipodocumento = 71 and iddocumentacion <> 5
+order by orden asc]]>
+		</queryString>
+		<field name="iddocumentacion" class="java.lang.Integer"/>
+		<field name="nombredocumentacion" class="java.lang.String"/>
+		<field name="tipodocumento" class="java.lang.Integer"/>
+		<field name="orden" class="java.lang.Integer"/>
+	</subDataset>
+	<subDataset name="suppasturas" uuid="acacd9e0-d2ba-417d-a07e-20c64e252833">
+		<parameter name="idregistro" class="java.lang.Integer"/>
+		<queryString>
+			<![CDATA[select 'Superficie pastizales naturales (Ha)' as indicador, suppastonatural as superficie, ''::text as com, ''::text as obs
+from planproduccionganadera
+where idregistro = $P{idregistro} and  anoprodganadera = 0
+union
+select 'Superficie pastos Cultivados de piso y corte (Ha)' as indicador, suppastosembrado as superficie, ''::text as com, ''::text as obs
+from planproduccionganadera
+where idregistro = $P{idregistro} and  anoprodganadera = 0]]>
+		</queryString>
+		<field name="indicador" class="java.lang.String"/>
+		<field name="superficie" class="java.lang.Float"/>
+		<field name="com" class="java.lang.String"/>
+		<field name="obs" class="java.lang.String"/>
+	</subDataset>
+	<parameter name="idmonitoreo" class="java.lang.Integer"/>
+	<parameter name="anomonitoreo" class="java.lang.Integer"/>
+	<parameter name="idregistro" class="java.lang.Integer"/>
+	<queryString>
+		<![CDATA[select *
+from v_parcela as v inner join planproduccionganadera as pg on v.idregistro = pg.idregistro
+where v.idregistro = $P{idregistro} and  anoprodganadera = 0 and potrero is not null
+limit 1]]>
+	</queryString>
+	<field name="idregistro" class="java.lang.Integer"/>
+	<field name="idparcela" class="java.lang.String"/>
+	<field name="nombre" class="java.lang.String"/>
+	<field name="superficie" class="java.lang.Double"/>
+	<field name="comp" class="java.lang.String"/>
+	<field name="nombrepolitico" class="java.lang.String"/>
+	<field name="TipoProp" class="java.lang.String"/>
+	<field name="SitJur" class="java.lang.String"/>
+	<field name="Clasificacion" class="java.lang.String"/>
+	<field name="idclasificacion" class="java.lang.String"/>
+	<field name="Oficina" class="java.lang.String"/>
+	<field name="estado" class="java.lang.String"/>
+	<field name="asesoramiento" class="java.lang.String"/>
+	<field name="fecharegistro" class="java.sql.Date"/>
+	<field name="clasificacionprog" class="java.lang.String"/>
+	<field name="departamento" class="java.lang.String"/>
+	<field name="provincia" class="java.lang.String"/>
+	<field name="idplanganadera" class="java.lang.Integer"/>
+	<field name="suppastosembrado" class="java.lang.Float"/>
+	<field name="suppastonatural" class="java.lang.Float"/>
+	<field name="potrero" class="java.lang.Integer"/>
+	<field name="pozas" class="java.lang.Integer"/>
+	<field name="saleros" class="java.lang.Integer"/>
+	<field name="bebederos" class="java.lang.Integer"/>
+	<field name="brete" class="java.lang.Integer"/>
+	<field name="corral" class="java.lang.Integer"/>
+	<field name="forraje" class="java.lang.Integer"/>
+	<field name="compraganado" class="java.lang.Integer"/>
+	<field name="cantganado" class="java.lang.Integer"/>
+	<field name="cantternero" class="java.lang.Integer"/>
+	<field name="cantganadofaineo" class="java.lang.Integer"/>
+	<field name="cantganadopie" class="java.lang.Integer"/>
+	<field name="cantprodcarne" class="java.lang.Double"/>
+	<field name="anoprodganadera" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="76">
+			<staticText>
+				<reportElement uuid="e6c064ba-6dee-4c79-9140-cede00ff8b85" x="0" y="0" width="488" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[2.2. Compromiso de Producción Ganadera]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="e6c064ba-6dee-4c79-9140-cede00ff8b85" x="20" y="21" width="468" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[2.2.1. Análisis de Documentación de Respaldo presentada en RCIA - Producción Ganadera]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="601a7443-087a-4145-bde4-14c1e215a048" style="table 1_TH" x="227" y="42" width="111" height="16"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Monto / Cantidad]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d3f26be4-b30e-4960-8724-a5f90a31ecdf" style="table 1_TH" x="338" y="42" width="151" height="16"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Observaciones]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="93e8a9d0-b0ad-4e97-820f-4a5b21bbce5a" style="table 1_TH" x="0" y="42" width="227" height="16"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Detalle de Contenido]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement uuid="50d1f686-ac37-47fc-b14e-abc0f80163b6" key="table 6" style="table 6" x="0" y="58" width="487" height="15"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="documentos" uuid="c9ada98d-a967-483a-af20-b8d19100094d">
+						<datasetParameter name="idmonitoreo">
+							<datasetParameterExpression><![CDATA[$P{idmonitoreo}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="489" uuid="fe3b970f-f5ed-4035-8a9e-85ffac0e47d5">
+						<jr:detailCell style="table 6_TD" height="21" rowSpan="1">
+							<textField>
+								<reportElement uuid="ff0e92bc-428a-4047-83c7-c34b7bfb2b6f" style="table 1_TH" x="0" y="0" width="489" height="14"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="10" isBold="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{nombredocumentacion}]]></textFieldExpression>
+							</textField>
+							<subreport>
+								<reportElement uuid="3fb85019-d43c-4608-960b-bbd5dfd962db" x="0" y="14" width="489" height="7"/>
+								<subreportParameter name="idmonitoreo">
+									<subreportParameterExpression><![CDATA[$P{idmonitoreo}]]></subreportParameterExpression>
+								</subreportParameter>
+								<subreportParameter name="iddocumento">
+									<subreportParameterExpression><![CDATA[$F{iddocumentacion}]]></subreportParameterExpression>
+								</subreportParameter>
+								<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+								<subreportExpression><![CDATA["C:\\xampp\\htdocs\\PPARB\\sistema\\reportes\\reportes-monitoreo\\EVALUACIONRCIA\\Evaluacion_RCIA_Alimentos_hojaGanadera_documentacion.jasper"]]></subreportExpression>
+							</subreport>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+		<band height="143">
+			<staticText>
+				<reportElement uuid="e6c064ba-6dee-4c79-9140-cede00ff8b85" x="20" y="0" width="460" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[2.2.2. Revisión y Análisis de Compromisos de Producción Ganadera]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b89cb770-39b8-4876-b7c4-1d0f84139567" x="20" y="20" width="134" height="15"/>
+				<textElement verticalAlignment="Bottom">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Pasturas:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b89cb770-39b8-4876-b7c4-1d0f84139567" x="20" y="109" width="100" height="15"/>
+				<textElement verticalAlignment="Bottom">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sistema(s):]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement uuid="45ae7f04-d7c5-491f-b62f-5075d2d5b001" key="table 7" x="12" y="130" width="405" height="13"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="sistemaprodgan" uuid="710291df-c652-4eee-be6b-38596451a005">
+						<datasetParameter name="idregistro">
+							<datasetParameterExpression><![CDATA[$P{idregistro}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="405" uuid="577c85b0-1ce9-4458-9a11-ae08390bba01">
+						<jr:detailCell height="14" rowSpan="1">
+							<textField>
+								<reportElement uuid="a172783a-0527-415d-ae2e-2007d462ea76" x="25" y="0" width="380" height="14"/>
+								<textElement verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{nombrecodificador} + ": " + $F{cantidad}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<componentElement>
+				<reportElement uuid="cfc70a94-90bb-4b32-a99a-aa76576b9def" key="table 11" style="table 11" x="0" y="35" width="488" height="70"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="suppasturas" uuid="bf5f1587-3975-49cc-851a-5896df07cb61">
+						<datasetParameter name="idregistro">
+							<datasetParameterExpression><![CDATA[$F{idregistro}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="186" uuid="e91da168-0cb1-4667-96b7-b187f3ac1cf1">
+						<jr:tableHeader style="table 5_TH" height="22" rowSpan="1">
+							<staticText>
+								<reportElement uuid="55b9bee8-46ff-44c9-ae0d-f192e1e8537a" x="0" y="0" width="186" height="22"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<text><![CDATA[Indicador]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table 11_TD" height="20" rowSpan="1">
+							<textField isStretchWithOverflow="true">
+								<reportElement uuid="75d1e4d7-c5ef-4cd1-92fe-2145e04c2f07" x="0" y="0" width="186" height="20"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{indicador}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="ce2ee5c3-18e4-4cda-ba57-fde20a161e7b">
+						<jr:tableHeader style="table 5_TH" height="22" rowSpan="1">
+							<staticText>
+								<reportElement uuid="4d204f81-0b6b-4a53-bd1d-a9ef02d46bed" x="0" y="0" width="90" height="22"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<text><![CDATA[Linea Base]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table 11_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement uuid="7135620c-2ccc-4268-978c-5611236d48ea" x="0" y="0" width="90" height="20"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{superficie}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="c044c8d7-9eec-427c-882a-f356992cd19f">
+						<jr:tableHeader style="table 5_TH" height="22" rowSpan="1">
+							<staticText>
+								<reportElement uuid="4d204f81-0b6b-4a53-bd1d-a9ef02d46bed" x="0" y="0" width="90" height="22"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<text><![CDATA[Compromiso]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table 11_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement uuid="9ae5071e-65bc-404e-b721-f50219b57913" x="0" y="0" width="90" height="20"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{com}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="121" uuid="d46b56a9-5aeb-47e9-ada3-ba90ea53c474">
+						<jr:tableHeader style="table 5_TH" height="22" rowSpan="1">
+							<staticText>
+								<reportElement uuid="4d204f81-0b6b-4a53-bd1d-a9ef02d46bed" x="0" y="0" width="121" height="22"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<text><![CDATA[Observacion]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table 11_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement uuid="c0268c66-1201-47f7-8068-88d276fa47db" x="0" y="0" width="121" height="20"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{obs}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+		<band height="11">
+			<componentElement>
+				<reportElement uuid="845cf5a4-8eec-474f-bbef-e73aa8a28d6c" key="table 5" style="table 5" x="0" y="0" width="487" height="10"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="compganado" uuid="a5808b58-0db5-40c3-878d-b3a9cc7faa40">
+						<datasetParameter name="anocomp">
+							<datasetParameterExpression><![CDATA[$P{anomonitoreo}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="idregistro">
+							<datasetParameterExpression><![CDATA[$P{idregistro}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="105" uuid="5ab874b9-be0b-4ad4-9c54-ecd689c3233c">
+						<jr:tableHeader style="table 5_TH" height="41" rowSpan="1">
+							<staticText>
+								<reportElement uuid="d1e99bbe-15e1-4497-9679-12cea12689b7" x="0" y="0" width="105" height="41"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="10"/>
+								</textElement>
+								<text><![CDATA[Indicadores]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table 5_TD" height="20" rowSpan="1">
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement uuid="03b1d255-04a6-48d5-8074-c949221b7305" x="0" y="0" width="105" height="20"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="10"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{indicador}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="38" uuid="337a7dac-6018-4b18-bcca-74b521cad7fb">
+						<jr:tableHeader style="table 5_TH" height="41" rowSpan="1">
+							<staticText>
+								<reportElement uuid="d47246b3-f0d3-48bc-a992-eb7ac494b14e" x="0" y="0" width="38" height="41"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="10"/>
+								</textElement>
+								<text><![CDATA[Línea Base]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table 5_TD" height="20" rowSpan="1">
+							<textField isStretchWithOverflow="true" pattern="###0" isBlankWhenNull="true">
+								<reportElement uuid="cc6643b5-6386-41b3-ab30-c31d2bade291" x="0" y="0" width="38" height="20"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="10"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{lineabase}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="47" uuid="a99530df-89be-4119-894d-e8c11eb40aaa">
+						<jr:tableHeader style="table 5_TH" height="41" rowSpan="1">
+							<staticText>
+								<reportElement uuid="40f8a81c-f888-444c-abae-2a99d6799de9" x="0" y="0" width="47" height="41"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="10"/>
+								</textElement>
+								<text><![CDATA[Compromiso]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table 5_TD" height="20" rowSpan="1">
+							<textField isStretchWithOverflow="true" pattern="###0" isBlankWhenNull="true">
+								<reportElement uuid="def8ebc8-9cb5-43c5-a66c-64d4384b6454" x="0" y="0" width="47" height="20"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="10"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{compromiso}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="55" uuid="51826f99-0529-42c3-8d30-b3fd95abe16c">
+						<jr:tableHeader style="table 5_TH" height="41" rowSpan="1">
+							<staticText>
+								<reportElement uuid="2edcd901-b9d3-442b-b344-59e211a1900d" x="0" y="0" width="55" height="41"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="10"/>
+								</textElement>
+								<text><![CDATA[Ejecutado declarado en RCIA]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table 5_TD" height="20" rowSpan="1">
+							<textField isStretchWithOverflow="true" pattern="###0" isBlankWhenNull="true">
+								<reportElement uuid="497d7770-d4b0-4c5c-b93c-dfeb0d8c9b1b" x="0" y="0" width="55" height="20"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="10"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{ejecutado}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="131" uuid="c8a416a6-db3b-4132-8dd8-56fa90677c13">
+						<jr:tableHeader style="table 5_TH" height="41" rowSpan="1">
+							<staticText>
+								<reportElement uuid="76a06db1-b6d2-4677-a79d-2a1a3bb6331b" x="0" y="0" width="131" height="41"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="10"/>
+								</textElement>
+								<text><![CDATA[Verificación de Documentación]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table 5_TD" height="20" rowSpan="1">
+							<textField isStretchWithOverflow="true">
+								<reportElement uuid="1cd7d20e-e65d-4a99-990a-3637a6c09ca3" x="0" y="0" width="131" height="20"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="10"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{verificacion}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="112" uuid="227e7700-73b2-4448-8f6a-c3e8f27690b6">
+						<jr:tableHeader style="table 5_TH" height="41" rowSpan="1">
+							<staticText>
+								<reportElement uuid="f1b2568d-b03a-4dc6-bc50-fc18d74c3bc3" x="0" y="0" width="112" height="41"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="10"/>
+								</textElement>
+								<text><![CDATA[Observación]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table 5_TD" height="20" rowSpan="1">
+							<textField isStretchWithOverflow="true">
+								<reportElement uuid="e297b508-e7da-4a8a-9033-0dfdd8e8c778" x="0" y="0" width="112" height="20"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="10"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{obs}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+		<band height="35">
+			<staticText>
+				<reportElement uuid="b89cb770-39b8-4876-b7c4-1d0f84139567" x="12" y="0" width="100" height="15"/>
+				<textElement verticalAlignment="Bottom">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Infraestructura]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement uuid="2c68facb-ed83-4048-a28f-1039ec8ab198" key="table 6" style="table 6" x="0" y="15" width="487" height="11"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="compinfgan" uuid="414d7ed0-6bc5-459c-bdf7-9db8de9eabe8">
+						<datasetParameter name="anocomp">
+							<datasetParameterExpression><![CDATA[$P{anomonitoreo}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="idregistro">
+							<datasetParameterExpression><![CDATA[$P{idregistro}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="109" uuid="7bd8a1b1-b39f-4e00-8b07-348a2e4d5974">
+						<jr:tableHeader style="table 6_TH" height="40" rowSpan="1">
+							<staticText>
+								<reportElement uuid="f3256605-4e07-4a43-a13a-3a31ec104ec1" x="0" y="0" width="109" height="39"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="10"/>
+								</textElement>
+								<text><![CDATA[Indicadores]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table 6_TD" height="20" rowSpan="1">
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement uuid="00897eca-a623-4c04-90bf-4229dc7a7b43" x="0" y="0" width="109" height="20"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="10"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{indicador}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="35" uuid="f83f3697-2086-4936-b286-52a76e609557">
+						<jr:tableHeader style="table 6_TH" height="40" rowSpan="1">
+							<staticText>
+								<reportElement uuid="1362db3a-2bd8-476a-845a-864d37af9538" x="0" y="0" width="35" height="39"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="10"/>
+								</textElement>
+								<text><![CDATA[Línea Base]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table 6_TD" height="20" rowSpan="1">
+							<textField pattern="###0" isBlankWhenNull="true">
+								<reportElement uuid="663267e7-c654-44cc-8529-270cbe041f82" x="0" y="0" width="35" height="20"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="10"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{lineabase}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="40" uuid="bdfd18b2-c144-4e32-a548-31e4627040e2">
+						<jr:tableHeader style="table 6_TH" height="40" rowSpan="1">
+							<staticText>
+								<reportElement uuid="87cdbc14-e24c-4565-9359-57f3e0f3ca36" x="0" y="0" width="40" height="39"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="10"/>
+								</textElement>
+								<text><![CDATA[Compromiso]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table 6_TD" height="20" rowSpan="1">
+							<textField pattern="###0" isBlankWhenNull="true">
+								<reportElement uuid="92b1502e-cabe-48c9-965b-84f3230d555d" x="0" y="0" width="40" height="20"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="10"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{compromiso}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="50" uuid="5d783665-09b3-467d-bb67-10d12d13f33d">
+						<jr:tableHeader style="table 6_TH" height="40" rowSpan="1">
+							<staticText>
+								<reportElement uuid="b051b7f3-4620-4b06-a62e-21f9d7552913" x="0" y="0" width="50" height="39"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="10"/>
+								</textElement>
+								<text><![CDATA[Ejecutado Declarado RCIA]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table 6_TD" height="20" rowSpan="1">
+							<textField pattern="###0" isBlankWhenNull="true">
+								<reportElement uuid="e41494c5-759e-433f-af7b-dc235253c862" x="0" y="0" width="50" height="20"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="10"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{ejecutado}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="136" uuid="e35f6949-af46-4335-84d1-a50a8d1722b2">
+						<jr:tableHeader style="table 6_TH" height="40" rowSpan="1">
+							<staticText>
+								<reportElement uuid="5ed48684-a9ab-4f94-b896-72f287840716" x="0" y="0" width="136" height="40"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="10"/>
+								</textElement>
+								<text><![CDATA[Verificación de Documentación]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table 6_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement uuid="4b1f88af-27af-4fcf-a3f7-aca8a1f281f6" x="0" y="0" width="136" height="20"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="10"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{verificacion}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="116" uuid="b4762831-9e68-4adf-b4a3-6d9d69ee0092">
+						<jr:tableHeader style="table 6_TH" height="40" rowSpan="1">
+							<staticText>
+								<reportElement uuid="47a80d69-3fbf-42f7-87ea-bde0c00cffbe" x="0" y="0" width="116" height="39"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="10"/>
+								</textElement>
+								<text><![CDATA[Observación]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table 6_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement uuid="557b1257-bdb4-4af9-8d65-6f5e00716e14" x="0" y="0" width="116" height="20"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="10"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{obs}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<break>
+				<reportElement uuid="4d36db79-2668-4f73-8667-ea74d58759db" x="0" y="32" width="100" height="1"/>
+			</break>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,1415 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Formulario_001_escenarios" language="groovy" columnCount="3" pageWidth="572" pageHeight="752" columnWidth="190" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="108bf87d-52f1-4eea-88ea-32c07084881d">
+	<property name="ireport.zoom" value="1.7715610000000017"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3">
+		<box>
+			<pen lineWidth="1.0" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table 3_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table 3_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table 3_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<subDataset name="escenarioA337" uuid="db3c90bc-a6e2-4cc5-898b-dcc74a9b7807">
+		<parameter name="idregistro" class="java.lang.Integer"/>
+		<queryString>
+			<![CDATA[select idregistro, suprestituir337, (suprestituir337/2) as suprest5, (suprestituir337/2) as supnat5, cantplantcomp337
+from escenariosreforestacion
+where idregistro = $P{idregistro} and tipoescenario = 321 and suprestituir337 > 0]]>
+		</queryString>
+		<field name="idregistro" class="java.lang.Integer"/>
+		<field name="suprestituir337" class="java.lang.Double"/>
+		<field name="suprest5" class="java.lang.Double"/>
+		<field name="supnat5" class="java.lang.Double"/>
+		<field name="cantplantcomp337" class="java.lang.Integer"/>
+	</subDataset>
+	<subDataset name="escenarioA502" uuid="299d20f2-c06c-4011-bfc0-9d6068b666a0">
+		<parameter name="idregistro" class="java.lang.Integer"/>
+		<queryString>
+			<![CDATA[select idregistro, suprestituir502, (suprestituir502/2) as suprest5, (suprestituir502/2) as supnat5, cantplantcomp502
+from escenariosreforestacion
+where idregistro = $P{idregistro} and tipoescenario = 321 and suprestituir502>0]]>
+		</queryString>
+		<field name="idregistro" class="java.lang.Integer"/>
+		<field name="suprestituir502" class="java.lang.Double"/>
+		<field name="suprest5" class="java.lang.Double"/>
+		<field name="supnat5" class="java.lang.Double"/>
+		<field name="cantplantcomp502" class="java.lang.Integer"/>
+	</subDataset>
+	<subDataset name="escenarioAfuera" uuid="286012ae-b64a-4772-a51d-e9331c6e2184">
+		<parameter name="idregistro" class="java.lang.Integer"/>
+		<queryString>
+			<![CDATA[select idregistro, suprestituirfuera, (suprestituirfuera/2) as suprest5, (suprestituirfuera/2) as supnat5, cantplantfuera
+from escenariosreforestacion
+where idregistro = $P{idregistro} and tipoescenario = 321 and suprestituirfuera > 0]]>
+		</queryString>
+		<field name="idregistro" class="java.lang.Integer"/>
+		<field name="suprestituirfuera" class="java.lang.Double"/>
+		<field name="suprest5" class="java.lang.Double"/>
+		<field name="supnat5" class="java.lang.Double"/>
+		<field name="cantplantfuera" class="java.lang.Integer"/>
+	</subDataset>
+	<subDataset name="escenarioB1337" uuid="97bdde37-3357-474f-8bce-e04f0f8c0355">
+		<parameter name="idregistro" class="java.lang.Integer"/>
+		<queryString>
+			<![CDATA[select idregistro, suprestituir337 as suprest, cantplantcomp337 as indcomp
+from escenariosreforestacion
+where idregistro = $P{idregistro} and tipoescenario = 322 and suprestituir337 > 0]]>
+		</queryString>
+		<field name="idregistro" class="java.lang.Integer"/>
+		<field name="suprest" class="java.lang.Double"/>
+		<field name="indcomp" class="java.lang.Integer"/>
+	</subDataset>
+	<subDataset name="escenarioB1502" uuid="97bdde37-3357-474f-8bce-e04f0f8c0355">
+		<parameter name="idregistro" class="java.lang.Integer"/>
+		<queryString>
+			<![CDATA[select idregistro, suprestituir502 as suprest, cantplantcomp502 as indcomp
+from escenariosreforestacion
+where idregistro = $P{idregistro} and tipoescenario = 322 and suprestituir502 > 0]]>
+		</queryString>
+		<field name="idregistro" class="java.lang.Integer"/>
+		<field name="suprest" class="java.lang.Double"/>
+		<field name="indcomp" class="java.lang.Integer"/>
+	</subDataset>
+	<subDataset name="escenarioB1fuera" uuid="97bdde37-3357-474f-8bce-e04f0f8c0355">
+		<parameter name="idregistro" class="java.lang.Integer"/>
+		<queryString>
+			<![CDATA[select idregistro, suprestituirfuera as suprest, cantplantfuera as indcomp
+from escenariosreforestacion
+where idregistro = $P{idregistro} and tipoescenario = 322 and suprestituirfuera > 0]]>
+		</queryString>
+		<field name="idregistro" class="java.lang.Integer"/>
+		<field name="suprest" class="java.lang.Double"/>
+		<field name="indcomp" class="java.lang.Integer"/>
+	</subDataset>
+	<subDataset name="escenarioB2337" uuid="97bdde37-3357-474f-8bce-e04f0f8c0355">
+		<parameter name="idregistro" class="java.lang.Integer"/>
+		<queryString>
+			<![CDATA[select idregistro, supbarbechoconservar337 as supbarcon, suprestituir337 as suprest, cantplantcomp337 as indcomp
+from escenariosreforestacion
+where idregistro = $P{idregistro} and tipoescenario = 342 and (supbarbechoconservar337 > 0 or supbarbechoconservar337 > 0)]]>
+		</queryString>
+		<field name="idregistro" class="java.lang.Integer"/>
+		<field name="supbarcon" class="java.lang.Double"/>
+		<field name="suprest" class="java.lang.Double"/>
+		<field name="indcomp" class="java.lang.Integer"/>
+	</subDataset>
+	<subDataset name="escenarioB2502" uuid="97bdde37-3357-474f-8bce-e04f0f8c0355">
+		<parameter name="idregistro" class="java.lang.Integer"/>
+		<queryString>
+			<![CDATA[select idregistro, supbarbechoconservar502 as supbarcon, suprestituir502 as suprest, cantplantcomp502 as indcomp
+from escenariosreforestacion
+where idregistro = $P{idregistro} and tipoescenario = 342 and (supbarbechoconservar502 > 0 or suprestituir502 > 0)]]>
+		</queryString>
+		<field name="idregistro" class="java.lang.Integer"/>
+		<field name="supbarcon" class="java.lang.Double"/>
+		<field name="suprest" class="java.lang.Double"/>
+		<field name="indcomp" class="java.lang.Integer"/>
+	</subDataset>
+	<subDataset name="escenarioB2fuera" uuid="97bdde37-3357-474f-8bce-e04f0f8c0355">
+		<parameter name="idregistro" class="java.lang.Integer"/>
+		<queryString>
+			<![CDATA[select idregistro, supbarbechoconservarfuera as supbarcon, suprestituirfuera as suprest, cantplantfuera as indcomp
+from escenariosreforestacion
+where idregistro = $P{idregistro} and tipoescenario = 342 and (supbarbechoconservarfuera > 0 or suprestituirfuera > 0)]]>
+		</queryString>
+		<field name="idregistro" class="java.lang.Integer"/>
+		<field name="supbarcon" class="java.lang.Double"/>
+		<field name="suprest" class="java.lang.Double"/>
+		<field name="indcomp" class="java.lang.Integer"/>
+	</subDataset>
+	<subDataset name="escenarioC337" uuid="97bdde37-3357-474f-8bce-e04f0f8c0355">
+		<parameter name="idregistro" class="java.lang.Integer"/>
+		<queryString>
+			<![CDATA[select idregistro, suprestituir337 as suprest, cantplantexistentes337 as indexis,cantplantcomp337 as indcomp
+from escenariosreforestacion
+where idregistro = $P{idregistro} and tipoescenario = 323 and suprestituir337 > 0]]>
+		</queryString>
+		<field name="idregistro" class="java.lang.Integer"/>
+		<field name="suprest" class="java.lang.Double"/>
+		<field name="indexis" class="java.lang.Integer"/>
+		<field name="indcomp" class="java.lang.Integer"/>
+	</subDataset>
+	<subDataset name="escenarioC502" uuid="97bdde37-3357-474f-8bce-e04f0f8c0355">
+		<parameter name="idregistro" class="java.lang.Integer"/>
+		<queryString>
+			<![CDATA[select idregistro, suprestituir502 as suprest, cantplantexistentes502 as indexis,cantplantcomp502 as indcomp
+from escenariosreforestacion
+where idregistro = $P{idregistro} and tipoescenario = 323 and suprestituir502 > 0]]>
+		</queryString>
+		<field name="idregistro" class="java.lang.Integer"/>
+		<field name="suprest" class="java.lang.Double"/>
+		<field name="indexis" class="java.lang.Integer"/>
+		<field name="indcomp" class="java.lang.Integer"/>
+	</subDataset>
+	<subDataset name="escenarioCfuera" uuid="97bdde37-3357-474f-8bce-e04f0f8c0355">
+		<parameter name="idregistro" class="java.lang.Integer"/>
+		<queryString>
+			<![CDATA[select idregistro, suprestituirfuera as suprest, cantplantexistentesfuera as indexis,cantplantfuera as indcomp
+from escenariosreforestacion
+where idregistro = $P{idregistro} and tipoescenario = 323 and suprestituirfuera > 0]]>
+		</queryString>
+		<field name="idregistro" class="java.lang.Integer"/>
+		<field name="suprest" class="java.lang.Double"/>
+		<field name="indexis" class="java.lang.Integer"/>
+		<field name="indcomp" class="java.lang.Integer"/>
+	</subDataset>
+	<parameter name="idpredio" class="java.lang.Integer"/>
+	<queryString>
+		<![CDATA[select idregistro, suprestituir337, (suprestituir337/2) as suprest5, (suprestituir337/2) as supnat5, cantplantcomp337
+from escenariosreforestacion
+where idregistro = $P{idpredio} limit 1]]>
+	</queryString>
+	<field name="idregistro" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="38" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="384987f8-b6b0-4e38-ba4e-a329351418f1" x="17" y="0" width="276" height="13"/>
+				<textElement verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[A) ESCENARIO ÀREA SIN COBERTURA BOSCOSA]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement uuid="84ae74cc-d588-4fad-b84c-c991eb503202" key="table" style="table" x="0" y="25" width="190" height="11"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="escenarioA337" uuid="b66085fb-1aa2-4b66-bfd7-c6f2b9c0d776">
+						<datasetParameter name="idregistro">
+							<datasetParameterExpression><![CDATA[$F{idregistro}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="54" uuid="e60b4af1-5d43-4752-9ac0-5ce3d6831380">
+						<jr:tableHeader style="table_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement uuid="cf5f399d-a796-430d-af63-1fbabc7cc643" x="0" y="0" width="54" height="30"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Sup. Rest TPFP (10%)]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table_TD" height="20" rowSpan="1">
+							<textField pattern="###0.0000">
+								<reportElement uuid="09750378-2708-40ba-bda7-796dd8771c65" x="0" y="0" width="54" height="20"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{suprestituir337}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="48" uuid="e3b4f118-7f73-45d4-b0b9-6ef15e06aff3">
+						<jr:tableHeader style="table_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement uuid="cf5f399d-a796-430d-af63-1fbabc7cc643" x="0" y="0" width="48" height="30"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Sup. Rest. (5%)]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table_TD" height="20" rowSpan="1">
+							<textField pattern="###0.0000">
+								<reportElement uuid="6ac9928a-383f-4785-9bd7-efc61540482a" x="0" y="0" width="48" height="20"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{suprest5}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="49" uuid="1967e94d-6f50-433f-a9c5-8adb2bc1b189">
+						<jr:tableHeader style="table_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement uuid="cf5f399d-a796-430d-af63-1fbabc7cc643" x="0" y="0" width="49" height="30"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Sup. Reg. Nat (5%)]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table_TD" height="20" rowSpan="1">
+							<textField pattern="###0.0000">
+								<reportElement uuid="c602f23d-bae9-425f-87bb-c17ddc96e11a" x="0" y="0" width="49" height="20"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{supnat5}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="39" uuid="c0b5105f-ec4c-4dcd-8a8e-9a0c7f6803b7">
+						<jr:tableHeader style="table_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement uuid="1ce26c5c-b6e5-4de4-8c2c-f44036557311" x="0" y="0" width="39" height="30"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Cant. Ind. Compr.]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement uuid="74c1bbf6-7d8a-4368-828f-17a5bbf2f48d" x="0" y="0" width="39" height="20"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{cantplantcomp337}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<componentElement>
+				<reportElement uuid="84ae74cc-d588-4fad-b84c-c991eb503202" key="table" style="table" x="190" y="25" width="190" height="11"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="escenarioA502" uuid="b66085fb-1aa2-4b66-bfd7-c6f2b9c0d776">
+						<datasetParameter name="idregistro">
+							<datasetParameterExpression><![CDATA[$F{idregistro}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="54" uuid="e60b4af1-5d43-4752-9ac0-5ce3d6831380">
+						<jr:tableHeader style="table_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement uuid="cf5f399d-a796-430d-af63-1fbabc7cc643" x="0" y="0" width="54" height="30"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Sup. Rest TPFP (10%)]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table_TD" height="20" rowSpan="1">
+							<textField pattern="###0.0000">
+								<reportElement uuid="09750378-2708-40ba-bda7-796dd8771c65" x="0" y="0" width="54" height="20"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{suprestituir502}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="48" uuid="e3b4f118-7f73-45d4-b0b9-6ef15e06aff3">
+						<jr:tableHeader style="table_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement uuid="cf5f399d-a796-430d-af63-1fbabc7cc643" x="0" y="0" width="48" height="30"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Sup. Rest. (5%)]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table_TD" height="20" rowSpan="1">
+							<textField pattern="###0.0000">
+								<reportElement uuid="6ac9928a-383f-4785-9bd7-efc61540482a" x="0" y="0" width="48" height="20"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{suprest5}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="49" uuid="1967e94d-6f50-433f-a9c5-8adb2bc1b189">
+						<jr:tableHeader style="table_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement uuid="cf5f399d-a796-430d-af63-1fbabc7cc643" x="0" y="0" width="49" height="30"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Sup. Reg. Nat (5%)]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table_TD" height="20" rowSpan="1">
+							<textField pattern="###0.0000">
+								<reportElement uuid="c602f23d-bae9-425f-87bb-c17ddc96e11a" x="0" y="0" width="49" height="20"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{supnat5}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="39" uuid="c0b5105f-ec4c-4dcd-8a8e-9a0c7f6803b7">
+						<jr:tableHeader style="table_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement uuid="1ce26c5c-b6e5-4de4-8c2c-f44036557311" x="0" y="0" width="39" height="30"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Cant. Ind. Compr.]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement uuid="74c1bbf6-7d8a-4368-828f-17a5bbf2f48d" x="0" y="0" width="39" height="20"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{cantplantcomp502}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<componentElement>
+				<reportElement uuid="4e148eff-caaf-48a4-850f-72806b74e769" key="table 3" style="table 3" x="0" y="14" width="190" height="11"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="escenarioA337" uuid="8deeb540-ce21-4b9f-86a5-c575ba4cf609">
+						<datasetParameter name="idregistro">
+							<datasetParameterExpression><![CDATA[$F{idregistro}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="190" uuid="f7e54ab0-0490-46b6-83ff-09e7ce9c618e">
+						<jr:detailCell style="table 3_TD" height="11" rowSpan="1">
+							<staticText>
+								<reportElement uuid="c6d1ecdb-09f1-4ef6-9f2a-82801a60320a" x="0" y="0" width="190" height="11"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[En Área Deforestada Ilegal]]></text>
+							</staticText>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<componentElement>
+				<reportElement uuid="4e148eff-caaf-48a4-850f-72806b74e769" key="table 3" style="table 3" x="190" y="14" width="190" height="11"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="escenarioA502" uuid="8deeb540-ce21-4b9f-86a5-c575ba4cf609">
+						<datasetParameter name="idregistro">
+							<datasetParameterExpression><![CDATA[$F{idregistro}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="190" uuid="f7e54ab0-0490-46b6-83ff-09e7ce9c618e">
+						<jr:detailCell style="table 3_TD" height="11" rowSpan="1">
+							<staticText>
+								<reportElement uuid="c6d1ecdb-09f1-4ef6-9f2a-82801a60320a" x="0" y="0" width="190" height="11"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[En Área con PAS]]></text>
+							</staticText>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<componentElement>
+				<reportElement uuid="4e148eff-caaf-48a4-850f-72806b74e769" key="table 3" style="table 3" x="380" y="14" width="190" height="11"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="escenarioAfuera" uuid="8deeb540-ce21-4b9f-86a5-c575ba4cf609">
+						<datasetParameter name="idregistro">
+							<datasetParameterExpression><![CDATA[$F{idregistro}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="190" uuid="f7e54ab0-0490-46b6-83ff-09e7ce9c618e">
+						<jr:detailCell style="table 3_TD" height="11" rowSpan="1">
+							<staticText>
+								<reportElement uuid="c6d1ecdb-09f1-4ef6-9f2a-82801a60320a" x="0" y="0" width="190" height="11"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Fuera del desmonte Ilegal (Antes 31-12-2011)]]></text>
+							</staticText>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<componentElement>
+				<reportElement uuid="84ae74cc-d588-4fad-b84c-c991eb503202" key="table" style="table" x="380" y="25" width="190" height="11"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="escenarioAfuera" uuid="b66085fb-1aa2-4b66-bfd7-c6f2b9c0d776">
+						<datasetParameter name="idregistro">
+							<datasetParameterExpression><![CDATA[$F{idregistro}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="54" uuid="e60b4af1-5d43-4752-9ac0-5ce3d6831380">
+						<jr:tableHeader style="table_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement uuid="cf5f399d-a796-430d-af63-1fbabc7cc643" x="0" y="0" width="54" height="30"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Sup. Rest TPFP (10%)]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table_TD" height="20" rowSpan="1">
+							<textField pattern="###0.0000">
+								<reportElement uuid="09750378-2708-40ba-bda7-796dd8771c65" x="0" y="0" width="54" height="20"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{suprestituirfuera}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="48" uuid="e3b4f118-7f73-45d4-b0b9-6ef15e06aff3">
+						<jr:tableHeader style="table_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement uuid="cf5f399d-a796-430d-af63-1fbabc7cc643" x="0" y="0" width="48" height="30"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Sup. Rest. (5%)]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table_TD" height="20" rowSpan="1">
+							<textField pattern="###0.0000">
+								<reportElement uuid="6ac9928a-383f-4785-9bd7-efc61540482a" x="0" y="0" width="48" height="20"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{suprest5}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="49" uuid="1967e94d-6f50-433f-a9c5-8adb2bc1b189">
+						<jr:tableHeader style="table_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement uuid="cf5f399d-a796-430d-af63-1fbabc7cc643" x="0" y="0" width="49" height="30"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Sup. Reg. Nat (5%)]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table_TD" height="20" rowSpan="1">
+							<textField pattern="###0.0000">
+								<reportElement uuid="c602f23d-bae9-425f-87bb-c17ddc96e11a" x="0" y="0" width="49" height="20"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{supnat5}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="39" uuid="c0b5105f-ec4c-4dcd-8a8e-9a0c7f6803b7">
+						<jr:tableHeader style="table_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement uuid="1ce26c5c-b6e5-4de4-8c2c-f44036557311" x="0" y="0" width="39" height="30"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Cant. Ind. Compr.]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement uuid="74c1bbf6-7d8a-4368-828f-17a5bbf2f48d" x="0" y="0" width="39" height="20"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{cantplantfuera}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+		<band height="38">
+			<staticText>
+				<reportElement uuid="384987f8-b6b0-4e38-ba4e-a329351418f1" x="17" y="0" width="462" height="13"/>
+				<textElement verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[B.1) ESCENARIO ÀREA CON BARBECHO (RESTITUCION DENTRO DEL BARBECHO DECLARADO]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement uuid="4e148eff-caaf-48a4-850f-72806b74e769" key="table 3" style="table 3" x="0" y="13" width="190" height="11"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="escenarioB1337" uuid="8deeb540-ce21-4b9f-86a5-c575ba4cf609">
+						<datasetParameter name="idregistro">
+							<datasetParameterExpression><![CDATA[$F{idregistro}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="190" uuid="f7e54ab0-0490-46b6-83ff-09e7ce9c618e">
+						<jr:detailCell style="table 3_TD" height="11" rowSpan="1">
+							<staticText>
+								<reportElement uuid="c6d1ecdb-09f1-4ef6-9f2a-82801a60320a" x="0" y="0" width="190" height="11"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[En Área Deforestada Ilegal]]></text>
+							</staticText>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<componentElement>
+				<reportElement uuid="4e148eff-caaf-48a4-850f-72806b74e769" key="table 3" style="table 3" x="190" y="13" width="190" height="11"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="escenarioB1502" uuid="8deeb540-ce21-4b9f-86a5-c575ba4cf609">
+						<datasetParameter name="idregistro">
+							<datasetParameterExpression><![CDATA[$F{idregistro}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="190" uuid="f7e54ab0-0490-46b6-83ff-09e7ce9c618e">
+						<jr:detailCell style="table 3_TD" height="11" rowSpan="1">
+							<staticText>
+								<reportElement uuid="c6d1ecdb-09f1-4ef6-9f2a-82801a60320a" x="0" y="0" width="190" height="11"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[En Área con PAS]]></text>
+							</staticText>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<componentElement>
+				<reportElement uuid="4e148eff-caaf-48a4-850f-72806b74e769" key="table 3" style="table 3" x="380" y="13" width="190" height="11"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="escenarioB1fuera" uuid="8deeb540-ce21-4b9f-86a5-c575ba4cf609">
+						<datasetParameter name="idregistro">
+							<datasetParameterExpression><![CDATA[$F{idregistro}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="190" uuid="f7e54ab0-0490-46b6-83ff-09e7ce9c618e">
+						<jr:detailCell style="table 3_TD" height="11" rowSpan="1">
+							<staticText>
+								<reportElement uuid="c6d1ecdb-09f1-4ef6-9f2a-82801a60320a" x="0" y="0" width="190" height="11"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Fuera del desmonte Ilegal (Antes 31-12-2011)]]></text>
+							</staticText>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<componentElement>
+				<reportElement uuid="84ae74cc-d588-4fad-b84c-c991eb503202" key="table" style="table" x="0" y="24" width="190" height="11"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="escenarioB1337" uuid="b66085fb-1aa2-4b66-bfd7-c6f2b9c0d776">
+						<datasetParameter name="idregistro">
+							<datasetParameterExpression><![CDATA[$F{idregistro}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="102" uuid="e60b4af1-5d43-4752-9ac0-5ce3d6831380">
+						<jr:tableHeader style="table_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement uuid="cf5f399d-a796-430d-af63-1fbabc7cc643" x="0" y="0" width="102" height="30"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Sup. Rest TPFP (10%)]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table_TD" height="20" rowSpan="1">
+							<textField pattern="###0.0000">
+								<reportElement uuid="09750378-2708-40ba-bda7-796dd8771c65" x="0" y="0" width="102" height="20"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{suprest}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="88" uuid="c0b5105f-ec4c-4dcd-8a8e-9a0c7f6803b7">
+						<jr:tableHeader style="table_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement uuid="1ce26c5c-b6e5-4de4-8c2c-f44036557311" x="0" y="0" width="88" height="30"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Cant. Ind. Compr.]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement uuid="74c1bbf6-7d8a-4368-828f-17a5bbf2f48d" x="0" y="0" width="88" height="20"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{indcomp}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<componentElement>
+				<reportElement uuid="84ae74cc-d588-4fad-b84c-c991eb503202" key="table" style="table" x="190" y="24" width="190" height="11"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="escenarioB1502" uuid="b66085fb-1aa2-4b66-bfd7-c6f2b9c0d776">
+						<datasetParameter name="idregistro">
+							<datasetParameterExpression><![CDATA[$F{idregistro}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="102" uuid="e60b4af1-5d43-4752-9ac0-5ce3d6831380">
+						<jr:tableHeader style="table_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement uuid="cf5f399d-a796-430d-af63-1fbabc7cc643" x="0" y="0" width="102" height="30"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Sup. Rest TPFP (10%)]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table_TD" height="20" rowSpan="1">
+							<textField pattern="###0.0000">
+								<reportElement uuid="09750378-2708-40ba-bda7-796dd8771c65" x="0" y="0" width="102" height="20"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{suprest}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="88" uuid="c0b5105f-ec4c-4dcd-8a8e-9a0c7f6803b7">
+						<jr:tableHeader style="table_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement uuid="1ce26c5c-b6e5-4de4-8c2c-f44036557311" x="0" y="0" width="88" height="30"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Cant. Ind. Compr.]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement uuid="74c1bbf6-7d8a-4368-828f-17a5bbf2f48d" x="0" y="0" width="88" height="20"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{indcomp}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<componentElement>
+				<reportElement uuid="84ae74cc-d588-4fad-b84c-c991eb503202" key="table" style="table" x="380" y="24" width="190" height="11"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="escenarioB1fuera" uuid="b66085fb-1aa2-4b66-bfd7-c6f2b9c0d776">
+						<datasetParameter name="idregistro">
+							<datasetParameterExpression><![CDATA[$F{idregistro}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="102" uuid="e60b4af1-5d43-4752-9ac0-5ce3d6831380">
+						<jr:tableHeader style="table_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement uuid="cf5f399d-a796-430d-af63-1fbabc7cc643" x="0" y="0" width="102" height="30"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Sup. Rest TPFP (10%)]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table_TD" height="20" rowSpan="1">
+							<textField pattern="###0.0000">
+								<reportElement uuid="09750378-2708-40ba-bda7-796dd8771c65" x="0" y="0" width="102" height="20"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{suprest}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="88" uuid="c0b5105f-ec4c-4dcd-8a8e-9a0c7f6803b7">
+						<jr:tableHeader style="table_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement uuid="1ce26c5c-b6e5-4de4-8c2c-f44036557311" x="0" y="0" width="88" height="30"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Cant. Ind. Compr.]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement uuid="74c1bbf6-7d8a-4368-828f-17a5bbf2f48d" x="0" y="0" width="88" height="20"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{indcomp}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+		<band height="37">
+			<staticText>
+				<reportElement uuid="384987f8-b6b0-4e38-ba4e-a329351418f1" x="17" y="0" width="462" height="13"/>
+				<textElement verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[B.2) ESCENARIO ÀREA CON BARBECHO (RESTITUCION FUERA DEL BARBECHO DECLARADO]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement uuid="4e148eff-caaf-48a4-850f-72806b74e769" key="table 3" style="table 3" x="0" y="13" width="190" height="11"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="escenarioB2337" uuid="8deeb540-ce21-4b9f-86a5-c575ba4cf609">
+						<datasetParameter name="idregistro">
+							<datasetParameterExpression><![CDATA[$F{idregistro}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="190" uuid="f7e54ab0-0490-46b6-83ff-09e7ce9c618e">
+						<jr:detailCell style="table 3_TD" height="11" rowSpan="1">
+							<staticText>
+								<reportElement uuid="c6d1ecdb-09f1-4ef6-9f2a-82801a60320a" x="0" y="0" width="190" height="11"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[En Área Deforestada Ilegal]]></text>
+							</staticText>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<componentElement>
+				<reportElement uuid="4e148eff-caaf-48a4-850f-72806b74e769" key="table 3" style="table 3" x="190" y="13" width="190" height="11"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="escenarioB2502" uuid="8deeb540-ce21-4b9f-86a5-c575ba4cf609">
+						<datasetParameter name="idregistro">
+							<datasetParameterExpression><![CDATA[$F{idregistro}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="190" uuid="f7e54ab0-0490-46b6-83ff-09e7ce9c618e">
+						<jr:detailCell style="table 3_TD" height="11" rowSpan="1">
+							<staticText>
+								<reportElement uuid="c6d1ecdb-09f1-4ef6-9f2a-82801a60320a" x="0" y="0" width="190" height="11"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[En Área con PAS]]></text>
+							</staticText>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<componentElement>
+				<reportElement uuid="4e148eff-caaf-48a4-850f-72806b74e769" key="table 3" style="table 3" x="380" y="13" width="190" height="11"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="escenarioB2fuera" uuid="8deeb540-ce21-4b9f-86a5-c575ba4cf609">
+						<datasetParameter name="idregistro">
+							<datasetParameterExpression><![CDATA[$F{idregistro}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="190" uuid="f7e54ab0-0490-46b6-83ff-09e7ce9c618e">
+						<jr:detailCell style="table 3_TD" height="11" rowSpan="1">
+							<staticText>
+								<reportElement uuid="c6d1ecdb-09f1-4ef6-9f2a-82801a60320a" x="0" y="0" width="190" height="11"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Fuera del desmonte Ilegal (Antes 31-12-2011)]]></text>
+							</staticText>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<componentElement>
+				<reportElement uuid="84ae74cc-d588-4fad-b84c-c991eb503202" key="table" style="table" x="0" y="24" width="190" height="11"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="escenarioB2337" uuid="b66085fb-1aa2-4b66-bfd7-c6f2b9c0d776">
+						<datasetParameter name="idregistro">
+							<datasetParameterExpression><![CDATA[$F{idregistro}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="79" uuid="e60b4af1-5d43-4752-9ac0-5ce3d6831380">
+						<jr:tableHeader style="table_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement uuid="cf5f399d-a796-430d-af63-1fbabc7cc643" x="0" y="0" width="79" height="30"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Sup. Barbecho TPFP a Conservar]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table_TD" height="20" rowSpan="1">
+							<textField pattern="###0.0000">
+								<reportElement uuid="09750378-2708-40ba-bda7-796dd8771c65" x="0" y="0" width="79" height="20"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{supbarcon}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="62" uuid="e3b4f118-7f73-45d4-b0b9-6ef15e06aff3">
+						<jr:tableHeader style="table_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement uuid="cf5f399d-a796-430d-af63-1fbabc7cc643" x="0" y="0" width="62" height="30"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Sup. Restituir]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table_TD" height="20" rowSpan="1">
+							<textField pattern="###0.0000">
+								<reportElement uuid="6ac9928a-383f-4785-9bd7-efc61540482a" x="0" y="0" width="62" height="20"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{suprest}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="49" uuid="c0b5105f-ec4c-4dcd-8a8e-9a0c7f6803b7">
+						<jr:tableHeader style="table_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement uuid="1ce26c5c-b6e5-4de4-8c2c-f44036557311" x="0" y="0" width="48" height="30"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Cant. Ind. Compr.]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement uuid="74c1bbf6-7d8a-4368-828f-17a5bbf2f48d" x="0" y="0" width="48" height="20"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{indcomp}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<componentElement>
+				<reportElement uuid="84ae74cc-d588-4fad-b84c-c991eb503202" key="table" style="table" x="190" y="24" width="190" height="11"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="escenarioB2502" uuid="b66085fb-1aa2-4b66-bfd7-c6f2b9c0d776">
+						<datasetParameter name="idregistro">
+							<datasetParameterExpression><![CDATA[$F{idregistro}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="79" uuid="e60b4af1-5d43-4752-9ac0-5ce3d6831380">
+						<jr:tableHeader style="table_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement uuid="cf5f399d-a796-430d-af63-1fbabc7cc643" x="0" y="0" width="79" height="30"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Sup. Barbecho TPFP a Conservar]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table_TD" height="20" rowSpan="1">
+							<textField pattern="###0.0000">
+								<reportElement uuid="09750378-2708-40ba-bda7-796dd8771c65" x="0" y="0" width="79" height="20"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{supbarcon}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="62" uuid="e3b4f118-7f73-45d4-b0b9-6ef15e06aff3">
+						<jr:tableHeader style="table_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement uuid="cf5f399d-a796-430d-af63-1fbabc7cc643" x="0" y="0" width="62" height="30"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Sup. Restituir]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table_TD" height="20" rowSpan="1">
+							<textField pattern="###0.0000">
+								<reportElement uuid="6ac9928a-383f-4785-9bd7-efc61540482a" x="0" y="0" width="62" height="20"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{suprest}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="49" uuid="c0b5105f-ec4c-4dcd-8a8e-9a0c7f6803b7">
+						<jr:tableHeader style="table_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement uuid="1ce26c5c-b6e5-4de4-8c2c-f44036557311" x="0" y="0" width="48" height="30"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Cant. Ind. Compr.]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement uuid="74c1bbf6-7d8a-4368-828f-17a5bbf2f48d" x="0" y="0" width="48" height="20"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{indcomp}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<componentElement>
+				<reportElement uuid="84ae74cc-d588-4fad-b84c-c991eb503202" key="table" style="table" x="380" y="24" width="190" height="11"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="escenarioB2fuera" uuid="b66085fb-1aa2-4b66-bfd7-c6f2b9c0d776">
+						<datasetParameter name="idregistro">
+							<datasetParameterExpression><![CDATA[$F{idregistro}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="79" uuid="e60b4af1-5d43-4752-9ac0-5ce3d6831380">
+						<jr:tableHeader style="table_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement uuid="cf5f399d-a796-430d-af63-1fbabc7cc643" x="0" y="0" width="79" height="30"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Sup. Barbecho TPFP a Conservar]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table_TD" height="20" rowSpan="1">
+							<textField pattern="###0.0000">
+								<reportElement uuid="09750378-2708-40ba-bda7-796dd8771c65" x="0" y="0" width="79" height="20"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{supbarcon}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="62" uuid="e3b4f118-7f73-45d4-b0b9-6ef15e06aff3">
+						<jr:tableHeader style="table_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement uuid="cf5f399d-a796-430d-af63-1fbabc7cc643" x="0" y="0" width="62" height="30"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Sup. Restituir]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table_TD" height="20" rowSpan="1">
+							<textField pattern="###0.0000">
+								<reportElement uuid="6ac9928a-383f-4785-9bd7-efc61540482a" x="0" y="0" width="62" height="20"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{suprest}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="49" uuid="c0b5105f-ec4c-4dcd-8a8e-9a0c7f6803b7">
+						<jr:tableHeader style="table_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement uuid="1ce26c5c-b6e5-4de4-8c2c-f44036557311" x="0" y="0" width="48" height="30"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Cant. Ind. Compr.]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement uuid="74c1bbf6-7d8a-4368-828f-17a5bbf2f48d" x="0" y="0" width="48" height="20"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{indcomp}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+		<band height="40">
+			<staticText>
+				<reportElement uuid="384987f8-b6b0-4e38-ba4e-a329351418f1" x="17" y="0" width="462" height="13"/>
+				<textElement verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[C) ESCENARIO SISTEMA SILVOPASTORIL]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement uuid="4e148eff-caaf-48a4-850f-72806b74e769" key="table 3" style="table 3" x="0" y="13" width="190" height="11"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="escenarioC337" uuid="8deeb540-ce21-4b9f-86a5-c575ba4cf609">
+						<datasetParameter name="idregistro">
+							<datasetParameterExpression><![CDATA[$F{idregistro}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="190" uuid="f7e54ab0-0490-46b6-83ff-09e7ce9c618e">
+						<jr:detailCell style="table 3_TD" height="11" rowSpan="1">
+							<staticText>
+								<reportElement uuid="c6d1ecdb-09f1-4ef6-9f2a-82801a60320a" x="0" y="0" width="190" height="11"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[En Área Deforestada Ilegal]]></text>
+							</staticText>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<componentElement>
+				<reportElement uuid="4e148eff-caaf-48a4-850f-72806b74e769" key="table 3" style="table 3" x="190" y="13" width="190" height="11"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="escenarioC502" uuid="8deeb540-ce21-4b9f-86a5-c575ba4cf609">
+						<datasetParameter name="idregistro">
+							<datasetParameterExpression><![CDATA[$F{idregistro}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="190" uuid="f7e54ab0-0490-46b6-83ff-09e7ce9c618e">
+						<jr:detailCell style="table 3_TD" height="11" rowSpan="1">
+							<staticText>
+								<reportElement uuid="c6d1ecdb-09f1-4ef6-9f2a-82801a60320a" x="0" y="0" width="190" height="11"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[En Área con PAS]]></text>
+							</staticText>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<componentElement>
+				<reportElement uuid="4e148eff-caaf-48a4-850f-72806b74e769" key="table 3" style="table 3" x="380" y="13" width="190" height="11"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="escenarioCfuera" uuid="8deeb540-ce21-4b9f-86a5-c575ba4cf609">
+						<datasetParameter name="idregistro">
+							<datasetParameterExpression><![CDATA[$F{idregistro}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="190" uuid="f7e54ab0-0490-46b6-83ff-09e7ce9c618e">
+						<jr:detailCell style="table 3_TD" height="11" rowSpan="1">
+							<staticText>
+								<reportElement uuid="c6d1ecdb-09f1-4ef6-9f2a-82801a60320a" x="0" y="0" width="190" height="11"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Fuera del desmonte Ilegal (Antes 31-12-2011)]]></text>
+							</staticText>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<componentElement>
+				<reportElement uuid="84ae74cc-d588-4fad-b84c-c991eb503202" key="table" style="table" x="0" y="24" width="190" height="11"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="escenarioC337" uuid="b66085fb-1aa2-4b66-bfd7-c6f2b9c0d776">
+						<datasetParameter name="idregistro">
+							<datasetParameterExpression><![CDATA[$F{idregistro}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="79" uuid="e60b4af1-5d43-4752-9ac0-5ce3d6831380">
+						<jr:tableHeader style="table_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement uuid="cf5f399d-a796-430d-af63-1fbabc7cc643" x="0" y="0" width="79" height="30"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Sup. Restituir TPFP. Ha]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table_TD" height="20" rowSpan="1">
+							<textField pattern="###0.0000">
+								<reportElement uuid="09750378-2708-40ba-bda7-796dd8771c65" x="0" y="0" width="79" height="20"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{suprest}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="62" uuid="e3b4f118-7f73-45d4-b0b9-6ef15e06aff3">
+						<jr:tableHeader style="table_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement uuid="cf5f399d-a796-430d-af63-1fbabc7cc643" x="0" y="0" width="62" height="30"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Cant. Arboles Existentes]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table_TD" height="20" rowSpan="1">
+							<textField pattern="###0.0000">
+								<reportElement uuid="6ac9928a-383f-4785-9bd7-efc61540482a" x="0" y="0" width="62" height="20"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{indexis}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="49" uuid="c0b5105f-ec4c-4dcd-8a8e-9a0c7f6803b7">
+						<jr:tableHeader style="table_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement uuid="1ce26c5c-b6e5-4de4-8c2c-f44036557311" x="0" y="0" width="48" height="30"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Cant. Ind. Compr.]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement uuid="74c1bbf6-7d8a-4368-828f-17a5bbf2f48d" x="0" y="0" width="48" height="20"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{indcomp}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<componentElement>
+				<reportElement uuid="84ae74cc-d588-4fad-b84c-c991eb503202" key="table" style="table" x="190" y="24" width="190" height="11"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="escenarioC502" uuid="b66085fb-1aa2-4b66-bfd7-c6f2b9c0d776">
+						<datasetParameter name="idregistro">
+							<datasetParameterExpression><![CDATA[$F{idregistro}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="79" uuid="e60b4af1-5d43-4752-9ac0-5ce3d6831380">
+						<jr:tableHeader style="table_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement uuid="cf5f399d-a796-430d-af63-1fbabc7cc643" x="0" y="0" width="79" height="30"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Sup. Restituir TPFP. Ha]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table_TD" height="20" rowSpan="1">
+							<textField pattern="###0.0000">
+								<reportElement uuid="09750378-2708-40ba-bda7-796dd8771c65" x="0" y="0" width="79" height="20"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{suprest}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="62" uuid="e3b4f118-7f73-45d4-b0b9-6ef15e06aff3">
+						<jr:tableHeader style="table_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement uuid="cf5f399d-a796-430d-af63-1fbabc7cc643" x="0" y="0" width="62" height="30"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Cant. Arboles Existentes]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table_TD" height="20" rowSpan="1">
+							<textField pattern="###0.0000">
+								<reportElement uuid="6ac9928a-383f-4785-9bd7-efc61540482a" x="0" y="0" width="62" height="20"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{indexis}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="49" uuid="c0b5105f-ec4c-4dcd-8a8e-9a0c7f6803b7">
+						<jr:tableHeader style="table_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement uuid="1ce26c5c-b6e5-4de4-8c2c-f44036557311" x="0" y="0" width="48" height="30"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Cant. Ind. Compr.]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement uuid="74c1bbf6-7d8a-4368-828f-17a5bbf2f48d" x="0" y="0" width="48" height="20"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{indcomp}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<componentElement>
+				<reportElement uuid="84ae74cc-d588-4fad-b84c-c991eb503202" key="table" style="table" x="380" y="24" width="190" height="11"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="escenarioCfuera" uuid="b66085fb-1aa2-4b66-bfd7-c6f2b9c0d776">
+						<datasetParameter name="idregistro">
+							<datasetParameterExpression><![CDATA[$F{idregistro}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="79" uuid="e60b4af1-5d43-4752-9ac0-5ce3d6831380">
+						<jr:tableHeader style="table_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement uuid="cf5f399d-a796-430d-af63-1fbabc7cc643" x="0" y="0" width="79" height="30"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Sup. Restituir TPFP. Ha]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table_TD" height="20" rowSpan="1">
+							<textField pattern="###0.0000">
+								<reportElement uuid="09750378-2708-40ba-bda7-796dd8771c65" x="0" y="0" width="79" height="20"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{suprest}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="62" uuid="e3b4f118-7f73-45d4-b0b9-6ef15e06aff3">
+						<jr:tableHeader style="table_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement uuid="cf5f399d-a796-430d-af63-1fbabc7cc643" x="0" y="0" width="62" height="30"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Cant. Arboles Existentes]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table_TD" height="20" rowSpan="1">
+							<textField pattern="###0.0000">
+								<reportElement uuid="6ac9928a-383f-4785-9bd7-efc61540482a" x="0" y="0" width="62" height="20"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{indexis}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="49" uuid="c0b5105f-ec4c-4dcd-8a8e-9a0c7f6803b7">
+						<jr:tableHeader style="table_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement uuid="1ce26c5c-b6e5-4de4-8c2c-f44036557311" x="0" y="0" width="48" height="30"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Cant. Ind. Compr.]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement uuid="74c1bbf6-7d8a-4368-828f-17a5bbf2f48d" x="0" y="0" width="48" height="20"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{indcomp}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<break>
+				<reportElement uuid="6bba4907-24eb-4545-8e4f-6cdc9f747562" x="0" y="37" width="100" height="1"/>
+			</break>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

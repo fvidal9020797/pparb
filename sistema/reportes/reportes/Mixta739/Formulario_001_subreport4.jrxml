@@ -1,0 +1,2386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Formulario_001_subreport4" language="groovy" pageWidth="572" pageHeight="752" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="464e68ee-d85d-4007-a8f1-7eed5d85126b">
+	<property name="ireport.zoom" value="1.2100000000000024"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="139"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#6B8040">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#DEE6CF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TH" mode="Opaque" backcolor="#E69473">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_CH" mode="Opaque" backcolor="#E6D5CF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_TH" mode="Opaque" backcolor="#E69273">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_CH" mode="Opaque" backcolor="#E6D5CF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_TH" mode="Opaque" backcolor="#E68473">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_CH" mode="Opaque" backcolor="#E6D2CF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6_TH" mode="Opaque" backcolor="#E68473">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6_CH" mode="Opaque" backcolor="#E6D2CF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 7">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 7_TH" mode="Opaque" backcolor="#E68473">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 7_CH" mode="Opaque" backcolor="#E6D2CF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 7_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 8">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 8_TH" mode="Opaque" backcolor="#E68473">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 8_CH" mode="Opaque" backcolor="#E6D2CF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 8_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 9">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 9_TH" mode="Opaque" backcolor="#FFDEAD">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 9_CH" mode="Opaque" backcolor="#FFE5BF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 9_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 10">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 10_TH" mode="Opaque" backcolor="#E67373">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 10_CH" mode="Opaque" backcolor="#E6CFCF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 10_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 11">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 11_TH" mode="Opaque" backcolor="#9AB95C">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 11_CH" mode="Opaque" backcolor="#DEE6CF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 11_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 12">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 12_TH" mode="Opaque" backcolor="#A9E371">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 12_CH" mode="Opaque" backcolor="#DAE6CF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 12_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 13">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 13_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 13_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 13_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 14">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 14_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 14_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 14_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 15">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 15_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 15_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 15_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="SistemasProduct" uuid="e61a2d6b-687e-4154-94b9-2b25b775f82c">
+		<parameter name="COD_PAR11" class="java.lang.String"/>
+		<queryString>
+			<![CDATA[select spg.*, c.nombrecodificador
+from sistprodganadera as spg inner join codificadores as c on spg.idsistproductivo = c.idcodificadores inner join registro as r
+on r.idregistro = spg.idregistro
+where r.idparcela = $P{COD_PAR11}
+and c.idclasificador = 27;]]>
+		</queryString>
+		<field name="idsistproductivo" class="java.lang.Integer"/>
+		<field name="idregistro" class="java.lang.Integer"/>
+		<field name="cantidad" class="java.lang.Integer"/>
+		<field name="nombrecodificador" class="java.lang.String"/>
+	</subDataset>
+	<subDataset name="situactuallechera" uuid="1bc12add-380f-45db-adeb-52aa4468ce36">
+		<parameter name="COD_PAR12" class="java.lang.String"/>
+		<queryString>
+			<![CDATA[SELECT
+idganaderalechera,
+registro.idregistro,
+COALESCE(suppasnatural,'0') as suppastonatural,
+COALESCE(suppassembrado,'0') as suppastosembrado,
+COALESCE(sistemaordeno,'0') as sistemaordeno,
+COALESCE(galpon,'0') as galpon,
+COALESCE(tanqueenfriamiento,'0') as tanqueenfriamiento,
+COALESCE(siloforraje,'0') as siloforraje,
+COALESCE(certtuberculosis,'0')as certtuberculosis,
+COALESCE(certbrucelosis,'0') as certbrucelosis,
+COALESCE(cabganprod,'0') as cabganprod,
+COALESCE(cabgandescar,'0') as cabgandescar,
+COALESCE(prodcarne,'0') as prodcarne,
+COALESCE(prodleche,'0') as prodleche,
+COALESCE(prodtotleche,'0') as prodtotleche,
+anoplanganadera
+FROM Registro INNER JOIN planganaderalechera ON Registro.IdRegistro = planganaderalechera.IdRegistro
+where registro.idparcela = $P{COD_PAR12} and anoplanganadera = 0
+order by anoplanganadera]]>
+		</queryString>
+		<field name="idganaderalechera" class="java.lang.Integer"/>
+		<field name="idregistro" class="java.lang.Integer"/>
+		<field name="suppastonatural" class="java.lang.Double"/>
+		<field name="suppastosembrado" class="java.lang.Double"/>
+		<field name="sistemaordeno" class="java.lang.Integer"/>
+		<field name="galpon" class="java.lang.Integer"/>
+		<field name="tanqueenfriamiento" class="java.lang.Integer"/>
+		<field name="siloforraje" class="java.lang.Integer"/>
+		<field name="certtuberculosis" class="java.lang.String"/>
+		<field name="certbrucelosis" class="java.lang.String"/>
+		<field name="cabganprod" class="java.lang.Integer"/>
+		<field name="cabgandescar" class="java.lang.Integer"/>
+		<field name="prodcarne" class="java.lang.Double"/>
+		<field name="prodleche" class="java.lang.Double"/>
+		<field name="prodtotleche" class="java.lang.Double"/>
+		<field name="anoplanganadera" class="java.lang.Integer"/>
+	</subDataset>
+	<subDataset name="ProduccionLechera1" uuid="2f9ab752-4600-40ef-94d6-3fcdb74c2d4b">
+		<parameter name="COD_PAR13" class="java.lang.String"/>
+		<queryString>
+			<![CDATA[SELECT
+idganaderalechera as idgan1,
+registro.idregistro as idreg1,
+COALESCE(suppasnatural,'0') as suppastonatural1,
+COALESCE(suppassembrado,'0') as suppastosembrado1,
+COALESCE(sistemaordeno,'0') as sistemaordeno1,
+COALESCE(galpon,'0') as galpon1,
+COALESCE(tanqueenfriamiento,'0') as tanqueenfriamiento1,
+COALESCE(siloforraje,'0') as siloforraje1,
+COALESCE(certtuberculosis,'0')as certtuberculosis1,
+COALESCE(certbrucelosis,'0') as certbrucelosis1,
+COALESCE(cabganprod,'0') as cabganprod1,
+COALESCE(cabgandescar,'0') as cabgandescar1,
+COALESCE(prodcarne,'0') as prodcarne1,
+COALESCE(prodleche,'0') as prodleche1,
+COALESCE(prodtotleche,'0') as prodtotleche1,
+anoplanganadera as ano1
+FROM Registro INNER JOIN planganaderalechera ON Registro.IdRegistro = planganaderalechera.IdRegistro
+where registro.idparcela = $P{COD_PAR13} and anoplanganadera = 3
+limit 1]]>
+		</queryString>
+		<field name="idgan1" class="java.lang.Integer"/>
+		<field name="idreg1" class="java.lang.Integer"/>
+		<field name="suppastonatural1" class="java.lang.Double"/>
+		<field name="suppastosembrado1" class="java.lang.Double"/>
+		<field name="sistemaordeno1" class="java.lang.Integer"/>
+		<field name="galpon1" class="java.lang.Integer"/>
+		<field name="tanqueenfriamiento1" class="java.lang.Integer"/>
+		<field name="siloforraje1" class="java.lang.Integer"/>
+		<field name="certtuberculosis1" class="java.lang.String"/>
+		<field name="certbrucelosis1" class="java.lang.String"/>
+		<field name="cabganprod1" class="java.lang.Integer"/>
+		<field name="cabgandescar1" class="java.lang.Integer"/>
+		<field name="prodcarne1" class="java.lang.Double"/>
+		<field name="prodleche1" class="java.lang.Double"/>
+		<field name="prodtotleche1" class="java.lang.Double"/>
+		<field name="ano1" class="java.lang.Double"/>
+	</subDataset>
+	<subDataset name="UsoActual" uuid="509669c2-202d-4e81-acfd-4711bd3b1cef">
+		<parameter name="CodPar" class="java.lang.String"/>
+		<queryString>
+			<![CDATA[select s.*, r.idparcela
+from Superficiealimentos as s inner join registro as r on s.idregistro = r.idregistro
+where r.idparcela = $P{CodPar}]]>
+		</queryString>
+		<field name="idsupalimentos" class="java.lang.Integer"/>
+		<field name="idregistro" class="java.lang.Integer"/>
+		<field name="supagricola" class="java.lang.Double"/>
+		<field name="supganadera" class="java.lang.Double"/>
+		<field name="supbarbecho" class="java.lang.Double"/>
+		<field name="supdescanso" class="java.lang.Double"/>
+		<field name="supganlegal" class="java.lang.Double"/>
+		<field name="idparcela" class="java.lang.String"/>
+	</subDataset>
+	<subDataset name="ProduccionLechera2" uuid="3a532536-c636-4b45-9e25-2f85f2401826">
+		<parameter name="idparcela" class="java.lang.String"/>
+		<queryString>
+			<![CDATA[SELECT
+idganaderalechera as idgan2,
+registro.idregistro as idreg2,
+COALESCE(suppasnatural,'0') as suppastonatural2,
+COALESCE(suppassembrado,'0') as suppastosembrado2,
+COALESCE(sistemaordeno,'0') as sistemaordeno2,
+COALESCE(galpon,'0') as galpon2,
+COALESCE(tanqueenfriamiento,'0') as tanqueenfriamiento2,
+COALESCE(siloforraje,'0') as siloforraje2,
+COALESCE(certtuberculosis,'0')as certtuberculosis2,
+COALESCE(certbrucelosis,'0') as certbrucelosis2,
+COALESCE(cabganprod,'0') as cabganprod2,
+COALESCE(cabgandescar,'0') as cabgandescar2,
+COALESCE(prodcarne,'0') as prodcarne2,
+COALESCE(prodleche,'0') as prodleche2,
+COALESCE(prodtotleche,'0') as prodtotleche2,
+anoplanganadera as ano2
+FROM Registro INNER JOIN planganaderalechera ON Registro.IdRegistro = planganaderalechera.IdRegistro
+where registro.idparcela = $P{idparcela} and anoplanganadera = 4
+limit 1]]>
+		</queryString>
+		<field name="idgan2" class="java.lang.Integer"/>
+		<field name="idreg2" class="java.lang.Integer"/>
+		<field name="suppastonatural2" class="java.lang.Double"/>
+		<field name="suppastosembrado2" class="java.lang.Double"/>
+		<field name="sistemaordeno2" class="java.lang.Integer"/>
+		<field name="galpon2" class="java.lang.Integer"/>
+		<field name="tanqueenfriamiento2" class="java.lang.Integer"/>
+		<field name="siloforraje2" class="java.lang.Integer"/>
+		<field name="certtuberculosis2" class="java.lang.String"/>
+		<field name="certbrucelosis2" class="java.lang.String"/>
+		<field name="cabganprod2" class="java.lang.Integer"/>
+		<field name="cabgandescar2" class="java.lang.Integer"/>
+		<field name="prodcarne2" class="java.lang.Double"/>
+		<field name="prodleche2" class="java.lang.Double"/>
+		<field name="prodtotleche2" class="java.lang.Double"/>
+		<field name="ano2" class="java.lang.Double"/>
+	</subDataset>
+	<subDataset name="ProduccionLechera3" uuid="cd552c25-dbf8-4ffb-b2c3-9cf258511a0d">
+		<parameter name="idPar" class="java.lang.String"/>
+		<queryString>
+			<![CDATA[SELECT
+idganaderalechera as idgan3,
+registro.idregistro as idreg3,
+COALESCE(suppasnatural,'0') as suppastonatural3,
+COALESCE(suppassembrado,'0') as suppastosembrado3,
+COALESCE(sistemaordeno,'0') as sistemaordeno3,
+COALESCE(galpon,'0') as galpon3,
+COALESCE(tanqueenfriamiento,'0') as tanqueenfriamiento3,
+COALESCE(siloforraje,'0') as siloforraje3,
+COALESCE(certtuberculosis,'0')as certtuberculosis3,
+COALESCE(certbrucelosis,'0') as certbrucelosis3,
+COALESCE(cabganprod,'0') as cabganprod3,
+COALESCE(cabgandescar,'0') as cabgandescar3,
+COALESCE(prodcarne,'0') as prodcarne3,
+COALESCE(prodleche,'0') as prodleche3,
+COALESCE(prodtotleche,'0') as prodtotleche3,
+anoplanganadera as ano3
+FROM Registro INNER JOIN planganaderalechera ON Registro.IdRegistro = planganaderalechera.IdRegistro
+where registro.idparcela = $P{idPar} and anoplanganadera = 5
+limit 1]]>
+		</queryString>
+		<field name="idgan3" class="java.lang.Integer"/>
+		<field name="idreg3" class="java.lang.Integer"/>
+		<field name="suppastonatural3" class="java.lang.Double"/>
+		<field name="suppastosembrado3" class="java.lang.Double"/>
+		<field name="sistemaordeno3" class="java.lang.Integer"/>
+		<field name="galpon3" class="java.lang.Integer"/>
+		<field name="tanqueenfriamiento3" class="java.lang.Integer"/>
+		<field name="siloforraje3" class="java.lang.Integer"/>
+		<field name="certtuberculosis3" class="java.lang.String"/>
+		<field name="certbrucelosis3" class="java.lang.String"/>
+		<field name="cabganprod3" class="java.lang.Integer"/>
+		<field name="cabgandescar3" class="java.lang.Integer"/>
+		<field name="prodcarne3" class="java.lang.Double"/>
+		<field name="prodleche3" class="java.lang.Double"/>
+		<field name="prodtotleche3" class="java.lang.Double"/>
+		<field name="ano3" class="java.lang.Double"/>
+	</subDataset>
+	<subDataset name="ProduccionLechera4" uuid="e9e919e0-3cad-4cf4-a006-8b6a0d9fb56d">
+		<parameter name="idPar" class="java.lang.String">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<queryString>
+			<![CDATA[SELECT
+idganaderalechera as idgan4,
+registro.idregistro as idreg4,
+COALESCE(suppasnatural,'0') as suppastonatural4,
+COALESCE(suppassembrado,'0') as suppastosembrado4,
+COALESCE(sistemaordeno,'0') as sistemaordeno4,
+COALESCE(galpon,'0') as galpon4,
+COALESCE(tanqueenfriamiento,'0') as tanqueenfriamiento4,
+COALESCE(siloforraje,'0') as siloforraje4,
+COALESCE(certtuberculosis,'0')as certtuberculosis4,
+COALESCE(certbrucelosis,'0') as certbrucelosis4,
+COALESCE(cabganprod,'0') as cabganprod4,
+COALESCE(cabgandescar,'0') as cabgandescar4,
+COALESCE(prodcarne,'0') as prodcarne4,
+COALESCE(prodleche,'0') as prodleche4,
+COALESCE(prodtotleche,'0') as prodtotleche4,
+anoplanganadera as ano4
+FROM Registro INNER JOIN planganaderalechera ON Registro.IdRegistro = planganaderalechera.IdRegistro
+where registro.idparcela = $P{idPar} and anoplanganadera = 6
+limit 1]]>
+		</queryString>
+		<field name="idgan4" class="java.lang.Integer"/>
+		<field name="idreg4" class="java.lang.Integer"/>
+		<field name="suppastonatural4" class="java.lang.Double"/>
+		<field name="suppastosembrado4" class="java.lang.Double"/>
+		<field name="sistemaordeno4" class="java.lang.Integer"/>
+		<field name="galpon4" class="java.lang.Integer"/>
+		<field name="tanqueenfriamiento4" class="java.lang.Integer"/>
+		<field name="siloforraje4" class="java.lang.Integer"/>
+		<field name="certtuberculosis4" class="java.lang.String"/>
+		<field name="certbrucelosis4" class="java.lang.String"/>
+		<field name="cabganprod4" class="java.lang.Integer"/>
+		<field name="cabgandescar4" class="java.lang.Integer"/>
+		<field name="prodcarne4" class="java.lang.Double"/>
+		<field name="prodleche4" class="java.lang.Double"/>
+		<field name="prodtotleche4" class="java.lang.Double"/>
+		<field name="ano4" class="java.lang.Double"/>
+	</subDataset>
+	<subDataset name="ProduccionLechera5" uuid="0c1600c9-9a3c-4c4a-8300-daa830976c00">
+		<parameter name="idpar" class="java.lang.String">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<queryString>
+			<![CDATA[SELECT
+idganaderalechera as idgan5,
+registro.idregistro as idreg5,
+COALESCE(suppasnatural,'0') as suppastonatural5,
+COALESCE(suppassembrado,'0') as suppastosembrado5,
+COALESCE(sistemaordeno,'0') as sistemaordeno5,
+COALESCE(galpon,'0') as galpon5,
+COALESCE(tanqueenfriamiento,'0') as tanqueenfriamiento5,
+COALESCE(siloforraje,'0') as siloforraje5,
+COALESCE(certtuberculosis,'0')as certtuberculosis5,
+COALESCE(certbrucelosis,'0') as certbrucelosis5,
+COALESCE(cabganprod,'0') as cabganprod5,
+COALESCE(cabgandescar,'0') as cabgandescar5,
+COALESCE(prodcarne,'0') as prodcarne5,
+COALESCE(prodleche,'0') as prodleche5,
+COALESCE(prodtotleche,'0') as prodtotleche5,
+anoplanganadera as ano5
+FROM Registro INNER JOIN planganaderalechera ON Registro.IdRegistro = planganaderalechera.IdRegistro
+where registro.idparcela = $P{idpar} and anoplanganadera = 7
+limit 1]]>
+		</queryString>
+		<field name="idgan5" class="java.lang.Integer"/>
+		<field name="idreg5" class="java.lang.Integer"/>
+		<field name="suppastonatural5" class="java.lang.Double"/>
+		<field name="suppastosembrado5" class="java.lang.Double"/>
+		<field name="sistemaordeno5" class="java.lang.Integer"/>
+		<field name="galpon5" class="java.lang.Integer"/>
+		<field name="tanqueenfriamiento5" class="java.lang.Integer"/>
+		<field name="siloforraje5" class="java.lang.Integer"/>
+		<field name="certtuberculosis5" class="java.lang.String"/>
+		<field name="certbrucelosis5" class="java.lang.String"/>
+		<field name="cabganprod5" class="java.lang.Integer"/>
+		<field name="cabgandescar5" class="java.lang.Integer"/>
+		<field name="prodcarne5" class="java.lang.Double"/>
+		<field name="prodleche5" class="java.lang.Double"/>
+		<field name="prodtotleche5" class="java.lang.Double"/>
+		<field name="ano5" class="java.lang.Double"/>
+	</subDataset>
+	<parameter name="COD_PAR4" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select r.idparcela,
+COALESCE (r.obsregistro,r.obsregistro,'') as obsregistro,
+v.*
+from v_registro as v inner join registro as r on v.idregistro = r.idregistro
+where r.idparcela = $P{COD_PAR4}]]>
+	</queryString>
+	<field name="idparcela" class="java.lang.String"/>
+	<field name="obsregistro" class="java.lang.String"/>
+	<field name="idregistro" class="java.lang.Integer"/>
+	<field name="supdefilegal" class="java.lang.Float"/>
+	<field name="suptpfp" class="java.lang.Float"/>
+	<field name="suptum" class="java.lang.Float"/>
+	<field name="supreftpfp" class="java.lang.Float"/>
+	<field name="supreftum" class="java.lang.Float"/>
+	<field name="supselstpfpref" class="java.lang.Float"/>
+	<field name="supselstpfpfcon" class="java.lang.Float"/>
+	<field name="supselstumref" class="java.lang.Float"/>
+	<field name="supselstumcon" class="java.lang.Float"/>
+	<field name="supmejorastpfp" class="java.lang.Float"/>
+	<field name="supmejorastum" class="java.lang.Float"/>
+	<field name="suppas" class="java.lang.Float"/>
+	<field name="suptpfppas" class="java.lang.Float"/>
+	<field name="suptumpas" class="java.lang.Float"/>
+	<field name="supreftpfppas" class="java.lang.Float"/>
+	<field name="supreftumpas" class="java.lang.Float"/>
+	<field name="supselstpfprefpas" class="java.lang.Float"/>
+	<field name="supselstpfpfconpas" class="java.lang.Float"/>
+	<field name="supselstumrefpas" class="java.lang.Float"/>
+	<field name="supselstumconpas" class="java.lang.Float"/>
+	<field name="supmejorastpfppas" class="java.lang.Float"/>
+	<field name="supmejorastumpas" class="java.lang.Float"/>
+	<field name="supproali" class="java.lang.Float"/>
+	<field name="supalitpfp" class="java.lang.Float"/>
+	<field name="supalitum" class="java.lang.Float"/>
+	<field name="supalitpfppas" class="java.lang.Float"/>
+	<field name="supalitumpas" class="java.lang.Float"/>
+	<group name="last">
+		<groupExpression><![CDATA[$F{idregistro}]]></groupExpression>
+		<groupFooter>
+			<band height="16"/>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="11" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="7" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="8" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="204" splitType="Stretch">
+			<rectangle>
+				<reportElement uuid="6cc35fc2-5e88-4493-99d3-551c94351df7" x="65" y="9" width="181" height="35"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="bd2ab13c-2424-4702-89fb-a3c7ab8f5b63" x="17" y="45" width="534" height="78"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="e1e49c79-3dd4-4be7-ad93-21a091bfe9b7" x="25" y="135" width="454" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Ganadera Lechera. Tipos de sistemas productivos Lecheros ]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement uuid="b0e44cde-f2d7-402a-975b-919e40a14f81" key="table 9" style="table 9" x="25" y="155" width="523" height="28"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="SistemasProduct" uuid="9e1cb68f-a38c-42c8-ba72-e320d325de5e">
+						<datasetParameter name="COD_PAR11">
+							<datasetParameterExpression><![CDATA[$F{idparcela}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="292" uuid="6a65ed2c-93c6-4333-b659-b3242efa0070">
+						<jr:tableHeader style="table 9_TH" height="13" rowSpan="1">
+							<staticText>
+								<reportElement uuid="e1d4cf94-4a36-4cff-8e5e-81358682884a" x="0" y="0" width="292" height="13"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="9"/>
+								</textElement>
+								<text><![CDATA[SISTEMAS DE PRODUCCION LECHERA]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table 9_TD" height="14" rowSpan="1">
+							<textField>
+								<reportElement uuid="8f2737ce-8164-417a-bfcc-c93cc3f98499" x="0" y="0" width="292" height="13"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="9"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{nombrecodificador}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="244" uuid="36c89bab-601b-4b61-93f6-b19c08d67e36">
+						<jr:tableHeader style="table 9_TH" height="13" rowSpan="1">
+							<staticText>
+								<reportElement uuid="9887a35a-2d21-476b-a7e0-4f92a4731bd9" x="0" y="0" width="237" height="13"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="9"/>
+								</textElement>
+								<text><![CDATA[CANTIDAD]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table 9_TD" height="14" rowSpan="1">
+							<textField>
+								<reportElement uuid="dbdac3e4-0e68-44ce-a8ef-e8dcdd20b1ef" x="0" y="0" width="237" height="13"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="9"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{cantidad}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<textField>
+				<reportElement uuid="775dc4a4-2421-46f9-afdf-dff0f27236cf" x="201" y="105" width="45" height="18"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{supalitumpas}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="44a07520-40c6-445a-ab34-5ee81f775625" x="162" y="104" width="39" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{supalitpfppas}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement uuid="65c1fb4a-2c3d-4363-abb3-53326aef49a1" x="201" y="45" width="1" height="78"/>
+			</line>
+			<staticText>
+				<reportElement uuid="b832602a-840d-4e6a-a0ab-27f556509125" x="110" y="46" width="51" height="57" backcolor="#99FF99"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Sup. Prod. de Alimentos en TUM (Ha)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="30a59828-7a98-4941-a650-67a748b862f5" x="202" y="45" width="44" height="59"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Sup. Prod. Ali. PAS EN TUM (Ha)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="97f4a700-86dd-46f2-8127-6e43345a1950" x="17" y="45" width="48" height="59" backcolor="#99FF99"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Sup. Total de Prod. Alimentos (Ha)]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="05d7c3ee-7b56-40dd-ab7a-b193498e2f27" x="66" y="105" width="43" height="18"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{supalitpfp}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="1f095563-d9be-4680-b98b-e5d9c22b311d" x="163" y="29" width="83" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{suppas}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="30a59828-7a98-4941-a650-67a748b862f5" x="162" y="44" width="39" height="59"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Sup. Prod. Ali. PAS EN TPFP (Ha)]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="ae4393f4-d363-42fd-8e15-19ab778ddadd" x="66" y="29" width="92" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{supdefilegal}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement uuid="f0dad725-113b-4f6c-99fd-f24842d80503" x="246" y="74" width="304" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="b7b5721d-fdae-442e-92ed-bcb13b83a6da" x="16" y="104" width="230" height="1"/>
+			</line>
+			<textField>
+				<reportElement uuid="08292285-d929-47b2-b312-7cc3a3e0ef3f" x="111" y="105" width="49" height="18"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{supalitum}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement uuid="f15b43d9-7624-4a5a-a544-c4e8a8dfaee9" x="66" y="29" width="180" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="a1b734e9-ff6c-4cf3-acb1-1077ef67c30d" x="109" y="45" width="1" height="77"/>
+			</line>
+			<staticText>
+				<reportElement uuid="bf15a58d-ac1e-4246-a073-14b46286fe54" x="253" y="44" width="295" height="29"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Uso Actual en Areas Deforestadas Ilegales (Ha)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a1948cbb-a24e-411c-9c99-9e8f1a489365" x="66" y="44" width="43" height="59" backcolor="#99FF99"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Sup. Prod. Alimentos en TPFP (Ha)]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="08d908ab-4f5e-4b51-966a-833054f5cbc2" x="17" y="105" width="48" height="18"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{supproali}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement uuid="a1b734e9-ff6c-4cf3-acb1-1077ef67c30d" x="246" y="45" width="1" height="79"/>
+			</line>
+			<line>
+				<reportElement uuid="a1b734e9-ff6c-4cf3-acb1-1077ef67c30d" x="64" y="46" width="1" height="77"/>
+			</line>
+			<componentElement>
+				<reportElement uuid="8cc63f4b-bd3a-4ce4-a9ac-2ba717818d90" key="table" style="table 5_TD" x="246" y="73" width="304" height="50"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="UsoActual" uuid="e97ff8b7-e92b-4964-9812-21be69616a3c">
+						<datasetParameter name="CodPar">
+							<datasetParameterExpression><![CDATA[$F{idparcela}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="77" uuid="559b7d3b-2283-4ad5-a6b3-36b4445b0f69">
+						<jr:tableHeader style="table_TH" height="32" rowSpan="1">
+							<staticText>
+								<reportElement uuid="9911c13d-786b-41ba-826e-358bdc368097" x="0" y="0" width="77" height="32"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<text><![CDATA[Agricola (Ha)]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table_TD" height="18" rowSpan="1">
+							<textField>
+								<reportElement uuid="26a964a4-8b34-491d-915f-637dc9b714f5" x="0" y="0" width="77" height="18"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{supagricola}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="78" uuid="f78595df-c2c5-46f9-b87b-21154473d373">
+						<jr:tableHeader style="table_TH" height="32" rowSpan="1">
+							<staticText>
+								<reportElement uuid="65721e0e-a75e-4172-95ed-a7b7a1edb6b7" x="0" y="0" width="78" height="32"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<text><![CDATA[Ganadero (Ha)]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table_TD" height="18" rowSpan="1">
+							<textField>
+								<reportElement uuid="a036350d-8535-4b10-b344-05cb612d240f" x="0" y="0" width="78" height="18"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{supganadera}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="76" uuid="cce6f5e2-5209-44c3-9739-d22ea0a17230">
+						<jr:tableHeader style="table_TH" height="32" rowSpan="1">
+							<staticText>
+								<reportElement uuid="c61c67b0-2dde-4ced-8209-7bea0522afdc" x="0" y="0" width="75" height="32"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<text><![CDATA[Barbecho (Ha)]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table_TD" height="18" rowSpan="1">
+							<textField>
+								<reportElement uuid="79ba63fc-5795-4805-8df9-9b3fb3bd61a0" x="0" y="0" width="75" height="18"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{supbarbecho}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="73" uuid="240dc60e-4989-4dee-90e6-a4012badbbaa">
+						<jr:tableHeader style="table_TH" height="32" rowSpan="1">
+							<staticText>
+								<reportElement uuid="e21d6868-9f82-451c-b6ba-3433dc25bc53" x="0" y="0" width="73" height="32"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<text><![CDATA[Descanso (Ha)]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table_TD" height="18" rowSpan="1">
+							<textField>
+								<reportElement uuid="65c9e7a5-2fe9-4273-86fd-f0eda1647851" x="0" y="0" width="73" height="18"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{supdescanso}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<staticText>
+				<reportElement uuid="c573e962-70f6-494e-8897-d4094da071c6" x="66" y="9" width="92" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Sup. Def. Ilegal (Ha):]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="65c1fb4a-2c3d-4363-abb3-53326aef49a1" x="160" y="9" width="1" height="114"/>
+			</line>
+			<staticText>
+				<reportElement uuid="c573e962-70f6-494e-8897-d4094da071c6" x="163" y="9" width="84" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Sup. con PAS (Ha):]]></text>
+			</staticText>
+		</band>
+		<band height="319">
+			<staticText>
+				<reportElement uuid="6c41f428-c337-47c8-9cb8-b30c878af6a2" x="3" y="0" width="192" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sistemas de Produccion Lechero]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="e4ab7c31-6a16-40d5-8075-6f5d48ee1d1b" x="201" y="27" width="268" height="14"/>
+				<textElement verticalAlignment="Bottom">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Plan de Produccion Lechera en 5 Años]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement uuid="2ed542ff-73d1-4c76-91be-9c8ecea2f8ae" key="table 14" style="table 14" x="5" y="41" width="185" height="267"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="situactuallechera" uuid="e72a54bf-c463-4dab-8c6c-a58c9d7f3688">
+						<datasetParameter name="COD_PAR12">
+							<datasetParameterExpression><![CDATA[$F{idparcela}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="143" uuid="3dfb9bd8-54e2-4019-9058-456e54f0e624">
+						<jr:detailCell style="table 14_TD" height="273" rowSpan="1">
+							<staticText>
+								<reportElement uuid="4089d028-94b9-42bf-a644-904a9b063f14" x="0" y="0" width="143" height="17"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Descripción]]></text>
+							</staticText>
+							<staticText>
+								<reportElement uuid="66e4a8df-77c4-45ae-9f01-5ff0b48f41d1" x="0" y="18" width="143" height="16"/>
+								<textElement verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<text><![CDATA[ Superficie pastizales naturales]]></text>
+							</staticText>
+							<staticText>
+								<reportElement uuid="ab8588fd-9af0-4a2e-aa84-6ee844343675" x="0" y="35" width="143" height="16"/>
+								<textElement verticalAlignment="Middle">
+									<font size="6" isBold="true"/>
+								</textElement>
+								<text><![CDATA[ 1. Sup. pastos Cultivados piso y Corte (Ha)]]></text>
+							</staticText>
+							<staticText>
+								<reportElement uuid="650e7456-2eff-4403-9212-ff19f6a07d42" x="0" y="51" width="143" height="16"/>
+								<textElement verticalAlignment="Middle">
+									<font size="6" isBold="true"/>
+								</textElement>
+								<text><![CDATA[ 2. Existencia de Infraestructura en el Predio]]></text>
+							</staticText>
+							<staticText>
+								<reportElement uuid="43db13a1-c6a5-4c7c-81ff-d6fce8c2b06f" x="0" y="69" width="143" height="16"/>
+								<textElement verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<text><![CDATA[ * Sistema de Ordeño (Manual /Mecanico)]]></text>
+							</staticText>
+							<staticText>
+								<reportElement uuid="49cd1e9e-1c44-4d57-9f2b-c6e7cca5bf94" x="0" y="86" width="143" height="16"/>
+								<textElement verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<text><![CDATA[ * Galpon de Ordeña (Uni)]]></text>
+							</staticText>
+							<staticText>
+								<reportElement uuid="15a2849c-fb20-472e-b4bb-dec095416de9" x="0" y="105" width="143" height="16"/>
+								<textElement verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<text><![CDATA[ * Tanque de Enfriamiento (Uni)]]></text>
+							</staticText>
+							<staticText>
+								<reportElement uuid="84bf34b2-05e1-4686-98e8-b7e5c3b9bd06" x="0" y="121" width="143" height="15"/>
+								<textElement verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<text><![CDATA[ * Silos para forraje (Uni)]]></text>
+							</staticText>
+							<staticText>
+								<reportElement uuid="fb924358-e859-4e01-9dcd-8110b2b4b781" x="0" y="136" width="143" height="16"/>
+								<textElement verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<text><![CDATA[ * Certificado Tuberculosis ]]></text>
+							</staticText>
+							<staticText>
+								<reportElement uuid="1b393f66-3d37-4492-86d0-1706b56174c7" x="0" y="153" width="143" height="16"/>
+								<textElement verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<text><![CDATA[ * Certificado Brucelosis]]></text>
+							</staticText>
+							<staticText>
+								<reportElement uuid="722da740-c3bf-4367-95a6-c59adc9cf53e" x="0" y="170" width="143" height="16"/>
+								<textElement verticalAlignment="Middle">
+									<font size="7" isBold="true"/>
+								</textElement>
+								<text><![CDATA[ 3. Total Cabezas Declaradas Produccion]]></text>
+							</staticText>
+							<staticText>
+								<reportElement uuid="fd9d9081-3b59-4c8e-b403-97719339307e" x="0" y="187" width="143" height="16"/>
+								<textElement verticalAlignment="Middle">
+									<font size="7" isBold="true"/>
+								</textElement>
+								<text><![CDATA[ 4. Total Cabezas Descarte (10%)]]></text>
+							</staticText>
+							<staticText>
+								<reportElement uuid="a54e13cb-6888-4d55-835a-6018058c1732" x="0" y="205" width="143" height="15"/>
+								<textElement>
+									<font size="6"/>
+								</textElement>
+								<text><![CDATA[]]></text>
+							</staticText>
+							<staticText>
+								<reportElement uuid="0cbd9b1f-e272-4471-bb03-44f0e86ac3eb" x="0" y="221" width="143" height="17"/>
+								<textElement verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<text><![CDATA[ Producción Promedio de Carne (Kg/hato)]]></text>
+							</staticText>
+							<staticText>
+								<reportElement uuid="e8d08f67-a6b4-48b4-bb9a-4f3bd2b482b9" x="0" y="239" width="143" height="16"/>
+								<textElement verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<text><![CDATA[ Producción Promedio de LEche (Lt/hato)]]></text>
+							</staticText>
+							<staticText>
+								<reportElement uuid="dd49555a-ee9d-4ed7-84a1-ee1bb4f50544" x="0" y="255" width="143" height="17"/>
+								<textElement verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<text><![CDATA[ Producción total de Leche (Lt/año)]]></text>
+							</staticText>
+							<line>
+								<reportElement uuid="422d0f95-8a58-473f-af4b-a48902ca8e3b" x="0" y="220" width="143" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="1d3fde88-0f85-4b58-86a0-8a8130d092f9" x="0" y="34" width="143" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="c7b13705-9fff-44e3-bdb0-8ba9f0023416" x="0" y="17" width="143" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="09977e37-3d5b-4608-87ab-c9fed138b858" x="0" y="51" width="143" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="10662a70-d4ef-4b77-b7b0-9a327da3be52" x="0" y="68" width="143" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="d6b87e75-0ca8-4a31-a889-511b242fd01e" x="0" y="85" width="143" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="51dcfa73-3135-4993-90f9-6940ce608a0c" x="0" y="102" width="143" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="470d9c35-972d-4373-a638-600666572d36" x="0" y="119" width="143" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="b47f6974-473a-4004-98ab-70b6d2cc4a70" x="0" y="136" width="143" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="97b185c4-a5c4-4fe1-8b73-06b0c1716034" x="0" y="153" width="143" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="cfe7bba7-3040-4cd6-b0ff-c101d3add636" x="0" y="187" width="143" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="1275a477-79ea-41a3-9a5e-f9c4598c8c23" x="0" y="170" width="143" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="e2cf09c9-c3e9-43a6-9a5d-f043111ddaa4" x="0" y="204" width="143" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="b8b7ba0b-ee42-4fe7-8f38-54f6478e1da7" x="0" y="220" width="143" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="10a3e032-322e-4c99-8c25-b267d4b6f53f" x="0" y="238" width="143" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="00836e80-e3df-42f9-9958-023449cf7e00" x="0" y="255" width="143" height="1"/>
+							</line>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="44" uuid="9f476589-c3f5-4bf9-acd9-e9b7332594b8">
+						<jr:detailCell style="table 14_TD" height="273" rowSpan="1">
+							<textField>
+								<reportElement uuid="39f0427e-b01d-4d0f-8901-cba200204446" x="0" y="17" width="44" height="17"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{suppastonatural}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="e680d15c-a075-43bc-a92e-e0ff46a244e2" x="0" y="35" width="44" height="17"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{suppastosembrado}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="aa0caf72-8f76-4df2-8e3d-98eb7a3f4622" x="0" y="68" width="44" height="17"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[(
+$F{sistemaordeno}.intValue() == 0 ? "Manual":
+ ($F{sistemaordeno}.intValue() == 1? "Mecanico" :"")
+)]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="26e6d8b5-615b-405b-8ba2-d01f1bebcfbe" x="0" y="85" width="44" height="17"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{galpon}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="1d52338c-62df-4ad0-941a-6df213788088" x="0" y="102" width="44" height="17"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{tanqueenfriamiento}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="89aefe7a-fd51-4914-8876-12085dc4f8ee" x="0" y="119" width="44" height="17"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{siloforraje}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="09755b17-e6a8-41f1-a5ba-f567aba66fae" x="0" y="136" width="44" height="17"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[(
+$F{certtuberculosis} == "0" ? "NO":
+ ($F{certtuberculosis} == "1"? "SI" :"")
+)]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="60b312bd-aed4-46b1-83bd-4ea948b0eb6a" x="0" y="153" width="44" height="17"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[(
+$F{certbrucelosis} == "0" ? "NO":
+ ($F{certbrucelosis} == "1"? "SI" :"")
+)]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="0b643a1c-2373-415d-9c81-af168cc54eb3" x="0" y="170" width="44" height="17"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{cabganprod}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="0d4d585e-d1fc-4551-bedb-25a2a5610bc9" x="0" y="187" width="44" height="17"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{cabgandescar}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="1e4679aa-c87d-4891-9f66-5981eee13650" x="0" y="221" width="44" height="17"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{prodcarne}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="f093f551-4251-466d-8a31-1d368d811545" x="0" y="238" width="44" height="17"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{prodleche}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="53b7aa24-0096-4531-8f2d-1e90af974cc3" x="0" y="255" width="44" height="17"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{prodtotleche}]]></textFieldExpression>
+							</textField>
+							<line>
+								<reportElement uuid="f0302e2d-7705-4027-b93e-2c0acb777e71" x="0" y="17" width="44" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="bac0c3c7-878e-4d16-b9d7-792f13e7047a" x="0" y="34" width="44" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="a3c27eab-b58e-4b5e-8c1d-97ef6cc192e8" x="0" y="51" width="44" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="d5b1c4e0-9c70-4ed2-92c7-320b1c96bf4c" x="0" y="68" width="44" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="347a77b4-c69b-405a-bb57-a0265fa28400" x="0" y="85" width="44" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="93d49544-1959-49f2-8ea2-9a02b33d63c6" x="0" y="102" width="44" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="44ec53fd-f1c3-441a-80e8-3d7bee9a469e" x="0" y="119" width="44" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="c73a7c74-780b-4113-aa4b-d0216e0cd004" x="0" y="136" width="44" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="cc8463dd-20dd-40b4-a9df-50e02699c1ed" x="0" y="153" width="44" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="fc54d675-2bb9-4b33-b43f-3eee0463f993" x="0" y="170" width="44" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="4548cd99-617d-4108-a459-88cc53418c40" x="0" y="187" width="44" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="eb8e3bad-061f-4903-b9dc-70963006af16" x="0" y="204" width="44" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="03ed31ab-c87d-47d7-9848-621520266ab1" x="0" y="220" width="44" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="31dd1cd5-43da-43a4-80c2-4b6036361500" x="0" y="238" width="44" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="f309a477-ad6e-4e54-a4ab-8874ec9837c8" x="0" y="255" width="44" height="1"/>
+							</line>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<componentElement>
+				<reportElement uuid="2ed542ff-73d1-4c76-91be-9c8ecea2f8ae" key="table 14" style="table 14" x="195" y="41" width="146" height="267"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="ProduccionLechera1" uuid="e72a54bf-c463-4dab-8c6c-a58c9d7f3688">
+						<datasetParameter name="COD_PAR13">
+							<datasetParameterExpression><![CDATA[$F{idparcela}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="150" uuid="3dfb9bd8-54e2-4019-9058-456e54f0e624">
+						<jr:detailCell style="table 14_TD" height="273" rowSpan="1">
+							<staticText>
+								<reportElement uuid="4089d028-94b9-42bf-a644-904a9b063f14" x="0" y="0" width="150" height="17"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<text><![CDATA[Descripción]]></text>
+							</staticText>
+							<staticText>
+								<reportElement uuid="66e4a8df-77c4-45ae-9f01-5ff0b48f41d1" x="0" y="18" width="150" height="16"/>
+								<textElement verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<text><![CDATA[]]></text>
+							</staticText>
+							<staticText>
+								<reportElement uuid="ab8588fd-9af0-4a2e-aa84-6ee844343675" x="0" y="35" width="150" height="16"/>
+								<textElement verticalAlignment="Middle">
+									<font size="7" isBold="true"/>
+								</textElement>
+								<text><![CDATA[ 1. Sup. pastos Cultivados piso y Corte (Ha)]]></text>
+							</staticText>
+							<staticText>
+								<reportElement uuid="650e7456-2eff-4403-9212-ff19f6a07d42" x="0" y="51" width="150" height="16"/>
+								<textElement verticalAlignment="Middle">
+									<font size="7" isBold="true"/>
+								</textElement>
+								<text><![CDATA[ 2. Existencia de Infraestructura en el Predio]]></text>
+							</staticText>
+							<staticText>
+								<reportElement uuid="43db13a1-c6a5-4c7c-81ff-d6fce8c2b06f" x="0" y="69" width="150" height="16"/>
+								<textElement verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<text><![CDATA[ * Sistema de Ordeño (Manual /Mecanico)]]></text>
+							</staticText>
+							<staticText>
+								<reportElement uuid="49cd1e9e-1c44-4d57-9f2b-c6e7cca5bf94" x="0" y="86" width="150" height="16"/>
+								<textElement verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<text><![CDATA[ * Galpon de Ordeña (Uni)]]></text>
+							</staticText>
+							<staticText>
+								<reportElement uuid="15a2849c-fb20-472e-b4bb-dec095416de9" x="0" y="103" width="150" height="18"/>
+								<textElement verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<text><![CDATA[ * Tanque de Enfriamiento (Uni)]]></text>
+							</staticText>
+							<staticText>
+								<reportElement uuid="84bf34b2-05e1-4686-98e8-b7e5c3b9bd06" x="0" y="121" width="150" height="15"/>
+								<textElement verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<text><![CDATA[ * Silos para forraje (Uni)]]></text>
+							</staticText>
+							<staticText>
+								<reportElement uuid="fb924358-e859-4e01-9dcd-8110b2b4b781" x="0" y="136" width="150" height="16"/>
+								<textElement verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<text><![CDATA[ * Certificado Tuberculosis ]]></text>
+							</staticText>
+							<staticText>
+								<reportElement uuid="1b393f66-3d37-4492-86d0-1706b56174c7" x="0" y="153" width="150" height="16"/>
+								<textElement verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<text><![CDATA[ * Certificado Brucelosis]]></text>
+							</staticText>
+							<staticText>
+								<reportElement uuid="722da740-c3bf-4367-95a6-c59adc9cf53e" x="0" y="170" width="150" height="16"/>
+								<textElement verticalAlignment="Middle">
+									<font size="7" isBold="true"/>
+								</textElement>
+								<text><![CDATA[ 3. Total Cabezas Declaradas Produccion (Uni)]]></text>
+							</staticText>
+							<staticText>
+								<reportElement uuid="fd9d9081-3b59-4c8e-b403-97719339307e" x="0" y="187" width="150" height="16"/>
+								<textElement verticalAlignment="Middle">
+									<font size="7" isBold="true"/>
+								</textElement>
+								<text><![CDATA[ 4. Total Cabezas Descarte (10%)]]></text>
+							</staticText>
+							<staticText>
+								<reportElement uuid="a54e13cb-6888-4d55-835a-6018058c1732" x="0" y="205" width="150" height="15"/>
+								<textElement>
+									<font size="6"/>
+								</textElement>
+								<text><![CDATA[]]></text>
+							</staticText>
+							<staticText>
+								<reportElement uuid="0cbd9b1f-e272-4471-bb03-44f0e86ac3eb" x="0" y="221" width="150" height="17"/>
+								<textElement verticalAlignment="Middle">
+									<font size="7" isBold="true"/>
+								</textElement>
+								<text><![CDATA[ 5. Producción Promedio de Carne (Kg/hato)]]></text>
+							</staticText>
+							<staticText>
+								<reportElement uuid="e8d08f67-a6b4-48b4-bb9a-4f3bd2b482b9" x="0" y="239" width="150" height="16"/>
+								<textElement verticalAlignment="Middle">
+									<font size="7" isBold="true"/>
+								</textElement>
+								<text><![CDATA[ 6. Producción Promedio de LEche (Lt/hato)]]></text>
+							</staticText>
+							<staticText>
+								<reportElement uuid="dd49555a-ee9d-4ed7-84a1-ee1bb4f50544" x="0" y="255" width="150" height="17"/>
+								<textElement verticalAlignment="Middle">
+									<font size="7" isBold="true"/>
+								</textElement>
+								<text><![CDATA[ 7. Producción total de Leche (Lt/año)]]></text>
+							</staticText>
+							<line>
+								<reportElement uuid="422d0f95-8a58-473f-af4b-a48902ca8e3b" x="0" y="220" width="150" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="1d3fde88-0f85-4b58-86a0-8a8130d092f9" x="0" y="34" width="150" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="c7b13705-9fff-44e3-bdb0-8ba9f0023416" x="0" y="17" width="150" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="09977e37-3d5b-4608-87ab-c9fed138b858" x="0" y="51" width="150" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="10662a70-d4ef-4b77-b7b0-9a327da3be52" x="0" y="68" width="150" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="d6b87e75-0ca8-4a31-a889-511b242fd01e" x="0" y="85" width="150" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="51dcfa73-3135-4993-90f9-6940ce608a0c" x="0" y="102" width="150" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="470d9c35-972d-4373-a638-600666572d36" x="0" y="119" width="150" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="b47f6974-473a-4004-98ab-70b6d2cc4a70" x="0" y="136" width="150" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="97b185c4-a5c4-4fe1-8b73-06b0c1716034" x="0" y="153" width="150" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="cfe7bba7-3040-4cd6-b0ff-c101d3add636" x="0" y="187" width="150" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="1275a477-79ea-41a3-9a5e-f9c4598c8c23" x="0" y="170" width="150" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="e2cf09c9-c3e9-43a6-9a5d-f043111ddaa4" x="0" y="204" width="150" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="b8b7ba0b-ee42-4fe7-8f38-54f6478e1da7" x="0" y="220" width="150" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="10a3e032-322e-4c99-8c25-b267d4b6f53f" x="0" y="238" width="150" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="00836e80-e3df-42f9-9958-023449cf7e00" x="0" y="255" width="150" height="1"/>
+							</line>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<componentElement>
+				<reportElement uuid="fd507dbf-8ad6-4570-8055-cb46943fb64d" key="table 15" style="table 15" x="344" y="41" width="43" height="267"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="ProduccionLechera1" uuid="9d91677d-2310-4269-9472-d47e52a25dcd">
+						<datasetParameter name="COD_PAR13">
+							<datasetParameterExpression><![CDATA[$F{idparcela}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="43" uuid="f42f09b0-7d51-4c32-b791-f7f5035c2c72">
+						<jr:detailCell style="table 15_TD" height="273" rowSpan="1">
+							<staticText>
+								<reportElement uuid="db5589b5-518a-4502-a784-435455affaa2" x="0" y="0" width="43" height="18"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<text><![CDATA[Compromiso 2016]]></text>
+							</staticText>
+							<staticText>
+								<reportElement uuid="7e33872a-65ea-445c-9b4c-86c24c2a708e" x="0" y="18" width="43" height="17"/>
+								<textElement>
+									<font size="6"/>
+								</textElement>
+								<text><![CDATA[]]></text>
+							</staticText>
+							<textField>
+								<reportElement uuid="466626fd-ffdc-474c-b317-a87445735254" x="0" y="35" width="43" height="17"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{suppastosembrado1}]]></textFieldExpression>
+							</textField>
+							<staticText>
+								<reportElement uuid="ea378ce4-0fca-412e-bc3e-4d2e2f82bf6c" x="0" y="52" width="43" height="17"/>
+								<textElement>
+									<font size="6"/>
+								</textElement>
+								<text><![CDATA[]]></text>
+							</staticText>
+							<textField>
+								<reportElement uuid="b30ecf9b-ae2f-4e35-9062-b086c2a8617b" x="0" y="69" width="43" height="16"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[(
+$F{sistemaordeno1}.intValue() == 0 ? "Manual":
+ ($F{sistemaordeno1}.intValue() == 1? "Mecanico" :"")
+)]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="e0ed17f2-b151-4cdb-b01a-f26ba90fc38b" x="0" y="85" width="43" height="17"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{galpon1}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="d51fb183-fa30-4d85-b986-92726f458407" x="0" y="103" width="43" height="16"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{tanqueenfriamiento1}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="70ef0064-2d5f-48bf-b554-180669672c0d" x="0" y="120" width="43" height="17"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{siloforraje1}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="6fe1d04d-ac55-4de6-bfc8-9b2f49b7bf40" x="0" y="137" width="43" height="16"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[(
+$F{certtuberculosis1} == "0" ? "NO":
+ ($F{certtuberculosis1} == "1"? "SI" :"")
+)]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="ba367640-21f0-44c3-855e-6b6426005d52" x="0" y="154" width="43" height="15"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[(
+$F{certbrucelosis1} == "0" ? "NO":
+ ($F{certbrucelosis1} == "1"? "SI" :"")
+)]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="ccdb0e3a-24fd-444e-ab45-6d783f315948" x="0" y="171" width="43" height="17"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{cabganprod1}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="7e734be9-bee9-4b9a-8ef2-58040738f15b" x="0" y="188" width="43" height="17"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{cabgandescar1}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="965c44ce-b5a7-42de-88a8-755ea073fb34" x="0" y="221" width="43" height="15"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{prodcarne1}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="00eb71c5-d119-4032-9419-488309cb20bf" x="0" y="240" width="43" height="15"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{prodleche1}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="0633bc61-53aa-4619-b0c2-94916a9b3a89" x="0" y="257" width="43" height="16"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{prodtotleche1}]]></textFieldExpression>
+							</textField>
+							<staticText>
+								<reportElement uuid="3349cebb-74cf-4295-a676-0f93b774b683" x="0" y="205" width="43" height="14"/>
+								<textElement>
+									<font size="6"/>
+								</textElement>
+								<text><![CDATA[]]></text>
+							</staticText>
+							<line>
+								<reportElement uuid="df1c9942-81d0-416e-9140-20c4c51bc637" x="0" y="51" width="43" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="fa997860-36b3-4d64-a757-019177cbb54b" x="0" y="34" width="43" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="426b47cf-39f6-4954-a2bf-18c786b55111" x="0" y="17" width="43" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="2d0e22bc-93d4-4e99-acc6-f21b5d5a6281" x="0" y="68" width="43" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="f86057a3-cc2e-462f-b7c6-aa101ff35f2b" x="0" y="85" width="43" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="e6531afc-c52f-46a4-a291-386c284a3dea" x="0" y="102" width="43" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="1190241b-35ed-4289-a86c-dcc85f59f793" x="0" y="119" width="43" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="be3951bc-9518-41f9-8fb6-279ccf6af651" x="0" y="153" width="43" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="d82ce65f-0393-43c7-9510-7a8235efa99b" x="0" y="136" width="43" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="1d903b21-87ba-4eb5-9eca-889141fd39b6" x="0" y="170" width="43" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="d9f9861c-f922-4067-b12a-8a723a46fa95" x="0" y="187" width="43" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="e838640c-dce7-4428-93c0-38c3958d33f1" x="0" y="204" width="43" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="7ecface3-8798-4680-a189-66d2de339323" x="0" y="220" width="43" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="3618e32a-a6f9-4aca-a177-ac1e668e1f44" x="0" y="238" width="43" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="80020ca0-d857-4572-8331-a7c9772bbc84" x="0" y="255" width="43" height="1"/>
+							</line>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<componentElement>
+				<reportElement uuid="fd507dbf-8ad6-4570-8055-cb46943fb64d" key="table 15" style="table 15" x="386" y="41" width="43" height="267"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="ProduccionLechera2" uuid="9d91677d-2310-4269-9472-d47e52a25dcd">
+						<datasetParameter name="idparcela">
+							<datasetParameterExpression><![CDATA[$F{idparcela}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="43" uuid="f42f09b0-7d51-4c32-b791-f7f5035c2c72">
+						<jr:detailCell style="table 15_TD" height="273" rowSpan="1">
+							<staticText>
+								<reportElement uuid="db5589b5-518a-4502-a784-435455affaa2" x="0" y="0" width="43" height="18"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<text><![CDATA[Compromiso 2017]]></text>
+							</staticText>
+							<staticText>
+								<reportElement uuid="7e33872a-65ea-445c-9b4c-86c24c2a708e" x="0" y="18" width="43" height="17"/>
+								<textElement>
+									<font size="6"/>
+								</textElement>
+								<text><![CDATA[]]></text>
+							</staticText>
+							<textField>
+								<reportElement uuid="466626fd-ffdc-474c-b317-a87445735254" x="0" y="35" width="43" height="17"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{suppastosembrado2}]]></textFieldExpression>
+							</textField>
+							<staticText>
+								<reportElement uuid="ea378ce4-0fca-412e-bc3e-4d2e2f82bf6c" x="0" y="52" width="43" height="17"/>
+								<textElement>
+									<font size="6"/>
+								</textElement>
+								<text><![CDATA[]]></text>
+							</staticText>
+							<textField>
+								<reportElement uuid="b30ecf9b-ae2f-4e35-9062-b086c2a8617b" x="0" y="69" width="43" height="16"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[(
+$F{sistemaordeno2}.intValue() == 0 ? "Manual":
+ ($F{sistemaordeno2}.intValue() == 1? "Mecanico" :"")
+)]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="e0ed17f2-b151-4cdb-b01a-f26ba90fc38b" x="0" y="85" width="43" height="17"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{galpon2}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="d51fb183-fa30-4d85-b986-92726f458407" x="0" y="103" width="43" height="16"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{tanqueenfriamiento2}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="70ef0064-2d5f-48bf-b554-180669672c0d" x="0" y="120" width="43" height="17"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{siloforraje2}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="6fe1d04d-ac55-4de6-bfc8-9b2f49b7bf40" x="0" y="137" width="43" height="16"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[(
+$F{certtuberculosis2} == "0" ? "NO":
+ ($F{certtuberculosis2} == "1"? "SI" :"")
+)]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="ba367640-21f0-44c3-855e-6b6426005d52" x="0" y="154" width="43" height="15"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[(
+$F{certbrucelosis2} == "0" ? "NO":
+ ($F{certbrucelosis2} == "1"? "SI" :"")
+)]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="ccdb0e3a-24fd-444e-ab45-6d783f315948" x="0" y="171" width="43" height="17"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{cabganprod2}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="7e734be9-bee9-4b9a-8ef2-58040738f15b" x="0" y="188" width="43" height="17"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{cabgandescar2}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="965c44ce-b5a7-42de-88a8-755ea073fb34" x="0" y="221" width="43" height="15"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{prodcarne2}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="00eb71c5-d119-4032-9419-488309cb20bf" x="0" y="240" width="43" height="15"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{prodleche2}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="0633bc61-53aa-4619-b0c2-94916a9b3a89" x="0" y="257" width="43" height="16"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{prodtotleche2}]]></textFieldExpression>
+							</textField>
+							<staticText>
+								<reportElement uuid="3349cebb-74cf-4295-a676-0f93b774b683" x="0" y="205" width="43" height="14"/>
+								<textElement>
+									<font size="6"/>
+								</textElement>
+								<text><![CDATA[]]></text>
+							</staticText>
+							<line>
+								<reportElement uuid="df1c9942-81d0-416e-9140-20c4c51bc637" x="0" y="51" width="43" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="fa997860-36b3-4d64-a757-019177cbb54b" x="0" y="34" width="43" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="426b47cf-39f6-4954-a2bf-18c786b55111" x="0" y="17" width="43" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="2d0e22bc-93d4-4e99-acc6-f21b5d5a6281" x="0" y="68" width="43" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="f86057a3-cc2e-462f-b7c6-aa101ff35f2b" x="0" y="85" width="43" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="e6531afc-c52f-46a4-a291-386c284a3dea" x="0" y="102" width="43" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="1190241b-35ed-4289-a86c-dcc85f59f793" x="0" y="119" width="43" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="be3951bc-9518-41f9-8fb6-279ccf6af651" x="0" y="153" width="43" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="d82ce65f-0393-43c7-9510-7a8235efa99b" x="0" y="136" width="43" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="1d903b21-87ba-4eb5-9eca-889141fd39b6" x="0" y="170" width="43" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="d9f9861c-f922-4067-b12a-8a723a46fa95" x="0" y="187" width="43" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="e838640c-dce7-4428-93c0-38c3958d33f1" x="0" y="204" width="43" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="7ecface3-8798-4680-a189-66d2de339323" x="0" y="220" width="43" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="3618e32a-a6f9-4aca-a177-ac1e668e1f44" x="0" y="238" width="43" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="80020ca0-d857-4572-8331-a7c9772bbc84" x="0" y="255" width="43" height="1"/>
+							</line>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<componentElement>
+				<reportElement uuid="fd507dbf-8ad6-4570-8055-cb46943fb64d" key="table 15" style="table 15" x="429" y="41" width="43" height="267"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="ProduccionLechera3" uuid="9d91677d-2310-4269-9472-d47e52a25dcd">
+						<datasetParameter name="idPar">
+							<datasetParameterExpression><![CDATA[$F{idparcela}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="43" uuid="f42f09b0-7d51-4c32-b791-f7f5035c2c72">
+						<jr:detailCell style="table 15_TD" height="273" rowSpan="1">
+							<staticText>
+								<reportElement uuid="db5589b5-518a-4502-a784-435455affaa2" x="0" y="0" width="43" height="18"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<text><![CDATA[Compromiso 2018]]></text>
+							</staticText>
+							<staticText>
+								<reportElement uuid="7e33872a-65ea-445c-9b4c-86c24c2a708e" x="0" y="18" width="43" height="17"/>
+								<textElement>
+									<font size="6"/>
+								</textElement>
+								<text><![CDATA[]]></text>
+							</staticText>
+							<textField>
+								<reportElement uuid="466626fd-ffdc-474c-b317-a87445735254" x="0" y="35" width="43" height="17"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{suppastosembrado3}]]></textFieldExpression>
+							</textField>
+							<staticText>
+								<reportElement uuid="ea378ce4-0fca-412e-bc3e-4d2e2f82bf6c" x="0" y="52" width="43" height="17"/>
+								<textElement>
+									<font size="6"/>
+								</textElement>
+								<text><![CDATA[]]></text>
+							</staticText>
+							<textField>
+								<reportElement uuid="b30ecf9b-ae2f-4e35-9062-b086c2a8617b" x="0" y="69" width="43" height="16"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[(
+$F{sistemaordeno3}.intValue() == 0 ? "Manual":
+ ($F{sistemaordeno3}.intValue() == 1? "Mecanico" :"")
+)]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="e0ed17f2-b151-4cdb-b01a-f26ba90fc38b" x="0" y="85" width="43" height="17"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{galpon3}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="d51fb183-fa30-4d85-b986-92726f458407" x="0" y="103" width="43" height="16"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{tanqueenfriamiento3}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="70ef0064-2d5f-48bf-b554-180669672c0d" x="0" y="120" width="43" height="17"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{siloforraje3}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="6fe1d04d-ac55-4de6-bfc8-9b2f49b7bf40" x="0" y="137" width="43" height="16"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[(
+$F{certtuberculosis3} == "0" ? "NO":
+ ($F{certtuberculosis3} == "1"? "SI" :"")
+)]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="ba367640-21f0-44c3-855e-6b6426005d52" x="0" y="154" width="43" height="15"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[(
+$F{certbrucelosis3} == "0" ? "NO":
+ ($F{certbrucelosis3} == "1"? "SI" :"")
+)]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="ccdb0e3a-24fd-444e-ab45-6d783f315948" x="0" y="171" width="43" height="17"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{cabganprod3}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="7e734be9-bee9-4b9a-8ef2-58040738f15b" x="0" y="188" width="43" height="17"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{cabgandescar3}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="965c44ce-b5a7-42de-88a8-755ea073fb34" x="0" y="221" width="43" height="15"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{prodcarne3}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="00eb71c5-d119-4032-9419-488309cb20bf" x="0" y="240" width="43" height="15"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{prodleche3}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="0633bc61-53aa-4619-b0c2-94916a9b3a89" x="0" y="257" width="43" height="16"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{prodtotleche3}]]></textFieldExpression>
+							</textField>
+							<staticText>
+								<reportElement uuid="3349cebb-74cf-4295-a676-0f93b774b683" x="0" y="205" width="43" height="14"/>
+								<textElement>
+									<font size="6"/>
+								</textElement>
+								<text><![CDATA[]]></text>
+							</staticText>
+							<line>
+								<reportElement uuid="df1c9942-81d0-416e-9140-20c4c51bc637" x="0" y="51" width="43" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="fa997860-36b3-4d64-a757-019177cbb54b" x="0" y="34" width="43" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="426b47cf-39f6-4954-a2bf-18c786b55111" x="0" y="17" width="43" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="2d0e22bc-93d4-4e99-acc6-f21b5d5a6281" x="0" y="68" width="43" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="f86057a3-cc2e-462f-b7c6-aa101ff35f2b" x="0" y="85" width="43" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="e6531afc-c52f-46a4-a291-386c284a3dea" x="0" y="102" width="43" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="1190241b-35ed-4289-a86c-dcc85f59f793" x="0" y="119" width="43" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="be3951bc-9518-41f9-8fb6-279ccf6af651" x="0" y="153" width="43" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="d82ce65f-0393-43c7-9510-7a8235efa99b" x="0" y="136" width="43" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="1d903b21-87ba-4eb5-9eca-889141fd39b6" x="0" y="170" width="43" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="d9f9861c-f922-4067-b12a-8a723a46fa95" x="0" y="187" width="43" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="e838640c-dce7-4428-93c0-38c3958d33f1" x="0" y="204" width="43" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="7ecface3-8798-4680-a189-66d2de339323" x="0" y="220" width="43" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="3618e32a-a6f9-4aca-a177-ac1e668e1f44" x="0" y="238" width="43" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="80020ca0-d857-4572-8331-a7c9772bbc84" x="0" y="255" width="43" height="1"/>
+							</line>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<componentElement>
+				<reportElement uuid="fd507dbf-8ad6-4570-8055-cb46943fb64d" key="table 15" style="table 15" x="472" y="41" width="43" height="267"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="ProduccionLechera4" uuid="9d91677d-2310-4269-9472-d47e52a25dcd">
+						<datasetParameter name="idPar">
+							<datasetParameterExpression><![CDATA[$F{idparcela}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="43" uuid="f42f09b0-7d51-4c32-b791-f7f5035c2c72">
+						<jr:detailCell style="table 15_TD" height="273" rowSpan="1">
+							<staticText>
+								<reportElement uuid="db5589b5-518a-4502-a784-435455affaa2" x="0" y="0" width="43" height="18"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<text><![CDATA[Compromiso 2019]]></text>
+							</staticText>
+							<staticText>
+								<reportElement uuid="7e33872a-65ea-445c-9b4c-86c24c2a708e" x="0" y="18" width="43" height="17"/>
+								<textElement>
+									<font size="6"/>
+								</textElement>
+								<text><![CDATA[]]></text>
+							</staticText>
+							<textField>
+								<reportElement uuid="466626fd-ffdc-474c-b317-a87445735254" x="0" y="35" width="43" height="17"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{suppastosembrado4}]]></textFieldExpression>
+							</textField>
+							<staticText>
+								<reportElement uuid="ea378ce4-0fca-412e-bc3e-4d2e2f82bf6c" x="0" y="52" width="43" height="17"/>
+								<textElement>
+									<font size="6"/>
+								</textElement>
+								<text><![CDATA[]]></text>
+							</staticText>
+							<textField>
+								<reportElement uuid="b30ecf9b-ae2f-4e35-9062-b086c2a8617b" x="0" y="69" width="43" height="16"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[(
+$F{sistemaordeno4}.intValue() == 0 ? "Manual":
+ ($F{sistemaordeno4}.intValue() == 1? "Mecanico" :"")
+)]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="e0ed17f2-b151-4cdb-b01a-f26ba90fc38b" x="0" y="85" width="43" height="17"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{galpon4}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="d51fb183-fa30-4d85-b986-92726f458407" x="0" y="103" width="43" height="16"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{tanqueenfriamiento4}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="70ef0064-2d5f-48bf-b554-180669672c0d" x="0" y="120" width="43" height="17"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{siloforraje4}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="6fe1d04d-ac55-4de6-bfc8-9b2f49b7bf40" x="0" y="137" width="43" height="16"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[(
+$F{certtuberculosis4} == "0" ? "NO":
+ ($F{certtuberculosis4} == "1"? "SI" :"")
+)]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="ba367640-21f0-44c3-855e-6b6426005d52" x="0" y="154" width="43" height="15"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[(
+$F{certbrucelosis4} == "0" ? "NO":
+ ($F{certbrucelosis4} == "1"? "SI" :"")
+)]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="ccdb0e3a-24fd-444e-ab45-6d783f315948" x="0" y="171" width="43" height="17"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{cabganprod4}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="7e734be9-bee9-4b9a-8ef2-58040738f15b" x="0" y="188" width="43" height="17"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{cabgandescar4}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="965c44ce-b5a7-42de-88a8-755ea073fb34" x="0" y="221" width="43" height="15"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{prodcarne4}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="00eb71c5-d119-4032-9419-488309cb20bf" x="0" y="240" width="43" height="15"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{prodleche4}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="0633bc61-53aa-4619-b0c2-94916a9b3a89" x="0" y="257" width="43" height="16"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{prodtotleche4}]]></textFieldExpression>
+							</textField>
+							<staticText>
+								<reportElement uuid="3349cebb-74cf-4295-a676-0f93b774b683" x="0" y="205" width="43" height="14"/>
+								<textElement>
+									<font size="6"/>
+								</textElement>
+								<text><![CDATA[]]></text>
+							</staticText>
+							<line>
+								<reportElement uuid="df1c9942-81d0-416e-9140-20c4c51bc637" x="0" y="51" width="43" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="fa997860-36b3-4d64-a757-019177cbb54b" x="0" y="34" width="43" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="426b47cf-39f6-4954-a2bf-18c786b55111" x="0" y="17" width="43" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="2d0e22bc-93d4-4e99-acc6-f21b5d5a6281" x="0" y="68" width="43" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="f86057a3-cc2e-462f-b7c6-aa101ff35f2b" x="0" y="85" width="43" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="e6531afc-c52f-46a4-a291-386c284a3dea" x="0" y="102" width="43" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="1190241b-35ed-4289-a86c-dcc85f59f793" x="0" y="119" width="43" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="be3951bc-9518-41f9-8fb6-279ccf6af651" x="0" y="153" width="43" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="d82ce65f-0393-43c7-9510-7a8235efa99b" x="0" y="136" width="43" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="1d903b21-87ba-4eb5-9eca-889141fd39b6" x="0" y="170" width="43" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="d9f9861c-f922-4067-b12a-8a723a46fa95" x="0" y="187" width="43" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="e838640c-dce7-4428-93c0-38c3958d33f1" x="0" y="204" width="43" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="7ecface3-8798-4680-a189-66d2de339323" x="0" y="220" width="43" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="3618e32a-a6f9-4aca-a177-ac1e668e1f44" x="0" y="238" width="43" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="80020ca0-d857-4572-8331-a7c9772bbc84" x="0" y="255" width="43" height="1"/>
+							</line>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<componentElement>
+				<reportElement uuid="fd507dbf-8ad6-4570-8055-cb46943fb64d" key="table 15" style="table 15" x="515" y="41" width="43" height="267"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="ProduccionLechera5" uuid="9d91677d-2310-4269-9472-d47e52a25dcd">
+						<datasetParameter name="idpar">
+							<datasetParameterExpression><![CDATA[$F{idparcela}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="43" uuid="f42f09b0-7d51-4c32-b791-f7f5035c2c72">
+						<jr:detailCell style="table 15_TD" height="273" rowSpan="1">
+							<staticText>
+								<reportElement uuid="db5589b5-518a-4502-a784-435455affaa2" x="0" y="0" width="43" height="18"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<text><![CDATA[Compromiso 2020]]></text>
+							</staticText>
+							<staticText>
+								<reportElement uuid="7e33872a-65ea-445c-9b4c-86c24c2a708e" x="0" y="18" width="43" height="17"/>
+								<textElement>
+									<font size="6"/>
+								</textElement>
+								<text><![CDATA[]]></text>
+							</staticText>
+							<textField>
+								<reportElement uuid="466626fd-ffdc-474c-b317-a87445735254" x="0" y="35" width="43" height="17"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{suppastosembrado5}]]></textFieldExpression>
+							</textField>
+							<staticText>
+								<reportElement uuid="ea378ce4-0fca-412e-bc3e-4d2e2f82bf6c" x="0" y="52" width="43" height="17"/>
+								<textElement>
+									<font size="6"/>
+								</textElement>
+								<text><![CDATA[]]></text>
+							</staticText>
+							<textField>
+								<reportElement uuid="b30ecf9b-ae2f-4e35-9062-b086c2a8617b" x="0" y="69" width="43" height="16"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[(
+$F{sistemaordeno5}.intValue() == 0 ? "Manual":
+ ($F{sistemaordeno5}.intValue() == 1? "Mecanico" :"")
+)]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="e0ed17f2-b151-4cdb-b01a-f26ba90fc38b" x="0" y="85" width="43" height="17"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{galpon5}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="d51fb183-fa30-4d85-b986-92726f458407" x="0" y="103" width="43" height="16"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{tanqueenfriamiento5}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="70ef0064-2d5f-48bf-b554-180669672c0d" x="0" y="120" width="43" height="17"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{siloforraje5}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="6fe1d04d-ac55-4de6-bfc8-9b2f49b7bf40" x="0" y="137" width="43" height="16"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[(
+$F{certtuberculosis5} == "0" ? "NO":
+ ($F{certtuberculosis5} == "1"? "SI" :"")
+)]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="ba367640-21f0-44c3-855e-6b6426005d52" x="0" y="154" width="43" height="15"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[(
+$F{certbrucelosis5} == "0" ? "NO":
+ ($F{certbrucelosis5} == "1"? "SI" :"")
+)]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="ccdb0e3a-24fd-444e-ab45-6d783f315948" x="0" y="171" width="43" height="17"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{cabganprod5}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="7e734be9-bee9-4b9a-8ef2-58040738f15b" x="0" y="188" width="43" height="17"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{cabgandescar5}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="965c44ce-b5a7-42de-88a8-755ea073fb34" x="0" y="221" width="43" height="15"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{prodcarne5}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="00eb71c5-d119-4032-9419-488309cb20bf" x="0" y="240" width="43" height="15"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{prodleche5}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="0633bc61-53aa-4619-b0c2-94916a9b3a89" x="0" y="257" width="43" height="16"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{prodtotleche5}]]></textFieldExpression>
+							</textField>
+							<staticText>
+								<reportElement uuid="3349cebb-74cf-4295-a676-0f93b774b683" x="0" y="205" width="43" height="14"/>
+								<textElement>
+									<font size="6"/>
+								</textElement>
+								<text><![CDATA[]]></text>
+							</staticText>
+							<line>
+								<reportElement uuid="df1c9942-81d0-416e-9140-20c4c51bc637" x="0" y="51" width="43" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="fa997860-36b3-4d64-a757-019177cbb54b" x="0" y="34" width="43" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="426b47cf-39f6-4954-a2bf-18c786b55111" x="0" y="17" width="43" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="2d0e22bc-93d4-4e99-acc6-f21b5d5a6281" x="0" y="68" width="43" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="f86057a3-cc2e-462f-b7c6-aa101ff35f2b" x="0" y="85" width="43" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="e6531afc-c52f-46a4-a291-386c284a3dea" x="0" y="102" width="43" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="1190241b-35ed-4289-a86c-dcc85f59f793" x="0" y="119" width="43" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="be3951bc-9518-41f9-8fb6-279ccf6af651" x="0" y="153" width="43" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="d82ce65f-0393-43c7-9510-7a8235efa99b" x="0" y="136" width="43" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="1d903b21-87ba-4eb5-9eca-889141fd39b6" x="0" y="170" width="43" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="d9f9861c-f922-4067-b12a-8a723a46fa95" x="0" y="187" width="43" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="e838640c-dce7-4428-93c0-38c3958d33f1" x="0" y="204" width="43" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="7ecface3-8798-4680-a189-66d2de339323" x="0" y="220" width="43" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="3618e32a-a6f9-4aca-a177-ac1e668e1f44" x="0" y="238" width="43" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="80020ca0-d857-4572-8331-a7c9772bbc84" x="0" y="255" width="43" height="1"/>
+							</line>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<staticText>
+				<reportElement uuid="e4ab7c31-6a16-40d5-8075-6f5d48ee1d1b" x="3" y="27" width="187" height="14"/>
+				<textElement verticalAlignment="Bottom">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Situacion  Actual Lechera]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="9" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="18" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="8" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report_superficies_general_all" language="groovy" pageWidth="1008" pageHeight="612" orientation="Landscape" columnWidth="968" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a8a5627a-8be8-4649-9fda-6a8484382c9c">
+	<property name="ireport.zoom" value="1.100000000000003"/>
+	<property name="ireport.x" value="236"/>
+	<property name="ireport.y" value="122"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="New Dataset TOTAL SUPERFICIES" uuid="aa979c58-b04d-4b83-8fbe-f6d068153ca9">
+		<queryString>
+			<![CDATA[select count(idregistro)as t_count,SUM(S.sup_def_ilegal)AS t_sup_def_ilegal, SUM(S.suptpfp)AS t_suptpfp
+, SUM(S.suptum)AS t_suptum, SUM(S.sup_reftpfp)AS t_sup_reftpfp, SUM(S.sup_alitpfp)AS t_sup_alitpfp
+, SUM(S.sup_alitum)AS t_sup_alitum, SUM(S.sup_selconservar)AS t_sup_selconservar, SUM(S.sup_selrestituir)AS t_sup_selrestituir, SUM(S.superficie_total)AS t_superficie_total
+ from view_report_predios_superficies S]]>
+		</queryString>
+		<field name="t_count" class="java.lang.Long"/>
+		<field name="t_sup_def_ilegal" class="java.lang.Double"/>
+		<field name="t_suptpfp" class="java.lang.Double"/>
+		<field name="t_suptum" class="java.lang.Double"/>
+		<field name="t_sup_reftpfp" class="java.lang.Double"/>
+		<field name="t_sup_alitpfp" class="java.lang.Double"/>
+		<field name="t_sup_alitum" class="java.lang.Double"/>
+		<field name="t_sup_selconservar" class="java.lang.Double"/>
+		<field name="t_sup_selrestituir" class="java.lang.Double"/>
+		<field name="t_superficie_total" class="java.lang.Double"/>
+	</subDataset>
+	<subDataset name="dataset_superficies_estado" uuid="2499e0aa-9513-4c5d-8a5b-93932ebcef55">
+		<queryString language="SQL">
+			<![CDATA[select estado ,count(estado), SUM(S.sup_def_ilegal)AS sup_def_ilegal, SUM(S.suptpfp)AS suptpfp
+, SUM(S.suptum)AS suptum, SUM(S.sup_reftpfp)AS sup_reftpfp, SUM(S.sup_alitpfp)AS sup_alitpfp
+, SUM(S.sup_alitum)AS sup_alitum, SUM(S.sup_selconservar)AS sup_selconservar, SUM(S.sup_selrestituir)AS sup_selrestituir ,SUM(S.superficie_total)AS superficie_total
+ from view_report_predios_superficies S
+ group by estado]]>
+		</queryString>
+		<field name="estado" class="java.lang.String"/>
+		<field name="count" class="java.lang.Long"/>
+		<field name="sup_def_ilegal" class="java.lang.Double"/>
+		<field name="suptpfp" class="java.lang.Double"/>
+		<field name="suptum" class="java.lang.Double"/>
+		<field name="sup_reftpfp" class="java.lang.Double"/>
+		<field name="sup_alitpfp" class="java.lang.Double"/>
+		<field name="sup_alitum" class="java.lang.Double"/>
+		<field name="sup_selconservar" class="java.lang.Double"/>
+		<field name="sup_selrestituir" class="java.lang.Double"/>
+		<field name="superficie_total" class="java.lang.Double"/>
+	</subDataset>
+	<queryString>
+		<![CDATA[SELECT
+     r_general."idregistro" AS r_general_idregistro,
+     r_general."nombrepredio" AS r_general_nombrepredio,
+     r_general."idparcela" AS r_general_idparcela,
+     r_general."comp" AS r_general_comp,
+     r_general."municipio" AS r_general_municipio,
+     r_general."Clasificacion" AS r_general_Clasificacion,
+     r_general."TipoProp" AS r_general_TipoProp,
+     r_general."SitJur" AS r_general_SitJur,
+     r_general."Oficina" AS r_general_Oficina,
+     r_general."estado" AS r_general_estado,
+     r_general."asesoramiento" AS r_general_asesoramiento,
+     r_general."fecharegistro" AS r_general_fecharegistro,
+     r_general."suppredio" AS r_general_suppredio,
+     r_general."supdefilegal" AS r_general_supdefilegal,
+     r_general."suptpfp" AS r_general_suptpfp,
+     r_general."supreftpfp" AS r_general_supreftpfp,
+     r_general."supalitpfp" AS r_general_supalitpfp,
+     r_general."supselstpfp" AS r_general_supselstpfp,
+     r_general."suptum" AS r_general_suptum,
+     r_general."supalitum" AS r_general_supalitum,
+     r_general."supselstum" AS r_general_supselstum,
+     r_general."supmejoras" AS r_general_supmejoras,
+     r_general."suppas" AS r_general_suppas,
+     r_general."supselspas" AS r_general_supselspas,
+     r_general."supalipas" AS r_general_supalipas,
+     r_general."supprodali" AS r_general_supprodali
+FROM
+     "public"."r_general" r_general]]>
+	</queryString>
+	<field name="r_general_idregistro" class="java.lang.Integer"/>
+	<field name="r_general_nombrepredio" class="java.lang.String"/>
+	<field name="r_general_idparcela" class="java.lang.String"/>
+	<field name="r_general_comp" class="java.lang.String"/>
+	<field name="r_general_municipio" class="java.lang.String"/>
+	<field name="r_general_clasificacion" class="java.lang.String"/>
+	<field name="r_general_tipoprop" class="java.lang.String"/>
+	<field name="r_general_sitjur" class="java.lang.String"/>
+	<field name="r_general_oficina" class="java.lang.String"/>
+	<field name="r_general_estado" class="java.lang.String"/>
+	<field name="r_general_asesoramiento" class="java.lang.String"/>
+	<field name="r_general_fecharegistro" class="java.sql.Date"/>
+	<field name="r_general_suppredio" class="java.lang.Double"/>
+	<field name="r_general_supdefilegal" class="java.lang.Double"/>
+	<field name="r_general_suptpfp" class="java.lang.Double"/>
+	<field name="r_general_supreftpfp" class="java.lang.Double"/>
+	<field name="r_general_supalitpfp" class="java.lang.Double"/>
+	<field name="r_general_supselstpfp" class="java.lang.Double"/>
+	<field name="r_general_suptum" class="java.lang.Double"/>
+	<field name="r_general_supalitum" class="java.lang.Double"/>
+	<field name="r_general_supselstum" class="java.lang.Double"/>
+	<field name="r_general_supmejoras" class="java.lang.Double"/>
+	<field name="r_general_suppas" class="java.lang.Double"/>
+	<field name="r_general_supselspas" class="java.lang.Double"/>
+	<field name="r_general_supalipas" class="java.lang.Double"/>
+	<field name="r_general_supprodali" class="java.lang.Double"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="66" splitType="Stretch">
+			<image>
+				<reportElement uuid="b86fb967-86e9-4dee-955f-7433964fed93" x="0" y="4" width="78" height="58"/>
+				<imageExpression><![CDATA["C:\\xampp\\htdocs\\PPARB\\sistema\\reportes\\reportes\\1_bolivia.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="ec078079-56e5-4798-89e1-b96d0ad26a6b" x="382" y="4" width="161" height="58"/>
+				<imageExpression><![CDATA["C:\\xampp\\htdocs\\PPARB\\sistema\\reportes\\reportes\\2_mdryt.jpg"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="45b51855-86a1-4e63-b046-4d6200c5a883" x="778" y="4" width="185" height="58"/>
+				<imageExpression><![CDATA["C:\\xampp\\htdocs\\PPARB\\sistema\\reportes\\reportes\\3_abt.png"]]></imageExpression>
+			</image>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="72" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="fb125fd2-3e1f-480a-9059-310d23d1d0be" x="20" y="41" width="65" height="23"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CODIGO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="e8c6d4b6-afb0-420e-b1a0-8bcb7704578b" x="85" y="41" width="137" height="23"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NOMBRE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="10980b3a-9aee-4492-b50d-9f7539ff01bd" x="222" y="41" width="75" height="23"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MUNICIPIO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b777a454-8b66-4d59-9039-2f369488814f" x="522" y="41" width="45" height="23"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SUP. SELS TPFP]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="14ae11ab-f71b-48c6-8d0b-bbe37c1c52ae" x="882" y="41" width="45" height="23"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SUP PROD ALI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4a739172-bfb3-4980-b846-e4e906e02fc2" x="928" y="41" width="58" height="23"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ESTADO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="361b2d62-2c0f-455e-a9a9-479ab3d405b1" x="567" y="41" width="45" height="23"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SUP. TUM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="cb21c5ce-39f3-4d5e-ad93-f23be763f940" x="657" y="41" width="45" height="23"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SUP. SELS TUM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="bfc95e1f-e554-4341-817e-67bbc51a4889" x="792" y="41" width="45" height="23"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SUP SELS PAS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="15496156-1536-42f5-8d8c-079b6a538d61" x="747" y="41" width="45" height="23"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SUP. PAS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="20a5d7cd-1897-4d00-98fe-e82fd1d44a4d" x="837" y="41" width="45" height="23"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SUP.  ALI. PAS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4a02cd14-0d25-44ab-a14f-5e42e412f321" x="0" y="41" width="20" height="23"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NRO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="50d91746-197f-4123-acc8-182712398713" x="164" y="0" width="351" height="41"/>
+				<textElement>
+					<font size="24"/>
+				</textElement>
+				<text><![CDATA[Lista Predios y Superficies
+]]></text>
+			</staticText>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement uuid="bf6c3880-0708-45dc-87f1-ee7b8bb1a791" x="515" y="0" width="273" height="41"/>
+				<textElement>
+					<font size="24"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement uuid="3e0bcedc-2939-4235-aa18-f3d1aaf1bb97" x="0" y="-1" width="968" height="1"/>
+			</line>
+			<staticText>
+				<reportElement uuid="5911e4e2-6cb7-48d2-8f28-ca5bda9143fd" x="387" y="41" width="45" height="23"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SUP. TPFP]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="cb21c5ce-39f3-4d5e-ad93-f23be763f940" x="702" y="41" width="45" height="23"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SUP. MEJORAS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="cb21c5ce-39f3-4d5e-ad93-f23be763f940" x="612" y="41" width="45" height="23"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SUP. ALI TUM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b777a454-8b66-4d59-9039-2f369488814f" x="477" y="41" width="45" height="23"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SUP. ALI TPFP]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="5911e4e2-6cb7-48d2-8f28-ca5bda9143fd" x="432" y="41" width="45" height="23"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SUP. REF. TPFP]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="5911e4e2-6cb7-48d2-8f28-ca5bda9143fd" x="343" y="41" width="45" height="23"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SUP. DEF. ILEGAL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="5911e4e2-6cb7-48d2-8f28-ca5bda9143fd" x="298" y="41" width="45" height="23"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SUP. TOTAL]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="22" splitType="Stretch">
+			<textField>
+				<reportElement uuid="666d887d-3707-4a8a-8fd4-8d94c65fd1a7" x="85" y="1" width="137" height="20"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{r_general_nombrepredio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="f3328ca6-4e66-434d-969f-36b9a693e4ef" x="222" y="0" width="75" height="20"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{r_general_municipio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="236058e6-0d80-463f-b8c9-51055c4bd5cf" x="522" y="0" width="45" height="20"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{r_general_supselstpfp}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="810db986-1fc4-4058-9c3f-acc476225ecb" x="567" y="0" width="45" height="20"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{r_general_suptum}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="d598c9f2-29d2-4a0e-a941-de865c56dd35" x="882" y="0" width="45" height="20"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{r_general_supprodali}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="d54f23be-5dab-433c-ad10-072d92f13f7f" x="837" y="0" width="45" height="20"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{r_general_supalipas}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="87460ea4-f114-4308-a7fe-ece9fd9913a6" x="928" y="0" width="58" height="20"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{r_general_estado}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="e2e8bc35-469a-4661-ae49-fb48a8a5bb08" x="0" y="0" width="20" height="20"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="f5c60951-c8f5-4d6e-add1-91af78d7fb88" x="747" y="0" width="45" height="20"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{r_general_suppas}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="f3b4775e-4aa9-49d4-8b9d-acaea452fb6d" x="792" y="0" width="45" height="20"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{r_general_supselspas}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="4485254b-1860-441d-b64e-a09b582e170f" x="20" y="1" width="65" height="20"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{r_general_idparcela}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="95295ed1-89cf-483b-9623-fbd5e1f56b5c" x="387" y="0" width="45" height="20"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{r_general_suptpfp}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="aa89b3f3-1856-4c5a-85e5-1c463dbfcaa1" x="657" y="2" width="45" height="20"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{r_general_supselstum}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="f5c60951-c8f5-4d6e-add1-91af78d7fb88" x="702" y="2" width="45" height="20"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{r_general_supmejoras}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="aa89b3f3-1856-4c5a-85e5-1c463dbfcaa1" x="612" y="2" width="45" height="20"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{r_general_supalitum}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="236058e6-0d80-463f-b8c9-51055c4bd5cf" x="477" y="0" width="45" height="20"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{r_general_supalitpfp}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="95295ed1-89cf-483b-9623-fbd5e1f56b5c" x="432" y="0" width="45" height="20"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{r_general_supreftpfp}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="95295ed1-89cf-483b-9623-fbd5e1f56b5c" x="343" y="0" width="45" height="20"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{r_general_supdefilegal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="95295ed1-89cf-483b-9623-fbd5e1f56b5c" x="298" y="0" width="45" height="20"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{r_general_suppredio}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="3" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="24" splitType="Stretch">
+			<textField>
+				<reportElement uuid="69c67a32-df6a-45cd-bae9-27b023c985f3" x="848" y="4" width="80" height="20"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement uuid="dd9b0fbb-1a92-4ca3-a2b7-a5b3f4a9f9b6" x="928" y="4" width="40" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement uuid="4e866cb4-5ea0-4a20-a39c-f6f11464cce5" x="0" y="0" width="963" height="1"/>
+			</line>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="28" splitType="Stretch"/>
+	</summary>
+</jasperReport>

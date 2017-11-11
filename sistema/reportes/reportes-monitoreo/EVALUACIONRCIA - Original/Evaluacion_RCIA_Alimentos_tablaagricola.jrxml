@@ -1,0 +1,691 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Evaluacion_RCIA_Alimentos_tablaganadera" language="groovy" pageWidth="612" pageHeight="792" columnWidth="474" leftMargin="69" rightMargin="69" topMargin="0" bottomMargin="0" uuid="0f1ff8ac-bba9-45a6-b867-eadb10105d02">
+	<property name="ireport.zoom" value="1.1000000000000028"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F5F5DC">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#FFFFBF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#F5F5DC">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#FFFFBF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TH" mode="Opaque" backcolor="#F5F5DC">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_CH" mode="Opaque" backcolor="#FFFFBF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Crosstab Data Text" hAlign="Center"/>
+	<style name="table 3">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 7">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 7_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 7_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 7_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 8">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 8_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 8_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 8_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 9">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 9_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 9_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 9_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="notaagricola" uuid="51782ac7-87cf-4bb4-9cbb-e7551f843c20">
+		<parameter name="idmonitoreo" class="java.lang.Integer"/>
+		<queryString>
+			<![CDATA[select idmonitoreo, sum(puntuacion) as puntuacionagricola
+from monitoreo.valoracionalimentos as mva inner join monitoreo.evaluacionespecifica as mee on mva.idevalespecif = mee.idevaluacionespecifica
+inner join monitoreo.evaluaciongeneral as meg on mee.idevalgral = meg.idevalgral
+where mva.tipo = 70 and idmonitoreo = $P{idmonitoreo}
+group by idmonitoreo]]>
+		</queryString>
+		<field name="idmonitoreo" class="java.lang.Integer"/>
+		<field name="puntuacionagricola" class="java.math.BigDecimal"/>
+	</subDataset>
+	<subDataset name="detallecultivo" uuid="46c9a346-803b-4569-a4c4-b38038382d4e">
+		<parameter name="idmonitoreo" class="java.lang.Integer"/>
+		<queryString>
+			<![CDATA[select va.idmonitoreo, c.nombrecultivo, dvc.puntuacioncultivo, va.puntuacion,ee.parametroespecifico, va.idtablavaloracion
+from monitoreo.valoracionalimentos as va inner join monitoreo.detallevalorcultivo as dvc on va.idtablavaloracion = idtablavalorali
+inner join cultivo as c on c.idcultivo = dvc.idcultivo inner join monitoreo.evaluacionespecifica as ee on ee.idevaluacionespecifica = va.idevalespecif
+where va.tipo = 70   and va.idmonitoreo = $P{idmonitoreo}
+order by idtablavaloracion asc]]>
+		</queryString>
+		<field name="idmonitoreo" class="java.lang.Integer"/>
+		<field name="nombrecultivo" class="java.lang.String"/>
+		<field name="puntuacioncultivo" class="java.lang.Integer"/>
+		<field name="puntuacion" class="java.math.BigDecimal"/>
+		<field name="parametroespecifico" class="java.lang.String"/>
+		<field name="idtablavaloracion" class="java.lang.Integer"/>
+	</subDataset>
+	<subDataset name="notaagricolaporparametro" uuid="ad7c2132-e913-44b5-a316-e05dfd898b4e">
+		<parameter name="idmonitoreo" class="java.lang.Integer"/>
+		<queryString>
+			<![CDATA[select va.idmonitoreo, va.puntuacion,ee.parametroespecifico, va.idtablavaloracion
+from monitoreo.valoracionalimentos as va inner join monitoreo.evaluacionespecifica as ee on ee.idevaluacionespecifica = va.idevalespecif
+where va.tipo = 70   and va.idmonitoreo = $P{idmonitoreo}
+order by idtablavaloracion asc]]>
+		</queryString>
+		<field name="idmonitoreo" class="java.lang.Integer"/>
+		<field name="puntuacion" class="java.math.BigDecimal"/>
+		<field name="parametroespecifico" class="java.lang.String"/>
+		<field name="idtablavaloracion" class="java.lang.Integer"/>
+	</subDataset>
+	<parameter name="idregistro" class="java.lang.Integer"/>
+	<parameter name="idmonitoreo" class="java.lang.Integer"/>
+	<queryString>
+		<![CDATA[select v.*
+from v_parcela as v inner join plancultivo as pc on v.idregistro = pc.idregistro
+where v.idregistro = $P{idregistro}
+limit 1]]>
+	</queryString>
+	<field name="idregistro" class="java.lang.Integer"/>
+	<field name="idparcela" class="java.lang.String"/>
+	<field name="nombre" class="java.lang.String"/>
+	<field name="superficie" class="java.lang.Double"/>
+	<field name="comp" class="java.lang.String"/>
+	<field name="nombrepolitico" class="java.lang.String"/>
+	<field name="TipoProp" class="java.lang.String"/>
+	<field name="SitJur" class="java.lang.String"/>
+	<field name="Clasificacion" class="java.lang.String"/>
+	<field name="idclasificacion" class="java.lang.String"/>
+	<field name="Oficina" class="java.lang.String"/>
+	<field name="estado" class="java.lang.String"/>
+	<field name="asesoramiento" class="java.lang.String"/>
+	<field name="fecharegistro" class="java.sql.Date"/>
+	<field name="clasificacionprog" class="java.lang.String"/>
+	<field name="departamento" class="java.lang.String"/>
+	<field name="provincia" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="114" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="b3a1ef0e-700b-4d35-a5c3-2a519b5b7c6d" x="3" y="33" width="120" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[NOMBRE PREDIO:]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="4a679db6-87b0-4048-b8ed-63a614d35f10" x="123" y="33" width="311" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="8defbad3-0c32-4a30-9407-5a7142a8d36f" x="3" y="53" width="120" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[CODIGO DE REGISTRO:]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="9dc2a262-a43f-4da5-a7e2-baaf0e75c099" x="123" y="53" width="311" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idparcela}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="7ccbd10c-cc2f-4bef-92ac-fda23380ddce" x="0" y="16" width="434" height="16"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[TABLA DE VALORACION AGRICOLA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8defbad3-0c32-4a30-9407-5a7142a8d36f" x="3" y="73" width="120" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[FECHA:]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="7636e24c-090e-44f6-b3fd-94ef8a6ad3c2" x="0" y="93" width="434" height="1"/>
+			</line>
+			<staticText>
+				<reportElement uuid="10e058c5-92ba-4f60-b7d3-815ff5243a27" x="0" y="0" width="434" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[ANEXO]]></text>
+			</staticText>
+		</band>
+		<band height="394">
+			<staticText>
+				<reportElement uuid="a6f75132-280b-4f2f-a4be-d17e9e6bb8b5" style="table" x="110" y="61" width="19" height="160"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[70]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="2e309d64-5c81-423d-84b9-db12f96036a1" style="table 1_TH" x="129" y="0" width="129" height="21"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Evaluación Directriz Técnica Especifica]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="aca38818-898c-433b-96cc-d845cb9a42bf" style="table 1_TH" x="63" y="21" width="66" height="40"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Valoración (%)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4587369d-0d4f-4d50-9484-b1bfcd2239fe" style="table" x="129" y="101" width="100" height="40"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Compra de semilla certificada ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4587369d-0d4f-4d50-9484-b1bfcd2239fe" style="table" x="129" y="301" width="100" height="40"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Adquisición de insumos ecológicos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a8a8ca04-bf6f-4811-b9b4-13836de681f6" style="table 1_TH" x="129" y="21" width="100" height="40"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Parámetro]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4587369d-0d4f-4d50-9484-b1bfcd2239fe" style="table" x="0" y="301" width="110" height="40"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Uso de abonos e insumos ecológicos. (*)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a6f75132-280b-4f2f-a4be-d17e9e6bb8b5" style="table" x="229" y="61" width="29" height="40"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[30]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4587369d-0d4f-4d50-9484-b1bfcd2239fe" style="table" x="129" y="61" width="100" height="40"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Documento de comercialización de la producción]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a6f75132-280b-4f2f-a4be-d17e9e6bb8b5" style="table" x="110" y="301" width="19" height="40"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[5]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4587369d-0d4f-4d50-9484-b1bfcd2239fe" style="table" x="0" y="221" width="63" height="80"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Aplicación de técnicas y tecnologías sostenibles: - Siembra directa. -Rotacion de Cultivos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a8a8ca04-bf6f-4811-b9b4-13836de681f6" style="table 1_TH" x="0" y="21" width="63" height="40"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Parámetro]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a6f75132-280b-4f2f-a4be-d17e9e6bb8b5" style="table" x="110" y="221" width="19" height="80"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[30]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="aca38818-898c-433b-96cc-d845cb9a42bf" style="table 1_TH" x="229" y="21" width="29" height="40"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Valoración (%)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4587369d-0d4f-4d50-9484-b1bfcd2239fe" style="table" x="129" y="181" width="100" height="40"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Combustibles y lubricantes]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="2e309d64-5c81-423d-84b9-db12f96036a1" style="table 1_TH" x="0" y="0" width="129" height="21"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Evaluación Directriz Técnica General]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a6f75132-280b-4f2f-a4be-d17e9e6bb8b5" style="table" x="229" y="261" width="29" height="40"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[15]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4587369d-0d4f-4d50-9484-b1bfcd2239fe" style="table" x="63" y="61" width="47" height="160"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[De 0 al 100% de forma directa en relación a la superficie programada]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4587369d-0d4f-4d50-9484-b1bfcd2239fe" style="table" x="0" y="61" width="63" height="160"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Superficie de siembra comprometida en el área deforestada sin autorización por cultivos estratégicos de acuerdo a programación (ha) ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4587369d-0d4f-4d50-9484-b1bfcd2239fe" style="table" x="129" y="141" width="100" height="40"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Adquisición de insumos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4587369d-0d4f-4d50-9484-b1bfcd2239fe" style="table" x="129" y="261" width="100" height="40"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Compra y/o alquiler de maquinaria y herramientas de siembra directa y/o insumos que demuestre siembra directa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a6f75132-280b-4f2f-a4be-d17e9e6bb8b5" style="table" x="229" y="221" width="29" height="40"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[15]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4587369d-0d4f-4d50-9484-b1bfcd2239fe" style="table" x="129" y="221" width="100" height="40"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Compra de semilla certificada y/o, venta de producto (que demuestren rotación de cultivo)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a6f75132-280b-4f2f-a4be-d17e9e6bb8b5" style="table" x="229" y="101" width="29" height="40"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[20]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a6f75132-280b-4f2f-a4be-d17e9e6bb8b5" style="table" x="229" y="141" width="29" height="40"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[15]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a6f75132-280b-4f2f-a4be-d17e9e6bb8b5" style="table" x="229" y="181" width="29" height="40"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[5]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4587369d-0d4f-4d50-9484-b1bfcd2239fe" style="table" x="63" y="221" width="47" height="80"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[De acuerdo a grados de aplicación: 1 Tecnica = 50% 2 Tecnicas= 100%]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a6f75132-280b-4f2f-a4be-d17e9e6bb8b5" style="table" x="229" y="301" width="29" height="40"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[5]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="0d824723-07bd-49e9-a517-ec2fbe12a384" style="table" x="0" y="341" width="403" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[PONDERACION FINAL (%)]]></text>
+			</staticText>
+			<crosstab>
+				<reportElement uuid="5b58d885-03ac-45f6-a55b-8ac79ce49683" style="table" x="258" y="21" width="176" height="320"/>
+				<crosstabDataset>
+					<dataset>
+						<datasetRun subDataset="detallecultivo" uuid="d193b40d-848e-4654-a20a-42e64275f2cb">
+							<datasetParameter name="idmonitoreo">
+								<datasetParameterExpression><![CDATA[$P{idmonitoreo}]]></datasetParameterExpression>
+							</datasetParameter>
+							<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+						</datasetRun>
+					</dataset>
+				</crosstabDataset>
+				<rowGroup name="idtablavaloracion" width="0">
+					<bucket class="java.lang.Integer">
+						<bucketExpression><![CDATA[$F{idtablavaloracion}]]></bucketExpression>
+					</bucket>
+					<crosstabRowHeader>
+						<cellContents backcolor="#F0F8FF" mode="Opaque"/>
+					</crosstabRowHeader>
+					<crosstabTotalRowHeader>
+						<cellContents/>
+					</crosstabTotalRowHeader>
+				</rowGroup>
+				<columnGroup name="nombrecultivo" height="40">
+					<bucket class="java.lang.String">
+						<bucketExpression><![CDATA[$F{nombrecultivo}]]></bucketExpression>
+					</bucket>
+					<crosstabColumnHeader>
+						<cellContents backcolor="#F0F8FF" mode="Opaque">
+							<textField>
+								<reportElement uuid="09db4342-3278-44d1-b549-1cdda41b2173" style="table" x="0" y="1" width="29" height="39"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$V{nombrecultivo}]]></textFieldExpression>
+							</textField>
+						</cellContents>
+					</crosstabColumnHeader>
+					<crosstabTotalColumnHeader>
+						<cellContents/>
+					</crosstabTotalColumnHeader>
+				</columnGroup>
+				<measure name="puntuacioncultivoMeasure" class="java.lang.Integer" calculation="Sum">
+					<measureExpression><![CDATA[$F{puntuacioncultivo}]]></measureExpression>
+				</measure>
+				<crosstabCell width="29" height="40">
+					<cellContents>
+						<textField>
+							<reportElement uuid="f73e7837-d5fb-412b-a168-6d9f7d57e84b" style="table" x="0" y="0" width="29" height="40"/>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font size="8"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$V{puntuacioncultivoMeasure}]]></textFieldExpression>
+						</textField>
+					</cellContents>
+				</crosstabCell>
+				<crosstabCell height="25" rowTotalGroup="idtablavaloracion">
+					<cellContents backcolor="#BFE1FF" mode="Opaque">
+						<textField>
+							<reportElement uuid="c4105cc4-2e09-4437-a389-17d7f015e00e" style="Crosstab Data Text" x="0" y="0" width="50" height="25"/>
+							<textElement/>
+							<textFieldExpression><![CDATA[$V{puntuacioncultivoMeasure}]]></textFieldExpression>
+						</textField>
+					</cellContents>
+				</crosstabCell>
+				<crosstabCell width="50" columnTotalGroup="nombrecultivo">
+					<cellContents backcolor="#BFE1FF" mode="Opaque">
+						<textField>
+							<reportElement uuid="a17cc748-3847-4711-a348-b091385647f8" style="Crosstab Data Text" x="0" y="0" width="50" height="25"/>
+							<textElement/>
+							<textFieldExpression><![CDATA[$V{puntuacioncultivoMeasure}]]></textFieldExpression>
+						</textField>
+					</cellContents>
+				</crosstabCell>
+				<crosstabCell rowTotalGroup="idtablavaloracion" columnTotalGroup="nombrecultivo">
+					<cellContents backcolor="#BFE1FF" mode="Opaque">
+						<textField>
+							<reportElement uuid="496a07ca-1bfd-4fdf-9ed5-9ee98d1acb7c" style="Crosstab Data Text" x="0" y="0" width="50" height="25"/>
+							<textElement/>
+							<textFieldExpression><![CDATA[$V{puntuacioncultivoMeasure}]]></textFieldExpression>
+						</textField>
+					</cellContents>
+				</crosstabCell>
+			</crosstab>
+			<componentElement>
+				<reportElement uuid="1feccf9c-fcad-4289-8da0-8de075ab81c6" key="table 8" style="table 8" x="434" y="341" width="40" height="20"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="notaagricola" uuid="4875f958-129f-41c1-8cbf-9568ec28b503">
+						<datasetParameter name="idmonitoreo">
+							<datasetParameterExpression><![CDATA[$P{idmonitoreo}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="40" uuid="edd45536-e2d8-44ee-896f-49cdbdfff728">
+						<jr:detailCell style="table 8_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement uuid="88c21e00-c1de-4801-b224-fe210008b77d" x="0" y="0" width="40" height="20"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{puntuacionagricola} + "(*)"]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<staticText>
+				<reportElement uuid="2e309d64-5c81-423d-84b9-db12f96036a1" style="table 1_TH" x="258" y="0" width="145" height="21"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Cultivos]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement uuid="f8d1af36-294c-4cf3-9f61-c7de8d443800" key="table 9" style="table" x="434" y="61" width="40" height="40"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="notaagricolaporparametro" uuid="542ca4d6-d6e1-4884-8d91-75511b192a5e">
+						<datasetParameter name="idmonitoreo">
+							<datasetParameterExpression><![CDATA[$P{idmonitoreo}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="40" uuid="c0b9f1a8-eabe-444b-aea1-370ff01ccdfb">
+						<jr:detailCell style="table 9_TD" height="40" rowSpan="1">
+							<textField>
+								<reportElement uuid="4f310445-eb0c-48da-870c-0714e8158e82" x="1" y="1" width="39" height="39"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{puntuacion}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<staticText>
+				<reportElement uuid="aca38818-898c-433b-96cc-d845cb9a42bf" style="table 1_TH" x="434" y="0" width="40" height="61"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Ponderacion (%)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="5c4863f1-31d7-4431-895b-15fe755c826f" x="3" y="361" width="399" height="20"/>
+				<textElement/>
+				<text><![CDATA[ (*) La puntuación asignada esta en base a la documentación  presentada en el RCIA]]></text>
+			</staticText>
+			<break>
+				<reportElement uuid="2197248f-c168-454d-b1fb-c72c5733c31f" x="0" y="385" width="100" height="1"/>
+			</break>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

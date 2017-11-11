@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Evaluacion_RCIA_Alimentos_tablaAnexo3" language="groovy" pageWidth="612" pageHeight="792" columnWidth="474" leftMargin="69" rightMargin="69" topMargin="0" bottomMargin="0" uuid="0f1ff8ac-bba9-45a6-b867-eadb10105d02">
+	<property name="ireport.zoom" value="1.4641000000000062"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F5F5DC">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#FFFFBF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#F5F5DC">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#FFFFBF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TH" mode="Opaque" backcolor="#F5F5DC">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_CH" mode="Opaque" backcolor="#FFFFBF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="nota" uuid="f934229a-3952-4eb3-a7f5-04e9299c2ce4">
+		<parameter name="idmonitoreo" class="java.lang.Integer"/>
+		<queryString>
+			<![CDATA[select p1.*, ROUND((p1.superficie/p2.suptotal)::numeric*100,2) as supporc, ROUND(((p1.superficie/p2.suptotal)* p1.puntuacion)::numeric,0) as valoracion
+from
+(select z.idmonitoreo, z.tipo, z.puntuacion, z.superficie
+from
+(select a.*, b.supagricola as superficie from
+(select idmonitoreo, 'Agricola'::text as tipo , sum(notacultivo) as puntuacion
+from monitoreo.ponderacionevalagricola
+where idmonitoreo = $P{idmonitoreo}
+group by idmonitoreo
+) as a  inner join
+(select b.idmonitoreo, a.supagricola from
+(select * from superficiealimentos
+) as a
+inner join
+(select * from monitoreo.monitoreo
+where idmonitoreo = $P{idmonitoreo}) as b on a.idregistro = b.idregistro
+) as b on a.idmonitoreo = b.idmonitoreo
+union
+select  x.* , y.supganadera as superficie from
+(select idmonitoreo, c.nombrecodificador as tipo ,sum(puntuacion) as puntuacion
+from monitoreo.valoracionalimentos as mva inner join monitoreo.evaluacionespecifica as mee on mva.idevalespecif = mee.idevaluacionespecifica
+inner join monitoreo.evaluaciongeneral as meg on mee.idevalgral = meg.idevalgral
+inner join codificadores as c on c.idcodificadores = mva.tipo
+where idmonitoreo = $P{idmonitoreo} and mva.tipo = 71
+group by idmonitoreo, c.nombrecodificador) as x
+inner join
+(select b.idmonitoreo, a.supganadera from
+(select * from superficiealimentos
+) as a
+inner join
+(select * from monitoreo.monitoreo
+where idmonitoreo = $P{idmonitoreo}) as b on a.idregistro = b.idregistro
+) as y on x.idmonitoreo = y.idmonitoreo) as z
+group by z.idmonitoreo, z.tipo, z.puntuacion, z.superficie) p1
+inner join
+(
+select z.idmonitoreo, sum(z.superficie) as suptotal
+from
+(select a.*, b.supagricola as superficie from
+(select idmonitoreo, 'Agricola'::text as tipo , sum(notacultivo) as puntuacion
+from monitoreo.ponderacionevalagricola
+where idmonitoreo = $P{idmonitoreo}
+group by idmonitoreo
+) as a  inner join
+(select b.idmonitoreo, a.supagricola from
+(select * from superficiealimentos
+) as a
+inner join
+(select * from monitoreo.monitoreo
+where idmonitoreo = $P{idmonitoreo}) as b on a.idregistro = b.idregistro
+) as b on a.idmonitoreo = b.idmonitoreo
+union
+select  x.* , y.supganadera as superficie from
+(select idmonitoreo, c.nombrecodificador as tipo ,sum(puntuacion) as puntuacion
+from monitoreo.valoracionalimentos as mva inner join monitoreo.evaluacionespecifica as mee on mva.idevalespecif = mee.idevaluacionespecifica
+inner join monitoreo.evaluaciongeneral as meg on mee.idevalgral = meg.idevalgral
+inner join codificadores as c on c.idcodificadores = mva.tipo
+where idmonitoreo = $P{idmonitoreo} and mva.tipo = 71
+group by idmonitoreo, c.nombrecodificador) as x
+inner join
+(select b.idmonitoreo, a.supganadera from
+(select * from superficiealimentos
+) as a
+inner join
+(select * from monitoreo.monitoreo
+where idmonitoreo = $P{idmonitoreo}) as b on a.idregistro = b.idregistro
+) as y on x.idmonitoreo = y.idmonitoreo) as z
+group by z.idmonitoreo) p2 on p1.idmonitoreo = p2.idmonitoreo]]>
+		</queryString>
+		<field name="idmonitoreo" class="java.lang.Integer"/>
+		<field name="tipo" class="java.lang.String"/>
+		<field name="puntuacion" class="java.lang.Double"/>
+		<field name="superficie" class="java.lang.Double"/>
+		<field name="supporc" class="java.math.BigDecimal"/>
+		<field name="valoracion" class="java.math.BigDecimal"/>
+		<variable name="superficietotal" class="java.lang.Double" calculation="Sum">
+			<variableExpression><![CDATA[$F{superficie}]]></variableExpression>
+		</variable>
+		<variable name="sumatotal" class="java.lang.Integer" calculation="Sum">
+			<variableExpression><![CDATA[$F{valoracion}]]></variableExpression>
+		</variable>
+	</subDataset>
+	<parameter name="idregistro" class="java.lang.Integer"/>
+	<parameter name="idmonitoreo" class="java.lang.Integer"/>
+	<parameter name="anomonitoreo" class="java.lang.Integer"/>
+	<queryString>
+		<![CDATA[select v.*
+from v_parcela as v
+where v.idregistro = $P{idregistro}
+and (clasificacionprog = 'Mixta Agropecuaria')
+limit 1]]>
+	</queryString>
+	<field name="idregistro" class="java.lang.Integer"/>
+	<field name="idparcela" class="java.lang.String"/>
+	<field name="nombre" class="java.lang.String"/>
+	<field name="superficie" class="java.lang.Double"/>
+	<field name="comp" class="java.lang.String"/>
+	<field name="nombrepolitico" class="java.lang.String"/>
+	<field name="TipoProp" class="java.lang.String"/>
+	<field name="SitJur" class="java.lang.String"/>
+	<field name="Clasificacion" class="java.lang.String"/>
+	<field name="idclasificacion" class="java.lang.String"/>
+	<field name="Oficina" class="java.lang.String"/>
+	<field name="estado" class="java.lang.String"/>
+	<field name="asesoramiento" class="java.lang.String"/>
+	<field name="fecharegistro" class="java.sql.Date"/>
+	<field name="clasificacionprog" class="java.lang.String"/>
+	<field name="departamento" class="java.lang.String"/>
+	<field name="provincia" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="117" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="b3a1ef0e-700b-4d35-a5c3-2a519b5b7c6d" x="0" y="33" width="120" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[NOMBRE PREDIO:]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="4a679db6-87b0-4048-b8ed-63a614d35f10" x="120" y="33" width="354" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="8defbad3-0c32-4a30-9407-5a7142a8d36f" x="0" y="53" width="120" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[CODIGO DE REGISTRO:]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="9dc2a262-a43f-4da5-a7e2-baaf0e75c099" x="120" y="53" width="354" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idparcela}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="7ccbd10c-cc2f-4bef-92ac-fda23380ddce" x="0" y="16" width="474" height="16"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[TABLA DE VALORACION PORCENTUAL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8defbad3-0c32-4a30-9407-5a7142a8d36f" x="0" y="93" width="120" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[FECHA:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="10e058c5-92ba-4f60-b7d3-815ff5243a27" x="0" y="0" width="474" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[ANEXO 3]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8defbad3-0c32-4a30-9407-5a7142a8d36f" x="0" y="72" width="120" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[GESTION:]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="9dc2a262-a43f-4da5-a7e2-baaf0e75c099" x="120" y="73" width="354" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[(
+$P{anomonitoreo}.intValue() == 1 ? "2014":
+ ($P{anomonitoreo}.intValue() == 2? "2015" :
+     ($P{anomonitoreo}.intValue() == 3? "2016" :
+        ($P{anomonitoreo}.intValue() == 4? "2017" :
+        ($P{anomonitoreo}.intValue() == 5? "2018" :
+
+   ($P{anomonitoreo}.intValue() == 6? "2019" :
+       ($P{anomonitoreo}.intValue() == 7? "2020" :
+    ""))))))
+)]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="321">
+			<componentElement>
+				<reportElement uuid="9f29df93-9c49-4658-a7e4-d1c85a3ed6a1" key="table 4" style="table 4" x="21" y="14" width="435" height="87"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="nota" uuid="4b1a9186-69f9-4941-a2c8-81ac7f039ff3">
+						<datasetParameter name="idmonitoreo">
+							<datasetParameterExpression><![CDATA[$P{idmonitoreo}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="137" uuid="57f2251c-b363-4378-ac02-856992b6cf33">
+						<jr:tableHeader style="table 4_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement uuid="8c32303c-a515-4abd-a4e5-d32f1c6c9908" x="0" y="0" width="137" height="30"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[Actividad]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:tableFooter style="table 4_TH" height="23" rowSpan="1">
+							<staticText>
+								<reportElement uuid="6b32672e-97dd-48a7-934d-1957d812198a" x="0" y="0" width="137" height="23"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<text><![CDATA[Total]]></text>
+							</staticText>
+						</jr:tableFooter>
+						<jr:detailCell style="table 4_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement uuid="dba5ebb5-a556-4150-9352-39d38a256e7e" x="0" y="0" width="137" height="20"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{tipo}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="73" uuid="d86c859a-91d4-4073-89f0-e1f6bec243b3">
+						<jr:tableHeader style="table 4_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement uuid="a3ec5b08-94de-4b83-a952-db4322add428" x="0" y="0" width="73" height="30"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[Nota Obtenida]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:tableFooter style="table 4_TH" height="23" rowSpan="1"/>
+						<jr:detailCell style="table 4_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement uuid="b04fe6ff-f6b8-4c25-a89b-13822c6d3076" x="0" y="0" width="73" height="20"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{puntuacion}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="73" uuid="5a63feca-bf3d-4068-a1ee-28e7bcc4c70f">
+						<jr:tableHeader style="table 4_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement uuid="2bf8708c-8f0b-4fb3-8f06-587da414df36" x="0" y="0" width="73" height="30"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[uperficie (Ha)]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:tableFooter style="table 4_TH" height="23" rowSpan="1">
+							<textField pattern="###0.0000">
+								<reportElement uuid="a9cb415e-0584-48a9-9c04-b270e3034cbf" x="0" y="0" width="73" height="23"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$V{superficietotal}]]></textFieldExpression>
+							</textField>
+						</jr:tableFooter>
+						<jr:detailCell style="table 4_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement uuid="aa3ef678-c623-4c9f-97ae-91d08dc84402" x="0" y="0" width="73" height="20"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{superficie}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="75" uuid="8b8cf62d-eaef-4ea4-a0bf-8ce206ad0aeb">
+						<jr:tableHeader style="table 4_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement uuid="98e81a90-fda6-4afb-a9f3-5d5eef4c3f0c" x="0" y="0" width="75" height="30"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[Superficie Ha]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:tableFooter style="table 4_TH" height="23" rowSpan="1"/>
+						<jr:detailCell style="table 4_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement uuid="656c9fe0-676e-497b-9879-0ea0ef765b89" x="0" y="0" width="75" height="20"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{supporc}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="76" uuid="6315d2a6-0356-459f-9369-edef4fdd309a">
+						<jr:tableHeader style="table 4_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement uuid="4be23432-6fdb-412b-9827-c7e76e89ca77" x="0" y="0" width="76" height="30"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[Valoracion]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:tableFooter style="table 4_TH" height="23" rowSpan="1">
+							<textField>
+								<reportElement uuid="0d864e09-ff4c-44dc-81dd-07356a4a3353" x="0" y="0" width="76" height="23"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$V{sumatotal}]]></textFieldExpression>
+							</textField>
+						</jr:tableFooter>
+						<jr:detailCell style="table 4_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement uuid="946e5b27-8037-400e-8d1d-9632eaf3280f" x="0" y="0" width="74" height="20"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{valoracion}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<textField>
+				<reportElement uuid="9dc2a262-a43f-4da5-a7e2-baaf0e75c099" x="21" y="121" width="435" height="47"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["* Nota final para valoración de RCIA gestión  "
++ (
+$P{anomonitoreo}.intValue() == 1 ? "2014":
+ ($P{anomonitoreo}.intValue() == 2? "2015" :
+     ($P{anomonitoreo}.intValue() == 3? "2016" :
+        ($P{anomonitoreo}.intValue() == 4? "2017" :
+        ($P{anomonitoreo}.intValue() == 5? "2018" :
+
+   ($P{anomonitoreo}.intValue() == 6? "2019" :
+       ($P{anomonitoreo}.intValue() == 7? "2020" :
+    ""))))))
+)+
+
+", obtenida del promedio de valoración tomando en cuenta el rubro y la superficie."
+
+
+
+]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

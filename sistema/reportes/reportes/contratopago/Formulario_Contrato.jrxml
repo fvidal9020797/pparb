@@ -1,0 +1,714 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Formulario_002" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="15" bottomMargin="15" uuid="24ef445b-9269-4ced-98f0-851559e82efd">
+	<property name="ireport.zoom" value="1.3310000000000037"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Heading 1" fontSize="16" isBold="true"/>
+	<style name="Crosstab Data Text" hAlign="Center"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#C66377">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#E6CFD3">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#E6D473">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#E6E2CF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TH" mode="Opaque" backcolor="#E68473">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_CH" mode="Opaque" backcolor="#E6D2CF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_TH" mode="Opaque" backcolor="#9AB95C">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_CH" mode="Opaque" backcolor="#DEE6CF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#F6F8F3"/>
+		</conditionalStyle>
+	</style>
+	<style name="table 5">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_TH" mode="Opaque" backcolor="#8FAFCC">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_CH" mode="Opaque" backcolor="#CFDBE6">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 7">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 7_TH" mode="Opaque" backcolor="#A39393">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 7_CH" mode="Opaque" backcolor="#FFE6E6">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 7_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="InfoSuperficie" uuid="269867e4-d371-4324-9f48-8a94688f3fd1">
+		<parameter name="P1" class="java.lang.String"/>
+		<queryString>
+			<![CDATA[select r.idparcela, v.*
+from v_registro as v inner join registro as r on v.idregistro = r.idregistro
+where r.idparcela = $P{P1}]]>
+		</queryString>
+		<field name="idparcela" class="java.lang.String"/>
+		<field name="idregistro" class="java.lang.Integer"/>
+		<field name="supdefilegal" class="java.lang.Float"/>
+		<field name="suptpfp" class="java.lang.Float"/>
+		<field name="suptum" class="java.lang.Float"/>
+		<field name="supreftpfp" class="java.lang.Float"/>
+		<field name="supreftum" class="java.lang.Float"/>
+		<field name="supselstpfpref" class="java.lang.Float"/>
+		<field name="supselstpfpfcon" class="java.lang.Float"/>
+		<field name="supselstumref" class="java.lang.Float"/>
+		<field name="supselstumcon" class="java.lang.Float"/>
+		<field name="supmejorastpfp" class="java.lang.Float"/>
+		<field name="supmejorastum" class="java.lang.Float"/>
+		<field name="suppas" class="java.lang.Float"/>
+		<field name="suptpfppas" class="java.lang.Float"/>
+		<field name="suptumpas" class="java.lang.Float"/>
+		<field name="supreftpfppas" class="java.lang.Float"/>
+		<field name="supreftumpas" class="java.lang.Float"/>
+		<field name="supselstpfprefpas" class="java.lang.Float"/>
+		<field name="supselstpfpfconpas" class="java.lang.Float"/>
+		<field name="supselstumrefpas" class="java.lang.Float"/>
+		<field name="supselstumconpas" class="java.lang.Float"/>
+		<field name="supmejorastpfppas" class="java.lang.Float"/>
+		<field name="supmejorastumpas" class="java.lang.Float"/>
+		<field name="supproali" class="java.lang.Float"/>
+		<field name="supalitpfp" class="java.lang.Float"/>
+		<field name="supalitum" class="java.lang.Float"/>
+		<field name="supalitpfppas" class="java.lang.Float"/>
+		<field name="supalitumpas" class="java.lang.Float"/>
+	</subDataset>
+	<subDataset name="Cuotas" uuid="15ef1917-5c5f-4046-b8ce-5abd753438e0">
+		<parameter name="P3" class="java.lang.String"/>
+		<queryString>
+			<![CDATA[(select c.*, 'Cancelado'::Text as estado,r.idparcela
+from cuota as c inner join planpago as pp on pp.idplanpago = c.idplanpago
+inner join registro as r on r.idregistro = pp.idregistro
+where r.idparcela = $P{P3} and numerocuota = 1
+order by c.numerocuota asc)
+union
+(select c.*, 'Por Cancelar'::Text as estado,r.idparcela
+from cuota as c inner join planpago as pp on pp.idplanpago = c.idplanpago
+inner join registro as r on r.idregistro = pp.idregistro
+where r.idparcela = $P{P3} and numerocuota <> 1
+order by c.numerocuota asc)]]>
+		</queryString>
+		<field name="idplanpago" class="java.lang.Integer"/>
+		<field name="numerocuota" class="java.lang.Integer"/>
+		<field name="montoxcuota" class="java.lang.Double"/>
+		<field name="fechacuota" class="java.sql.Date"/>
+		<field name="estado" class="java.lang.String"/>
+		<field name="idparcela" class="java.lang.String"/>
+	</subDataset>
+	<subDataset name="PlanPago" uuid="eb7efcb0-b4a0-401b-bd5a-7eda15c901ab">
+		<parameter name="P2" class="java.lang.String"/>
+		<queryString>
+			<![CDATA[select pp.*,c.*, r.idparcela, v.valor_ufv as valorufv, v.fecha_ufv
+from planpago as pp inner join codificadores as c on pp.idtipopago = c.idcodificadores
+inner join registro as r on pp.idregistro = r.idregistro
+inner join valoresufv v on pp.idvalorufv = v.idvalorufv
+where r.idparcela = $P{P2}]]>
+		</queryString>
+		<field name="idplanpago" class="java.lang.Integer"/>
+		<field name="idregistro" class="java.lang.Integer"/>
+		<field name="idvalorufv" class="java.lang.Integer"/>
+		<field name="montoinicial" class="java.lang.Double"/>
+		<field name="montoacuenta" class="java.lang.Double"/>
+		<field name="fechapreliquidacion" class="java.sql.Date"/>
+		<field name="idtipopago" class="java.lang.Integer"/>
+		<field name="cuotas" class="java.lang.Integer"/>
+		<field name="montototal" class="java.lang.Double"/>
+		<field name="otrosingresos" class="java.lang.Double"/>
+		<field name="montoxcuota" class="java.lang.Double"/>
+		<field name="idcodificadores" class="java.lang.Integer"/>
+		<field name="idclasificador" class="java.lang.Integer"/>
+		<field name="nombrecodificador" class="java.lang.String"/>
+		<field name="idparcela" class="java.lang.String"/>
+		<field name="valorufv" class="java.lang.Double"/>
+		<field name="fecha_ufv" class="java.sql.Date"/>
+	</subDataset>
+	<subDataset name="PagaoNo" uuid="e6838eaf-07f2-4350-b620-aef4bf2956df">
+		<parameter name="idparcela" class="java.lang.String"/>
+		<queryString>
+			<![CDATA[select count (idplanpago) as cuenta_planpago
+from planpago as pp inner join registro as r on pp.idregistro = r.idregistro
+where r.idparcela = $P{idparcela};]]>
+		</queryString>
+		<field name="cuenta_planpago" class="java.lang.Long"/>
+	</subDataset>
+	<parameter name="CODIGO_PARCELA" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="idreg" class="java.lang.Integer"/>
+	<queryString>
+		<![CDATA[select * from
+
+(SELECT parcelas.idparcela, parcelas.superficie, v_politico.provincia AS PROV, v_politico.departamento AS DPTO,
+    v_politico.nombrepolitico as Municipio, c.nombrecodificador AS "TipoProp",
+    c1.nombrecodificador AS "SitJur", c2.nombrecodificador AS "Clasificacion",
+    c2.nombrecodificador AS idclasificacion, rtrim(parcelas.nombre) as nombre,
+    c3.nombrecodificador AS "Oficina", c4.nombrecodificador AS estado, c5.nombrecodificador as "Clasprog",
+    registro.fecharegistro, registro.idregistro,
+    COALESCE(registro.idregion, registro.idregion, '') as numABT
+   FROM v_politico, parcelas, registro, codificadores c, codificadores c1,
+    codificadores c2, codificadores c3, codificadores c4, codificadores c5
+  WHERE v_politico.cod = parcelas.idpolitico AND parcelas.idparcela = registro.idparcela AND parcelas.idtipoprop = c.idcodificadores AND parcelas.idsituacionjuridica = c1.idcodificadores AND parcelas.idclasificacion = c2.idcodificadores AND c3.idcodificadores = registro.idoficina AND registro.estado = c4.idcodificadores and
+parcelas.idclasificacionprog = c5.idcodificadores and
+     parcelas.idparcela = $P{CODIGO_PARCELA} ) as A
+inner join
+(select  r.idparcela, rtrim(v.nomcompleto) as nomcompleto, rtrim(v.noidentidad) as noidentidad, cod.nombrecodificador as exp, COALESCE(r.numdocpoder, r.numdocpoder, '')as numdoc, r.direccionnotificacion, COALESCE(v.telefono, v.telefono, '')as tele, COALESCE(v.email, v.email, '') as mail
+from v_persona as v inner join representante as r on v.idpersona = r.idpersona inner join codificadores as cod on cod.idcodificadores = v.lugarci::numeric
+where r.idparcela = $P{CODIGO_PARCELA} ) as B
+on A.idparcela = B.idparcela
+inner join
+(select *
+from pagosrealizados
+where idregistro = $P{idreg} and fechaanulacion is null
+order by idpago
+limit 1) as C
+on A.idregistro = C.idregistro]]>
+	</queryString>
+	<field name="idparcela" class="java.lang.String"/>
+	<field name="superficie" class="java.lang.Double"/>
+	<field name="prov" class="java.lang.String"/>
+	<field name="dpto" class="java.lang.String"/>
+	<field name="municipio" class="java.lang.String"/>
+	<field name="TipoProp" class="java.lang.String"/>
+	<field name="SitJur" class="java.lang.String"/>
+	<field name="Clasificacion" class="java.lang.String"/>
+	<field name="idclasificacion" class="java.lang.String"/>
+	<field name="nombre" class="java.lang.String"/>
+	<field name="Oficina" class="java.lang.String"/>
+	<field name="estado" class="java.lang.String"/>
+	<field name="Clasprog" class="java.lang.String"/>
+	<field name="fecharegistro" class="java.sql.Date"/>
+	<field name="idregistro" class="java.lang.Integer"/>
+	<field name="numabt" class="java.lang.String"/>
+	<field name="nomcompleto" class="java.lang.String"/>
+	<field name="noidentidad" class="java.lang.String"/>
+	<field name="exp" class="java.lang.String"/>
+	<field name="numdoc" class="java.lang.String"/>
+	<field name="direccionnotificacion" class="java.lang.String"/>
+	<field name="tele" class="java.lang.String"/>
+	<field name="mail" class="java.lang.String"/>
+	<field name="idpago" class="java.lang.Integer"/>
+	<field name="numerocuota" class="java.lang.Integer"/>
+	<field name="identidadbancario" class="java.lang.Integer"/>
+	<field name="nboleta" class="java.lang.String"/>
+	<field name="montodeposito" class="java.lang.Double"/>
+	<field name="fechadeposito" class="java.sql.Date"/>
+	<field name="idrecibo" class="java.lang.String"/>
+	<field name="fecharegistropago" class="java.sql.Date"/>
+	<field name="fechaanulacion" class="java.sql.Date"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="55" splitType="Stretch">
+			<line>
+				<reportElement uuid="ab6318d5-b137-4ec6-8181-078f5b7aa9b4" x="0" y="52" width="572" height="1"/>
+			</line>
+			<image>
+				<reportElement uuid="8c263e3f-19de-45e3-9c6a-50071d98cfe2" x="486" y="0" width="72" height="50"/>
+				<imageExpression><![CDATA["C:\\xampp\\htdocs\\PPARB\\sistema\\reportes\\reportes\\3_abt.png"]]></imageExpression>
+			</image>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="631" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="320197d7-85c8-46cd-9069-8c2069f226e3" x="8" y="194" width="208" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PRIMERA: (DE LAS PARTES).]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="3ab73e41-560c-4bca-8a4f-a6cd4b6daa47" x="8" y="300" width="552" height="63"/>
+				<textElement textAlignment="Justified">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["2.- El (la) Sr(a). " + $F{nomcompleto} + "  con C.I. N° " + $F{noidentidad} + " "+$F{exp} + ", Propietario del Predio " + $F{nombre} + " mayor de edad, hábiles por ley, con domicilio en  "+ $F{direccionnotificacion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="f374a69d-6ca8-4571-9d5f-89cedc3a8642" x="8" y="214" width="552" height="86"/>
+				<textElement textAlignment="Justified">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["1.- La ABT, creada por Decreto Supremo N° 071 de 07 de mayo de 2010, representado por el (la) " + ($F{Oficina} == "OFICINA SANTA CRUZ" ? "Ing. RICARDO BALLIVIAN DOMINGUEZ con C.I. Nº 4686128 SC, ":
+ ($F{Oficina} == "OFICINA CONCEPCION"? "Ing. RICARDO BALLIVIAN DOMINGUEZ con C.I. Nº 4686128 SC, " :
+     ($F{Oficina} == "OFICINA SAN JOSE"? "Ing. RICARDO BALLIVIAN DOMINGUEZ con C.I. Nº 4686128 SC, " :
+        ($F{Oficina} == "OFICINA COBIJA"? "Ing. ERWIN CRUZ DORADO con C.I. N° 8137137 SC, " :
+        ($F{Oficina} == "OFICINA TRINIDAD"? "Ing. RICHAR ARTEAGA con C.I. N° 1726750 BN, " :
+        ($F{Oficina} == "OFICINA RIBERALTA"? "Ing. RICHAR ARTEAGA con C.I. N° 1726750 BN, " :
+        ($F{Oficina} == "OFICINA MONTEAGUDO"? "Ing. YAMIL MARCELO FARFAN NARVAEZ con C.I. N° 5022376 TJ, " :
+        ($F{Oficina} == "OFICINA YACUIBA"? "Ing. YAMIL MARCERLO FARFAN NARVAEZ con C.I. N° 5022376 TJ, " :
+     "")))))))) + " en su calidad de RESPONSABLE DPTAL. DEL COMPONENTE DE RESTITUCIÓN DE BOSQUES, con domicilio legal en la Ciudad de Santa Cruz – Bolivia, avenida 2 de agosto Nº 6, y hábil por derecho, en adelante se denominará ABT."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="3ab73e41-560c-4bca-8a4f-a6cd4b6daa47" x="8" y="83" width="552" height="102"/>
+				<textElement textAlignment="Justified">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Conste por el presente documento un contrato administrativo, que suscriben por una parte la Autoridad de Fiscalización y Control Social de Bosques y Tierra ABT, en adelante “LA ABT” y por otro, "+"El (la) Sr(a). " + $F{nomcompleto} + "  con C.I. N° " + $F{noidentidad} + " "+$F{exp} + ", Propietario del Predio  " + $F{nombre} + "  en adelante 'El Beneficiario', el presente CONTRATO DE COMPROMISO DE PAGO POR SUSCRIPCIÓN AL PROGRAMA DE PRODUCCIÓN DE ALIMENTOS Y RESTITUCIÓN DE BOSQUES, de acuerdo a las siguientes cláusulas:"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="320197d7-85c8-46cd-9069-8c2069f226e3" x="8" y="380" width="293" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SEGUNDA: (ANTECEDENTES LEGALES).]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="83a0e2c1-74d2-4676-8ca1-2ef7e1e37d8c" x="8" y="400" width="552" height="37"/>
+				<textElement textAlignment="Justified">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Mediante Registro N°  " + $F{idparcela} + " de fecha " + $F{fecharegistropago}.toString()+" ,el beneficiario ha sido adherido al Programa de Producción de Alimentos y Restitución de Bosques."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="1bac8c8d-9b44-4d15-9cdb-0f669de8f352" x="8" y="437" width="552" height="51"/>
+				<textElement textAlignment="Justified">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["La Ley N° 337 de Apoyo a la Producción de Alimentos y Restitución de Bosques en su Art.6° establece de manera excepcional, que los Beneficiarios de predios que se inscriban al Programa, pagarán un monto único por concepto de sanción administrativa por desmonte sin autorización."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="1bac8c8d-9b44-4d15-9cdb-0f669de8f352" x="8" y="488" width="552" height="37"/>
+				<textElement textAlignment="Justified">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["El pago del 50% del total de la multa es condición previa para la suscripción al Programa. El monto restante podrá realizarse al contado o plazos."]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="320197d7-85c8-46cd-9069-8c2069f226e3" x="8" y="538" width="293" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TERCERA: (OBJETO) Y FORMA DE PAGO.]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="83a0e2c1-74d2-4676-8ca1-2ef7e1e37d8c" x="8" y="558" width="552" height="67"/>
+				<textElement textAlignment="Justified">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["El Beneficiario para el cumplimiento correspondiente de su multa decide acogerse al plan de pagos semestral. En este sentido El Beneficiario mediante boleta Bancaria N° " + $F{nboleta} + " acreditó el pago del 50% de la multa, que corresponde a la suma de " + $F{montodeposito}+ " Bolivianos, por concepto de sanción administrativa por desmonte sin autorización."]]></textFieldExpression>
+			</textField>
+			<break>
+				<reportElement uuid="abadf99a-e70c-498e-9175-993d250c2715" x="0" y="625" width="100" height="1"/>
+			</break>
+			<staticText>
+				<reportElement uuid="8dc0a660-7c67-4d16-b6b4-273509e73d96" x="0" y="36" width="572" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[CONTRATO DE COMPROMISO DE PAGO POR SUSCRIPCIÓN AL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="7374a6d0-516b-4f4b-98a6-c54b786dc5f8" x="0" y="56" width="572" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true" isItalic="false" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA["PROGRAMA DE PRODUCCIÓN DE ALIMENTOS Y RESTITUCIÓN DE BOSQUES"]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="93b34cd0-53e3-4f83-8b0f-03aeb9009645" x="4" y="0" width="279" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["CONTRATO: "+$F{numabt}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="67">
+			<componentElement>
+				<reportElement uuid="5f5145d3-cc8f-49ec-95a0-b60ded843e89" key="table 7" style="table 7" x="36" y="47" width="497" height="18"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="Cuotas" uuid="0fed1ef5-1c4b-4eed-b208-7092cf1edc15">
+						<datasetParameter name="P3">
+							<datasetParameterExpression><![CDATA[$F{idparcela}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="107" uuid="6020099d-8811-4989-88dd-42d8d39dd1c0">
+						<jr:tableHeader style="table 7_TH" height="16" rowSpan="1">
+							<staticText>
+								<reportElement uuid="73730fe5-99c6-4d09-bc85-6dd4d383b59e" x="0" y="0" width="107" height="16"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="12"/>
+								</textElement>
+								<text><![CDATA[CUOTA]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table 7_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement uuid="2e259611-320c-44dd-ac59-344964b09ad9" x="0" y="0" width="107" height="20"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{numerocuota}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="146" uuid="1c961867-9152-4a63-a97b-0a4feed60dd3">
+						<jr:tableHeader style="table 7_TH" height="16" rowSpan="1">
+							<staticText>
+								<reportElement uuid="73730fe5-99c6-4d09-bc85-6dd4d383b59e" x="0" y="0" width="146" height="16"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<text><![CDATA[MONTO POR CUOTA]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table 7_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement uuid="372e7ee9-dc55-4e7c-8318-9305220d2ed4" x="0" y="0" width="146" height="20"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{montoxcuota} + " UFV"]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="121" uuid="9345d516-714b-495f-9a07-39580f71e704">
+						<jr:tableHeader style="table 7_TH" height="16" rowSpan="1">
+							<staticText>
+								<reportElement uuid="73730fe5-99c6-4d09-bc85-6dd4d383b59e" x="0" y="0" width="121" height="16"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<text><![CDATA[FECHA]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table 7_TD" height="20" rowSpan="1">
+							<textField pattern="dd/MM/yyyy">
+								<reportElement uuid="3347de47-0f5e-4e8e-8ad1-2735abd72b80" x="0" y="0" width="121" height="20"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{fechacuota}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="123" uuid="60a2e6d9-ed63-4486-85e1-55c7ceecdb43">
+						<jr:tableHeader style="table 7_TH" height="16" rowSpan="1">
+							<staticText>
+								<reportElement uuid="73730fe5-99c6-4d09-bc85-6dd4d383b59e" x="0" y="0" width="123" height="16"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<text><![CDATA[ESTADO]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:tableFooter height="0" rowSpan="1"/>
+						<jr:columnHeader height="0" rowSpan="1"/>
+						<jr:columnFooter height="0" rowSpan="1"/>
+						<jr:detailCell style="table 7_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement uuid="3046375a-5bc6-43f9-a3f8-26e4d797ec26" x="0" y="0" width="123" height="20"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="12"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{estado}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<textField>
+				<reportElement uuid="1bac8c8d-9b44-4d15-9cdb-0f669de8f352" x="7" y="10" width="552" height="37"/>
+				<textElement textAlignment="Justified">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["De esta manera “El Beneficiario” está obligado a pagar el monto correspondiente de las siguientes cuotas pendientes, a ser pagada bajo el siguiente detalle:"]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="488">
+			<staticText>
+				<reportElement uuid="320197d7-85c8-46cd-9069-8c2069f226e3" x="8" y="10" width="387" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CUARTA: (DEL INCUMPLIMIENTO AL PLAN DE PAGO).]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="1bac8c8d-9b44-4d15-9cdb-0f669de8f352" x="7" y="34" width="552" height="51"/>
+				<textElement textAlignment="Justified">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["En caso de incumplimiento de los planes de pagos, la ABT conminara al beneficiario para que en el plazo de 30 días hábiles cumpla con el pago correspondiente sin reprogramación de pagos; caso contrario, remitirá un informe en detalle a la UCAB, para fines de suspensión del programa."]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="320197d7-85c8-46cd-9069-8c2069f226e3" x="8" y="96" width="387" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[QUINTA: (DOMICILIO LEGAL).]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="1bac8c8d-9b44-4d15-9cdb-0f669de8f352" x="8" y="116" width="552" height="54"/>
+				<textElement textAlignment="Justified">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["-La Autoridad de Fiscalización y Control Social de Bosques y Tierra, señala como domicilio legal las oficinas del Programa de Producción de Alimentos, de la ciudad de Santa Cruz de la Sierra – Bolivia y el de todas sus oficinas departamentales y regionales distribuidas en el área de acción del programa."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="3ab73e41-560c-4bca-8a4f-a6cd4b6daa47" x="8" y="170" width="552" height="40"/>
+				<textElement textAlignment="Justified">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["El (la) Sr(a). " + $F{nomcompleto} + "  con C.I. N° " + $F{noidentidad} + " "+$F{exp} + ", Propietario del Predio " + $F{nombre} + " mayor de edad, hábiles por ley, con domicilio en  "+ $F{direccionnotificacion}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="320197d7-85c8-46cd-9069-8c2069f226e3" x="8" y="220" width="387" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SEXTA: (INTRANSFERIBILIDAD DEL CONTRATO)]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="3ab73e41-560c-4bca-8a4f-a6cd4b6daa47" x="8" y="240" width="552" height="20"/>
+				<textElement textAlignment="Justified">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["“El Beneficiario” bajo ningún título podrá ceder, transferir, subrogar, total o parcialmente este Contrato."]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="320197d7-85c8-46cd-9069-8c2069f226e3" x="8" y="271" width="387" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SEPTIMA. (CONFORMIDAD)]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="3ab73e41-560c-4bca-8a4f-a6cd4b6daa47" x="7" y="291" width="552" height="40"/>
+				<textElement textAlignment="Justified">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Las partes otorgan su entera conformidad con todas y cada una de las cláusulas del presente contrato  y  se  obligan  a  su  fiel  y  estricto  cumplimiento,  el  mismo  que  es suscrito en tres ejemplares. "]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement uuid="f374a69d-6ca8-4571-9d5f-89cedc3a8642" x="8" y="341" width="139" height="20"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{Oficina} == "OFICINA SANTA CRUZ" ? "Santa Cruz de la Sierra, ":
+ ($F{Oficina} == "OFICINA CONCEPCION"? "Concepcion, " :
+     ($F{Oficina} == "OFICINA SAN JOSE"? "San José de Chiquitos, " :
+        ($F{Oficina} == "OFICINA COBIJA"? "Cobija, " :
+        ($F{Oficina} == "OFICINA TRINIDAD"? "Trinidad, " :
+        ($F{Oficina} == "OFICINA RIBERALTA"? "Riberalta, " :
+        ($F{Oficina} == "OFICINA MONTEAGUDO"? "Monteagudo, " :
+        ($F{Oficina} == "OFICINA YACUIBA"? "Ycacuiba, " :
+     ""))))))))]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement uuid="def9f5e1-49a3-4f21-bf63-049495c40135" x="147" y="341" width="136" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="297879ba-4161-447f-827f-e9061bd3dddb" x="0" y="428" width="283" height="16"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nomcompleto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="6dc484f3-961f-4c86-999f-eb77f4b34c10" x="1" y="444" width="282" height="17"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["CI " + $F{noidentidad} + " " + $F{exp}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="1b956a90-c5f9-4598-ae2d-a8edfedf1cbb" x="0" y="414" width="283" height="16"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[BENEFICIARIO]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="a68cf4bc-ec54-4bef-9cae-0b2667986bba" x="36" y="414" width="211" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement uuid="c9c329fe-88c3-4ca3-8c37-68efc40517f4" x="36" y="475" width="100" height="13"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[ADJ/ARCH. CC]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="24" splitType="Stretch">
+			<line>
+				<reportElement uuid="0d73cb93-bdbe-4c78-9e22-410d28939e69" x="0" y="0" width="572" height="1"/>
+			</line>
+			<textField>
+				<reportElement uuid="26451997-0539-40ca-b1ce-61a80c84e8a6" x="461" y="0" width="57" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Pagina "+$V{PAGE_NUMBER}+" de"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement uuid="1bfad5c0-43b1-499b-9573-bad14caef025" x="518" y="0" width="40" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="e70c4fe8-e64f-4767-b8a8-5b1e33bc1ff2" x="4" y="1" width="256" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Programa de Produccion de Alimentos y Restitucion de Bosques]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="112ec4e0-3134-4e14-b86d-7edfede0f5c4" x="299" y="0" width="69" height="21"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Fecha de Impresion:]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement uuid="def9f5e1-49a3-4f21-bf63-049495c40135" x="368" y="1" width="66" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,111 @@
+body  {
+	    background-image: url("../images/background2.jpg");
+	    background-repeat: no-repeat;
+	    background-attachment: fixed;
+	    background-size: cover;
+	}
+.dropdown-menu{
+	background:#75af73;
+}
+li>a{
+	color:#FFF;
+}
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+	background-color: #75af73;
+}	
+a:hover {
+	color: #000 !important;
+}
+
+.dropdown-menu > li > a {
+	color:#FFF;
+}
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus{
+	background-color: transparent;
+}
+
+.navbar-default{
+	background-color: transparent;
+   	border-color: transparent;
+   	margin-bottom: 0px;
+}
+.navbar-default .navbar-nav > li > a {
+   	color: #000;
+}
+@media (max-width: 767px){
+	.navbar-default .navbar-nav .open .dropdown-menu > li > a{
+		color:#FFF;
+		text-align: center;
+	}	
+	.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+   		background-color: #75af73;
+   		border-color: transparent;
+	}
+	.navbar-default .navbar-nav > li > a {
+    	color: #000;
+	}
+	#myCarousel{
+		margin-right: 20px;
+	}
+}
+p, ul, ol {
+    font-size: 13px;
+}
+@media (min-width: 1024px){
+	.navbar-nav{
+		float: right;
+	}
+}
+.ul-li-a-marcolegal{
+	color:#000;
+}
+.oficinas-img{
+    padding: 0px 1px 11px 14px;
+}
+.a-negro{
+	color:#000;
+}
+p{
+	color:#000;
+}
+.div-text-align{
+	text-align: left;
+}
+.h-foother{
+	color:#000;
+}
+label{
+	color:#FFF;
+}
+h3{
+	color:#FFF;
+}
+.container{
+	background-color: #75af73;
+}
+.btn-primary{
+	background: #3c4146;
+	border-color: #3c4146;
+}
+.h2-oficinas{
+	margin-bottom: 0px;
+}
+.p-oficinas{
+	margin-bottom: 0px;
+}
+.ul-li-a-marcolegal:hover{
+	text-decoration: underline !important;
+}
+p, ul, ol{
+	color: #fff;
+}							                     
+.details-control{
+	display: none
+}
+.modal-dialog{
+	width: 800px !important;
+	max-width:100%;
+}
+::selection {
+    color: #000;
+    background: #FFF;

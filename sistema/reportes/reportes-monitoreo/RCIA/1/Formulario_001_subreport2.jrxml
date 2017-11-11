@@ -1,0 +1,625 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Formulario_001_subreport2" language="groovy" pageWidth="572" pageHeight="752" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="4709e7d3-23ac-4365-954e-12fb6e25dbd9">
+	<property name="ireport.zoom" value="1.7715610000000104"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#A9E371">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#DAE6CF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#E68473">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#E6D2CF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TH" mode="Opaque" backcolor="#E69273">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_CH" mode="Opaque" backcolor="#E6D5CF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TH" mode="Opaque" backcolor="#E68473">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_CH" mode="Opaque" backcolor="#E6D2CF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Crosstab Data Text" hAlign="Center"/>
+	<style name="table 4">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_TH" mode="Opaque" backcolor="#E68473">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_CH" mode="Opaque" backcolor="#E6D2CF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6">
+		<box>
+			<pen lineWidth="1.0" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table 6_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table 6_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table 6_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table 7">
+		<box>
+			<pen lineWidth="1.0" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table 7_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table 7_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table 7_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table 8">
+		<box>
+			<pen lineWidth="1.0" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table 8_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table 8_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table 8_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table 9">
+		<box>
+			<pen lineWidth="1.0" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table 9_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table 9_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table 9_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table 10">
+		<box>
+			<pen lineWidth="1.0" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table 10_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table 10_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table 10_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table 11">
+		<box>
+			<pen lineWidth="1.0" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table 11_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table 11_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table 11_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table 12">
+		<box>
+			<pen lineWidth="1.0" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table 12_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table 12_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table 12_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table 13">
+		<box>
+			<pen lineWidth="1.0" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table 13_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table 13_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table 13_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table 14">
+		<box>
+			<pen lineWidth="1.0" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table 14_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table 14_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table 14_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table 15">
+		<box>
+			<pen lineWidth="1.0" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table 15_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table 15_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table 15_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table 16">
+		<box>
+			<pen lineWidth="1.0" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table 16_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table 16_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table 16_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table 17">
+		<box>
+			<pen lineWidth="1.0" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table 17_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table 17_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table 17_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<subDataset name="esAgricola" uuid="82fa449b-a205-4dfd-b4fd-0d5a02ce1325">
+		<parameter name="ID_REG" class="java.lang.Integer"/>
+		<queryString>
+			<![CDATA[select pc.*, r.idparcela
+from plancultivo as pc inner join registro as r on pc.idregistro = r.idregistro
+where pc.idregistro = $P{ID_REG}
+limit 1;]]>
+		</queryString>
+		<field name="anocultivo" class="java.lang.Integer"/>
+		<field name="idcultivo" class="java.lang.Integer"/>
+		<field name="idregistro" class="java.lang.Integer"/>
+		<field name="supverano" class="java.lang.Double"/>
+		<field name="supinvierno" class="java.lang.Double"/>
+		<field name="idparcela" class="java.lang.String"/>
+	</subDataset>
+	<subDataset name="esGanadera" uuid="769f7f97-413c-4860-87d7-62f38a831f1c">
+		<parameter name="idreg" class="java.lang.Integer"/>
+		<queryString>
+			<![CDATA[select pg.*, r.idparcela
+from planproduccionganadera as pg inner join registro as r on r.idregistro = pg.idregistro
+where pg.idregistro = $P{idreg}
+limit 1;]]>
+		</queryString>
+		<field name="idplanganadera" class="java.lang.Integer"/>
+		<field name="idregistro" class="java.lang.Integer"/>
+		<field name="suppastosembrado" class="java.lang.Float"/>
+		<field name="suppastonatural" class="java.lang.Float"/>
+		<field name="potrero" class="java.lang.Integer"/>
+		<field name="pozas" class="java.lang.Integer"/>
+		<field name="saleros" class="java.lang.Integer"/>
+		<field name="bebederos" class="java.lang.Integer"/>
+		<field name="brete" class="java.lang.Integer"/>
+		<field name="corral" class="java.lang.Integer"/>
+		<field name="forraje" class="java.lang.Integer"/>
+		<field name="compraganado" class="java.lang.Integer"/>
+		<field name="cantganado" class="java.lang.Integer"/>
+		<field name="cantternero" class="java.lang.Integer"/>
+		<field name="cantganadofaineo" class="java.lang.Integer"/>
+		<field name="cantganadopie" class="java.lang.Integer"/>
+		<field name="cantprodcarne" class="java.lang.Integer"/>
+		<field name="anoprodganadera" class="java.lang.Integer"/>
+		<field name="idparcela" class="java.lang.String"/>
+	</subDataset>
+	<subDataset name="esLechera" uuid="0bcbadfd-fc90-493b-80a2-97b851b94c9b">
+		<parameter name="idreg" class="java.lang.Integer"/>
+		<queryString>
+			<![CDATA[select pl.*, r.idparcela
+from planganaderalechera as pl inner join registro as r on pl.idregistro = r.idregistro
+where pl.idregistro = $P{idreg}
+limit 1;]]>
+		</queryString>
+		<field name="idganaderalechera" class="java.lang.Integer"/>
+		<field name="idregistro" class="java.lang.Integer"/>
+		<field name="suppasnatural" class="java.lang.Double"/>
+		<field name="suppassembrado" class="java.lang.Double"/>
+		<field name="sistemaordeno" class="java.lang.Integer"/>
+		<field name="galpon" class="java.lang.Integer"/>
+		<field name="tanqueenfriamiento" class="java.lang.Integer"/>
+		<field name="siloforraje" class="java.lang.Integer"/>
+		<field name="certtuberculosis" class="java.lang.String"/>
+		<field name="certbrucelosis" class="java.lang.String"/>
+		<field name="cabganprod" class="java.lang.Integer"/>
+		<field name="cabgandescar" class="java.lang.Integer"/>
+		<field name="prodcarne" class="java.lang.Integer"/>
+		<field name="prodleche" class="java.lang.Integer"/>
+		<field name="prodtotleche" class="java.lang.Integer"/>
+		<field name="anoplanganadera" class="java.lang.Integer"/>
+		<field name="idparcela" class="java.lang.String"/>
+	</subDataset>
+	<subDataset name="esAvicola" uuid="0bcbadfd-fc90-493b-80a2-97b851b94c9b">
+		<parameter name="idreg" class="java.lang.Integer"/>
+		<queryString>
+			<![CDATA[select pl.*, r.idparcela
+from planproduccionavicola as pl inner join registro as r on pl.idregistro = r.idregistro
+where pl.idregistro = $P{idreg}
+limit 1;]]>
+		</queryString>
+		<field name="idregistro" class="java.lang.Integer"/>
+		<field name="anoplanavicola" class="java.lang.Integer"/>
+		<field name="supcultavicola" class="java.lang.Double"/>
+		<field name="supinfraestuctura" class="java.lang.Double"/>
+		<field name="registrosanitario" class="java.lang.Integer"/>
+		<field name="eclosionpesadas" class="java.lang.Double"/>
+		<field name="eclosionlivianas" class="java.lang.Double"/>
+		<field name="mortalidadparrillero" class="java.lang.Double"/>
+		<field name="posturaponedoras" class="java.lang.Double"/>
+		<field name="cantpolloventa" class="java.lang.Integer"/>
+		<field name="canthuevoventa" class="java.lang.Integer"/>
+		<field name="cantpollobbventa" class="java.lang.Integer"/>
+		<field name="idparcela" class="java.lang.String"/>
+	</subDataset>
+	<parameter name="COD_PAR2" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select r.idparcela, r.idregistro,
+COALESCE (r.obsregistro,r.obsregistro,'') as obsregistro
+from registro as r
+where r.idparcela = $P{COD_PAR2}]]>
+	</queryString>
+	<field name="idparcela" class="java.lang.String"/>
+	<field name="idregistro" class="java.lang.Integer"/>
+	<field name="obsregistro" class="java.lang.String"/>
+	<group name="last">
+		<groupExpression><![CDATA[$F{idparcela}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="6" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="6" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="4" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="29">
+			<componentElement>
+				<reportElement uuid="126b0633-330e-403d-acd9-5790a484bd7c" key="table 13" style="table 13" x="4" y="17" width="562" height="9"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="esAgricola" uuid="bc1252da-5ab1-438b-aa1b-5d917ca41b7d">
+						<datasetParameter name="ID_REG">
+							<datasetParameterExpression><![CDATA[$F{idregistro}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="572" uuid="8ab2e487-b3d6-4296-836b-95e7ebb45de6">
+						<jr:detailCell style="table 13_TD" height="15" rowSpan="1">
+							<subreport>
+								<reportElement uuid="7c1ba56b-e829-4dc1-8cc4-9b2d3b473f91" x="0" y="0" width="572" height="13"/>
+								<subreportParameter name="COD_PAR2">
+									<subreportParameterExpression><![CDATA[$F{idparcela}]]></subreportParameterExpression>
+								</subreportParameter>
+								<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+								<subreportExpression><![CDATA["C:\\xampp\\htdocs\\PPARB\\sistema\\reportes\\reportes-monitoreo\\RCIA\\1\\Formulario_001_subreport2 - copia.jasper"]]></subreportExpression>
+							</subreport>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<staticText>
+				<reportElement uuid="d2ae3382-018a-456b-9008-0ec025dbac27" x="4" y="0" width="295" height="17"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[III. PRODUCCIÓN DE ALIMENTOS]]></text>
+			</staticText>
+		</band>
+		<band height="13" splitType="Immediate">
+			<componentElement>
+				<reportElement uuid="2757c811-7a26-41f7-97e1-e68c02b637a7" key="table 14" style="table 14" x="4" y="3" width="562" height="8"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="esGanadera" uuid="724cecbf-8944-41a3-b08e-76b187fe4451">
+						<datasetParameter name="idreg">
+							<datasetParameterExpression><![CDATA[$F{idregistro}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="570" uuid="044287c0-5d43-48e5-bee4-3596ac57b566">
+						<jr:detailCell style="table 14_TD" height="14" rowSpan="1">
+							<subreport>
+								<reportElement uuid="e1ddbcc2-6602-40ab-85ec-b5f91e0e8837" x="0" y="0" width="570" height="14"/>
+								<subreportParameter name="SUBREPORT_DIR"/>
+								<subreportParameter name="COD_PAR3">
+									<subreportParameterExpression><![CDATA[$F{idparcela}]]></subreportParameterExpression>
+								</subreportParameter>
+								<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+								<subreportExpression><![CDATA["C:\\xampp\\htdocs\\PPARB\\sistema\\reportes\\reportes-monitoreo\\RCIA\\1\\Formulario_001_subreport3.jasper"]]></subreportExpression>
+							</subreport>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+		<band height="13">
+			<componentElement>
+				<reportElement uuid="73dd55c4-71a0-40a8-b0ad-e414308533c6" key="table 15" style="table 15" x="5" y="2" width="562" height="9"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="esLechera" uuid="648f27c8-158b-454f-8f20-09c68855ce5a">
+						<datasetParameter name="idreg">
+							<datasetParameterExpression><![CDATA[$F{idregistro}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="571" uuid="fc8b718c-ef02-483b-b2aa-dd5d048e1ff4">
+						<jr:detailCell style="table 15_TD" height="12" rowSpan="1">
+							<subreport>
+								<reportElement uuid="69776656-6aa3-433f-8733-0392d20a7fc8" x="0" y="0" width="571" height="12"/>
+								<subreportParameter name="COD_PAR4">
+									<subreportParameterExpression><![CDATA[$F{idparcela}]]></subreportParameterExpression>
+								</subreportParameter>
+								<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+								<subreportExpression><![CDATA["C:\\xampp\\htdocs\\PPARB\\sistema\\reportes\\reportes-monitoreo\\RCIA\\1\\Formulario_001_subreport4.jasper"]]></subreportExpression>
+							</subreport>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+		<band height="13">
+			<componentElement>
+				<reportElement uuid="73dd55c4-71a0-40a8-b0ad-e414308533c6" key="table 15" style="table 15" x="5" y="1" width="562" height="10"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="esAvicola" uuid="648f27c8-158b-454f-8f20-09c68855ce5a">
+						<datasetParameter name="idreg">
+							<datasetParameterExpression><![CDATA[$F{idregistro}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="571" uuid="fc8b718c-ef02-483b-b2aa-dd5d048e1ff4">
+						<jr:detailCell style="table 15_TD" height="10" rowSpan="1">
+							<subreport>
+								<reportElement uuid="69776656-6aa3-433f-8733-0392d20a7fc8" x="0" y="0" width="571" height="10"/>
+								<subreportParameter name="COD_PAR4">
+									<subreportParameterExpression><![CDATA[$F{idparcela}]]></subreportParameterExpression>
+								</subreportParameter>
+								<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+								<subreportExpression><![CDATA["C:\\xampp\\htdocs\\PPARB\\sistema\\reportes\\reportes-monitoreo\\RCIA\\1\\Formulario_001_avicola.jasper"]]></subreportExpression>
+							</subreport>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+		<band height="13">
+			<subreport>
+				<reportElement uuid="35426ccc-be42-447f-9530-ee986923e268" x="4" y="2" width="558" height="8"/>
+				<subreportParameter name="COD_PAR2">
+					<subreportParameterExpression><![CDATA[$F{idparcela}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA["C:\\xampp\\htdocs\\PPARB\\sistema\\reportes\\reportes-monitoreo\\RCIA\\1\\Formulario_001_Check.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="17">
+			<subreport>
+				<reportElement uuid="d32a01e2-0791-4c53-800a-42d90654f1af" x="4" y="6" width="558" height="8"/>
+				<subreportParameter name="COD_PAR2">
+					<subreportParameterExpression><![CDATA[$F{idparcela}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA["C:\\xampp\\htdocs\\PPARB\\sistema\\reportes\\reportes-monitoreo\\RCIA\\1\\Formulario_001_Firmas.jasper"]]></subreportExpression>
+			</subreport>
+			<break>
+				<reportElement uuid="0f0254bc-0860-42c6-a5eb-55bcd8154c19" x="0" y="3" width="100" height="1"/>
+			</break>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="6" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="6" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="3" splitType="Stretch"/>
+	</summary>
+</jasperReport>

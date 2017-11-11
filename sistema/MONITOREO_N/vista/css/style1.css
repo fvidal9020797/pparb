@@ -1,0 +1,25 @@
+.table_eval_gral_label{
+	/*font-size: 15px;
+	writing-mode: vertical-rl;
+	transform: rotate(180deg);
+	max-height: 201px;*/
+}
+.inputAgricolaPonderacion{
+	width: 70px;
+}
+.inputAgricolaFojas{
+	width: 70px;
+}
+.inputAgricolaProduccion{
+	width: 70px;
+}
+.labelAgricolaEvaluacionGeneral{
+	/*max-width: 200px;*/
+}
+.labelAgricolaEvaluacionEspefica{
+	/*writing-mode: vertical-rl;
+	transform: rotate(180deg);
+*/}
+.modal-body{
+	height: 170px;
+}

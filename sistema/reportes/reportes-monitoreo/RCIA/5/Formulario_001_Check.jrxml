@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Formulario_001_subreport2" language="groovy" pageWidth="586" pageHeight="810" columnWidth="586" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="4709e7d3-23ac-4365-954e-12fb6e25dbd9">
+	<property name="ireport.zoom" value="1.4615378250000097"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#A9E371">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#DAE6CF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#E68473">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#E6D2CF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TH" mode="Opaque" backcolor="#E69273">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_CH" mode="Opaque" backcolor="#E6D5CF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TH" mode="Opaque" backcolor="#E68473">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_CH" mode="Opaque" backcolor="#E6D2CF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Crosstab Data Text" hAlign="Center"/>
+	<style name="table 4">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_TH" mode="Opaque" backcolor="#E68473">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_CH" mode="Opaque" backcolor="#E6D2CF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6">
+		<box>
+			<pen lineWidth="1.0" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table 6_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table 6_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table 6_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table 7">
+		<box>
+			<pen lineWidth="1.0" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table 7_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table 7_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table 7_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table 8">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 8_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 8_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 8_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 9">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 9_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 9_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 9_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<parameter name="COD_PAR2" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select r.idparcela,r.idregistro, coalesce(r.obsregistro,r.obsregistro,'') as obsregistro
+from registro as r
+where r.idparcela = $P{COD_PAR2}]]>
+	</queryString>
+	<field name="idparcela" class="java.lang.String"/>
+	<field name="idregistro" class="java.lang.Integer"/>
+	<field name="obsregistro" class="java.lang.String"/>
+	<group name="last">
+		<groupExpression><![CDATA[$F{idparcela}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="5" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="665">
+			<staticText>
+				<reportElement uuid="f0e7c60a-53f9-4a6e-9a5b-413297433e60" x="18" y="151" width="113" height="17"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[b) Actividad Agrícola]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="765470a7-5f95-4113-942d-d12e06e08a46" x="18" y="1" width="275" height="14"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[IV. DOCUMENTOS PRESENTADOS RCIA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f0e7c60a-53f9-4a6e-9a5b-413297433e60" x="18" y="320" width="113" height="17"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[c) Actividad Ganadera]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f0e7c60a-53f9-4a6e-9a5b-413297433e60" x="18" y="27" width="166" height="14"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[a) Actividad de Restitución Bosques]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4b6e2ac8-8d38-4774-a234-2920673ac400" style="table" x="36" y="42" width="459" height="16"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[ 1. Recibo o Factura de Compra de Plantines.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="31cb5d88-c4e8-400e-85ef-91bd1e93558f" style="table" x="36" y="58" width="459" height="16"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[ 2. Recibo o Factura de Compra de Semillas Forestales]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="31cb5d88-c4e8-400e-85ef-91bd1e93558f" style="table" x="36" y="74" width="459" height="17"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[ 3. Recibo o Factura insumos para viveros]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="1690ea74-2ed0-47c7-84fa-2ed7d3014b7b" x="518" y="42" width="31" height="16"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="f58638c5-84af-4192-926e-48958660cb58" x="518" y="58" width="31" height="16"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="2dfb7665-b2c8-45e5-bd1d-0969e96c54d0" x="518" y="74" width="31" height="17"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="d88cebeb-a8da-414a-bb5b-5c58c590035c" x="184" y="28" width="311" height="13"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Documentos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="2cef36fa-52c7-4bd5-afbe-e77a9e3a3651" style="table" x="36" y="123" width="513" height="14"/>
+				<textElement verticalAlignment="Top">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[ Otros:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d88cebeb-a8da-414a-bb5b-5c58c590035c" x="184" y="153" width="311" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Documentos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="2cef36fa-52c7-4bd5-afbe-e77a9e3a3651" style="table" x="36" y="283" width="513" height="21"/>
+				<textElement verticalAlignment="Top">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[ Otros (Herramientas menores, repuestos para maquinaria, etc.) :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d88cebeb-a8da-414a-bb5b-5c58c590035c" x="184" y="321" width="311" height="16"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Documentos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="31cb5d88-c4e8-400e-85ef-91bd1e93558f" style="table" x="36" y="107" width="459" height="16"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[ 5. Contrato de Servicios Forestales]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="2dfb7665-b2c8-45e5-bd1d-0969e96c54d0" x="518" y="107" width="31" height="16"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="2dfb7665-b2c8-45e5-bd1d-0969e96c54d0" x="518" y="202" width="31" height="16"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="f58638c5-84af-4192-926e-48958660cb58" x="518" y="168" width="31" height="17"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="2dfb7665-b2c8-45e5-bd1d-0969e96c54d0" x="518" y="185" width="31" height="17"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="31cb5d88-c4e8-400e-85ef-91bd1e93558f" style="table" x="36" y="249" width="459" height="18"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[ 5. Compra y/o alquiler de maquinaria, herramientas o insumos que demuestren siembra directa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="31cb5d88-c4e8-400e-85ef-91bd1e93558f" style="table" x="36" y="185" width="459" height="16"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[ 2. Recibos y/o facturas de compra de Semilla.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="31cb5d88-c4e8-400e-85ef-91bd1e93558f" style="table" x="36" y="202" width="459" height="16"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[ 3. Recibos o Facturas de Adquisición de Insumos Agrícolas (fertilizantes, agroquímicos, etc.)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="31cb5d88-c4e8-400e-85ef-91bd1e93558f" style="table" x="36" y="218" width="459" height="31"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[ 4. Recibo o factura de compra de Combustibles, lubricantes, permisos de Trasnporte de Sustancias Controladas]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="2dfb7665-b2c8-45e5-bd1d-0969e96c54d0" x="518" y="218" width="31" height="31"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="31cb5d88-c4e8-400e-85ef-91bd1e93558f" style="table" x="36" y="169" width="459" height="16"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[ 1. Documentos que demuestren la Comercialización y/o almacenamiento de la Producción.]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="2dfb7665-b2c8-45e5-bd1d-0969e96c54d0" x="518" y="249" width="31" height="18"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="2cef36fa-52c7-4bd5-afbe-e77a9e3a3651" style="table" x="36" y="511" width="513" height="18"/>
+				<textElement verticalAlignment="Top">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[ Otros: (Fotografìas, Etc)]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="2dfb7665-b2c8-45e5-bd1d-0969e96c54d0" x="518" y="384" width="31" height="16"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="31cb5d88-c4e8-400e-85ef-91bd1e93558f" style="table" x="36" y="431" width="459" height="16"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[ 3. Certificado de Vacunación emitido por SENASAG de la campaña correspondiente al RCIA.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="31cb5d88-c4e8-400e-85ef-91bd1e93558f" style="table" x="36" y="400" width="459" height="31"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[ 2. Contratos de Trabajo, Fotografìas u otros que demuestren establecimiento de Infraestructura Ganadera (Potreros, Alambradas, Corral, Brete, Saleros, bebederos, etc)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="31cb5d88-c4e8-400e-85ef-91bd1e93558f" style="table" x="36" y="447" width="459" height="16"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[ 4. Recibos, notas o facturas de compra y venta de Ganado, guias de Movimiento SENASAG.]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="f58638c5-84af-4192-926e-48958660cb58" x="518" y="337" width="31" height="16"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="2dfb7665-b2c8-45e5-bd1d-0969e96c54d0" x="518" y="368" width="31" height="16"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="2dfb7665-b2c8-45e5-bd1d-0969e96c54d0" x="518" y="353" width="31" height="16"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="31cb5d88-c4e8-400e-85ef-91bd1e93558f" style="table" x="36" y="463" width="459" height="16"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[ 5. Comprobantes de compra de Insumos Pecuarios. (Farmacos, Biológicos, Alimenticios, etc.)]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="f58638c5-84af-4192-926e-48958660cb58" x="518" y="400" width="31" height="31"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="31cb5d88-c4e8-400e-85ef-91bd1e93558f" style="table" x="36" y="91" width="459" height="16"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[ 4. Recibo o factura de compra de Combustibles, permisos de Trasnporte de Sustancias Controladas.]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="2dfb7665-b2c8-45e5-bd1d-0969e96c54d0" x="518" y="91" width="31" height="16"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="31cb5d88-c4e8-400e-85ef-91bd1e93558f" style="table" x="36" y="479" width="459" height="16"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[ 6. Certificado libre de Brucelosis y Tuberculosis (Predios con Actividad Lechera)]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="2dfb7665-b2c8-45e5-bd1d-0969e96c54d0" x="518" y="447" width="31" height="16"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="d88cebeb-a8da-414a-bb5b-5c58c590035c" x="184" y="546" width="311" height="16"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Documentos]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="f58638c5-84af-4192-926e-48958660cb58" x="518" y="563" width="31" height="16"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="31cb5d88-c4e8-400e-85ef-91bd1e93558f" style="table" x="36" y="563" width="459" height="16"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[ 1. Certificado de Vacunas]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="f58638c5-84af-4192-926e-48958660cb58" x="518" y="579" width="31" height="16"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="31cb5d88-c4e8-400e-85ef-91bd1e93558f" style="table" x="36" y="579" width="459" height="16"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[ 2. Registros, Recibos o Facturas de Venta de Pollos BB (Pesadas)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f0e7c60a-53f9-4a6e-9a5b-413297433e60" x="18" y="545" width="113" height="17"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[d) Actividad Avicola]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="f58638c5-84af-4192-926e-48958660cb58" x="518" y="595" width="31" height="16"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="31cb5d88-c4e8-400e-85ef-91bd1e93558f" style="table" x="36" y="595" width="459" height="16"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[ 3. Comprobantes, Facturas de Venta de Huevos (Liviano)]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="f58638c5-84af-4192-926e-48958660cb58" x="518" y="611" width="31" height="16"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="31cb5d88-c4e8-400e-85ef-91bd1e93558f" style="table" x="36" y="611" width="459" height="16"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[ 4. Comprobantes, recibos, Facturas de Venta de Pollo en Kg. (Parrillero)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="31cb5d88-c4e8-400e-85ef-91bd1e93558f" style="table" x="36" y="627" width="459" height="16"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[ 5. Registro de Mortalidad de Pollos (%)]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="f58638c5-84af-4192-926e-48958660cb58" x="518" y="627" width="31" height="16"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="2cef36fa-52c7-4bd5-afbe-e77a9e3a3651" style="table" x="36" y="643" width="513" height="16"/>
+				<textElement verticalAlignment="Top">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[ Otros:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="31cb5d88-c4e8-400e-85ef-91bd1e93558f" style="table" x="36" y="495" width="459" height="16"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[ 7. Recibos o Facturas de Venta de Leche (Predios con Actividad Lechera)]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="2dfb7665-b2c8-45e5-bd1d-0969e96c54d0" x="518" y="463" width="31" height="16"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="31cb5d88-c4e8-400e-85ef-91bd1e93558f" style="table" x="36" y="267" width="459" height="16"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[ 6. Recibos y/o facturas de Adquisición de Insumos Ecológicos.]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="2dfb7665-b2c8-45e5-bd1d-0969e96c54d0" x="518" y="267" width="31" height="16"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="2dfb7665-b2c8-45e5-bd1d-0969e96c54d0" x="518" y="431" width="31" height="16"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="31cb5d88-c4e8-400e-85ef-91bd1e93558f" style="table" x="36" y="337" width="459" height="16"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[ 1. Documentacion que demuestre la aplicación de tecnicas y tecnologías Sostenibles:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="31cb5d88-c4e8-400e-85ef-91bd1e93558f" style="table" x="36" y="353" width="459" height="16"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[       - Alimentos Suplementarios.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="31cb5d88-c4e8-400e-85ef-91bd1e93558f" style="table" x="36" y="369" width="459" height="15"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[       - Razas Mejoradas.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="31cb5d88-c4e8-400e-85ef-91bd1e93558f" style="table" x="36" y="384" width="459" height="16"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[       - Ensilados de Forrajes]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="2dfb7665-b2c8-45e5-bd1d-0969e96c54d0" x="518" y="479" width="31" height="16"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="2dfb7665-b2c8-45e5-bd1d-0969e96c54d0" x="518" y="495" width="31" height="16"/>
+			</rectangle>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="5" splitType="Stretch"/>
+	</summary>
+</jasperReport>

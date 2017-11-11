@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Formulario_002" language="groovy" pageWidth="595" pageHeight="842" columnWidth="523" leftMargin="36" rightMargin="36" topMargin="15" bottomMargin="15" uuid="24ef445b-9269-4ced-98f0-851559e82efd">
+	<property name="ireport.zoom" value="0.9090909090909113"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="106"/>
+	<style name="Heading 1" fontSize="16" isBold="true"/>
+	<style name="Crosstab Data Text" hAlign="Center"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#C66377">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#E6CFD3">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#E6D473">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#E6E2CF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TH" mode="Opaque" backcolor="#E68473">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_CH" mode="Opaque" backcolor="#E6D2CF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_TH" mode="Opaque" backcolor="#9AB95C">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_CH" mode="Opaque" backcolor="#DEE6CF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#F6F8F3"/>
+		</conditionalStyle>
+	</style>
+	<style name="table 5">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_TH" mode="Opaque" backcolor="#8FAFCC">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_CH" mode="Opaque" backcolor="#CFDBE6">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6_TH" mode="Opaque" backcolor="#DDB66E">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6_CH" mode="Opaque" backcolor="#E6DECF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 7">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 7_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 7_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 7_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 8">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 8_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 8_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 8_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 9">
+		<box>
+			<pen lineWidth="1.0" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table 9_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table 9_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table 9_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<subDataset name="beneficiarios" uuid="b09fe359-a942-49aa-826b-3603d179ed84">
+		<parameter name="codigoparcela" class="java.lang.String"/>
+		<queryString>
+			<![CDATA[select pb.idparcela, cpb.cuentadeidbeneficiario,
+       CASE WHEN cpb.cuentadeidbeneficiario > 2 THEN ((((((COALESCE(persona.nombre1, ''::bpchar)::text || ' '::text) || COALESCE(persona.nombre2, ''::bpchar)::text) || ' '::text) || COALESCE(persona.apellidopat, ''::bpchar)::text) || ' '::text) || COALESCE(persona.apellidomat, ''::bpchar)::text) || ' Y OTROS'::text
+            WHEN cpb.cuentadeidbeneficiario <= 2 THEN ((((((COALESCE(persona.nombre1, ''::bpchar)::text || ' '::text) || COALESCE(persona.nombre2, ''::bpchar)::text) || ' '::text) || COALESCE(persona.apellidopat, ''::bpchar)::text) || ' '::text) || COALESCE(persona.apellidomat, ''::bpchar)::text)
+            ELSE ''
+       END as beneficiario
+from parcelabeneficiario as pb inner join persona on pb.idpersona = persona.idpersona
+inner join cuenta_parcela_beneficiario as cpb ON pb.idparcela = cpb.idparcela
+where poblador < 1 and pb.idparcela = $P{codigoparcela}
+
+order by pb.idparcela asc, persona.idgenero desc
+limit 2]]>
+		</queryString>
+		<field name="idparcela" class="java.lang.String"/>
+		<field name="cuentadeidbeneficiario" class="java.lang.Long"/>
+		<field name="beneficiario" class="java.lang.String"/>
+	</subDataset>
+	<parameter name="idparcela" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="ano" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select *
+from v_parcela
+where idparcela = $P{idparcela}]]>
+	</queryString>
+	<field name="idregistro" class="java.lang.Integer"/>
+	<field name="idparcela" class="java.lang.String"/>
+	<field name="nombre" class="java.lang.String"/>
+	<field name="superficie" class="java.lang.Double"/>
+	<field name="comp" class="java.lang.String"/>
+	<field name="nombrepolitico" class="java.lang.String"/>
+	<field name="TipoProp" class="java.lang.String"/>
+	<field name="SitJur" class="java.lang.String"/>
+	<field name="Clasificacion" class="java.lang.String"/>
+	<field name="idclasificacion" class="java.lang.String"/>
+	<field name="Oficina" class="java.lang.String"/>
+	<field name="estado" class="java.lang.String"/>
+	<field name="asesoramiento" class="java.lang.String"/>
+	<field name="fecharegistro" class="java.sql.Date"/>
+	<field name="clasificacionprog" class="java.lang.String"/>
+	<field name="departamento" class="java.lang.String"/>
+	<field name="provincia" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="106" splitType="Stretch">
+			<image>
+				<reportElement uuid="17a9653f-a8e3-4e70-b720-f7f718db139e" x="0" y="0" width="126" height="106"/>
+				<imageExpression><![CDATA["C:\\xampp\\htdocs\\PPARB\\sistema\\reportes\\caratulas-predios\\1_bolivia.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="3cb6b306-52ba-42de-9e6f-72db83c5ecd2" x="337" y="11" width="174" height="82"/>
+				<imageExpression><![CDATA["C:\\xampp\\htdocs\\PPARB\\sistema\\reportes\\caratulas-predios\\mdryt.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="190" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="1d3d3a1e-89f9-4731-839e-876448135130" x="30" y="33" width="469" height="102"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="24"/>
+				</textElement>
+				<text><![CDATA[PROGRAMA DE PRODUCCIÓN
+DE ALIMENTOS Y RESTITUCIÓN DE BOSQUES
+]]></text>
+			</staticText>
+			<image>
+				<reportElement uuid="0ed46152-f9ff-49b5-bdfb-f5a49b1f6692" x="1" y="7" width="516" height="15"/>
+				<imageExpression><![CDATA["C:\\xampp\\htdocs\\PPARB\\sistema\\reportes\\caratulas-predios\\barra.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="da7a21e8-ec32-4c97-a678-05df1f97c013" x="215" y="135" width="100" height="46"/>
+				<imageExpression><![CDATA["C:\\xampp\\htdocs\\PPARB\\sistema\\reportes\\caratulas-predios\\ucab.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="107" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="000a3ae8-f25d-4e53-b94a-ea49f39bde47" x="7" y="26" width="213" height="20"/>
+				<textElement>
+					<font fontName="SansSerif" size="14"/>
+				</textElement>
+				<text><![CDATA[PREDIO]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="48c4bec0-6056-45ac-a8b0-bbc05910c0de" x="232" y="26" width="286" height="41"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="SansSerif" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="b2db9302-fefe-431c-8dab-1efaacc9d770" x="231" y="67" width="287" height="40"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="SansSerif" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{idparcela}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="000a3ae8-f25d-4e53-b94a-ea49f39bde47" x="7" y="67" width="213" height="20"/>
+				<textElement>
+					<font fontName="SansSerif" size="14"/>
+				</textElement>
+				<text><![CDATA[CÓDIGO DE REGISTRO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="000a3ae8-f25d-4e53-b94a-ea49f39bde47" x="221" y="26" width="11" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Copperplate Gothic Bold" size="16"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="000a3ae8-f25d-4e53-b94a-ea49f39bde47" x="220" y="67" width="11" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Copperplate Gothic Bold" size="16"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+		</band>
+		<band height="21">
+			<staticText>
+				<reportElement uuid="000a3ae8-f25d-4e53-b94a-ea49f39bde47" x="8" y="0" width="213" height="20"/>
+				<textElement>
+					<font fontName="SansSerif" size="14"/>
+				</textElement>
+				<text><![CDATA[PROPIETARIOS]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement uuid="0f8ca43e-220c-4623-a07f-1f5eac4c54b0" key="table 9" style="table 9" x="232" y="0" width="286" height="20"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="beneficiarios" uuid="857cf36f-4069-4987-8b13-d9b2116f43fc">
+						<datasetParameter name="codigoparcela">
+							<datasetParameterExpression><![CDATA[$F{idparcela}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="287" uuid="4dfd0639-6728-4707-bc4f-a0d602d40e2a">
+						<jr:detailCell style="table 9_TD" height="39" rowSpan="1">
+							<textField>
+								<reportElement uuid="82b384e6-ab7f-48ec-840f-1ea067f16306" x="0" y="0" width="287" height="39"/>
+								<textElement>
+									<font fontName="SansSerif" size="16"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{beneficiario}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<staticText>
+				<reportElement uuid="000a3ae8-f25d-4e53-b94a-ea49f39bde47" x="221" y="1" width="11" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Copperplate Gothic Bold" size="16"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+		</band>
+		<band height="257">
+			<textField>
+				<reportElement uuid="61f6be04-0ecd-47ab-9be0-5c00ed2cfd09" x="231" y="18" width="286" height="41"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="SansSerif" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{departamento}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="6cd916c0-b08d-42bd-b482-badfde7508f1" x="231" y="59" width="286" height="40"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="SansSerif" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{provincia}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="9c200414-5017-44a9-a7d0-9f239bd3e723" x="231" y="99" width="286" height="40"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="SansSerif" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombrepolitico}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="000a3ae8-f25d-4e53-b94a-ea49f39bde47" x="7" y="18" width="213" height="20"/>
+				<textElement>
+					<font fontName="SansSerif" size="14"/>
+				</textElement>
+				<text><![CDATA[DEPARTAMENTO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="000a3ae8-f25d-4e53-b94a-ea49f39bde47" x="7" y="59" width="213" height="20"/>
+				<textElement>
+					<font fontName="SansSerif" size="14"/>
+				</textElement>
+				<text><![CDATA[PROVINCIA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="000a3ae8-f25d-4e53-b94a-ea49f39bde47" x="7" y="99" width="213" height="20"/>
+				<textElement>
+					<font fontName="SansSerif" size="14"/>
+				</textElement>
+				<text><![CDATA[MUNICIPIO]]></text>
+			</staticText>
+			<image>
+				<reportElement uuid="b5a1d9a1-2730-467c-ae1e-90e2dc77b85b" x="169" y="139" width="205" height="83"/>
+				<imageExpression><![CDATA["C:\\xampp\\htdocs\\PPARB\\sistema\\reportes\\caratulas-predios\\"+$P{ano}+".jpg"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="b98f5d4c-bd61-4690-8f6b-fad61e604f37" x="20" y="183" width="101" height="60"/>
+				<imageExpression><![CDATA["C:\\xampp\\htdocs\\PPARB\\sistema\\reportes\\caratulas-predios\\abt.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="5e9cff1c-2e3c-4013-83fe-f8425519dd99" x="429" y="178" width="82" height="65"/>
+				<imageExpression><![CDATA["C:\\xampp\\htdocs\\PPARB\\sistema\\reportes\\caratulas-predios\\vdra.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="000a3ae8-f25d-4e53-b94a-ea49f39bde47" x="221" y="18" width="11" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Copperplate Gothic Bold" size="16"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="000a3ae8-f25d-4e53-b94a-ea49f39bde47" x="221" y="59" width="11" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Copperplate Gothic Bold" size="16"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="000a3ae8-f25d-4e53-b94a-ea49f39bde47" x="220" y="99" width="11" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Copperplate Gothic Bold" size="16"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="40" splitType="Stretch">
+			<textField>
+				<reportElement uuid="132cc2b1-22e5-4095-9b8c-f9f8226bb7ef" x="237" y="0" width="100" height="33"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{ano}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="15" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

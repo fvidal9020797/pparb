@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Reporte_Predios" language="groovy" pageWidth="1008" pageHeight="612" orientation="Landscape" columnWidth="968" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d7139bf7-cb63-471a-bda4-7e8d20518f4c">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="predios" uuid="8bac2a48-4045-4de5-8e9f-270fe7312d26">
+		<queryString>
+			<![CDATA[
+select * from r_general as r where (fechasuscripcion between  date('2013-01-01') and date('2015-12-31'))  and
+ idparcela not in
+(select codigoparcela from solicitudrecepcionada where anosolicitud<>0)]]>
+		</queryString>
+		<field name="idregistro" class="java.lang.Integer"/>
+		<field name="nombrepredio" class="java.lang.String"/>
+		<field name="idparcela" class="java.lang.String"/>
+		<field name="comp" class="java.lang.String"/>
+		<field name="departamento" class="java.lang.String"/>
+		<field name="provincia" class="java.lang.String"/>
+		<field name="municipio" class="java.lang.String"/>
+		<field name="Clasificacion" class="java.lang.String"/>
+		<field name="TipoProp" class="java.lang.String"/>
+		<field name="SitJur" class="java.lang.String"/>
+		<field name="Oficina" class="java.lang.String"/>
+		<field name="estado" class="java.lang.String"/>
+		<field name="asesoramiento" class="java.lang.String"/>
+		<field name="fecharegistro" class="java.sql.Date"/>
+		<field name="suppredio" class="java.lang.Double"/>
+		<field name="supdefilegal" class="java.math.BigDecimal"/>
+		<field name="suptpfp" class="java.math.BigDecimal"/>
+		<field name="suptum" class="java.math.BigDecimal"/>
+		<field name="supreftpfp" class="java.math.BigDecimal"/>
+		<field name="supreftum" class="java.math.BigDecimal"/>
+		<field name="supselstpfpref" class="java.math.BigDecimal"/>
+		<field name="supselstpfpfcon" class="java.math.BigDecimal"/>
+		<field name="supselstumref" class="java.math.BigDecimal"/>
+		<field name="supselstumcon" class="java.math.BigDecimal"/>
+		<field name="supmejorastpfp" class="java.math.BigDecimal"/>
+		<field name="supmejorastum" class="java.math.BigDecimal"/>
+		<field name="suppas" class="java.math.BigDecimal"/>
+		<field name="suptpfppas" class="java.math.BigDecimal"/>
+		<field name="suptumpas" class="java.math.BigDecimal"/>
+		<field name="supreftpfppas" class="java.math.BigDecimal"/>
+		<field name="supreftumpas" class="java.math.BigDecimal"/>
+		<field name="supselstpfprefpas" class="java.math.BigDecimal"/>
+		<field name="supselstpfpfconpas" class="java.math.BigDecimal"/>
+		<field name="supselstumrefpas" class="java.math.BigDecimal"/>
+		<field name="supselstumconpas" class="java.math.BigDecimal"/>
+		<field name="supmejorastpfppas" class="java.math.BigDecimal"/>
+		<field name="supmejorastumpas" class="java.math.BigDecimal"/>
+		<field name="supproali" class="java.math.BigDecimal"/>
+		<field name="supalitpfp" class="java.math.BigDecimal"/>
+		<field name="supalitum" class="java.math.BigDecimal"/>
+		<field name="supalitpfppas" class="java.math.BigDecimal"/>
+		<field name="supalitumpas" class="java.math.BigDecimal"/>
+		<field name="supagricola" class="java.math.BigDecimal"/>
+		<field name="supganadera" class="java.math.BigDecimal"/>
+		<field name="fechasuscripcion" class="java.sql.Date"/>
+		<field name="supbarbecho" class="java.math.BigDecimal"/>
+		<field name="supdescanso" class="java.math.BigDecimal"/>
+	</subDataset>
+	<subDataset name="beneficiarios" uuid="2c14f088-9936-4811-b4bd-db868b52406f">
+		<parameter name="idparcela" class="java.lang.String"/>
+		<queryString>
+			<![CDATA[select idparcela, nomcompleto, telefono as noidentidad from
+parcelabeneficiario as pb inner join v_persona as p on pb.idpersona = p.idpersona
+where idparcela = $P{idparcela} and poblador <> 1
+order by nomcompleto asc]]>
+		</queryString>
+		<field name="idparcela" class="java.lang.String"/>
+		<field name="nomcompleto" class="java.lang.String"/>
+		<field name="noidentidad" class="java.lang.String"/>
+	</subDataset>
+	<queryString>
+		<![CDATA[select * from r_general
+limit 1]]>
+	</queryString>
+	<field name="idregistro" class="java.lang.Integer"/>
+	<field name="nombrepredio" class="java.lang.String"/>
+	<field name="idparcela" class="java.lang.String"/>
+	<field name="comp" class="java.lang.String"/>
+	<field name="departamento" class="java.lang.String"/>
+	<field name="provincia" class="java.lang.String"/>
+	<field name="municipio" class="java.lang.String"/>
+	<field name="Clasificacion" class="java.lang.String"/>
+	<field name="TipoProp" class="java.lang.String"/>
+	<field name="SitJur" class="java.lang.String"/>
+	<field name="Oficina" class="java.lang.String"/>
+	<field name="estado" class="java.lang.String"/>
+	<field name="asesoramiento" class="java.lang.String"/>
+	<field name="fecharegistro" class="java.sql.Date"/>
+	<field name="suppredio" class="java.lang.Double"/>
+	<field name="supdefilegal" class="java.math.BigDecimal"/>
+	<field name="suptpfp" class="java.math.BigDecimal"/>
+	<field name="suptum" class="java.math.BigDecimal"/>
+	<field name="supreftpfp" class="java.math.BigDecimal"/>
+	<field name="supreftum" class="java.math.BigDecimal"/>
+	<field name="supselstpfpref" class="java.math.BigDecimal"/>
+	<field name="supselstpfpfcon" class="java.math.BigDecimal"/>
+	<field name="supselstumref" class="java.math.BigDecimal"/>
+	<field name="supselstumcon" class="java.math.BigDecimal"/>
+	<field name="supmejorastpfp" class="java.math.BigDecimal"/>
+	<field name="supmejorastum" class="java.math.BigDecimal"/>
+	<field name="suppas" class="java.math.BigDecimal"/>
+	<field name="suptpfppas" class="java.math.BigDecimal"/>
+	<field name="suptumpas" class="java.math.BigDecimal"/>
+	<field name="supreftpfppas" class="java.math.BigDecimal"/>
+	<field name="supreftumpas" class="java.math.BigDecimal"/>
+	<field name="supselstpfprefpas" class="java.math.BigDecimal"/>
+	<field name="supselstpfpfconpas" class="java.math.BigDecimal"/>
+	<field name="supselstumrefpas" class="java.math.BigDecimal"/>
+	<field name="supselstumconpas" class="java.math.BigDecimal"/>
+	<field name="supmejorastpfppas" class="java.math.BigDecimal"/>
+	<field name="supmejorastumpas" class="java.math.BigDecimal"/>
+	<field name="supproali" class="java.math.BigDecimal"/>
+	<field name="supalitpfp" class="java.math.BigDecimal"/>
+	<field name="supalitum" class="java.math.BigDecimal"/>
+	<field name="supalitpfppas" class="java.math.BigDecimal"/>
+	<field name="supalitumpas" class="java.math.BigDecimal"/>
+	<field name="supagricola" class="java.math.BigDecimal"/>
+	<field name="supganadera" class="java.math.BigDecimal"/>
+	<field name="fechasuscripcion" class="java.sql.Date"/>
+	<field name="supbarbecho" class="java.math.BigDecimal"/>
+	<field name="supdescanso" class="java.math.BigDecimal"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="40" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="98269378-ab20-41ee-8c99-d51a53520541" x="0" y="0" width="968" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[REPORTE DE PREDIOS INSCRITOS AL PPARB QUE NO PRESENTARON RCIA]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="86" splitType="Stretch">
+			<componentElement>
+				<reportElement uuid="bb5e13de-ea0d-4fcd-991f-95dcd75bdac4" key="table" style="table" x="0" y="19" width="958" height="50"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="predios" uuid="0e1e1a96-668a-4e86-8e1c-b0408637240c">
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="20" uuid="840cdddb-9afc-43ed-b048-c15815333baf">
+						<jr:tableHeader style="table_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement uuid="2d5525e0-0b9c-4d13-a8ba-5091b9f04283" x="0" y="0" width="20" height="30"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[N°]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table_TD" height="30" rowSpan="1">
+							<textField>
+								<reportElement uuid="bf06cc3a-a96b-4d61-9901-a788eee0e12f" x="0" y="0" width="20" height="29"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="69" uuid="73c5b98c-9539-48c4-8dc0-6be9e843602f">
+						<jr:tableHeader style="table_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement uuid="bd34f6ee-be34-4234-8f2b-72c0ed121166" stretchType="RelativeToBandHeight" x="0" y="0" width="69" height="30"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Codigo de Registro]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table_TD" height="30" rowSpan="1">
+							<textField isStretchWithOverflow="true">
+								<reportElement uuid="fb2339de-aa98-4033-8f84-bc05224c84cb" x="0" y="0" width="69" height="29"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{idparcela}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="112" uuid="b9738367-31ed-4f82-a7bc-b7816dbd936a">
+						<jr:tableHeader style="table_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement uuid="2be1eb76-1cd4-49e8-9957-f51b1e745f00" x="0" y="0" width="112" height="30"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Nombre del Predio]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table_TD" height="30" rowSpan="1">
+							<textField isStretchWithOverflow="true">
+								<reportElement uuid="8e513bea-9ff5-43a8-b768-2f711fa75bfb" stretchType="RelativeToBandHeight" x="0" y="0" width="112" height="29"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{nombrepredio}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="58" uuid="c75dda27-2c2e-4e51-909c-6b84987592dd">
+						<jr:tableHeader style="table_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement uuid="f92ca7e0-6251-4f48-afef-99ce2c753ef9" x="0" y="0" width="57" height="30"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Departamento]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table_TD" height="30" rowSpan="1">
+							<textField isStretchWithOverflow="true">
+								<reportElement uuid="c9bd8903-e08d-4b19-949f-1163fc85369c" stretchType="RelativeToBandHeight" x="0" y="0" width="57" height="30"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{departamento}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="65" uuid="4215224d-e90a-44df-bc2b-5df9c2d0a7a8">
+						<jr:tableHeader style="table_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement uuid="f92ca7e0-6251-4f48-afef-99ce2c753ef9" x="0" y="0" width="65" height="30"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Provincia]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table_TD" height="30" rowSpan="1">
+							<textField isStretchWithOverflow="true">
+								<reportElement uuid="c9bd8903-e08d-4b19-949f-1163fc85369c" stretchType="RelativeToBandHeight" x="0" y="0" width="65" height="29"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{provincia}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="63" uuid="06c27c9b-4d39-4dd7-9a0f-ee0cbc8d591e">
+						<jr:tableHeader style="table_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement uuid="f92ca7e0-6251-4f48-afef-99ce2c753ef9" style="table" x="0" y="0" width="63" height="30"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Asesoramiento]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:tableFooter height="0" rowSpan="1"/>
+						<jr:columnHeader height="0" rowSpan="1"/>
+						<jr:columnFooter height="0" rowSpan="1"/>
+						<jr:detailCell height="30" rowSpan="1">
+							<textField isStretchWithOverflow="true">
+								<reportElement uuid="c9bd8903-e08d-4b19-949f-1163fc85369c" style="table" stretchType="RelativeToBandHeight" x="0" y="0" width="63" height="30"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{municipio}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="58" uuid="8903b5aa-b8ba-4d77-87ec-cfc3ca74e1f9">
+						<jr:tableHeader style="table_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement uuid="f92ca7e0-6251-4f48-afef-99ce2c753ef9" style="table" x="0" y="0" width="57" height="30" backcolor="#66CCFF"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Situacion Jurídica]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:tableFooter height="0" rowSpan="1"/>
+						<jr:columnHeader height="0" rowSpan="1"/>
+						<jr:columnFooter height="0" rowSpan="1"/>
+						<jr:detailCell height="30" rowSpan="1">
+							<textField isStretchWithOverflow="true">
+								<reportElement uuid="c9bd8903-e08d-4b19-949f-1163fc85369c" style="table" stretchType="RelativeToBandHeight" x="0" y="0" width="57" height="30"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{SitJur}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="63" uuid="38aef223-d588-4308-a7bd-a83f2c8ce89c">
+						<jr:tableHeader style="table_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement uuid="c72b5742-2133-4827-a40c-256eeb8ebda8" x="0" y="0" width="63" height="30"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Actividad]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table_TD" height="30" rowSpan="1">
+							<textField isStretchWithOverflow="true">
+								<reportElement uuid="a72bb919-5314-4318-a1fb-f1f82a2c3908" x="0" y="0" width="63" height="29"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{Clasificacion}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="68" uuid="b9ac35f8-41c2-4945-a7ff-244d5584a1d7">
+						<jr:tableHeader style="table_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement uuid="f0a52b46-be52-45d2-a1a1-f35dfd5a3033" stretchType="RelativeToBandHeight" x="0" y="0" width="68" height="30"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Tipo de Propiedad]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table_TD" height="30" rowSpan="1">
+							<textField isStretchWithOverflow="true">
+								<reportElement uuid="3a93f7e9-e485-43fb-bef0-c33122717ad9" x="0" y="0" width="68" height="29"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{TipoProp}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="0" uuid="7f2802dd-9eab-4527-a217-0b25022efdde">
+						<jr:tableHeader style="table_TH" height="30" rowSpan="1"/>
+						<jr:detailCell style="table_TD" height="30" rowSpan="1"/>
+					</jr:column>
+					<jr:column width="57" uuid="0c507782-0460-4e11-8893-ded89aba1755">
+						<jr:tableHeader style="table_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement uuid="a2294345-6070-4abb-af6d-7bcddfc9363f" x="0" y="0" width="57" height="30"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Fecha Suscripcion]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table_TD" height="30" rowSpan="1">
+							<textField isStretchWithOverflow="true" pattern="dd/MM/yyyy">
+								<reportElement uuid="43824f3d-4640-4bad-bb6e-f752ef5af537" x="0" y="0" width="57" height="29"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{fechasuscripcion}.toString()]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="52" uuid="5997a443-35f1-40e1-9aff-d5afd80eabc0">
+						<jr:tableHeader style="table_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement uuid="83808a1b-a40b-4343-a3bf-2b08f88a1000" x="0" y="0" width="52" height="30"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Sup. Predio]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table_TD" height="30" rowSpan="1">
+							<textField isStretchWithOverflow="true">
+								<reportElement uuid="6656b36f-c48a-437b-83c8-01c0c71a49e7" x="0" y="0" width="52" height="29"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{suppredio}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="54" uuid="8ae725a1-5bd6-4f57-baac-c8b88e581557">
+						<jr:tableHeader style="table_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement uuid="210cfa79-aa2f-4907-a172-82a0e1111efe" x="0" y="0" width="54" height="30"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Sup. Regularizada]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table_TD" height="30" rowSpan="1">
+							<textField isStretchWithOverflow="true">
+								<reportElement uuid="309da72e-a712-4f3c-9356-64e4ccd1c10e" x="0" y="0" width="54" height="29"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{supdefilegal}+$F{suppas}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="222" uuid="5248bae1-865f-4ef4-b62d-bd5422c90055">
+						<jr:tableHeader style="table_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement uuid="1a5ab70f-af23-4859-97b4-a2f23c45265d" x="0" y="0" width="222" height="30"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Beneficiarios]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table_TD" height="30" rowSpan="1">
+							<subreport>
+								<reportElement uuid="16126cd8-0f51-4abd-b129-ce22a1f7bd91" stretchType="RelativeToBandHeight" x="0" y="0" width="222" height="29"/>
+								<subreportParameter name="idparcelaparam">
+									<subreportParameterExpression><![CDATA[$F{idparcela}]]></subreportParameterExpression>
+								</subreportParameter>
+								<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+								<subreportExpression><![CDATA["C:\\xampp\\htdocs\\PPARB\\sistema\\reportes\\reportes\\ListadoPredios\\reporteprediosbeneficiarios.jasper"]]></subreportExpression>
+							</subreport>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="30" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="19" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

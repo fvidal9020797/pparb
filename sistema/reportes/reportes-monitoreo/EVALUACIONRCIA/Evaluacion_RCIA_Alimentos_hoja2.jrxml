@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Evaluacion_RCIA_Alimentos_hoja2" language="groovy" pageWidth="612" pageHeight="792" columnWidth="472" leftMargin="70" rightMargin="70" topMargin="0" bottomMargin="0" uuid="e5987b6c-e6ec-47c2-9cfe-b510fa1bbe23">
+	<property name="ireport.zoom" value="1.4641000000000044"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="ubicacion actual" uuid="9fb117b8-6aed-4d2f-8005-b8347e717efa">
+		<queryString language="SQL">
+			<![CDATA[SELECT registro.idregistro, parcelas.idparcela,  parcelas.nombre, b.unidad
+FROM
+	  public.parcelas,
+	  public.registro inner join ( SELECT
+			  codificadores.nombrecodificador AS unidad,
+			  nota.nnota,
+			  detallenota.idregistro as idregnota,
+				detallenota.estado as estado
+			FROM
+			  public.detallenota,
+			  public.nota,
+			  public.codificadores
+			WHERE
+			  nota.idnota = detallenota.idnota AND
+			  codificadores.idcodificadores = nota.idunidad AND
+			  detallenota.estado ='U' ) b ON registro.idregistro = b.idregnota,
+	  public.codificadores
+WHERE   parcelas.idparcela = registro.idparcela and registro.estado = codificadores.idcodificadores and idregistro = 212]]>
+		</queryString>
+		<field name="idregistro" class="java.lang.Integer"/>
+		<field name="idparcela" class="java.lang.String"/>
+		<field name="nombre" class="java.lang.String"/>
+		<field name="unidad" class="java.lang.String"/>
+	</subDataset>
+	<parameter name="idregistro" class="java.lang.Integer"/>
+	<parameter name="idmonitoreo" class="java.lang.Integer"/>
+	<parameter name="anomonitoreo" class="java.lang.Integer"/>
+	<queryString>
+		<![CDATA[SELECT v_parcela.idregistro, v_parcela.nombre AS nombrepredio, v_parcela.idparcela, v_parcela.departamento, v_parcela.provincia, v_parcela.nombrepolitico AS municipio,
+  v_parcela.clasificacionprog, v_parcela."TipoProp", v_parcela."SitJur", v_parcela."Oficina", v_parcela.estado, v_parcela.asesoramiento, v_parcela.fecharegistro,
+  v_parcela.superficie AS suppredio, v.supdefilegal, v.suppas, v.supproali,
+   round(COALESCE(sa.supagricola, sa.supagricola, 0::double precision)::numeric(10,4), 4) AS supagricola,
+   round(COALESCE(sa.supganadera, sa.supganadera, 0::double precision)::numeric(10,4), 4) AS supganadera,
+   round(COALESCE(sa.supbarbecho, sa.supbarbecho, 0::double precision)::numeric(10,4), 4) AS supbarbecho,
+   round(COALESCE(sa.supdescanso, sa.supdescanso, 0::double precision)::numeric(10,4), 4) AS supdescanso,
+   fr.fechasuscripcion
+   FROM v_parcela
+   LEFT JOIN v_registro v ON v_parcela.idregistro = v.idregistro
+   LEFT JOIN superficiealimentos sa ON sa.idregistro = v_parcela.idregistro
+   FULL JOIN fechasregistro fr ON fr.idregistro = v_parcela.idregistro
+where v_parcela.idregistro = $P{idregistro}]]>
+	</queryString>
+	<field name="idregistro" class="java.lang.Integer"/>
+	<field name="nombrepredio" class="java.lang.String"/>
+	<field name="idparcela" class="java.lang.String"/>
+	<field name="departamento" class="java.lang.String"/>
+	<field name="provincia" class="java.lang.String"/>
+	<field name="municipio" class="java.lang.String"/>
+	<field name="clasificacionprog" class="java.lang.String"/>
+	<field name="TipoProp" class="java.lang.String"/>
+	<field name="SitJur" class="java.lang.String"/>
+	<field name="Oficina" class="java.lang.String"/>
+	<field name="estado" class="java.lang.String"/>
+	<field name="asesoramiento" class="java.lang.String"/>
+	<field name="fecharegistro" class="java.sql.Date"/>
+	<field name="suppredio" class="java.lang.Double"/>
+	<field name="supdefilegal" class="java.math.BigDecimal"/>
+	<field name="suppas" class="java.math.BigDecimal"/>
+	<field name="supproali" class="java.math.BigDecimal"/>
+	<field name="supagricola" class="java.math.BigDecimal"/>
+	<field name="supganadera" class="java.math.BigDecimal"/>
+	<field name="supbarbecho" class="java.math.BigDecimal"/>
+	<field name="supdescanso" class="java.math.BigDecimal"/>
+	<field name="fechasuscripcion" class="java.sql.Date"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="8" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="114" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="e6c064ba-6dee-4c79-9140-cede00ff8b85" x="13" y="0" width="178" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[1.3. Situación Actual de la Carpeta]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="e6c064ba-6dee-4c79-9140-cede00ff8b85" x="0" y="39" width="472" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[2. Superficie Comprometida para la producción de alimentos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="52a861c8-74d6-48c9-b256-ab97a01e71a7" style="table" x="0" y="62" width="100" height="28"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Superficie Producción de Alimentos (Ha.)]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="7cc7f495-7aff-4e40-8463-b216f9f76ec1" style="table" x="0" y="90" width="100" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{supproali}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="9cfbff50-bd56-42c7-b9cc-1a507df7a01c" style="table" x="100" y="62" width="92" height="28"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Superficie Agrícola (Ha.)]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="ef571559-9c7e-43e1-9281-822b6065379f" style="table" x="100" y="90" width="92" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{supagricola}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="4cc56ee2-5175-4e38-b27d-aed8a177c6de" style="table" x="192" y="90" width="92" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{supganadera}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="d3edceeb-3104-40ea-a9a6-ffe9e09936f7" style="table" x="284" y="90" width="92" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{supbarbecho}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="9cfbff50-bd56-42c7-b9cc-1a507df7a01c" style="table" x="192" y="62" width="92" height="28"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Superficie Ganadera (Ha.)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="9cfbff50-bd56-42c7-b9cc-1a507df7a01c" style="table" x="284" y="62" width="92" height="28"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Superficie Barbecho (Ha.)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="9cfbff50-bd56-42c7-b9cc-1a507df7a01c" style="table" x="376" y="62" width="96" height="28"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Superficie Descanso (Ha.)]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="b80ae416-5499-4092-ab1f-87dfd2d433fb" style="table" x="376" y="90" width="96" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{supdescanso}]]></textFieldExpression>
+			</textField>
+			<componentElement>
+				<reportElement uuid="36a865a8-0a0b-4c69-bd31-6bb04193c52c" key="table 1" x="45" y="20" width="360" height="15"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="ubicacion actual" uuid="7e7474c5-e1e0-493a-91fe-3e924b09ca29">
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="359" uuid="fcc37b05-4029-4ccf-93c5-e60aeb65138f">
+						<jr:detailCell height="20" rowSpan="1">
+							<textField>
+								<reportElement uuid="3436036d-29e3-4ae8-b1a8-aa5c6091824a" x="20" y="0" width="339" height="20"/>
+								<textElement verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{unidad}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+		<band height="11">
+			<subreport>
+				<reportElement uuid="9b81d874-a4e2-4c1a-af52-5bebb10aa00a" x="-70" y="0" width="612" height="10"/>
+				<subreportParameter name="idmonitoreo">
+					<subreportParameterExpression><![CDATA[$P{idmonitoreo}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="idregistro">
+					<subreportParameterExpression><![CDATA[$P{idregistro}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="anomonitoreo">
+					<subreportParameterExpression><![CDATA[$P{anomonitoreo}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA["C:\\xampp\\htdocs\\PPARB\\sistema\\reportes\\reportes-monitoreo\\EVALUACIONRCIA\\Evaluacion_RCIA_Alimentos_hojaAgricola.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="13">
+			<subreport>
+				<reportElement uuid="9b81d874-a4e2-4c1a-af52-5bebb10aa00a" x="-70" y="0" width="612" height="11"/>
+				<subreportParameter name="idmonitoreo">
+					<subreportParameterExpression><![CDATA[$P{idmonitoreo}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="idregistro">
+					<subreportParameterExpression><![CDATA[$P{idregistro}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="anomonitoreo">
+					<subreportParameterExpression><![CDATA[$P{anomonitoreo}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA["C:\\xampp\\htdocs\\PPARB\\sistema\\reportes\\reportes-monitoreo\\EVALUACIONRCIA\\Evaluacion_RCIA_Alimentos_hojaGanadera.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="13">
+			<subreport>
+				<reportElement uuid="9b81d874-a4e2-4c1a-af52-5bebb10aa00a" x="-70" y="0" width="612" height="11"/>
+				<subreportParameter name="idmonitoreo">
+					<subreportParameterExpression><![CDATA[$P{idmonitoreo}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="idregistro">
+					<subreportParameterExpression><![CDATA[$P{idregistro}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="anomonitoreo">
+					<subreportParameterExpression><![CDATA[$P{anomonitoreo}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA["C:\\xampp\\htdocs\\PPARB\\sistema\\reportes\\reportes-monitoreo\\EVALUACIONRCIA\\Evaluacion_RCIA_Alimentos_hojaGanaderaLechera.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="175">
+			<staticText>
+				<reportElement uuid="e6c064ba-6dee-4c79-9140-cede00ff8b85" x="0" y="148" width="472" height="17"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[4. RECOMENDACIONES.]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="b05c0639-2599-4af1-b39f-355110cd7f01" x="0" y="22" width="472" height="60"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA["Visto el análisis de la información presentada perteneciente al predio  " + $F{nombrepredio} +
+", en aplicación de los parámetros de evaluación de cumplimiento del programa plasmado por el punto " + ""+
+" 10.3 del reglamento del Programa de Producción de Alimentos y Restitución de Bosques aprobado mediante resolución Ministerial MDRyT N° 706 de 30 de julio de 2013."]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="e6c064ba-6dee-4c79-9140-cede00ff8b85" x="0" y="2" width="472" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[3. CONCLUSIONES.]]></text>
+			</staticText>
+			<break>
+				<reportElement uuid="a984c1eb-31a3-4db7-b1e3-4259ee94be16" x="0" y="166" width="100" height="1"/>
+			</break>
+			<textField>
+				<reportElement uuid="9dc2a262-a43f-4da5-a7e2-baaf0e75c099" x="0" y="82" width="472" height="47"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["Se otorga una calificación  de   dando lugar a un      para la gestión  "
++ (
+$P{anomonitoreo}.intValue() == 1 ? "2014":
+ ($P{anomonitoreo}.intValue() == 2? "2015" :
+     ($P{anomonitoreo}.intValue() == 3? "2016" :
+        ($P{anomonitoreo}.intValue() == 4? "2017" :
+        ($P{anomonitoreo}.intValue() == 5? "2018" :
+
+   ($P{anomonitoreo}.intValue() == 6? "2019" :
+       ($P{anomonitoreo}.intValue() == 7? "2020" :
+    ""))))))
+)+
+
+" Según tabla de Valoración Adjunta en Anexo."]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="31">
+			<subreport>
+				<reportElement uuid="5dc12011-4f6b-448d-82a7-c94cf5c5928d" x="-70" y="0" width="612" height="15"/>
+				<subreportParameter name="idmonitoreo">
+					<subreportParameterExpression><![CDATA[$P{idmonitoreo}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="idregistro">
+					<subreportParameterExpression><![CDATA[$F{idregistro}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA["C:\\xampp\\htdocs\\PPARB\\sistema\\reportes\\reportes-monitoreo\\EVALUACIONRCIA\\Evaluacion_RCIA_Alimentos_tablaagricola.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement uuid="5dc12011-4f6b-448d-82a7-c94cf5c5928d" x="-70" y="15" width="612" height="15"/>
+				<subreportParameter name="idmonitoreo">
+					<subreportParameterExpression><![CDATA[$P{idmonitoreo}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="idregistro">
+					<subreportParameterExpression><![CDATA[$F{idregistro}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA["C:\\xampp\\htdocs\\PPARB\\sistema\\reportes\\reportes-monitoreo\\EVALUACIONRCIA\\Evaluacion_RCIA_Alimentos_tablaagricolapequetioc.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="14">
+			<subreport>
+				<reportElement uuid="76c44bd3-d7f6-44dc-ae5d-bf4d336c97c3" x="-70" y="0" width="612" height="13"/>
+				<subreportParameter name="idmonitoreo">
+					<subreportParameterExpression><![CDATA[$P{idmonitoreo}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="idregistro">
+					<subreportParameterExpression><![CDATA[$F{idregistro}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA["C:\\xampp\\htdocs\\PPARB\\sistema\\reportes\\reportes-monitoreo\\EVALUACIONRCIA\\Evaluacion_RCIA_Alimentos_tablaganadera.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="15">
+			<subreport>
+				<reportElement uuid="76c44bd3-d7f6-44dc-ae5d-bf4d336c97c3" x="-70" y="0" width="612" height="13"/>
+				<subreportParameter name="idmonitoreo">
+					<subreportParameterExpression><![CDATA[$P{idmonitoreo}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="idregistro">
+					<subreportParameterExpression><![CDATA[$F{idregistro}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA["C:\\xampp\\htdocs\\PPARB\\sistema\\reportes\\reportes-monitoreo\\EVALUACIONRCIA\\Evaluacion_RCIA_Alimentos_tablaganaderapequetioc.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="16">
+			<subreport>
+				<reportElement uuid="76c44bd3-d7f6-44dc-ae5d-bf4d336c97c3" x="-70" y="0" width="612" height="13"/>
+				<subreportParameter name="idmonitoreo">
+					<subreportParameterExpression><![CDATA[$P{idmonitoreo}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="idregistro">
+					<subreportParameterExpression><![CDATA[$F{idregistro}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA["C:\\xampp\\htdocs\\PPARB\\sistema\\reportes\\reportes-monitoreo\\EVALUACIONRCIA\\Evaluacion_RCIA_Alimentos_tablaganaderalechera.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="13">
+			<subreport>
+				<reportElement uuid="76c44bd3-d7f6-44dc-ae5d-bf4d336c97c3" x="-70" y="0" width="612" height="13"/>
+				<subreportParameter name="idmonitoreo">
+					<subreportParameterExpression><![CDATA[$P{idmonitoreo}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="idregistro">
+					<subreportParameterExpression><![CDATA[$F{idregistro}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="anomonitoreo">
+					<subreportParameterExpression><![CDATA[$P{anomonitoreo}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA["C:\\xampp\\htdocs\\PPARB\\sistema\\reportes\\reportes-monitoreo\\EVALUACIONRCIA\\Evaluacion_RCIA_Alimentos_tablaAnexo3.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

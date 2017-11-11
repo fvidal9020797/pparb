@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report_produccion_ganadera_all" language="groovy" pageWidth="612" pageHeight="792" columnWidth="572" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a8a5627a-8be8-4649-9fda-6a8484382c9c">
+	<property name="ireport.zoom" value="1.2100000000000033"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<queryString>
+		<![CDATA[SELECT
+     r_prodganadera."idregistro" AS r_prodganadera_idregistro,
+     r_prodganadera."nombre" AS r_prodganadera_nombre,
+     r_prodganadera."idparcela" AS r_prodganadera_idparcela,
+     r_prodganadera."anoprodganadera" AS r_prodganadera_anoprodganadera,
+     r_prodganadera."suppastosembrado" AS r_prodganadera_suppastosembrado,
+     r_prodganadera."cantprodcarne" AS r_prodganadera_cantprodcarne,
+     r_prodganadera."ganado" AS r_prodganadera_ganado
+FROM
+     "public"."r_prodganadera" r_prodganadera]]>
+	</queryString>
+	<field name="r_prodganadera_idregistro" class="java.lang.Integer"/>
+	<field name="r_prodganadera_nombre" class="java.lang.String"/>
+	<field name="r_prodganadera_idparcela" class="java.lang.String"/>
+	<field name="r_prodganadera_anoprodganadera" class="java.lang.Integer"/>
+	<field name="r_prodganadera_suppastosembrado" class="java.lang.Float"/>
+	<field name="r_prodganadera_cantprodcarne" class="java.lang.Integer"/>
+	<field name="r_prodganadera_ganado" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="66" splitType="Stretch">
+			<image>
+				<reportElement uuid="b86fb967-86e9-4dee-955f-7433964fed93" x="0" y="2" width="78" height="58"/>
+				<imageExpression><![CDATA["C:\\xampp\\htdocs\\PPARB\\sistema\\reportes\\reportes\\1_bolivia.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="ec078079-56e5-4798-89e1-b96d0ad26a6b" x="165" y="2" width="161" height="58"/>
+				<imageExpression><![CDATA["C:\\xampp\\htdocs\\PPARB\\sistema\\reportes\\reportes\\2_mdryt.jpg"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="45b51855-86a1-4e63-b046-4d6200c5a883" x="387" y="1" width="185" height="58"/>
+				<imageExpression><![CDATA["C:\\xampp\\htdocs\\PPARB\\sistema\\reportes\\reportes\\3_abt.png"]]></imageExpression>
+			</image>
+			<line>
+				<reportElement uuid="3e0bcedc-2939-4235-aa18-f3d1aaf1bb97" x="0" y="65" width="968" height="1"/>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="72" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="b777a454-8b66-4d59-9039-2f369488814f" x="162" y="41" width="183" height="23"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NOMBRE PARCELA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="14ae11ab-f71b-48c6-8d0b-bbe37c1c52ae" x="508" y="41" width="62" height="23"/>
+				<textElement textAlignment="Right">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CANTIDAD GANDO PIE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="361b2d62-2c0f-455e-a9a9-479ab3d405b1" x="385" y="41" width="58" height="23"/>
+				<textElement textAlignment="Right">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SUPERFICIE CULTIVO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4a02cd14-0d25-44ab-a14f-5e42e412f321" x="15" y="41" width="25" height="23"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NRO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b777a454-8b66-4d59-9039-2f369488814f" x="40" y="41" width="108" height="23"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CODIGO PARCELA]]></text>
+			</staticText>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement uuid="bf6c3880-0708-45dc-87f1-ee7b8bb1a791" x="297" y="0" width="181" height="28"/>
+				<textElement>
+					<font size="16" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="14ae11ab-f71b-48c6-8d0b-bbe37c1c52ae" x="443" y="41" width="65" height="23"/>
+				<textElement textAlignment="Right">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CANTIDAD PROD. CARNE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="361b2d62-2c0f-455e-a9a9-479ab3d405b1" x="362" y="41" width="22" height="23"/>
+				<textElement textAlignment="Center">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[AÑO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="50d91746-197f-4123-acc8-182712398713" x="115" y="0" width="171" height="28"/>
+				<textElement>
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Producción Ganadera]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="22" splitType="Stretch">
+			<textField>
+				<reportElement uuid="236058e6-0d80-463f-b8c9-51055c4bd5cf" x="162" y="0" width="183" height="20"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{r_prodganadera_nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="87460ea4-f114-4308-a7fe-ece9fd9913a6" x="518" y="0" width="49" height="20"/>
+				<textElement textAlignment="Right">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{r_prodganadera_ganado}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="e2e8bc35-469a-4661-ae49-fb48a8a5bb08" x="15" y="0" width="25" height="20"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="810db986-1fc4-4058-9c3f-acc476225ecb" x="395" y="0" width="45" height="20"/>
+				<textElement textAlignment="Right">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{r_prodganadera_suppastosembrado}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="236058e6-0d80-463f-b8c9-51055c4bd5cf" x="40" y="0" width="108" height="20"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{r_prodganadera_idparcela}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="87460ea4-f114-4308-a7fe-ece9fd9913a6" x="456" y="0" width="49" height="20"/>
+				<textElement textAlignment="Right">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{r_prodganadera_cantprodcarne}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="810db986-1fc4-4058-9c3f-acc476225ecb" x="362" y="0" width="22" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{r_prodganadera_anoprodganadera}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="3" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="24" splitType="Stretch">
+			<textField evaluationTime="Report">
+				<reportElement uuid="dd9b0fbb-1a92-4ca3-a2b7-a5b3f4a9f9b6" x="532" y="0" width="40" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement uuid="4e866cb4-5ea0-4a20-a39c-f6f11464cce5" x="0" y="0" width="963" height="1"/>
+			</line>
+			<textField>
+				<reportElement uuid="69c67a32-df6a-45cd-bae9-27b023c985f3" x="449" y="0" width="80" height="20"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="28" splitType="Stretch"/>
+	</summary>
+</jasperReport>

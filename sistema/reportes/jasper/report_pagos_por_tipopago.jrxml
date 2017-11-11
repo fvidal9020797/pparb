@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report_superficies_general" language="groovy" pageWidth="612" pageHeight="792" columnWidth="572" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a8a5627a-8be8-4649-9fda-6a8484382c9c">
+	<property name="ireport.zoom" value="0.9090909090909123"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="New Dataset TOTAL SUPERFICIES" uuid="aa979c58-b04d-4b83-8fbe-f6d068153ca9">
+		<queryString>
+			<![CDATA[select count(idregistro)as t_count,
+  round((sum(view_report_predios_pagos.montodeposito))::numeric(20,4), 4) as t_total
+  from view_report_predios_pagos
+where view_report_predios_pagos."TipoPago" is not null]]>
+		</queryString>
+		<field name="t_count" class="java.lang.Long"/>
+		<field name="t_total" class="java.math.BigDecimal"/>
+	</subDataset>
+	<subDataset name="dataset_superficies_estado" uuid="2499e0aa-9513-4c5d-8a5b-93932ebcef55">
+		<queryString>
+			<![CDATA[select view_report_predios_pagos."TipoPago",count(estado), round((sum(view_report_predios_pagos.montodeposito))::numeric(20,4), 4) as total from view_report_predios_pagos
+where view_report_predios_pagos."TipoPago" is not null
+group by   view_report_predios_pagos."TipoPago"]]>
+		</queryString>
+		<field name="TipoPago" class="java.lang.String"/>
+		<field name="count" class="java.lang.Long"/>
+		<field name="total" class="java.math.BigDecimal"/>
+	</subDataset>
+	<queryString>
+		<![CDATA[select count(idregistro)as t_count, sum(view_report_predios_pagos.montodeposito) as t_total from view_report_predios_pagos
+where view_report_predios_pagos."TipoPago" is not null]]>
+	</queryString>
+	<field name="t_count" class="java.lang.Long"/>
+	<field name="t_total" class="java.lang.Double"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="66" splitType="Stretch">
+			<image>
+				<reportElement uuid="b86fb967-86e9-4dee-955f-7433964fed93" x="0" y="4" width="78" height="58"/>
+				<imageExpression><![CDATA["C:\\xampp\\htdocs\\PPARB\\sistema\\reportes\\reportes\\1_bolivia.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="ec078079-56e5-4798-89e1-b96d0ad26a6b" x="165" y="4" width="161" height="58"/>
+				<imageExpression><![CDATA["C:\\xampp\\htdocs\\PPARB\\sistema\\reportes\\reportes\\2_mdryt.jpg"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="45b51855-86a1-4e63-b046-4d6200c5a883" x="387" y="4" width="185" height="58"/>
+				<imageExpression><![CDATA["C:\\xampp\\htdocs\\PPARB\\sistema\\reportes\\reportes\\3_abt.png"]]></imageExpression>
+			</image>
+			<line>
+				<reportElement uuid="3e0bcedc-2939-4235-aa18-f3d1aaf1bb97" x="0" y="65" width="572" height="1"/>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="3" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="584" splitType="Stretch">
+			<componentElement>
+				<reportElement uuid="dd745266-be02-4a0d-bd71-48b4cd0ee426" key="table 1" style="table 1" x="54" y="167" width="450" height="18"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="New Dataset TOTAL SUPERFICIES" uuid="034175da-adc5-4ee7-a02e-1077ae415764">
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="145" uuid="7da3b51f-ba7e-483f-a214-c48d1627bf60">
+						<jr:detailCell style="table 1_TD" height="20" rowSpan="1">
+							<staticText>
+								<reportElement uuid="97708f2b-5c12-40c3-8ff8-4936fcc5a6c8" x="24" y="0" width="90" height="20"/>
+								<textElement>
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[TOTAL]]></text>
+							</staticText>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="104" uuid="acaf99a2-f3a7-43c4-9744-81d8ec866efc">
+						<jr:detailCell style="table 1_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement uuid="65db9ede-6da0-4a7b-8dc4-70cea3b8a46f" x="0" y="0" width="83" height="20"/>
+								<textElement textAlignment="Right">
+									<font isBold="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{t_count}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="199" uuid="600dbb2f-0eca-4539-82f0-b1c6a7d78310">
+						<jr:detailCell style="table 1_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement uuid="cd114cc7-047b-490f-bc75-1028c50b2979" x="0" y="0" width="185" height="20"/>
+								<textElement textAlignment="Right">
+									<font isBold="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{t_total}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<staticText>
+				<reportElement uuid="50d91746-197f-4123-acc8-182712398713" x="249" y="221" width="64" height="32"/>
+				<textElement>
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Grafico]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="50d91746-197f-4123-acc8-182712398713" x="140" y="2" width="290" height="21"/>
+				<textElement>
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Pagos Realizados Por Tipo de Pago]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement uuid="dd745266-be02-4a0d-bd71-48b4cd0ee426" key="table 1" style="table 1" x="54" y="32" width="450" height="82"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="dataset_superficies_estado" uuid="034175da-adc5-4ee7-a02e-1077ae415764">
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="145" uuid="7da3b51f-ba7e-483f-a214-c48d1627bf60">
+						<jr:columnHeader style="table 1_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement uuid="677ee91f-1601-4a42-9f59-1f20f3bb62f6" x="13" y="0" width="114" height="30"/>
+								<textElement/>
+								<text><![CDATA[TIPO DE PAGO]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 1_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement uuid="849ff4eb-2da8-462e-ab6c-9813c65591b0" x="13" y="0" width="114" height="20"/>
+								<textElement/>
+								<textFieldExpression><![CDATA[$F{TipoPago}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="103" uuid="acaf99a2-f3a7-43c4-9744-81d8ec866efc">
+						<jr:columnHeader style="table 1_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement uuid="c8dad617-1ee7-4d7b-a4b4-472122a101c1" x="13" y="0" width="80" height="30"/>
+								<textElement/>
+								<text><![CDATA[CONTADOR]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 1_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement uuid="65db9ede-6da0-4a7b-8dc4-70cea3b8a46f" x="0" y="0" width="83" height="20"/>
+								<textElement textAlignment="Right"/>
+								<textFieldExpression><![CDATA[$F{count}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="200" uuid="600dbb2f-0eca-4539-82f0-b1c6a7d78310">
+						<jr:columnHeader style="table 1_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement uuid="532c4ca4-475c-4cec-b691-b92651608cf4" x="13" y="0" width="185" height="30"/>
+								<textElement>
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[MONTO TOTAL (BS)]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 1_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement uuid="cd114cc7-047b-490f-bc75-1028c50b2979" x="0" y="0" width="185" height="20"/>
+								<textElement textAlignment="Right">
+									<font isBold="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{total}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<pieChart>
+				<chart>
+					<reportElement uuid="4a8097fd-ced9-4331-9519-80bcbe02a6d9" x="0" y="218" width="572" height="357"/>
+					<box>
+						<pen lineStyle="Solid"/>
+						<topPen lineStyle="Solid"/>
+						<leftPen lineStyle="Solid"/>
+						<bottomPen lineStyle="Solid"/>
+						<rightPen lineStyle="Solid"/>
+					</box>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<pieDataset>
+					<dataset>
+						<datasetRun subDataset="dataset_superficies_estado" uuid="aea97b0e-c6c8-430d-9fe9-f74499917b63"/>
+					</dataset>
+					<keyExpression><![CDATA[$F{total}]]></keyExpression>
+					<valueExpression><![CDATA[$F{total}]]></valueExpression>
+					<labelExpression><![CDATA[$F{TipoPago}]]></labelExpression>
+				</pieDataset>
+				<piePlot>
+					<plot/>
+					<itemLabel/>
+				</piePlot>
+			</pieChart>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="26" splitType="Stretch">
+			<line>
+				<reportElement uuid="4e866cb4-5ea0-4a20-a39c-f6f11464cce5" x="0" y="0" width="572" height="1"/>
+			</line>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="4" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,2394 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Formulario_001_subreport3" language="groovy" pageWidth="572" pageHeight="752" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="464e68ee-d85d-4007-a8f1-7eed5d85126b">
+	<property name="ireport.zoom" value="1.464100000000005"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="339"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#6B8040">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#DEE6CF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TH" mode="Opaque" backcolor="#E69473">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_CH" mode="Opaque" backcolor="#E6D5CF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_TH" mode="Opaque" backcolor="#E69273">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_CH" mode="Opaque" backcolor="#E6D5CF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_TH" mode="Opaque" backcolor="#E68473">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_CH" mode="Opaque" backcolor="#E6D2CF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6_TH" mode="Opaque" backcolor="#E68473">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6_CH" mode="Opaque" backcolor="#E6D2CF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 7">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 7_TH" mode="Opaque" backcolor="#E68473">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 7_CH" mode="Opaque" backcolor="#E6D2CF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 7_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 8">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 8_TH" mode="Opaque" backcolor="#E68473">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 8_CH" mode="Opaque" backcolor="#E6D2CF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 8_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 9">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 9_TH" mode="Opaque" backcolor="#ACE673">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 9_CH" mode="Opaque" backcolor="#DAE6CF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 9_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Crosstab Data Text" hAlign="Center"/>
+	<style name="table 10">
+		<box>
+			<pen lineWidth="1.0" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table 10_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table 10_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table 10_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<subDataset name="SistemasProduc" uuid="e61a2d6b-687e-4154-94b9-2b25b775f82c">
+		<parameter name="COD_PAR1" class="java.lang.String"/>
+		<queryString>
+			<![CDATA[select spg.*, c.nombrecodificador
+from sistprodganadera as spg inner join codificadores as c on spg.idsistproductivo = c.idcodificadores inner join registro as r
+on r.idregistro = spg.idregistro
+where r.idparcela = $P{COD_PAR1} and c.idclasificador = 13;]]>
+		</queryString>
+		<field name="idsistproductivo" class="java.lang.Integer"/>
+		<field name="idregistro" class="java.lang.Integer"/>
+		<field name="cantidad" class="java.lang.Integer"/>
+		<field name="nombrecodificador" class="java.lang.String"/>
+	</subDataset>
+	<subDataset name="situactualganadera" uuid="1bc12add-380f-45db-adeb-52aa4468ce36">
+		<parameter name="COD_PAR2" class="java.lang.String"/>
+		<queryString>
+			<![CDATA[SELECT idplanganadera, registro.idregistro,COALESCE(suppastosembrado,'0') as suppastosembrado,COALESCE(suppastonatural,'0') as suppastonatural,COALESCE(potrero,'0') as potrero,COALESCE(pozas,'0') as pozas,
+COALESCE(saleros,'0') as saleros, COALESCE(bebederos,'0') as bebederos,COALESCE(brete,'0')as brete,COALESCE(corral,'0') as corral,COALESCE(forraje,'0') as forraje,COALESCE(compraganado,'0') as compraganado,
+COALESCE(cantganado,'0') as cantganado, COALESCE(cantternero,'0') as cantternero,COALESCE(cantganadofaineo,'0') as cantganadofaineo,COALESCE(cantganadopie,'0') as cantganadopie, COALESCE(cantprodcarne,'0') as cantprodcarne,
+anoprodganadera
+FROM Registro INNER JOIN PlanProduccionGanadera ON Registro.IdRegistro = PlanProduccionGanadera.IdRegistro
+where registro.idparcela = $P{COD_PAR2} and anoprodganadera = 0
+order by anoprodganadera]]>
+		</queryString>
+		<field name="idplanganadera" class="java.lang.Integer"/>
+		<field name="idregistro" class="java.lang.Integer"/>
+		<field name="suppastosembrado" class="java.lang.Float"/>
+		<field name="suppastonatural" class="java.lang.Float"/>
+		<field name="potrero" class="java.lang.Integer"/>
+		<field name="pozas" class="java.lang.Integer"/>
+		<field name="saleros" class="java.lang.Integer"/>
+		<field name="bebederos" class="java.lang.Integer"/>
+		<field name="brete" class="java.lang.Integer"/>
+		<field name="corral" class="java.lang.Integer"/>
+		<field name="forraje" class="java.lang.Integer"/>
+		<field name="compraganado" class="java.lang.Integer"/>
+		<field name="cantganado" class="java.lang.Integer"/>
+		<field name="cantternero" class="java.lang.Integer"/>
+		<field name="cantganadofaineo" class="java.lang.Integer"/>
+		<field name="cantganadopie" class="java.lang.Integer"/>
+		<field name="cantprodcarne" class="java.lang.Double"/>
+		<field name="anoprodganadera" class="java.lang.Integer"/>
+	</subDataset>
+	<subDataset name="PlanProdGanANO1" uuid="2f9ab752-4600-40ef-94d6-3fcdb74c2d4b">
+		<parameter name="COD_PARANO1" class="java.lang.String"/>
+		<queryString>
+			<![CDATA[SELECT idplanganadera,
+registro.idregistro,
+COALESCE(suppastosembrado,'0') as suppastosembrado,
+COALESCE(potrero,'0') as potrero,
+COALESCE(pozas,'0') as pozas,
+COALESCE(saleros,'0') as saleros,
+ COALESCE(bebederos,'0') as bebederos,
+ COALESCE(brete,'0')as brete,
+ COALESCE(corral,'0') as corral,
+ COALESCE(forraje,'0') as forraje,
+ COALESCE(compraganado,'0') as compraganado,
+COALESCE(cantganado,'0') as cantganado,
+COALESCE(cantternero,'0') as cantternero,
+COALESCE(cantganadofaineo,'0') as cantganadofaineo,
+COALESCE(cantganadopie,'0') as cantganadopie,
+COALESCE(cantprodcarne,'0') as cantprodcarne
+FROM Registro INNER JOIN PlanProduccionGanadera ON Registro.IdRegistro = PlanProduccionGanadera.IdRegistro
+where registro.idparcela = $P{COD_PARANO1} and anoprodganadera = 3]]>
+		</queryString>
+		<field name="idplanganadera" class="java.lang.Integer"/>
+		<field name="idregistro" class="java.lang.Integer"/>
+		<field name="suppastosembrado" class="java.lang.Float"/>
+		<field name="potrero" class="java.lang.Integer"/>
+		<field name="pozas" class="java.lang.Integer"/>
+		<field name="saleros" class="java.lang.Integer"/>
+		<field name="bebederos" class="java.lang.Integer"/>
+		<field name="brete" class="java.lang.Integer"/>
+		<field name="corral" class="java.lang.Integer"/>
+		<field name="forraje" class="java.lang.Integer"/>
+		<field name="compraganado" class="java.lang.Integer"/>
+		<field name="cantganado" class="java.lang.Integer"/>
+		<field name="cantternero" class="java.lang.Integer"/>
+		<field name="cantganadofaineo" class="java.lang.Integer"/>
+		<field name="cantganadopie" class="java.lang.Integer"/>
+		<field name="cantprodcarne" class="java.lang.Double"/>
+	</subDataset>
+	<subDataset name="UsoActual" uuid="0c0d3911-fd80-4b8c-ae2d-d329ad0fcc5a">
+		<parameter name="COD_PAR4" class="java.lang.String"/>
+		<queryString>
+			<![CDATA[select s.*, r.idparcela
+from Superficiealimentos as s inner join registro as r on s.idregistro = r.idregistro
+where r.idparcela = $P{COD_PAR4}]]>
+		</queryString>
+		<field name="idsupalimentos" class="java.lang.Integer"/>
+		<field name="idregistro" class="java.lang.Integer"/>
+		<field name="supagricola" class="java.lang.Double"/>
+		<field name="supganadera" class="java.lang.Double"/>
+		<field name="supbarbecho" class="java.lang.Double"/>
+		<field name="supdescanso" class="java.lang.Double"/>
+		<field name="supganlegal" class="java.lang.Double"/>
+		<field name="idparcela" class="java.lang.String"/>
+	</subDataset>
+	<subDataset name="PlanProdGanANO2" uuid="dd8fe93b-780a-4f1c-9f3d-674f9795d024">
+		<parameter name="CodParcela" class="java.lang.String"/>
+		<queryString>
+			<![CDATA[SELECT idplanganadera, registro.idregistro, COALESCE(suppastosembrado,'0') as suppastosembrado,COALESCE(suppastonatural,'0') as suppastonatural,COALESCE(potrero,'0') as potrero,COALESCE(pozas,'0') as pozas,
+COALESCE(saleros,'0') as saleros, COALESCE(bebederos,'0') as bebederos,COALESCE(brete,'0')as brete,COALESCE(corral,'0') as corral,COALESCE(forraje,'0') as forraje,COALESCE(compraganado,'0') as compraganado,
+COALESCE(cantganado,'0') as cantganado, COALESCE(cantternero,'0') as cantternero,COALESCE(cantganadofaineo,'0') as cantganadofaineo,COALESCE(cantganadopie,'0') as cantganadopie, COALESCE(cantprodcarne,'0') as cantprodcarne,
+anoprodganadera
+FROM Registro INNER JOIN PlanProduccionGanadera ON Registro.IdRegistro = PlanProduccionGanadera.IdRegistro
+where registro.idparcela = $P{CodParcela} and anoprodganadera = 4]]>
+		</queryString>
+		<field name="idplanganadera" class="java.lang.Integer"/>
+		<field name="idregistro" class="java.lang.Integer"/>
+		<field name="suppastosembrado" class="java.lang.Float"/>
+		<field name="suppastonatural" class="java.lang.Float"/>
+		<field name="potrero" class="java.lang.Integer"/>
+		<field name="pozas" class="java.lang.Integer"/>
+		<field name="saleros" class="java.lang.Integer"/>
+		<field name="bebederos" class="java.lang.Integer"/>
+		<field name="brete" class="java.lang.Integer"/>
+		<field name="corral" class="java.lang.Integer"/>
+		<field name="forraje" class="java.lang.Integer"/>
+		<field name="compraganado" class="java.lang.Integer"/>
+		<field name="cantganado" class="java.lang.Integer"/>
+		<field name="cantternero" class="java.lang.Integer"/>
+		<field name="cantganadofaineo" class="java.lang.Integer"/>
+		<field name="cantganadopie" class="java.lang.Integer"/>
+		<field name="cantprodcarne" class="java.lang.Double"/>
+		<field name="anoprodganadera" class="java.lang.Integer"/>
+	</subDataset>
+	<subDataset name="PlanProdGanANO3" uuid="a46057bf-e320-471d-a8f0-f7ecd20fcc82">
+		<parameter name="CodParcela" class="java.lang.String"/>
+		<queryString>
+			<![CDATA[SELECT idplanganadera, registro.idregistro, COALESCE(suppastosembrado,'0') as suppastosembrado,COALESCE(suppastonatural,'0') as suppastonatural,COALESCE(potrero,'0') as potrero,COALESCE(pozas,'0') as pozas,
+COALESCE(saleros,'0') as saleros, COALESCE(bebederos,'0') as bebederos,COALESCE(brete,'0')as brete,COALESCE(corral,'0') as corral,COALESCE(forraje,'0') as forraje,COALESCE(compraganado,'0') as compraganado,
+COALESCE(cantganado,'0') as cantganado, COALESCE(cantternero,'0') as cantternero,COALESCE(cantganadofaineo,'0') as cantganadofaineo,COALESCE(cantganadopie,'0') as cantganadopie, COALESCE(cantprodcarne,'0') as cantprodcarne,
+anoprodganadera
+FROM Registro INNER JOIN PlanProduccionGanadera ON Registro.IdRegistro = PlanProduccionGanadera.IdRegistro
+where registro.idparcela = $P{CodParcela} and anoprodganadera = 5]]>
+		</queryString>
+		<field name="idplanganadera" class="java.lang.Integer"/>
+		<field name="idregistro" class="java.lang.Integer"/>
+		<field name="suppastosembrado" class="java.lang.Float"/>
+		<field name="suppastonatural" class="java.lang.Float"/>
+		<field name="potrero" class="java.lang.Integer"/>
+		<field name="pozas" class="java.lang.Integer"/>
+		<field name="saleros" class="java.lang.Integer"/>
+		<field name="bebederos" class="java.lang.Integer"/>
+		<field name="brete" class="java.lang.Integer"/>
+		<field name="corral" class="java.lang.Integer"/>
+		<field name="forraje" class="java.lang.Integer"/>
+		<field name="compraganado" class="java.lang.Integer"/>
+		<field name="cantganado" class="java.lang.Integer"/>
+		<field name="cantternero" class="java.lang.Integer"/>
+		<field name="cantganadofaineo" class="java.lang.Integer"/>
+		<field name="cantganadopie" class="java.lang.Integer"/>
+		<field name="cantprodcarne" class="java.lang.Double"/>
+		<field name="anoprodganadera" class="java.lang.Integer"/>
+	</subDataset>
+	<subDataset name="PlanProdGanANO4" uuid="2f9ab752-4600-40ef-94d6-3fcdb74c2d4b">
+		<parameter name="CodParcela" class="java.lang.String">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<queryString>
+			<![CDATA[SELECT idplanganadera, registro.idregistro, COALESCE(suppastosembrado,'0') as suppastosembrado,COALESCE(suppastonatural,'0') as suppastonatural,COALESCE(potrero,'0') as potrero,COALESCE(pozas,'0') as pozas,
+COALESCE(saleros,'0') as saleros, COALESCE(bebederos,'0') as bebederos,COALESCE(brete,'0')as brete,COALESCE(corral,'0') as corral,COALESCE(forraje,'0') as forraje,COALESCE(compraganado,'0') as compraganado,
+COALESCE(cantganado,'0') as cantganado, COALESCE(cantternero,'0') as cantternero,COALESCE(cantganadofaineo,'0') as cantganadofaineo,COALESCE(cantganadopie,'0') as cantganadopie, COALESCE(cantprodcarne,'0') as cantprodcarne,
+anoprodganadera
+FROM Registro INNER JOIN PlanProduccionGanadera ON Registro.IdRegistro = PlanProduccionGanadera.IdRegistro
+where registro.idparcela = $P{CodParcela} and anoprodganadera = 6]]>
+		</queryString>
+		<field name="idplanganadera" class="java.lang.Integer"/>
+		<field name="idregistro" class="java.lang.Integer"/>
+		<field name="suppastosembrado" class="java.lang.Float"/>
+		<field name="suppastonatural" class="java.lang.Float"/>
+		<field name="potrero" class="java.lang.Integer"/>
+		<field name="pozas" class="java.lang.Integer"/>
+		<field name="saleros" class="java.lang.Integer"/>
+		<field name="bebederos" class="java.lang.Integer"/>
+		<field name="brete" class="java.lang.Integer"/>
+		<field name="corral" class="java.lang.Integer"/>
+		<field name="forraje" class="java.lang.Integer"/>
+		<field name="compraganado" class="java.lang.Integer"/>
+		<field name="cantganado" class="java.lang.Integer"/>
+		<field name="cantternero" class="java.lang.Integer"/>
+		<field name="cantganadofaineo" class="java.lang.Integer"/>
+		<field name="cantganadopie" class="java.lang.Integer"/>
+		<field name="cantprodcarne" class="java.lang.Double"/>
+		<field name="anoprodganadera" class="java.lang.Integer"/>
+	</subDataset>
+	<subDataset name="PlanProdGanANO5" uuid="2f9ab752-4600-40ef-94d6-3fcdb74c2d4b">
+		<parameter name="CodParcela" class="java.lang.String">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<queryString>
+			<![CDATA[SELECT idplanganadera, registro.idregistro, COALESCE(suppastosembrado,'0') as suppastosembrado,COALESCE(suppastonatural,'0') as suppastonatural,COALESCE(potrero,'0') as potrero,COALESCE(pozas,'0') as pozas,
+COALESCE(saleros,'0') as saleros, COALESCE(bebederos,'0') as bebederos,COALESCE(brete,'0')as brete,COALESCE(corral,'0') as corral,COALESCE(forraje,'0') as forraje,COALESCE(compraganado,'0') as compraganado,
+COALESCE(cantganado,'0') as cantganado, COALESCE(cantternero,'0') as cantternero,COALESCE(cantganadofaineo,'0') as cantganadofaineo,COALESCE(cantganadopie,'0') as cantganadopie, COALESCE(cantprodcarne,'0') as cantprodcarne,
+anoprodganadera
+FROM Registro INNER JOIN PlanProduccionGanadera ON Registro.IdRegistro = PlanProduccionGanadera.IdRegistro
+where registro.idparcela = $P{CodParcela} and anoprodganadera = 7]]>
+		</queryString>
+		<field name="idplanganadera" class="java.lang.Integer"/>
+		<field name="idregistro" class="java.lang.Integer"/>
+		<field name="suppastosembrado" class="java.lang.Float"/>
+		<field name="suppastonatural" class="java.lang.Float"/>
+		<field name="potrero" class="java.lang.Integer"/>
+		<field name="pozas" class="java.lang.Integer"/>
+		<field name="saleros" class="java.lang.Integer"/>
+		<field name="bebederos" class="java.lang.Integer"/>
+		<field name="brete" class="java.lang.Integer"/>
+		<field name="corral" class="java.lang.Integer"/>
+		<field name="forraje" class="java.lang.Integer"/>
+		<field name="compraganado" class="java.lang.Integer"/>
+		<field name="cantganado" class="java.lang.Integer"/>
+		<field name="cantternero" class="java.lang.Integer"/>
+		<field name="cantganadofaineo" class="java.lang.Integer"/>
+		<field name="cantganadopie" class="java.lang.Integer"/>
+		<field name="cantprodcarne" class="java.lang.Double"/>
+		<field name="anoprodganadera" class="java.lang.Integer"/>
+	</subDataset>
+	<subDataset name="funcionarioabt" uuid="ac3585ab-b350-440a-95fe-87293bd14c80">
+		<parameter name="idreg" class="java.lang.Integer"/>
+		<queryString>
+			<![CDATA[select nomcompleto as abt, idregistro
+from funcionarioregistro as fr inner join funcionario as r on fr.idfuncionario = r.idfuncionario inner join v_persona as v on r.idpersona = v.idpersona
+where idregistro = $P{idreg} and tiporegistrador = 138]]>
+		</queryString>
+		<field name="abt" class="java.lang.String"/>
+	</subDataset>
+	<subDataset name="funcionariovdra" uuid="2ee10ba7-5ef4-443c-bf08-df6307438665">
+		<parameter name="idreg" class="java.lang.Integer"/>
+		<queryString>
+			<![CDATA[select nomcompleto as vdra, idregistro
+from funcionarioregistro as fr inner join funcionario as r on fr.idfuncionario = r.idfuncionario inner join v_persona as v on r.idpersona = v.idpersona
+where idregistro = $P{idreg} and tiporegistrador = 137]]>
+		</queryString>
+		<field name="vdra" class="java.lang.String"/>
+	</subDataset>
+	<parameter name="COD_PAR3" class="java.lang.String"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["C:\\xampp\\htdocs\\PPARB\\sistema\\reportes\\reportes\\Mixta\\"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select r.idparcela,
+COALESCE (r.obsregistro,r.obsregistro,'') as obsregistro,
+v.*
+from v_registro as v inner join registro as r on v.idregistro = r.idregistro
+where r.idparcela = $P{COD_PAR3}]]>
+	</queryString>
+	<field name="idparcela" class="java.lang.String"/>
+	<field name="obsregistro" class="java.lang.String"/>
+	<field name="idregistro" class="java.lang.Integer"/>
+	<field name="supdefilegal" class="java.lang.Float"/>
+	<field name="suptpfp" class="java.lang.Float"/>
+	<field name="suptum" class="java.lang.Float"/>
+	<field name="supreftpfp" class="java.lang.Float"/>
+	<field name="supreftum" class="java.lang.Float"/>
+	<field name="supselstpfpref" class="java.lang.Float"/>
+	<field name="supselstpfpfcon" class="java.lang.Float"/>
+	<field name="supselstumref" class="java.lang.Float"/>
+	<field name="supselstumcon" class="java.lang.Float"/>
+	<field name="supmejorastpfp" class="java.lang.Float"/>
+	<field name="supmejorastum" class="java.lang.Float"/>
+	<field name="suppas" class="java.lang.Float"/>
+	<field name="suptpfppas" class="java.lang.Float"/>
+	<field name="suptumpas" class="java.lang.Float"/>
+	<field name="supreftpfppas" class="java.lang.Float"/>
+	<field name="supreftumpas" class="java.lang.Float"/>
+	<field name="supselstpfprefpas" class="java.lang.Float"/>
+	<field name="supselstpfpfconpas" class="java.lang.Float"/>
+	<field name="supselstumrefpas" class="java.lang.Float"/>
+	<field name="supselstumconpas" class="java.lang.Float"/>
+	<field name="supmejorastpfppas" class="java.lang.Float"/>
+	<field name="supmejorastumpas" class="java.lang.Float"/>
+	<field name="supproali" class="java.lang.Float"/>
+	<field name="supalitpfp" class="java.lang.Float"/>
+	<field name="supalitum" class="java.lang.Float"/>
+	<field name="supalitpfppas" class="java.lang.Float"/>
+	<field name="supalitumpas" class="java.lang.Float"/>
+	<group name="last">
+		<groupExpression><![CDATA[$F{idregistro}]]></groupExpression>
+		<groupFooter>
+			<band height="3"/>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="8" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="8" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="5" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="163" splitType="Stretch">
+			<rectangle>
+				<reportElement uuid="bd2ab13c-2424-4702-89fb-a3c7ab8f5b63" x="18" y="59" width="534" height="63"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="e1e49c79-3dd4-4be7-ad93-21a091bfe9b7" x="18" y="124" width="466" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Ganadera. Cantidad de ganado existente en el predio por tipo de sistema productivo]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement uuid="72eff5a8-8923-4f46-826c-7bc18f9f92b3" key="table" style="table" x="18" y="144" width="534" height="14"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="SistemasProduc" uuid="c83d0cc6-4d74-4caf-a950-df95eb5eea52">
+						<datasetParameter name="COD_PAR1">
+							<datasetParameterExpression><![CDATA[$F{idparcela}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="163" uuid="dd0b358b-3edc-4bc7-be33-53b2bacaf40a">
+						<jr:tableHeader style="table 8_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement uuid="76675924-64a8-420d-a679-c8844827e749" x="0" y="0" width="163" height="30"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="9" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Sistema Productivo]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table 8_CH" height="12" rowSpan="1">
+							<textField>
+								<reportElement uuid="3a8747df-a9b6-42d1-9a26-dcfb53920956" style="table 8_CH" x="0" y="0" width="163" height="12"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="9" isBold="false"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{nombrecodificador}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="99" uuid="a9498283-5499-462d-9b4f-2756a290151c">
+						<jr:tableHeader style="table 8_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement uuid="526154a9-5004-4cee-aa33-37809c4642c8" x="0" y="0" width="99" height="30"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="9" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Cantidad de Ganado Linea Base]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table 8_CH" height="12" rowSpan="1">
+							<textField>
+								<reportElement uuid="d15b17d7-6f28-4906-b1af-c4a212a0484f" style="table 8_CH" x="0" y="0" width="99" height="12"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="9" isBold="false"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{cantidad}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="53" uuid="051be369-b94d-44b8-9e98-096f5be259e9">
+						<jr:tableHeader height="30" rowSpan="1">
+							<staticText>
+								<reportElement uuid="526154a9-5004-4cee-aa33-37809c4642c8" style="table 8_CH" x="0" y="0" width="53" height="30"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Cantidad Ganado 2016]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:tableFooter height="1" rowSpan="1"/>
+						<jr:columnHeader height="0" rowSpan="1"/>
+						<jr:columnFooter height="0" rowSpan="1"/>
+						<jr:detailCell style="table 8_CH" height="12" rowSpan="1"/>
+					</jr:column>
+					<jr:column width="56" uuid="7b19792e-210d-4c4e-8388-0a1c050df9df">
+						<jr:tableHeader height="30" rowSpan="1">
+							<staticText>
+								<reportElement uuid="526154a9-5004-4cee-aa33-37809c4642c8" style="table" x="0" y="0" width="56" height="30"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Cantidad Ganado 2017]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:tableFooter height="1" rowSpan="1"/>
+						<jr:columnHeader height="0" rowSpan="1"/>
+						<jr:columnFooter height="0" rowSpan="1"/>
+						<jr:detailCell style="table" height="12" rowSpan="1"/>
+					</jr:column>
+					<jr:column width="53" uuid="a72bf371-86d7-4f43-bc24-ed4f3b195c90">
+						<jr:tableHeader height="30" rowSpan="1">
+							<staticText>
+								<reportElement uuid="526154a9-5004-4cee-aa33-37809c4642c8" style="table 8_CH" x="0" y="0" width="53" height="30"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Cantidad Ganado 2018]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:tableFooter height="1" rowSpan="1"/>
+						<jr:columnHeader height="0" rowSpan="1"/>
+						<jr:columnFooter height="0" rowSpan="1"/>
+						<jr:detailCell style="table 8_CH" height="12" rowSpan="1"/>
+					</jr:column>
+					<jr:column width="57" uuid="91e5e20d-459e-4f1c-8d8e-5a6ad6f12334">
+						<jr:tableHeader height="30" rowSpan="1">
+							<staticText>
+								<reportElement uuid="526154a9-5004-4cee-aa33-37809c4642c8" style="table 8_CH" x="0" y="0" width="57" height="30"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Cantidad Ganado 2019]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:tableFooter height="1" rowSpan="1"/>
+						<jr:columnHeader height="0" rowSpan="1"/>
+						<jr:columnFooter height="0" rowSpan="1"/>
+						<jr:detailCell style="table 8_CH" height="12" rowSpan="1"/>
+					</jr:column>
+					<jr:column width="53" uuid="85b93169-fdd6-4ddd-bc00-16a8e991d3c9">
+						<jr:tableHeader height="30" rowSpan="1">
+							<staticText>
+								<reportElement uuid="526154a9-5004-4cee-aa33-37809c4642c8" style="table 8_CH" x="0" y="0" width="52" height="30"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Cantidad Ganado 2020]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:tableFooter height="1" rowSpan="1"/>
+						<jr:columnHeader height="0" rowSpan="1"/>
+						<jr:columnFooter height="0" rowSpan="1"/>
+						<jr:detailCell style="table 8_CH" height="12" rowSpan="1"/>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<staticText>
+				<reportElement uuid="bf15a58d-ac1e-4246-a073-14b46286fe54" x="250" y="57" width="304" height="29"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Uso Actual en Areas Deforestadas Ilegales (Ha)]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement uuid="386ae134-7508-49bb-896b-a969134d9a4a" key="table 9" style="table 9" x="250" y="89" width="303" height="31"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="UsoActual" uuid="97547616-d334-4eb4-9ec3-817d33f526e0">
+						<datasetParameter name="COD_PAR4">
+							<datasetParameterExpression><![CDATA[$F{idparcela}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="77" uuid="25cdcfc5-1c70-4ca8-8fd1-d3b19d3c18dd">
+						<jr:tableHeader style="table 9_TH" height="16" rowSpan="1">
+							<staticText>
+								<reportElement uuid="998137a1-8627-42c4-845c-1be2b9804e27" x="0" y="0" width="77" height="16"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="9"/>
+								</textElement>
+								<text><![CDATA[Agrícola]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table 9_TD" height="17" rowSpan="1">
+							<textField>
+								<reportElement uuid="55c10e9a-069b-45d3-a95d-a7d426eb2d22" x="0" y="0" width="75" height="17"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="9"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{supagricola}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="73" uuid="4241060e-17f8-44a9-ba0b-a75436d387b7">
+						<jr:tableHeader style="table 9_TH" height="16" rowSpan="1">
+							<staticText>
+								<reportElement uuid="c8c7fbfe-beb6-4600-8065-154802d9a878" x="0" y="0" width="72" height="16"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="9"/>
+								</textElement>
+								<text><![CDATA[Ganadero]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table 9_TD" height="17" rowSpan="1">
+							<textField>
+								<reportElement uuid="5bf0069c-9cef-42c8-aa06-4708365671b9" x="0" y="0" width="72" height="16"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="9"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{supganadera}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="80" uuid="3c02e434-6f84-4f37-9fe0-131b8d7dd6d4">
+						<jr:tableHeader style="table 9_TH" height="16" rowSpan="1">
+							<staticText>
+								<reportElement uuid="4776c15a-67b7-4ca1-9912-b2df03978873" x="0" y="0" width="79" height="16"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="9"/>
+								</textElement>
+								<text><![CDATA[Barbecho]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table 9_TD" height="17" rowSpan="1">
+							<textField>
+								<reportElement uuid="14948d62-200f-4e0f-a687-7874772d1129" x="0" y="0" width="79" height="17"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="9"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{supbarbecho}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="72" uuid="0232f074-1e67-4abe-adb2-8cbb6db31de4">
+						<jr:tableHeader style="table 9_TH" height="16" rowSpan="1">
+							<staticText>
+								<reportElement uuid="6becd7ce-95f3-4d29-b6dd-91c93e124698" x="0" y="0" width="71" height="16"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="9"/>
+								</textElement>
+								<text><![CDATA[Descanso]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table 9_TD" height="17" rowSpan="1">
+							<textField>
+								<reportElement uuid="bdc09c85-e2ac-48aa-92d7-0609d6c52ec6" x="0" y="0" width="71" height="17"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="9"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{supdescanso}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<line>
+				<reportElement uuid="a1b734e9-ff6c-4cf3-acb1-1077ef67c30d" x="248" y="59" width="1" height="65"/>
+			</line>
+			<staticText>
+				<reportElement uuid="30a59828-7a98-4941-a650-67a748b862f5" x="204" y="59" width="44" height="44"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Sup. Prod. Ali. PAS EN TUM (Ha)]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="b7b5721d-fdae-442e-92ed-bcb13b83a6da" x="20" y="103" width="230" height="1"/>
+			</line>
+			<rectangle>
+				<reportElement uuid="6cc35fc2-5e88-4493-99d3-551c94351df7" x="67" y="24" width="181" height="35"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="b832602a-840d-4e6a-a0ab-27f556509125" x="112" y="60" width="51" height="43" backcolor="#99FF99"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Sup. Prod. de Alimentos en TUM (Ha)]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="f0dad725-113b-4f6c-99fd-f24842d80503" x="248" y="88" width="304" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="f15b43d9-7624-4a5a-a544-c4e8a8dfaee9" x="67" y="42" width="180" height="1"/>
+			</line>
+			<staticText>
+				<reportElement uuid="97f4a700-86dd-46f2-8127-6e43345a1950" x="18" y="58" width="48" height="45" backcolor="#99FF99"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Sup. Total de Prod. Alimentos (Ha)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a1948cbb-a24e-411c-9c99-9e8f1a489365" x="67" y="57" width="43" height="46" backcolor="#99FF99"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Sup. Prod. Alimentos en TPFP (Ha)]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="a1b734e9-ff6c-4cf3-acb1-1077ef67c30d" x="66" y="58" width="1" height="63"/>
+			</line>
+			<staticText>
+				<reportElement uuid="c573e962-70f6-494e-8897-d4094da071c6" x="163" y="23" width="84" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Sup. con PAS (Ha):]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="30a59828-7a98-4941-a650-67a748b862f5" x="163" y="57" width="39" height="46"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Sup. Prod. Ali. PAS EN TTPFP (ha)]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="65c1fb4a-2c3d-4363-abb3-53326aef49a1" x="202" y="58" width="1" height="64"/>
+			</line>
+			<line>
+				<reportElement uuid="65c1fb4a-2c3d-4363-abb3-53326aef49a1" x="161" y="22" width="1" height="100"/>
+			</line>
+			<staticText>
+				<reportElement uuid="c573e962-70f6-494e-8897-d4094da071c6" x="68" y="23" width="92" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Sup. Def. Ilegal (Ha):]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="a1b734e9-ff6c-4cf3-acb1-1077ef67c30d" x="110" y="60" width="1" height="63"/>
+			</line>
+			<textField>
+				<reportElement uuid="0555670e-04ac-427e-b791-5dae21c71bae" x="68" y="103" width="42" height="16"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{supalitpfp}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="ca3ac0ec-0cd7-443d-aa06-3c175c014050" x="112" y="103" width="49" height="17"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{supalitum}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="e142c9f5-439e-4365-bc27-b44e521f2d57" x="163" y="103" width="38" height="16"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{supalitpfppas}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="3b0057c6-b29a-414a-9d94-e073938068e6" x="203" y="103" width="43" height="17"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{supalitumpas}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="646d8241-bbfb-4e78-bc2f-5c75c4159407" x="19" y="104" width="47" height="16"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{supproali}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="70cc1337-9a98-48aa-902a-0e97196790f1" x="67" y="42" width="93" height="18"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{supdefilegal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="8f4867c3-c447-4a21-9dd7-69a0755e06a8" x="163" y="43" width="84" height="16"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{suppas}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="374e230b-6e8f-4c3c-ad5b-4bc72ffdab37" x="20" y="0" width="145" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Características del Predio]]></text>
+			</staticText>
+		</band>
+		<band height="92">
+			<staticText>
+				<reportElement uuid="f8ffed6e-4ff5-4d01-9b7c-bbe8aee244cd" x="17" y="3" width="408" height="14"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Actividades realizadas en la superficie deforestada sin autorización]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="28975661-1692-4e8f-9e0e-bfada75cc60e" style="table" x="178" y="17" width="46" height="28"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[SI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="28975661-1692-4e8f-9e0e-bfada75cc60e" style="table" x="17" y="17" width="161" height="28"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Actividad]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="28975661-1692-4e8f-9e0e-bfada75cc60e" style="table" x="17" y="58" width="161" height="14"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Compra de ganado (opcional)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="28975661-1692-4e8f-9e0e-bfada75cc60e" style="table" x="17" y="45" width="161" height="14"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Siembra de pastos cultivados de piso y/o corte]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="28975661-1692-4e8f-9e0e-bfada75cc60e" style="table" x="270" y="17" width="287" height="28"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Descripción de las características durante la actividad realizada (superficie y especie utilizada en la caso de pastos, raza en la compra de ganado, etc.)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="28975661-1692-4e8f-9e0e-bfada75cc60e" style="table" x="17" y="71" width="161" height="14"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Establecimiento de infraestructura]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="28975661-1692-4e8f-9e0e-bfada75cc60e" style="table" x="224" y="17" width="46" height="28"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[NO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="937f3e73-0aab-416f-9aea-0bad30af05b0" style="table" x="178" y="45" width="46" height="14"/>
+				<textElement/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="937f3e73-0aab-416f-9aea-0bad30af05b0" style="table" x="178" y="58" width="46" height="14"/>
+				<textElement/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="937f3e73-0aab-416f-9aea-0bad30af05b0" style="table" x="178" y="71" width="46" height="14"/>
+				<textElement/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="937f3e73-0aab-416f-9aea-0bad30af05b0" style="table" x="224" y="45" width="46" height="14"/>
+				<textElement/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="937f3e73-0aab-416f-9aea-0bad30af05b0" style="table" x="224" y="58" width="46" height="14"/>
+				<textElement/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="937f3e73-0aab-416f-9aea-0bad30af05b0" style="table" x="224" y="71" width="46" height="14"/>
+				<textElement/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="937f3e73-0aab-416f-9aea-0bad30af05b0" style="table" x="270" y="45" width="287" height="14"/>
+				<textElement/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="937f3e73-0aab-416f-9aea-0bad30af05b0" style="table" x="270" y="59" width="287" height="13"/>
+				<textElement/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="937f3e73-0aab-416f-9aea-0bad30af05b0" style="table" x="270" y="72" width="287" height="13"/>
+				<textElement/>
+				<text><![CDATA[]]></text>
+			</staticText>
+		</band>
+		<band height="345">
+			<rectangle>
+				<reportElement uuid="cb1d6a64-23ac-4934-91e0-b0aeccb87915" x="201" y="26" width="359" height="310"/>
+			</rectangle>
+			<componentElement>
+				<reportElement uuid="7e7a5639-545c-428f-8b02-76d3e9964b4a" key="table 8" style="table 8" x="13" y="24" width="179" height="310"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="situactualganadera" uuid="83fb1f2e-f65c-48c6-b41e-234d4d27da45">
+						<datasetParameter name="COD_PAR2">
+							<datasetParameterExpression><![CDATA[$F{idparcela}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="181" uuid="ac15c88b-8aa2-43b8-863b-311a308ba3bd">
+						<jr:detailCell style="table 8_CH" height="310" rowSpan="1">
+							<staticText>
+								<reportElement uuid="a038d74a-c49e-4bda-8ecf-011c8f96c17a" x="0" y="0" width="180" height="14"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Linea Base]]></text>
+							</staticText>
+							<staticText>
+								<reportElement uuid="59b21d86-9a8b-4fc7-8754-86c865c18a66" x="0" y="14" width="131" height="28"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Descripción]]></text>
+							</staticText>
+							<staticText>
+								<reportElement uuid="c30a1f6b-b8ef-4ce2-9a8c-f9f3bb3db72e" x="131" y="14" width="50" height="28"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Datos Form. 1-2013]]></text>
+							</staticText>
+							<staticText>
+								<reportElement uuid="f8973e8f-50ff-4b09-b6c6-7da4d79a98fa" x="1" y="42" width="130" height="15"/>
+								<textElement verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<text><![CDATA[Superficies pastizales naturales (ha)]]></text>
+							</staticText>
+							<staticText>
+								<reportElement uuid="1ad779de-6ed4-45de-b405-78b73259bc8a" x="1" y="57" width="130" height="16"/>
+								<textElement verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<text><![CDATA[Sup. pastos cultivados piso corte]]></text>
+							</staticText>
+							<staticText>
+								<reportElement uuid="02f9f37a-9938-45f6-97d6-6562bd182b33" x="2" y="87" width="129" height="16"/>
+								<textElement verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<text><![CDATA[ * Potreros con alambrada (Unidades)]]></text>
+							</staticText>
+							<staticText>
+								<reportElement uuid="b5877f80-cf86-4fa2-975a-5aaa14adba4e" x="2" y="72" width="178" height="16"/>
+								<textElement verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<text><![CDATA[Existencia de infraestructura en el predio]]></text>
+							</staticText>
+							<staticText>
+								<reportElement uuid="7f43457c-be86-40d3-8eb8-f994bd8c4d50" x="2" y="102" width="129" height="15"/>
+								<textElement verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<text><![CDATA[ *Aguada, pozas, o atajado]]></text>
+							</staticText>
+							<staticText>
+								<reportElement uuid="523e9ee1-0677-4d34-8e24-bb0e67b625e8" x="2" y="117" width="129" height="15"/>
+								<textElement verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<text><![CDATA[ *Saleros (Unidades)]]></text>
+							</staticText>
+							<staticText>
+								<reportElement uuid="a8caa2d8-b9e0-4024-bda7-832faf3dbead" x="2" y="132" width="129" height="15"/>
+								<textElement verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<text><![CDATA[ *Bebederos (Unidades)]]></text>
+							</staticText>
+							<staticText>
+								<reportElement uuid="c540029c-9f8f-43c8-a365-bd0a017c6d54" x="2" y="147" width="129" height="15"/>
+								<textElement verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<text><![CDATA[ *Brete]]></text>
+							</staticText>
+							<staticText>
+								<reportElement uuid="8eca8c70-8312-48c8-b82d-8d57616810bd" x="2" y="162" width="129" height="15"/>
+								<textElement>
+									<font size="7"/>
+								</textElement>
+								<text><![CDATA[ *Corral]]></text>
+							</staticText>
+							<staticText>
+								<reportElement uuid="49324e3e-cd3a-4c88-b246-bb1534c8a26e" x="1" y="177" width="130" height="15"/>
+								<textElement>
+									<font size="7"/>
+								</textElement>
+								<text><![CDATA[ *Silo para forraje]]></text>
+							</staticText>
+							<staticText>
+								<reportElement uuid="4b940561-54aa-470f-8496-08c324067bba" x="1" y="205" width="130" height="15"/>
+								<textElement verticalAlignment="Middle">
+									<font size="6"/>
+								</textElement>
+								<text><![CDATA[Total Cabezas declaradas de terneros (as)]]></text>
+							</staticText>
+							<staticText>
+								<reportElement uuid="13d9c37e-fc16-4fcb-b383-18d888570e4f" x="1" y="219" width="130" height="28"/>
+								<textElement verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<text><![CDATA[Total cabezas de ganado declaradas (cabezas de ganado mayor)]]></text>
+							</staticText>
+							<staticText>
+								<reportElement uuid="e7334655-ab3e-4689-94f6-21b7d78a3ebc" x="0" y="293" width="129" height="17"/>
+								<textElement verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<text><![CDATA[Producción de carne (kg/ha)]]></text>
+							</staticText>
+							<textField>
+								<reportElement uuid="b817d80d-e258-4047-8a7b-40d87e44441c" x="131" y="57" width="50" height="16"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{suppastosembrado}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="e5af15ba-8d6a-4043-9f53-5ed0613adf7f" x="131" y="42" width="50" height="15"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{suppastonatural}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="7ca751e9-c05d-48fa-997a-adcaef372463" x="131" y="87" width="50" height="15"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{potrero}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="4edd4039-8e5a-4e71-adea-0dab77ccded4" x="131" y="132" width="49" height="15"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{bebederos}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="8b6caa91-1526-41f1-bc9a-0aa25dbaada8" x="131" y="147" width="49" height="15"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{brete}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="f790c69c-58f9-4e3f-9d80-3b90e4379d4c" x="131" y="162" width="50" height="15"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{corral}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="1a2a48a7-fcbb-4350-a4e1-49af6161d7f2" x="131" y="177" width="49" height="15"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{forraje}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="2722ee48-7b79-4151-b9d2-c57a670890fa" x="131" y="205" width="50" height="15"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{cantternero}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="00ea9130-2a19-492d-b7de-bdc4b5d825b5" x="131" y="220" width="49" height="27"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{cantganado}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="7c745ebe-b80f-4053-9813-d1be9804e813" x="130" y="294" width="50" height="15"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{cantprodcarne}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="117ede1d-2ea8-44eb-8326-34013d339c68" x="131" y="117" width="50" height="15"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{saleros}]]></textFieldExpression>
+							</textField>
+							<line>
+								<reportElement uuid="fd39aafe-ab06-40b7-a385-e8c01a57ff92" x="2" y="14" width="179" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="fa7b13f3-8003-4b9b-a977-7fe4ba6fea1f" x="2" y="42" width="179" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="ca7ae2bc-c85e-4bc0-afa6-b2414e26fdc5" x="2" y="57" width="178" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="ca7ae2bc-c85e-4bc0-afa6-b2414e26fdc5" x="2" y="72" width="179" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="ca7ae2bc-c85e-4bc0-afa6-b2414e26fdc5" x="2" y="87" width="179" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="ca7ae2bc-c85e-4bc0-afa6-b2414e26fdc5" x="1" y="102" width="180" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="ca7ae2bc-c85e-4bc0-afa6-b2414e26fdc5" x="2" y="117" width="179" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="ca7ae2bc-c85e-4bc0-afa6-b2414e26fdc5" x="0" y="132" width="180" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="ca7ae2bc-c85e-4bc0-afa6-b2414e26fdc5" x="0" y="147" width="180" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="ca7ae2bc-c85e-4bc0-afa6-b2414e26fdc5" x="2" y="162" width="179" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="ca7ae2bc-c85e-4bc0-afa6-b2414e26fdc5" x="2" y="177" width="179" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="ca7ae2bc-c85e-4bc0-afa6-b2414e26fdc5" x="2" y="192" width="178" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="ca7ae2bc-c85e-4bc0-afa6-b2414e26fdc5" x="2" y="205" width="178" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="ca7ae2bc-c85e-4bc0-afa6-b2414e26fdc5" x="2" y="219" width="179" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="ca7ae2bc-c85e-4bc0-afa6-b2414e26fdc5" x="2" y="247" width="178" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="ca7ae2bc-c85e-4bc0-afa6-b2414e26fdc5" x="131" y="15" width="1" height="57"/>
+							</line>
+							<line>
+								<reportElement uuid="ca7ae2bc-c85e-4bc0-afa6-b2414e26fdc5" x="131" y="87" width="1" height="105"/>
+							</line>
+							<textField>
+								<reportElement uuid="a20dcc38-a54d-47a9-a4e1-4d926ad3b55b" x="131" y="102" width="49" height="15"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{pozas}]]></textFieldExpression>
+							</textField>
+							<line>
+								<reportElement uuid="25975209-106a-44f6-95f5-083561d2fd3b" x="131" y="206" width="1" height="41"/>
+							</line>
+							<line>
+								<reportElement uuid="4703b26c-481f-4de0-86b5-3001421d5616" x="0" y="293" width="179" height="1"/>
+							</line>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<componentElement>
+				<reportElement uuid="7e7a5639-545c-428f-8b02-76d3e9964b4a" key="table 8" style="table 8" x="382" y="41" width="72" height="295"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="PlanProdGanANO2" uuid="83fb1f2e-f65c-48c6-b41e-234d4d27da45">
+						<datasetParameter name="CodParcela">
+							<datasetParameterExpression><![CDATA[$F{idparcela}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="32" uuid="ac15c88b-8aa2-43b8-863b-311a308ba3bd">
+						<jr:detailCell style="table 8_CH" height="295" rowSpan="1">
+							<staticText>
+								<reportElement uuid="c30a1f6b-b8ef-4ce2-9a8c-f9f3bb3db72e" x="0" y="0" width="32" height="28"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="5" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Compromiso 2017]]></text>
+							</staticText>
+							<line>
+								<reportElement uuid="fd39aafe-ab06-40b7-a385-e8c01a57ff92" x="1" y="27" width="24" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="fa7b13f3-8003-4b9b-a977-7fe4ba6fea1f" x="1" y="57" width="31" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="ca7ae2bc-c85e-4bc0-afa6-b2414e26fdc5" x="0" y="42" width="32" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="ca7ae2bc-c85e-4bc0-afa6-b2414e26fdc5" x="0" y="27" width="32" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="ca7ae2bc-c85e-4bc0-afa6-b2414e26fdc5" x="0" y="72" width="32" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="ca7ae2bc-c85e-4bc0-afa6-b2414e26fdc5" x="1" y="88" width="31" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="ca7ae2bc-c85e-4bc0-afa6-b2414e26fdc5" x="0" y="102" width="26" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="ca7ae2bc-c85e-4bc0-afa6-b2414e26fdc5" x="0" y="119" width="32" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="ca7ae2bc-c85e-4bc0-afa6-b2414e26fdc5" x="0" y="132" width="32" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="ca7ae2bc-c85e-4bc0-afa6-b2414e26fdc5" x="1" y="146" width="31" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="ca7ae2bc-c85e-4bc0-afa6-b2414e26fdc5" x="0" y="162" width="32" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="ca7ae2bc-c85e-4bc0-afa6-b2414e26fdc5" x="0" y="176" width="32" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="ca7ae2bc-c85e-4bc0-afa6-b2414e26fdc5" x="0" y="192" width="32" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="ca7ae2bc-c85e-4bc0-afa6-b2414e26fdc5" x="0" y="205" width="32" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="ca7ae2bc-c85e-4bc0-afa6-b2414e26fdc5" x="1" y="102" width="31" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="25975209-106a-44f6-95f5-083561d2fd3b" x="0" y="233" width="32" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="4703b26c-481f-4de0-86b5-3001421d5616" x="1" y="279" width="31" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="ebefe275-118a-48d8-a841-7f0b9d045c63" x="1" y="263" width="31" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="dd9d8c97-42a5-4260-a0c8-87a9b6f049ae" x="3" y="132" width="19" height="1"/>
+							</line>
+							<textField>
+								<reportElement uuid="90d33d10-87c3-4b94-98af-798b6100acf5" x="0" y="43" width="32" height="14"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{suppastosembrado}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="316e3e64-d78d-406f-b262-0120690427fd" x="0" y="73" width="32" height="15"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{potrero}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="44fbc622-707b-4272-8111-e10644b2a40d" x="0" y="88" width="32" height="14"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{pozas}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="325d80ea-d689-4ee2-8392-be5ed49addc2" x="1" y="103" width="31" height="17"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{saleros}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="4aae895f-b68d-4151-8d5e-024c80ccfaf7" x="1" y="120" width="31" height="13"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{bebederos}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="35c4a4fd-4972-49e8-8f5b-cc2d57786946" x="0" y="133" width="32" height="14"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{brete}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="b30ae338-fbb0-411b-b71a-79cdebe2bc2b" x="1" y="147" width="31" height="14"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{corral}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="9f6148df-6296-40b0-bf04-7c874c5450c8" x="1" y="162" width="31" height="14"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{forraje}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="03d12bc9-e85d-460e-9f5f-13bf6cd019df" x="1" y="177" width="31" height="15"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{compraganado}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="e79c8a0b-f4ec-4151-84e5-cc594ead9105" x="1" y="192" width="31" height="15"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{cantternero}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="7370d6fb-f8de-424f-881b-0c454d6cf54e" x="0" y="206" width="32" height="28"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{cantganado}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="af4ae898-5939-49a0-9efd-a2b8b9541c15" x="1" y="234" width="31" height="29"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{cantganadopie}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="a5368414-4fc7-4461-a7c5-07d2055e4b52" x="0" y="264" width="26" height="15"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{cantganadofaineo}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="52f492c8-23d0-482f-88ad-1b1a58cfe763" x="1" y="280" width="25" height="15"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{cantprodcarne}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="40" uuid="aee5b0b6-7416-4249-a5d3-bc5d279d8cf1">
+						<jr:tableHeader height="0" rowSpan="1"/>
+						<jr:tableFooter height="0" rowSpan="1"/>
+						<jr:columnHeader height="0" rowSpan="1"/>
+						<jr:columnFooter height="0" rowSpan="1"/>
+						<jr:detailCell height="295" rowSpan="1">
+							<staticText>
+								<reportElement uuid="065dddf6-0c09-4aa3-8e8c-0ba776d89608" x="0" y="1" width="40" height="27"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="6" isBold="false" isUnderline="false"/>
+								</textElement>
+								<text><![CDATA[Ejecutado 2017]]></text>
+							</staticText>
+							<line>
+								<reportElement uuid="f83c5f54-95b4-4fc1-8edf-502d0a5fe4dd" x="0" y="57" width="40" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="66eebd2d-8852-4756-9234-936bfb061b82" x="0" y="27" width="40" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="a3d7a827-d2bd-4d23-8eee-1df722b0150b" x="0" y="42" width="40" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="b56a8bfd-5d96-4cd6-963f-5e626060ade7" x="0" y="72" width="40" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="c0d08026-7e55-4a85-947e-27e520582711" x="0" y="88" width="40" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="a5e327c3-4615-495c-87b2-8a0d327af5c7" x="0" y="102" width="40" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="64754ff0-69d0-495c-a6ca-4a41f441e8ac" x="0" y="119" width="40" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="79b11033-11f6-441f-a0d2-b09d932e3bd8" x="0" y="132" width="40" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="7b849580-80f6-421d-b514-a6ddf8a04720" x="0" y="146" width="40" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="33f168c3-c907-4a5e-9e59-9e327350cf4c" x="0" y="162" width="40" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="80af2c5e-c803-42cd-8136-5a8aa4071856" x="0" y="177" width="40" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="3a35c046-0e9b-4f2d-9c3a-5457763995e8" x="0" y="192" width="40" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="f13f2fe8-be25-4f8a-b6b0-09fa531ea1ec" x="0" y="205" width="40" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="024597c0-8414-4fdb-80ba-b5e24df7d68c" x="0" y="233" width="40" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="7208b14f-4921-4d4f-a89b-6a7c598dfd9d" x="0" y="263" width="40" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="d8991e89-9187-4093-9503-2dd07406700e" x="0" y="279" width="40" height="1"/>
+							</line>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<staticText>
+				<reportElement uuid="934dc763-caf3-4216-822b-73105b6b3ba2" x="201" y="26" width="360" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Resultados Alcanzados]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f4dba6be-aada-4807-a6a1-961bf7f97f91" x="201" y="40" width="144" height="28"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Descripción]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="1230ff3f-4e5c-40d7-ad55-68580fcbb66f" x="201" y="83" width="144" height="16"/>
+				<textElement verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ 1. Sup. pastos cultivados de piso y/o corte (ha)]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="21edce73-b857-4033-a379-91be0ee2e508" x="201" y="67" width="144" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="7b07c51f-0a9b-41fa-8aa4-9576aef82d16" x="201" y="82" width="144" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="21edce73-b857-4033-a379-91be0ee2e508" x="201" y="97" width="144" height="1"/>
+			</line>
+			<staticText>
+				<reportElement uuid="1230ff3f-4e5c-40d7-ad55-68580fcbb66f" x="201" y="97" width="144" height="16"/>
+				<textElement verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ 2. Infraestructura a construir]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="7b07c51f-0a9b-41fa-8aa4-9576aef82d16" x="201" y="112" width="144" height="1"/>
+			</line>
+			<staticText>
+				<reportElement uuid="1230ff3f-4e5c-40d7-ad55-68580fcbb66f" x="201" y="112" width="144" height="16"/>
+				<textElement verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[     * Potreros con alambrada (und).]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="1230ff3f-4e5c-40d7-ad55-68580fcbb66f" x="201" y="127" width="144" height="16"/>
+				<textElement verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[     Aguada, pozas, o atajado]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="1230ff3f-4e5c-40d7-ad55-68580fcbb66f" x="201" y="142" width="144" height="16"/>
+				<textElement verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[     * Saleros (Unidades)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="1230ff3f-4e5c-40d7-ad55-68580fcbb66f" x="201" y="157" width="144" height="16"/>
+				<textElement verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[     * Bebederos (Unidades)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="1230ff3f-4e5c-40d7-ad55-68580fcbb66f" x="201" y="172" width="144" height="16"/>
+				<textElement verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[     * Brete.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="1230ff3f-4e5c-40d7-ad55-68580fcbb66f" x="201" y="186" width="144" height="16"/>
+				<textElement verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[     * Corral]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="1230ff3f-4e5c-40d7-ad55-68580fcbb66f" x="201" y="202" width="144" height="16"/>
+				<textElement verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[     * Silo para Forrajes.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="1230ff3f-4e5c-40d7-ad55-68580fcbb66f" x="201" y="217" width="144" height="16"/>
+				<textElement verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ 3. Compra de ganado en cabezas (opcional).]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="1230ff3f-4e5c-40d7-ad55-68580fcbb66f" x="201" y="232" width="144" height="14"/>
+				<textElement verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ 4. Total de cabezas de terneros (as).]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="1230ff3f-4e5c-40d7-ad55-68580fcbb66f" x="201" y="320" width="144" height="16"/>
+				<textElement verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ 8. Producción estimada de carne (Kg/ha)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="1230ff3f-4e5c-40d7-ad55-68580fcbb66f" x="201" y="304" width="144" height="16"/>
+				<textElement verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ 7. Cantidad de ganado para faeneo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="1230ff3f-4e5c-40d7-ad55-68580fcbb66f" x="201" y="246" width="144" height="29"/>
+				<textElement verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ 5. Total cabezas de ganado mayor (Considerar 20% de incremento/año) por años]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="7b07c51f-0a9b-41fa-8aa4-9576aef82d16" x="201" y="127" width="144" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="7b07c51f-0a9b-41fa-8aa4-9576aef82d16" x="201" y="142" width="144" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="7b07c51f-0a9b-41fa-8aa4-9576aef82d16" x="201" y="158" width="144" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="7b07c51f-0a9b-41fa-8aa4-9576aef82d16" x="201" y="171" width="144" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="7b07c51f-0a9b-41fa-8aa4-9576aef82d16" x="201" y="186" width="144" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="7b07c51f-0a9b-41fa-8aa4-9576aef82d16" x="201" y="201" width="144" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="7b07c51f-0a9b-41fa-8aa4-9576aef82d16" x="201" y="216" width="144" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="7b07c51f-0a9b-41fa-8aa4-9576aef82d16" x="201" y="231" width="144" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="7b07c51f-0a9b-41fa-8aa4-9576aef82d16" x="201" y="245" width="144" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="7b07c51f-0a9b-41fa-8aa4-9576aef82d16" x="201" y="273" width="144" height="1"/>
+			</line>
+			<staticText>
+				<reportElement uuid="1230ff3f-4e5c-40d7-ad55-68580fcbb66f" x="201" y="274" width="144" height="29"/>
+				<textElement verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ 6. Cantidad de ganado en pie para la venta (cría y recría)]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="7b07c51f-0a9b-41fa-8aa4-9576aef82d16" x="201" y="303" width="144" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="7b07c51f-0a9b-41fa-8aa4-9576aef82d16" x="201" y="319" width="144" height="1"/>
+			</line>
+			<componentElement>
+				<reportElement uuid="7e7a5639-545c-428f-8b02-76d3e9964b4a" key="table 8" style="table 8" x="453" y="41" width="36" height="295"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="PlanProdGanANO3" uuid="83fb1f2e-f65c-48c6-b41e-234d4d27da45">
+						<datasetParameter name="CodParcela">
+							<datasetParameterExpression><![CDATA[$F{idparcela}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="36" uuid="ac15c88b-8aa2-43b8-863b-311a308ba3bd">
+						<jr:detailCell style="table 8_CH" height="295" rowSpan="1">
+							<staticText>
+								<reportElement uuid="c30a1f6b-b8ef-4ce2-9a8c-f9f3bb3db72e" x="0" y="0" width="36" height="28"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="5" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Compromiso 2018]]></text>
+							</staticText>
+							<line>
+								<reportElement uuid="fd39aafe-ab06-40b7-a385-e8c01a57ff92" x="1" y="27" width="34" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="fa7b13f3-8003-4b9b-a977-7fe4ba6fea1f" x="1" y="57" width="33" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="ca7ae2bc-c85e-4bc0-afa6-b2414e26fdc5" x="0" y="42" width="36" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="ca7ae2bc-c85e-4bc0-afa6-b2414e26fdc5" x="0" y="27" width="34" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="ca7ae2bc-c85e-4bc0-afa6-b2414e26fdc5" x="0" y="72" width="36" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="ca7ae2bc-c85e-4bc0-afa6-b2414e26fdc5" x="1" y="87" width="34" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="ca7ae2bc-c85e-4bc0-afa6-b2414e26fdc5" x="0" y="102" width="36" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="ca7ae2bc-c85e-4bc0-afa6-b2414e26fdc5" x="0" y="118" width="36" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="ca7ae2bc-c85e-4bc0-afa6-b2414e26fdc5" x="0" y="131" width="36" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="ca7ae2bc-c85e-4bc0-afa6-b2414e26fdc5" x="1" y="146" width="35" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="ca7ae2bc-c85e-4bc0-afa6-b2414e26fdc5" x="0" y="161" width="36" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="ca7ae2bc-c85e-4bc0-afa6-b2414e26fdc5" x="0" y="176" width="36" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="ca7ae2bc-c85e-4bc0-afa6-b2414e26fdc5" x="0" y="191" width="34" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="ca7ae2bc-c85e-4bc0-afa6-b2414e26fdc5" x="0" y="205" width="36" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="ca7ae2bc-c85e-4bc0-afa6-b2414e26fdc5" x="1" y="102" width="34" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="25975209-106a-44f6-95f5-083561d2fd3b" x="0" y="233" width="36" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="4703b26c-481f-4de0-86b5-3001421d5616" x="1" y="279" width="34" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="ebefe275-118a-48d8-a841-7f0b9d045c63" x="1" y="263" width="35" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="dd9d8c97-42a5-4260-a0c8-87a9b6f049ae" x="3" y="131" width="32" height="1"/>
+							</line>
+							<textField>
+								<reportElement uuid="90d33d10-87c3-4b94-98af-798b6100acf5" x="0" y="43" width="36" height="14"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{suppastosembrado}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="316e3e64-d78d-406f-b262-0120690427fd" x="0" y="72" width="36" height="15"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{potrero}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="44fbc622-707b-4272-8111-e10644b2a40d" x="0" y="87" width="35" height="15"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{pozas}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="325d80ea-d689-4ee2-8392-be5ed49addc2" x="0" y="102" width="35" height="17"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{saleros}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="4aae895f-b68d-4151-8d5e-024c80ccfaf7" x="0" y="118" width="35" height="13"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{bebederos}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="35c4a4fd-4972-49e8-8f5b-cc2d57786946" x="0" y="132" width="36" height="15"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{brete}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="b30ae338-fbb0-411b-b71a-79cdebe2bc2b" x="1" y="147" width="34" height="14"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{corral}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="9f6148df-6296-40b0-bf04-7c874c5450c8" x="1" y="162" width="35" height="13"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{forraje}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="03d12bc9-e85d-460e-9f5f-13bf6cd019df" x="0" y="177" width="35" height="15"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{compraganado}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="e79c8a0b-f4ec-4151-84e5-cc594ead9105" x="0" y="192" width="35" height="15"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{cantternero}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="7370d6fb-f8de-424f-881b-0c454d6cf54e" x="0" y="206" width="36" height="28"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{cantganado}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="af4ae898-5939-49a0-9efd-a2b8b9541c15" x="0" y="235" width="35" height="29"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{cantganadopie}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="a5368414-4fc7-4461-a7c5-07d2055e4b52" x="0" y="264" width="35" height="15"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{cantganadofaineo}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="52f492c8-23d0-482f-88ad-1b1a58cfe763" x="0" y="280" width="34" height="15"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{cantprodcarne}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<componentElement>
+				<reportElement uuid="7e7a5639-545c-428f-8b02-76d3e9964b4a" key="table 8" style="table 8" x="489" y="41" width="35" height="295"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="PlanProdGanANO4" uuid="83fb1f2e-f65c-48c6-b41e-234d4d27da45">
+						<datasetParameter name="CodParcela">
+							<datasetParameterExpression><![CDATA[$F{idparcela}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="35" uuid="ac15c88b-8aa2-43b8-863b-311a308ba3bd">
+						<jr:detailCell style="table 8_CH" height="295" rowSpan="1">
+							<staticText>
+								<reportElement uuid="c30a1f6b-b8ef-4ce2-9a8c-f9f3bb3db72e" x="0" y="0" width="34" height="28"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="5" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Compromiso 2019]]></text>
+							</staticText>
+							<line>
+								<reportElement uuid="fd39aafe-ab06-40b7-a385-e8c01a57ff92" x="1" y="27" width="32" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="fa7b13f3-8003-4b9b-a977-7fe4ba6fea1f" x="1" y="57" width="34" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="ca7ae2bc-c85e-4bc0-afa6-b2414e26fdc5" x="0" y="42" width="34" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="ca7ae2bc-c85e-4bc0-afa6-b2414e26fdc5" x="0" y="27" width="35" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="ca7ae2bc-c85e-4bc0-afa6-b2414e26fdc5" x="0" y="72" width="34" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="ca7ae2bc-c85e-4bc0-afa6-b2414e26fdc5" x="1" y="87" width="34" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="ca7ae2bc-c85e-4bc0-afa6-b2414e26fdc5" x="0" y="102" width="34" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="ca7ae2bc-c85e-4bc0-afa6-b2414e26fdc5" x="0" y="118" width="34" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="ca7ae2bc-c85e-4bc0-afa6-b2414e26fdc5" x="0" y="131" width="34" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="ca7ae2bc-c85e-4bc0-afa6-b2414e26fdc5" x="1" y="146" width="33" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="ca7ae2bc-c85e-4bc0-afa6-b2414e26fdc5" x="0" y="161" width="34" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="ca7ae2bc-c85e-4bc0-afa6-b2414e26fdc5" x="0" y="176" width="34" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="ca7ae2bc-c85e-4bc0-afa6-b2414e26fdc5" x="0" y="191" width="35" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="ca7ae2bc-c85e-4bc0-afa6-b2414e26fdc5" x="0" y="205" width="34" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="ca7ae2bc-c85e-4bc0-afa6-b2414e26fdc5" x="1" y="102" width="34" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="25975209-106a-44f6-95f5-083561d2fd3b" x="0" y="233" width="34" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="4703b26c-481f-4de0-86b5-3001421d5616" x="1" y="279" width="34" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="ebefe275-118a-48d8-a841-7f0b9d045c63" x="1" y="263" width="33" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="dd9d8c97-42a5-4260-a0c8-87a9b6f049ae" x="3" y="131" width="30" height="1"/>
+							</line>
+							<textField>
+								<reportElement uuid="90d33d10-87c3-4b94-98af-798b6100acf5" x="0" y="43" width="34" height="14"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{suppastosembrado}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="316e3e64-d78d-406f-b262-0120690427fd" x="0" y="72" width="34" height="15"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{potrero}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="44fbc622-707b-4272-8111-e10644b2a40d" x="0" y="87" width="35" height="15"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{pozas}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="325d80ea-d689-4ee2-8392-be5ed49addc2" x="0" y="102" width="35" height="17"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{saleros}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="4aae895f-b68d-4151-8d5e-024c80ccfaf7" x="0" y="118" width="35" height="13"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{bebederos}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="35c4a4fd-4972-49e8-8f5b-cc2d57786946" x="0" y="132" width="34" height="15"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{brete}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="b30ae338-fbb0-411b-b71a-79cdebe2bc2b" x="1" y="147" width="34" height="14"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{corral}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="9f6148df-6296-40b0-bf04-7c874c5450c8" x="1" y="162" width="33" height="13"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{forraje}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="03d12bc9-e85d-460e-9f5f-13bf6cd019df" x="1" y="177" width="33" height="15"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{compraganado}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="e79c8a0b-f4ec-4151-84e5-cc594ead9105" x="1" y="191" width="33" height="15"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{cantternero}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="7370d6fb-f8de-424f-881b-0c454d6cf54e" x="0" y="206" width="34" height="28"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{cantganado}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="af4ae898-5939-49a0-9efd-a2b8b9541c15" x="1" y="234" width="33" height="29"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{cantganadopie}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="a5368414-4fc7-4461-a7c5-07d2055e4b52" x="0" y="264" width="35" height="15"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{cantganadofaineo}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="52f492c8-23d0-482f-88ad-1b1a58cfe763" x="1" y="280" width="34" height="15"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{cantprodcarne}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<componentElement>
+				<reportElement uuid="7e7a5639-545c-428f-8b02-76d3e9964b4a" key="table 8" style="table 8" x="524" y="41" width="36" height="295"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="PlanProdGanANO5" uuid="83fb1f2e-f65c-48c6-b41e-234d4d27da45">
+						<datasetParameter name="CodParcela">
+							<datasetParameterExpression><![CDATA[$F{idparcela}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="36" uuid="ac15c88b-8aa2-43b8-863b-311a308ba3bd">
+						<jr:detailCell style="table 8_CH" height="295" rowSpan="1">
+							<staticText>
+								<reportElement uuid="c30a1f6b-b8ef-4ce2-9a8c-f9f3bb3db72e" x="0" y="0" width="35" height="28"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="5" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Compromiso 2020]]></text>
+							</staticText>
+							<line>
+								<reportElement uuid="fd39aafe-ab06-40b7-a385-e8c01a57ff92" x="1" y="27" width="33" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="fa7b13f3-8003-4b9b-a977-7fe4ba6fea1f" x="1" y="57" width="35" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="ca7ae2bc-c85e-4bc0-afa6-b2414e26fdc5" x="0" y="42" width="35" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="ca7ae2bc-c85e-4bc0-afa6-b2414e26fdc5" x="0" y="27" width="36" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="ca7ae2bc-c85e-4bc0-afa6-b2414e26fdc5" x="0" y="72" width="35" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="ca7ae2bc-c85e-4bc0-afa6-b2414e26fdc5" x="1" y="87" width="35" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="ca7ae2bc-c85e-4bc0-afa6-b2414e26fdc5" x="0" y="102" width="35" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="ca7ae2bc-c85e-4bc0-afa6-b2414e26fdc5" x="0" y="118" width="35" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="ca7ae2bc-c85e-4bc0-afa6-b2414e26fdc5" x="0" y="131" width="35" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="ca7ae2bc-c85e-4bc0-afa6-b2414e26fdc5" x="1" y="146" width="34" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="ca7ae2bc-c85e-4bc0-afa6-b2414e26fdc5" x="0" y="161" width="35" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="ca7ae2bc-c85e-4bc0-afa6-b2414e26fdc5" x="0" y="176" width="35" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="ca7ae2bc-c85e-4bc0-afa6-b2414e26fdc5" x="0" y="191" width="36" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="ca7ae2bc-c85e-4bc0-afa6-b2414e26fdc5" x="0" y="205" width="35" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="ca7ae2bc-c85e-4bc0-afa6-b2414e26fdc5" x="1" y="102" width="35" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="25975209-106a-44f6-95f5-083561d2fd3b" x="0" y="233" width="35" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="4703b26c-481f-4de0-86b5-3001421d5616" x="1" y="279" width="35" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="ebefe275-118a-48d8-a841-7f0b9d045c63" x="1" y="263" width="34" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="dd9d8c97-42a5-4260-a0c8-87a9b6f049ae" x="3" y="131" width="31" height="1"/>
+							</line>
+							<textField>
+								<reportElement uuid="90d33d10-87c3-4b94-98af-798b6100acf5" x="0" y="43" width="35" height="14"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{suppastosembrado}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="316e3e64-d78d-406f-b262-0120690427fd" x="0" y="72" width="35" height="15"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{potrero}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="44fbc622-707b-4272-8111-e10644b2a40d" x="0" y="87" width="36" height="15"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{pozas}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="325d80ea-d689-4ee2-8392-be5ed49addc2" x="0" y="102" width="36" height="17"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{saleros}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="4aae895f-b68d-4151-8d5e-024c80ccfaf7" x="0" y="118" width="36" height="13"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{bebederos}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="35c4a4fd-4972-49e8-8f5b-cc2d57786946" x="0" y="132" width="35" height="15"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{brete}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="b30ae338-fbb0-411b-b71a-79cdebe2bc2b" x="1" y="147" width="35" height="14"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{corral}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="9f6148df-6296-40b0-bf04-7c874c5450c8" x="1" y="162" width="34" height="13"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{forraje}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="03d12bc9-e85d-460e-9f5f-13bf6cd019df" x="1" y="177" width="34" height="15"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{compraganado}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="e79c8a0b-f4ec-4151-84e5-cc594ead9105" x="1" y="191" width="34" height="15"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{cantternero}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="7370d6fb-f8de-424f-881b-0c454d6cf54e" x="0" y="206" width="35" height="28"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{cantganado}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="af4ae898-5939-49a0-9efd-a2b8b9541c15" x="1" y="234" width="34" height="29"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{cantganadopie}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="a5368414-4fc7-4461-a7c5-07d2055e4b52" x="0" y="264" width="36" height="15"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{cantganadofaineo}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="52f492c8-23d0-482f-88ad-1b1a58cfe763" x="1" y="280" width="35" height="15"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{cantprodcarne}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<line>
+				<reportElement uuid="825b1b65-df0a-44e7-ac5f-84ff54f92a29" x="201" y="40" width="144" height="1"/>
+			</line>
+			<staticText>
+				<reportElement uuid="6c41f428-c337-47c8-9cb8-b30c878af6a2" x="14" y="11" width="322" height="13"/>
+				<textElement verticalAlignment="Bottom">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Resultados Obtenidos (Sistema de cría, recría y engorde)]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement uuid="7e7a5639-545c-428f-8b02-76d3e9964b4a" key="table 8" style="table 8" x="345" y="41" width="37" height="295"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="PlanProdGanANO1" uuid="83fb1f2e-f65c-48c6-b41e-234d4d27da45">
+						<datasetParameter name="COD_PARANO1">
+							<datasetParameterExpression><![CDATA[$F{idparcela}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="35" uuid="ac15c88b-8aa2-43b8-863b-311a308ba3bd">
+						<jr:detailCell style="table 8_CH" height="295" rowSpan="1">
+							<staticText>
+								<reportElement uuid="c30a1f6b-b8ef-4ce2-9a8c-f9f3bb3db72e" x="0" y="0" width="35" height="28"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="5" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Compromiso 2016]]></text>
+							</staticText>
+							<line>
+								<reportElement uuid="fd39aafe-ab06-40b7-a385-e8c01a57ff92" x="1" y="27" width="34" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="fa7b13f3-8003-4b9b-a977-7fe4ba6fea1f" x="1" y="57" width="34" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="ca7ae2bc-c85e-4bc0-afa6-b2414e26fdc5" x="0" y="42" width="35" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="ca7ae2bc-c85e-4bc0-afa6-b2414e26fdc5" x="0" y="27" width="35" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="ca7ae2bc-c85e-4bc0-afa6-b2414e26fdc5" x="0" y="72" width="34" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="ca7ae2bc-c85e-4bc0-afa6-b2414e26fdc5" x="1" y="87" width="34" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="ca7ae2bc-c85e-4bc0-afa6-b2414e26fdc5" x="0" y="102" width="34" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="ca7ae2bc-c85e-4bc0-afa6-b2414e26fdc5" x="0" y="118" width="35" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="ca7ae2bc-c85e-4bc0-afa6-b2414e26fdc5" x="0" y="131" width="34" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="ca7ae2bc-c85e-4bc0-afa6-b2414e26fdc5" x="1" y="146" width="33" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="ca7ae2bc-c85e-4bc0-afa6-b2414e26fdc5" x="0" y="161" width="34" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="ca7ae2bc-c85e-4bc0-afa6-b2414e26fdc5" x="0" y="176" width="35" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="ca7ae2bc-c85e-4bc0-afa6-b2414e26fdc5" x="0" y="191" width="35" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="ca7ae2bc-c85e-4bc0-afa6-b2414e26fdc5" x="0" y="205" width="35" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="ca7ae2bc-c85e-4bc0-afa6-b2414e26fdc5" x="0" y="102" width="33" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="25975209-106a-44f6-95f5-083561d2fd3b" x="0" y="233" width="35" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="4703b26c-481f-4de0-86b5-3001421d5616" x="1" y="279" width="34" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="ebefe275-118a-48d8-a841-7f0b9d045c63" x="1" y="263" width="34" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="dd9d8c97-42a5-4260-a0c8-87a9b6f049ae" x="3" y="131" width="32" height="1"/>
+							</line>
+							<textField>
+								<reportElement uuid="90d33d10-87c3-4b94-98af-798b6100acf5" x="0" y="43" width="35" height="14"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{suppastosembrado}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="316e3e64-d78d-406f-b262-0120690427fd" x="0" y="72" width="35" height="15"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{potrero}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="44fbc622-707b-4272-8111-e10644b2a40d" x="1" y="88" width="34" height="15"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{pozas}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="325d80ea-d689-4ee2-8392-be5ed49addc2" x="0" y="103" width="35" height="17"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{saleros}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="4aae895f-b68d-4151-8d5e-024c80ccfaf7" x="0" y="118" width="34" height="13"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{bebederos}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="35c4a4fd-4972-49e8-8f5b-cc2d57786946" x="0" y="132" width="35" height="15"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{brete}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="b30ae338-fbb0-411b-b71a-79cdebe2bc2b" x="0" y="147" width="35" height="14"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{corral}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="9f6148df-6296-40b0-bf04-7c874c5450c8" x="0" y="162" width="34" height="13"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{forraje}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="03d12bc9-e85d-460e-9f5f-13bf6cd019df" x="1" y="177" width="34" height="15"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{compraganado}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="e79c8a0b-f4ec-4151-84e5-cc594ead9105" x="1" y="190" width="34" height="15"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{cantternero}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="7370d6fb-f8de-424f-881b-0c454d6cf54e" x="0" y="205" width="34" height="28"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{cantganado}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="af4ae898-5939-49a0-9efd-a2b8b9541c15" x="1" y="234" width="34" height="29"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{cantganadopie}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="a5368414-4fc7-4461-a7c5-07d2055e4b52" x="1" y="264" width="33" height="15"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{cantganadofaineo}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="52f492c8-23d0-482f-88ad-1b1a58cfe763" x="2" y="280" width="33" height="15"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{cantprodcarne}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="3" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

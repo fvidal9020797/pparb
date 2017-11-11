@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Evaluacion_RCIA_Alimentos_hojaAgricola_subreport1" language="groovy" pageWidth="572" pageHeight="752" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="342f5c82-cd75-498d-b689-fe7c28e480ea">
+	<property name="ireport.zoom" value="1.6105100000000019"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="documentosobs" uuid="c69c0625-27eb-4606-8e3e-d0af5bc94ff1">
+		<parameter name="idmonitoreo" class="java.lang.Integer"/>
+		<parameter name="iddocumento" class="java.lang.Integer"/>
+		<queryString>
+			<![CDATA[select upper(md.nombredocumentacion) as nombredocumentacion, upper(mad.detallecotenido) as detallecotenido,
+ mad.montocantidad, upper(mad.observaciones) as observaciones
+from monitoreo.analisisdocumentacion as mad inner join monitoreo.documentacion as md on mad.iddocumentacion = md.iddocumentacion
+where tipodocumento = 101 and mad.iddocumentacion = $P{iddocumento} and idmonitoreo = $P{idmonitoreo}
+order by orden]]>
+		</queryString>
+		<field name="nombredocumentacion" class="java.lang.String"/>
+		<field name="detallecotenido" class="java.lang.String"/>
+		<field name="montocantidad" class="java.lang.String"/>
+		<field name="observaciones" class="java.lang.String"/>
+	</subDataset>
+	<parameter name="idmonitoreo" class="java.lang.Integer"/>
+	<parameter name="iddocumento" class="java.lang.Integer"/>
+	<queryString>
+		<![CDATA[select md.nombredocumentacion, mad.detallecotenido, mad.montocantidad, mad.observaciones
+from monitoreo.analisisdocumentacion as mad inner join monitoreo.documentacion as md on mad.iddocumentacion = md.iddocumentacion
+where tipodocumento = 101 and mad.iddocumentacion = $P{iddocumento} and idmonitoreo = $P{idmonitoreo}
+order by orden
+limit 1]]>
+	</queryString>
+	<field name="nombredocumentacion" class="java.lang.String"/>
+	<field name="detallecotenido" class="java.lang.String"/>
+	<field name="montocantidad" class="java.lang.String"/>
+	<field name="observaciones" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="19" splitType="Stretch">
+			<componentElement>
+				<reportElement uuid="d216d6a8-2059-4e93-9578-54505ba99fe9" key="table 1" style="table 1" x="0" y="0" width="461" height="18"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="documentosobs" uuid="ec88464a-74ab-4767-a31b-df0b67766629">
+						<datasetParameter name="idmonitoreo">
+							<datasetParameterExpression><![CDATA[$P{idmonitoreo}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="iddocumento">
+							<datasetParameterExpression><![CDATA[$P{iddocumento}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="233" uuid="5cbd525d-0213-4125-ba33-9de1b7b46ae5">
+						<jr:detailCell style="table 1_TD" height="38" rowSpan="1">
+							<textField isStretchWithOverflow="true">
+								<reportElement uuid="8cdd93dc-9db2-40c3-850b-ed3d9a1e764c" x="0" y="0" width="233" height="38"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="9"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{detallecotenido}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="109" uuid="6e622e0b-087a-4e9b-a895-6d58cd619f42">
+						<jr:detailCell style="table 1_TD" height="38" rowSpan="1">
+							<textField isStretchWithOverflow="true">
+								<reportElement uuid="25452ac7-fb79-4586-ae1b-058650984bad" x="0" y="0" width="109" height="38"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="9"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{montocantidad}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="145" uuid="7a847be2-c3d4-4d98-a48e-5b21d41e3c9a">
+						<jr:detailCell style="table 1_TD" height="38" rowSpan="1">
+							<textField isStretchWithOverflow="true">
+								<reportElement uuid="56ab91da-3f22-4eb0-adf4-73baeb251a2a" x="0" y="0" width="145" height="38"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="9"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{observaciones}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

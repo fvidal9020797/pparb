@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report_superficies_por_asesoramiento" language="groovy" pageWidth="612" pageHeight="792" columnWidth="572" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a8a5627a-8be8-4649-9fda-6a8484382c9c">
+	<property name="ireport.zoom" value="0.9090909090909123"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="318"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="New Dataset TOTAL SUPERFICIES" uuid="aa979c58-b04d-4b83-8fbe-f6d068153ca9">
+		<queryString>
+			<![CDATA[SELECT
+count(r_general.idregistro) as count_t,
+round((SUM(r_general.suppredio))::numeric(15,4), 4) as suppredio_t,
+  round((SUM(r_general.supdefilegal))::numeric(15,4), 4)as supdefilegal_t,
+ round((SUM(r_general.suptpfp))::numeric(15,4), 4) as suptpfp_t,
+  round((SUM(r_general.supreftpfp))::numeric(15,4), 4)as supreftpfp_t,
+  round((SUM(r_general.supalitpfp))::numeric(15,4), 4)as supalitpfp_t,
+  round((SUM(r_general.supselstpfp))::numeric(15,4), 4)as supselstpfp_t,
+ round((SUM(r_general.suptum))::numeric(15,4), 4)as suptum_t,
+ round((SUM(r_general.supalitum))::numeric(15,4), 4) as supalitum_t,
+  round((SUM(r_general.supselstum))::numeric(15,4), 4)as supselstum_t,
+ round((SUM(r_general.supmejoras))::numeric(15,4), 4)as supmejoras_t,
+ round((SUM(r_general.suppas))::numeric(15,4), 4) as suppas_t,
+  round((SUM(r_general.supselspas))::numeric(15,4), 4)as supselspas_t,
+  round((SUM(r_general.supalipas))::numeric(15,4), 4)as supalipas_t,
+ round((SUM(r_general.supprodali))::numeric(15,4), 4) as supprodali_t
+FROM r_general
+]]>
+		</queryString>
+		<field name="count_t" class="java.lang.Long"/>
+		<field name="suppredio_t" class="java.math.BigDecimal"/>
+		<field name="supdefilegal_t" class="java.math.BigDecimal"/>
+		<field name="suptpfp_t" class="java.math.BigDecimal"/>
+		<field name="supreftpfp_t" class="java.math.BigDecimal"/>
+		<field name="supalitpfp_t" class="java.math.BigDecimal"/>
+		<field name="supselstpfp_t" class="java.math.BigDecimal"/>
+		<field name="suptum_t" class="java.math.BigDecimal"/>
+		<field name="supalitum_t" class="java.math.BigDecimal"/>
+		<field name="supselstum_t" class="java.math.BigDecimal"/>
+		<field name="supmejoras_t" class="java.math.BigDecimal"/>
+		<field name="suppas_t" class="java.math.BigDecimal"/>
+		<field name="supselspas_t" class="java.math.BigDecimal"/>
+		<field name="supalipas_t" class="java.math.BigDecimal"/>
+		<field name="supprodali_t" class="java.math.BigDecimal"/>
+	</subDataset>
+	<subDataset name="dataset_superficies_estado" uuid="2499e0aa-9513-4c5d-8a5b-93932ebcef55">
+		<queryString>
+			<![CDATA[SELECT
+  r_general.asesoramiento,count(estado),
+
+round((SUM(r_general.suppredio))::numeric(15,4), 4) as suppredio,
+  round((SUM(r_general.supdefilegal))::numeric(15,4), 4)as supdefilegal,
+ round((SUM(r_general.suptpfp))::numeric(15,4), 4) as suptpfp,
+  round((SUM(r_general.supreftpfp))::numeric(15,4), 4)as supreftpfp,
+  round((SUM(r_general.supalitpfp))::numeric(15,4), 4)as supalitpfp,
+  round((SUM(r_general.supselstpfp))::numeric(15,4), 4)as supselstpfp,
+ round((SUM(r_general.suptum))::numeric(15,4), 4)as suptum,
+ round((SUM(r_general.supalitum))::numeric(15,4), 4) as supalitum,
+  round((SUM(r_general.supselstum))::numeric(15,4), 4)as supselstum,
+ round((SUM(r_general.supmejoras))::numeric(15,4), 4)as supmejoras,
+ round((SUM(r_general.suppas))::numeric(15,4), 4) as suppas,
+  round((SUM(r_general.supselspas))::numeric(15,4), 4)as supselspas,
+  round((SUM(r_general.supalipas))::numeric(15,4), 4)as supalipas,
+ round((SUM(r_general.supprodali))::numeric(15,4), 4) as supprodali
+FROM r_general
+ group by asesoramiento
+ order by asesoramiento]]>
+		</queryString>
+		<field name="asesoramiento" class="java.lang.String"/>
+		<field name="count" class="java.lang.Long"/>
+		<field name="suppredio" class="java.math.BigDecimal"/>
+		<field name="supdefilegal" class="java.math.BigDecimal"/>
+		<field name="suptpfp" class="java.math.BigDecimal"/>
+		<field name="supreftpfp" class="java.math.BigDecimal"/>
+		<field name="supalitpfp" class="java.math.BigDecimal"/>
+		<field name="supselstpfp" class="java.math.BigDecimal"/>
+		<field name="suptum" class="java.math.BigDecimal"/>
+		<field name="supalitum" class="java.math.BigDecimal"/>
+		<field name="supselstum" class="java.math.BigDecimal"/>
+		<field name="supmejoras" class="java.math.BigDecimal"/>
+		<field name="suppas" class="java.math.BigDecimal"/>
+		<field name="supselspas" class="java.math.BigDecimal"/>
+		<field name="supalipas" class="java.math.BigDecimal"/>
+		<field name="supprodali" class="java.math.BigDecimal"/>
+	</subDataset>
+	<queryString>
+		<![CDATA[SELECT
+count(r_general.idregistro) as count_t,
+round((SUM(r_general.suppredio))::numeric(15,4), 4) as suppredio_t,
+  round((SUM(r_general.supdefilegal))::numeric(15,4), 4)as supdefilegal_t,
+ round((SUM(r_general.suptpfp))::numeric(15,4), 4) as suptpfp_t,
+  round((SUM(r_general.supreftpfp))::numeric(15,4), 4)as supreftpfp_t,
+  round((SUM(r_general.supalitpfp))::numeric(15,4), 4)as supalitpfp_t,
+  round((SUM(r_general.supselstpfp))::numeric(15,4), 4)as supselstpfp_t,
+ round((SUM(r_general.suptum))::numeric(15,4), 4)as suptum_t,
+ round((SUM(r_general.supalitum))::numeric(15,4), 4) as supalitum_t,
+  round((SUM(r_general.supselstum))::numeric(15,4), 4)as supselstum_t,
+ round((SUM(r_general.supmejoras))::numeric(15,4), 4)as supmejoras_t,
+ round((SUM(r_general.suppas))::numeric(15,4), 4) as suppas_t,
+  round((SUM(r_general.supselspas))::numeric(15,4), 4)as supselspas_t,
+  round((SUM(r_general.supalipas))::numeric(15,4), 4)as supalipas_t,
+ round((SUM(r_general.supprodali))::numeric(15,4), 4) as supprodali_t
+FROM r_general]]>
+	</queryString>
+	<field name="count_t" class="java.lang.Long"/>
+	<field name="suppredio_t" class="java.math.BigDecimal"/>
+	<field name="supdefilegal_t" class="java.math.BigDecimal"/>
+	<field name="suptpfp_t" class="java.math.BigDecimal"/>
+	<field name="supreftpfp_t" class="java.math.BigDecimal"/>
+	<field name="supalitpfp_t" class="java.math.BigDecimal"/>
+	<field name="supselstpfp_t" class="java.math.BigDecimal"/>
+	<field name="suptum_t" class="java.math.BigDecimal"/>
+	<field name="supalitum_t" class="java.math.BigDecimal"/>
+	<field name="supselstum_t" class="java.math.BigDecimal"/>
+	<field name="supmejoras_t" class="java.math.BigDecimal"/>
+	<field name="suppas_t" class="java.math.BigDecimal"/>
+	<field name="supselspas_t" class="java.math.BigDecimal"/>
+	<field name="supalipas_t" class="java.math.BigDecimal"/>
+	<field name="supprodali_t" class="java.math.BigDecimal"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="66" splitType="Stretch">
+			<image>
+				<reportElement uuid="b86fb967-86e9-4dee-955f-7433964fed93" x="0" y="4" width="78" height="58"/>
+				<imageExpression><![CDATA["C:\\xampp\\htdocs\\PPARB\\sistema\\reportes\\reportes\\1_bolivia.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="ec078079-56e5-4798-89e1-b96d0ad26a6b" x="165" y="4" width="161" height="58"/>
+				<imageExpression><![CDATA["C:\\xampp\\htdocs\\PPARB\\sistema\\reportes\\reportes\\2_mdryt.jpg"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="45b51855-86a1-4e63-b046-4d6200c5a883" x="387" y="4" width="185" height="58"/>
+				<imageExpression><![CDATA["C:\\xampp\\htdocs\\PPARB\\sistema\\reportes\\reportes\\3_abt.png"]]></imageExpression>
+			</image>
+			<line>
+				<reportElement uuid="3e0bcedc-2939-4235-aa18-f3d1aaf1bb97" x="0" y="65" width="572" height="1"/>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="3" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="584" splitType="Stretch">
+			<componentElement>
+				<reportElement uuid="dd745266-be02-4a0d-bd71-48b4cd0ee426" key="table 1" style="table 1" x="54" y="160" width="450" height="18"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="New Dataset TOTAL SUPERFICIES" uuid="034175da-adc5-4ee7-a02e-1077ae415764">
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="145" uuid="7da3b51f-ba7e-483f-a214-c48d1627bf60">
+						<jr:detailCell style="table 1_TD" height="20" rowSpan="1">
+							<staticText>
+								<reportElement uuid="97708f2b-5c12-40c3-8ff8-4936fcc5a6c8" x="24" y="0" width="90" height="20"/>
+								<textElement>
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[TOTAL]]></text>
+							</staticText>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="104" uuid="acaf99a2-f3a7-43c4-9744-81d8ec866efc">
+						<jr:detailCell style="table 1_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement uuid="65db9ede-6da0-4a7b-8dc4-70cea3b8a46f" x="10" y="0" width="83" height="20"/>
+								<textElement textAlignment="Right">
+									<font isBold="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{count_t}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="199" uuid="600dbb2f-0eca-4539-82f0-b1c6a7d78310">
+						<jr:detailCell style="table 1_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement uuid="cd114cc7-047b-490f-bc75-1028c50b2979" x="6" y="0" width="185" height="20"/>
+								<textElement textAlignment="Right">
+									<font isBold="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{suppredio_t}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<staticText>
+				<reportElement uuid="50d91746-197f-4123-acc8-182712398713" x="249" y="221" width="64" height="32"/>
+				<textElement>
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Grafico]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="50d91746-197f-4123-acc8-182712398713" x="134" y="3" width="286" height="21"/>
+				<textElement>
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Superficie Total Por Asesoramiento]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement uuid="dd745266-be02-4a0d-bd71-48b4cd0ee426" key="table 1" style="table 1" x="54" y="32" width="450" height="82"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="dataset_superficies_estado" uuid="034175da-adc5-4ee7-a02e-1077ae415764">
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="145" uuid="7da3b51f-ba7e-483f-a214-c48d1627bf60">
+						<jr:columnHeader style="table 1_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement uuid="677ee91f-1601-4a42-9f59-1f20f3bb62f6" x="13" y="0" width="114" height="30"/>
+								<textElement/>
+								<text><![CDATA[CLASIFICACION DE PROPIEDAD]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 1_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement uuid="849ff4eb-2da8-462e-ab6c-9813c65591b0" x="13" y="0" width="114" height="20"/>
+								<textElement/>
+								<textFieldExpression><![CDATA[$F{asesoramiento}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="103" uuid="acaf99a2-f3a7-43c4-9744-81d8ec866efc">
+						<jr:columnHeader style="table 1_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement uuid="c8dad617-1ee7-4d7b-a4b4-472122a101c1" x="13" y="0" width="80" height="30"/>
+								<textElement/>
+								<text><![CDATA[CONTADOR]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 1_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement uuid="65db9ede-6da0-4a7b-8dc4-70cea3b8a46f" x="13" y="0" width="80" height="20"/>
+								<textElement textAlignment="Right"/>
+								<textFieldExpression><![CDATA[$F{count}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="200" uuid="600dbb2f-0eca-4539-82f0-b1c6a7d78310">
+						<jr:columnHeader style="table 1_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement uuid="532c4ca4-475c-4cec-b691-b92651608cf4" x="13" y="0" width="185" height="30"/>
+								<textElement>
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[SUPERFICIE TOTAL]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 1_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement uuid="cd114cc7-047b-490f-bc75-1028c50b2979" x="8" y="0" width="185" height="20"/>
+								<textElement textAlignment="Right">
+									<font isBold="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{suppredio}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<pieChart>
+				<chart>
+					<reportElement uuid="4a8097fd-ced9-4331-9519-80bcbe02a6d9" x="0" y="218" width="572" height="357"/>
+					<box>
+						<pen lineStyle="Solid"/>
+						<topPen lineStyle="Solid"/>
+						<leftPen lineStyle="Solid"/>
+						<bottomPen lineStyle="Solid"/>
+						<rightPen lineStyle="Solid"/>
+					</box>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<pieDataset>
+					<dataset>
+						<datasetRun subDataset="dataset_superficies_estado" uuid="aea97b0e-c6c8-430d-9fe9-f74499917b63"/>
+					</dataset>
+					<keyExpression><![CDATA[$F{suppredio}]]></keyExpression>
+					<valueExpression><![CDATA[$F{suppredio}]]></valueExpression>
+					<labelExpression><![CDATA[$F{asesoramiento}]]></labelExpression>
+				</pieDataset>
+				<piePlot>
+					<plot/>
+					<itemLabel/>
+				</piePlot>
+			</pieChart>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="26" splitType="Stretch">
+			<line>
+				<reportElement uuid="4e866cb4-5ea0-4a20-a39c-f6f11464cce5" x="0" y="0" width="572" height="1"/>
+			</line>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="4" splitType="Stretch"/>
+	</summary>
+</jasperReport>

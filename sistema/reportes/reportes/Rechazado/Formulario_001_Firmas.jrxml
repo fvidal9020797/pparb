@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Formulario_001_subreport2" language="groovy" pageWidth="586" pageHeight="810" columnWidth="586" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="4709e7d3-23ac-4365-954e-12fb6e25dbd9">
+	<property name="ireport.zoom" value="0.9075000000000059"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="23"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#A9E371">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#DAE6CF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#E68473">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#E6D2CF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TH" mode="Opaque" backcolor="#E69273">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_CH" mode="Opaque" backcolor="#E6D5CF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TH" mode="Opaque" backcolor="#E68473">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_CH" mode="Opaque" backcolor="#E6D2CF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Crosstab Data Text" hAlign="Center"/>
+	<style name="table 4">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_TH" mode="Opaque" backcolor="#E68473">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_CH" mode="Opaque" backcolor="#E6D2CF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6">
+		<box>
+			<pen lineWidth="1.0" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table 6_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table 6_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table 6_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table 7">
+		<box>
+			<pen lineWidth="1.0" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table 7_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table 7_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table 7_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<subDataset name="UsoActual" uuid="d0cf26ef-68ec-4b0f-9082-bff8e925b076">
+		<parameter name="COD_PAR1" class="java.lang.String"/>
+		<queryString>
+			<![CDATA[select s.*, r.idparcela
+from Superficiealimentos as s inner join registro as r on s.idregistro = r.idregistro
+where r.idparcela = $P{COD_PAR1}]]>
+		</queryString>
+		<field name="idsupalimentos" class="java.lang.Integer"/>
+		<field name="idregistro" class="java.lang.Integer"/>
+		<field name="supagricola" class="java.lang.Double"/>
+		<field name="supganadera" class="java.lang.Double"/>
+		<field name="supbarbecho" class="java.lang.Double"/>
+		<field name="supdescanso" class="java.lang.Double"/>
+		<field name="supganlegal" class="java.lang.Double"/>
+		<field name="idparcela" class="java.lang.String"/>
+	</subDataset>
+	<subDataset name="funcionarioABT" uuid="1e62e6ab-3fe3-48b5-aaab-5b4fe232cd1f">
+		<parameter name="ID_REG" class="java.lang.Integer"/>
+		<queryString>
+			<![CDATA[select nomcompleto as abt, idregistro
+from funcionarioregistro as fr inner join funcionario as r on fr.idfuncionario = r.idfuncionario inner join v_persona as v on r.idpersona = v.idpersona
+where idregistro = $P{ID_REG} and tiporegistrador = 138]]>
+		</queryString>
+		<field name="abt" class="java.lang.String"/>
+		<field name="idregistro" class="java.lang.Integer"/>
+	</subDataset>
+	<subDataset name="funcionarioVDRA" uuid="b070bfe4-5a43-4462-ae1e-8bc153a19e0d">
+		<parameter name="ID_REG" class="java.lang.Integer"/>
+		<queryString>
+			<![CDATA[select nomcompleto as vdra, idregistro
+from funcionarioregistro as fr inner join funcionario as r on fr.idfuncionario = r.idfuncionario inner join v_persona as v on r.idpersona = v.idpersona
+where idregistro = $P{ID_REG} and tiporegistrador = 137]]>
+		</queryString>
+		<field name="vdra" class="java.lang.String"/>
+		<field name="idregistro" class="java.lang.Integer"/>
+	</subDataset>
+	<parameter name="COD_PAR2" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select r.idparcela,r.idregistro, coalesce(r.obsregistro,r.obsregistro,'') as obsregistro, fr.fechasuscripcion
+from registro as r left join fechasregistro as fr on r.idregistro = fr.idregistro
+where r.idparcela = $P{COD_PAR2}]]>
+	</queryString>
+	<field name="idparcela" class="java.lang.String"/>
+	<field name="idregistro" class="java.lang.Integer"/>
+	<field name="obsregistro" class="java.lang.String"/>
+	<field name="fechasuscripcion" class="java.sql.Date"/>
+	<group name="last">
+		<groupExpression><![CDATA[$F{idparcela}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="6" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="10" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="5" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="481">
+			<staticText>
+				<reportElement uuid="765470a7-5f95-4113-942d-d12e06e08a46" x="13" y="59" width="275" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[10. OBSERVACIONES]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f0e7c60a-53f9-4a6e-9a5b-413297433e60" x="13" y="27" width="542" height="32"/>
+				<textElement textAlignment="Justified">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Declaro bajo juramento que todos los datos consignados en el presente formulario son correctos y complejos para el cumplimiento del programa de apoyo a la produccion de alimentos y restitucion de bosques]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="765470a7-5f95-4113-942d-d12e06e08a46" x="13" y="7" width="275" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[9. DECLARACION JURADA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="ff414d9f-0d73-42c6-ae48-52ba35e98a8f" x="97" y="335" width="118" height="19"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom"/>
+				<text><![CDATA[Firma Interesado :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b5c2baab-9be7-41bc-9af3-8c9e9ad16606" x="97" y="366" width="118" height="19"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom"/>
+				<text><![CDATA[Aclaracion de  Firma:]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="26010d48-4046-410c-8073-bc67c10f8410" x="215" y="384" width="285" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement uuid="26010d48-4046-410c-8073-bc67c10f8410" x="215" y="354" width="285" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement uuid="b2d6cf1c-d72f-483d-a202-9f9b0601ede8" x="15" y="79" width="540" height="186"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{obsregistro}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="16" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="153" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="193c733b-0919-43c9-b57f-e564322fcad6" x="320" y="8" width="141" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[FUNCIONARIO VDRA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d6adbd32-d32a-4e32-b58b-edd3078a1d21" x="118" y="9" width="141" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[FUNCIONARIO ABT]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement uuid="f848553e-fed8-4a32-88b7-68f7d71fc046" key="table 6" style="table 6" x="97" y="99" width="194" height="12"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="funcionarioABT" uuid="bad65840-ae0e-4b5b-825a-21b68543f0e0">
+						<datasetParameter name="ID_REG">
+							<datasetParameterExpression><![CDATA[$F{idregistro}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="193" uuid="3a1b77bb-bad5-4594-a3cd-8d56d19e29a1">
+						<jr:detailCell style="table 6_TD" height="11" rowSpan="1">
+							<textField>
+								<reportElement uuid="8623a731-13e0-4f7f-8ffe-5244b6fb9aca" x="10" y="0" width="183" height="11"/>
+								<textElement verticalAlignment="Middle">
+									<font size="7" isBold="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{abt}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<componentElement>
+				<reportElement uuid="a39be53c-352f-4f64-81e0-d44f75100d2d" key="table 7" style="table 7" x="97" y="112" width="194" height="12"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="funcionarioVDRA" uuid="0309a1f3-5641-4597-a91b-66f646615b82">
+						<datasetParameter name="ID_REG">
+							<datasetParameterExpression><![CDATA[$F{idregistro}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="193" uuid="ad0690a4-9105-4c8d-b2c1-5b00a76135ff">
+						<jr:detailCell style="table 7_TD" height="11" rowSpan="1">
+							<textField>
+								<reportElement uuid="868fe692-eeca-4384-b778-b2f8cb525a5f" x="11" y="0" width="182" height="11"/>
+								<textElement verticalAlignment="Middle">
+									<font size="7" isBold="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{vdra}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<staticText>
+				<reportElement uuid="16463106-9600-4b9f-a04d-9a44e5bf0d33" x="18" y="133" width="100" height="12"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Fecha de Impresion:]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement uuid="18e4bd6e-3d4b-4e7a-80f1-af8e2bedeb3c" x="118" y="133" width="121" height="12"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="54677b3f-6111-4028-8d6a-16c31946c8ad" x="18" y="104" width="79" height="12"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Elaborado por :]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="462d3c4f-e40e-4d2b-b856-50199dd44565" x="118" y="8" width="141" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement uuid="462d3c4f-e40e-4d2b-b856-50199dd44565" x="320" y="7" width="141" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="8" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Evaluacion_RCIA_Alimentos_tablaganadera" language="groovy" pageWidth="612" pageHeight="792" columnWidth="474" leftMargin="69" rightMargin="69" topMargin="0" bottomMargin="0" uuid="0f1ff8ac-bba9-45a6-b867-eadb10105d02">
+	<property name="ireport.zoom" value="1.0000000000000033"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F5F5DC">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#FFFFBF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#F5F5DC">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#FFFFBF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TH" mode="Opaque" backcolor="#F5F5DC">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_CH" mode="Opaque" backcolor="#FFFFBF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="notaganadera" uuid="a524814c-7712-4b59-999d-d83013e12905">
+		<parameter name="idmonitoreo" class="java.lang.Integer"/>
+		<queryString>
+			<![CDATA[select idmonitoreo, sum(puntuacion) as puntuacionganadera
+from monitoreo.valoracionalimentos as mva inner join monitoreo.evaluacionespecifica as mee on mva.idevalespecif = mee.idevaluacionespecifica
+inner join monitoreo.evaluaciongeneral as meg on mee.idevalgral = meg.idevalgral
+where mva.tipo = 101 and idmonitoreo = $P{idmonitoreo}
+group by idmonitoreo]]>
+		</queryString>
+		<field name="idmonitoreo" class="java.lang.Integer"/>
+		<field name="puntuacionganadera" class="java.math.BigDecimal"/>
+	</subDataset>
+	<subDataset name="puntoganadero" uuid="b645fe6d-2284-431f-9b40-9ef519d1c61b">
+		<parameter name="idmonitoreo" class="java.lang.Integer"/>
+		<queryString>
+			<![CDATA[select idmonitoreo, mee.idevalgral, parametroespecifico, valoracion, puntuacion
+from monitoreo.valoracionalimentos as mva inner join monitoreo.evaluacionespecifica as mee on mva.idevalespecif = mee.idevaluacionespecifica
+inner join monitoreo.evaluaciongeneral as meg on mee.idevalgral = meg.idevalgral
+where mva.tipo = 101 and idmonitoreo = $P{idmonitoreo}
+order by idtablavaloracion asc]]>
+		</queryString>
+		<field name="idmonitoreo" class="java.lang.Integer"/>
+		<field name="idevalgral" class="java.lang.Integer"/>
+		<field name="parametroespecifico" class="java.lang.String"/>
+		<field name="valoracion" class="java.lang.Integer"/>
+		<field name="puntuacion" class="java.math.BigDecimal"/>
+	</subDataset>
+	<parameter name="idregistro" class="java.lang.Integer"/>
+	<parameter name="idmonitoreo" class="java.lang.Integer"/>
+	<queryString>
+		<![CDATA[select v.*
+from v_parcela as v inner join planganaderalechera as pg on v.idregistro = pg.idregistro
+where v.idregistro = $P{idregistro}
+limit 1]]>
+	</queryString>
+	<field name="idregistro" class="java.lang.Integer"/>
+	<field name="idparcela" class="java.lang.String"/>
+	<field name="nombre" class="java.lang.String"/>
+	<field name="superficie" class="java.lang.Double"/>
+	<field name="comp" class="java.lang.String"/>
+	<field name="nombrepolitico" class="java.lang.String"/>
+	<field name="TipoProp" class="java.lang.String"/>
+	<field name="SitJur" class="java.lang.String"/>
+	<field name="Clasificacion" class="java.lang.String"/>
+	<field name="idclasificacion" class="java.lang.String"/>
+	<field name="Oficina" class="java.lang.String"/>
+	<field name="estado" class="java.lang.String"/>
+	<field name="asesoramiento" class="java.lang.String"/>
+	<field name="fecharegistro" class="java.sql.Date"/>
+	<field name="clasificacionprog" class="java.lang.String"/>
+	<field name="departamento" class="java.lang.String"/>
+	<field name="provincia" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="95" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="b3a1ef0e-700b-4d35-a5c3-2a519b5b7c6d" x="0" y="33" width="120" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[NOMBRE PREDIO:]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="4a679db6-87b0-4048-b8ed-63a614d35f10" x="120" y="33" width="314" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="8defbad3-0c32-4a30-9407-5a7142a8d36f" x="0" y="53" width="120" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[CODIGO DE REGISTRO:]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="9dc2a262-a43f-4da5-a7e2-baaf0e75c099" x="120" y="53" width="314" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idparcela}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="7ccbd10c-cc2f-4bef-92ac-fda23380ddce" x="0" y="16" width="434" height="16"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[TABLA DE VALORACION GANADERA LECHERA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8defbad3-0c32-4a30-9407-5a7142a8d36f" x="0" y="73" width="120" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[FECHA:]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="7636e24c-090e-44f6-b3fd-94ef8a6ad3c2" x="5" y="93" width="460" height="1"/>
+			</line>
+			<staticText>
+				<reportElement uuid="10e058c5-92ba-4f60-b7d3-815ff5243a27" x="0" y="0" width="434" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[ANEXO]]></text>
+			</staticText>
+		</band>
+		<band height="411">
+			<staticText>
+				<reportElement uuid="aca38818-898c-433b-96cc-d845cb9a42bf" style="table 1_TH" x="353" y="32" width="52" height="29"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Valoración (%)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a8a8ca04-bf6f-4811-b9b4-13836de681f6" style="table 1_TH" x="0" y="32" width="125" height="29"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Parámetro]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4587369d-0d4f-4d50-9484-b1bfcd2239fe" style="table" x="224" y="257" width="129" height="28"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Documento de comercialización lechera]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a6f75132-280b-4f2f-a4be-d17e9e6bb8b5" style="table" x="353" y="201" width="52" height="28"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[2]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4587369d-0d4f-4d50-9484-b1bfcd2239fe" style="table" x="224" y="61" width="129" height="28"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Superficie pastos cultivados de piso y/o corte (ha.)]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="9a674043-1bd6-4348-9a10-8e6a4d16ee69" x="125" y="89" width="75" height="84"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="aca38818-898c-433b-96cc-d845cb9a42bf" style="table 1_TH" x="125" y="32" width="99" height="29"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Valoración (%)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="2b36bbfd-05a0-4b74-b79d-64143a543f07" x="125" y="145" width="76" height="28"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[3 Tecnicas = 100%]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4587369d-0d4f-4d50-9484-b1bfcd2239fe" style="table" x="224" y="145" width="129" height="28"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Ensilado de Forrajes]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4587369d-0d4f-4d50-9484-b1bfcd2239fe" style="table" x="224" y="117" width="129" height="28"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Razas Mejoradas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="2e309d64-5c81-423d-84b9-db12f96036a1" style="table 1_TH" x="0" y="369" width="405" height="18"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[PUNTUACION FINAL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a6f75132-280b-4f2f-a4be-d17e9e6bb8b5" style="table" x="353" y="257" width="52" height="28"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[15]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4587369d-0d4f-4d50-9484-b1bfcd2239fe" style="table" x="224" y="313" width="129" height="28"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Insumos pecuarios]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4587369d-0d4f-4d50-9484-b1bfcd2239fe" style="table" x="224" y="201" width="129" height="28"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Certificado o algún documento que acredite el uso inmunològico contra tuberculosis]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a6f75132-280b-4f2f-a4be-d17e9e6bb8b5" style="table" x="200" y="285" width="24" height="56"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[30]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a6f75132-280b-4f2f-a4be-d17e9e6bb8b5" style="table" x="353" y="89" width="52" height="84"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[15]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="2e309d64-5c81-423d-84b9-db12f96036a1" style="table 1_TH" x="0" y="12" width="224" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Evaluación Directriz Técnica General]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="11aa43ac-8791-4fc4-9d4c-62ad3c3070b6" style="table 1_TH" x="405" y="12" width="60" height="49"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Ponderación (%)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4587369d-0d4f-4d50-9484-b1bfcd2239fe" style="table" x="125" y="285" width="75" height="56"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Relación directa de acuerdo a metas programadas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a6f75132-280b-4f2f-a4be-d17e9e6bb8b5" style="table" x="353" y="229" width="52" height="28"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[3]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a6f75132-280b-4f2f-a4be-d17e9e6bb8b5" style="table" x="353" y="313" width="52" height="28"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[15]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4587369d-0d4f-4d50-9484-b1bfcd2239fe" style="table" x="224" y="229" width="129" height="28"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Certificado de libre de Brucelosis (emitido por los laboratorios autorizados)]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement uuid="90b1bf96-7221-43b4-9e5b-7ee1239ce014" key="table 3" style="table 3" x="405" y="61" width="60" height="28"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="puntoganadero" uuid="dd8cc687-f377-4724-8ad1-c91ea09a561a">
+						<datasetParameter name="idmonitoreo">
+							<datasetParameterExpression><![CDATA[$P{idmonitoreo}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="60" uuid="9764760b-a6ee-42fe-8a41-37d2718b4e2c">
+						<jr:detailCell style="table" height="28" rowSpan="1">
+							<textField>
+								<reportElement uuid="0b9813e5-c815-46a7-8257-1960b7940703" style="table" x="0" y="0" width="60" height="28"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{puntuacion}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<staticText>
+				<reportElement uuid="a6f75132-280b-4f2f-a4be-d17e9e6bb8b5" style="table" x="353" y="173" width="52" height="28"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[5]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a6f75132-280b-4f2f-a4be-d17e9e6bb8b5" style="table" x="353" y="341" width="52" height="28"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[10]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="2b36bbfd-05a0-4b74-b79d-64143a543f07" x="125" y="117" width="76" height="28"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[2 Tecnicas = 70%]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="2b36bbfd-05a0-4b74-b79d-64143a543f07" x="125" y="90" width="76" height="27"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[1 Tecnica = 30%]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4587369d-0d4f-4d50-9484-b1bfcd2239fe" style="table" x="224" y="285" width="129" height="28"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Certificación de Vacunación del SENASAG]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4587369d-0d4f-4d50-9484-b1bfcd2239fe" style="table" x="0" y="173" width="125" height="84"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Sanidad Animal mediante inmunològicos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4587369d-0d4f-4d50-9484-b1bfcd2239fe" style="table" x="224" y="89" width="129" height="28"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Uso de Alimentos Suplementarios]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a8a8ca04-bf6f-4811-b9b4-13836de681f6" style="table 1_TH" x="224" y="32" width="129" height="29"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Parámetro]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a6f75132-280b-4f2f-a4be-d17e9e6bb8b5" style="table" x="200" y="173" width="24" height="84"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[10]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4587369d-0d4f-4d50-9484-b1bfcd2239fe" style="table" x="0" y="285" width="125" height="56"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Total cabezas de ganado mayor en el área deforestada]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement uuid="899f81b1-9a71-406b-8f2b-d9dd4e9dbddb" key="table 2" style="table 2" x="405" y="369" width="60" height="18"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="notaganadera" uuid="ac3e54b3-3c7c-4730-a658-53c9a314bfaf">
+						<datasetParameter name="idmonitoreo">
+							<datasetParameterExpression><![CDATA[$P{idmonitoreo}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="60" uuid="43a37156-64d2-4971-8035-d4cca5c4ed70">
+						<jr:detailCell style="table 2_TD" height="18" rowSpan="1">
+							<textField>
+								<reportElement uuid="72a2b6a7-0206-4e28-b142-6a6fe3373f51" x="0" y="0" width="60" height="18"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{puntuacionganadera} + "(*)"]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<staticText>
+				<reportElement uuid="4587369d-0d4f-4d50-9484-b1bfcd2239fe" style="table" x="224" y="341" width="129" height="28"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Infraestructura e instalaciones para ordeño]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4587369d-0d4f-4d50-9484-b1bfcd2239fe" style="table" x="0" y="61" width="125" height="28"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Superficie pastos cultivados de piso y/o corte (ha.)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a6f75132-280b-4f2f-a4be-d17e9e6bb8b5" style="table" x="353" y="285" width="52" height="28"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[15]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a6f75132-280b-4f2f-a4be-d17e9e6bb8b5" style="table" x="353" y="61" width="52" height="28"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[30]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="2e309d64-5c81-423d-84b9-db12f96036a1" style="table 1_TH" x="224" y="12" width="181" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Evaluación Directriz Técnica Especifica]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a6f75132-280b-4f2f-a4be-d17e9e6bb8b5" style="table" x="200" y="89" width="24" height="84"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[15]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="da6e3456-0141-4a90-92c6-a5e511a70e63" x="125" y="61" width="75" height="28"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="5c4863f1-31d7-4431-895b-15fe755c826f" x="0" y="387" width="399" height="20"/>
+				<textElement/>
+				<text><![CDATA[ (*) La puntuación asignada esta en base a la documentación  presentada en el RCIA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4587369d-0d4f-4d50-9484-b1bfcd2239fe" style="table" x="224" y="173" width="129" height="28"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Certificado de Vacunación contra la fiebre aftosa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4587369d-0d4f-4d50-9484-b1bfcd2239fe" style="table" x="0" y="89" width="125" height="84"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Aplicación de técnicas y tecnologías sostenibles:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a6f75132-280b-4f2f-a4be-d17e9e6bb8b5" style="table" x="200" y="61" width="24" height="28"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[30]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4587369d-0d4f-4d50-9484-b1bfcd2239fe" style="table" x="0" y="257" width="125" height="28"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Producción Lechera]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="e6bfed6b-4f75-45b2-8163-d1dc14d9c6ff" x="125" y="257" width="75" height="28"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="a6f75132-280b-4f2f-a4be-d17e9e6bb8b5" style="table" x="200" y="257" width="24" height="28"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[15]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a6f75132-280b-4f2f-a4be-d17e9e6bb8b5" style="table" x="200" y="341" width="24" height="28"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[10]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4587369d-0d4f-4d50-9484-b1bfcd2239fe" style="table" x="0" y="341" width="125" height="28"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Infraestructura e instalaciones para ordeño]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4587369d-0d4f-4d50-9484-b1bfcd2239fe" style="table" x="125" y="341" width="75" height="28"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[Sistema de Ordeños; Galpon de Ordeño, Tanque de Enfriamiento]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

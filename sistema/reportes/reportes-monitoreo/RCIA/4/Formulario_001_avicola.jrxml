@@ -1,0 +1,2032 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Formulario_001_subreport4" language="groovy" pageWidth="572" pageHeight="752" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="464e68ee-d85d-4007-a8f1-7eed5d85126b">
+	<property name="ireport.zoom" value="1.2100000000000024"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="128"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#6B8040">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#DEE6CF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TH" mode="Opaque" backcolor="#E69473">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_CH" mode="Opaque" backcolor="#E6D5CF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_TH" mode="Opaque" backcolor="#E69273">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_CH" mode="Opaque" backcolor="#E6D5CF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_TH" mode="Opaque" backcolor="#E68473">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_CH" mode="Opaque" backcolor="#E6D2CF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6_TH" mode="Opaque" backcolor="#E68473">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6_CH" mode="Opaque" backcolor="#E6D2CF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 7">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 7_TH" mode="Opaque" backcolor="#E68473">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 7_CH" mode="Opaque" backcolor="#E6D2CF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 7_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 8">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 8_TH" mode="Opaque" backcolor="#E68473">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 8_CH" mode="Opaque" backcolor="#E6D2CF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 8_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 9">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 9_TH" mode="Opaque" backcolor="#FFDEAD">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 9_CH" mode="Opaque" backcolor="#FFE5BF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 9_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 10">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 10_TH" mode="Opaque" backcolor="#E67373">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 10_CH" mode="Opaque" backcolor="#E6CFCF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 10_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 11">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 11_TH" mode="Opaque" backcolor="#9AB95C">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 11_CH" mode="Opaque" backcolor="#DEE6CF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 11_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 12">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 12_TH" mode="Opaque" backcolor="#A9E371">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 12_CH" mode="Opaque" backcolor="#DAE6CF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 12_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 13">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 13_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 13_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 13_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 14">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 14_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 14_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 14_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 15">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 15_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 15_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 15_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="SistemasProduct" uuid="e61a2d6b-687e-4154-94b9-2b25b775f82c">
+		<parameter name="COD_PAR11" class="java.lang.String"/>
+		<queryString>
+			<![CDATA[select spg.*, c.nombrecodificador
+from sistemaproduccion as spg inner join codificadores as c on idsistemaproduccion = c.idcodificadores inner join registro as r
+on r.idregistro = spg.idregistro
+where r.idparcela = $P{COD_PAR11}
+and c.idclasificador = 29;]]>
+		</queryString>
+		<field name="idsistemaproduccion" class="java.lang.Integer"/>
+		<field name="idregistro" class="java.lang.Integer"/>
+		<field name="cantidadproduccion" class="java.lang.Integer"/>
+		<field name="nombrecodificador" class="java.lang.String"/>
+	</subDataset>
+	<subDataset name="situactualavicola" uuid="1bc12add-380f-45db-adeb-52aa4468ce36">
+		<parameter name="COD_PAR12" class="java.lang.String"/>
+		<queryString>
+			<![CDATA[SELECT
+COALESCE(supcultavicola,'0') as supcultavicola,
+COALESCE(supinfraestuctura,'0') as supinfraestructura,
+COALESCE(registrosanitario,'0') as registrosanitario,
+COALESCE(eclosionpesadas,'0') as eclosionpesadas,
+COALESCE(eclosionlivianas,'0') as eclosionlivianas,
+COALESCE(mortalidadparrillero,'0') as mortalidadparrillero,
+COALESCE(posturaponedoras,'0')as posturaponedoras,
+COALESCE(cantpolloventa,'0') as cantpolloventa,
+COALESCE(canthuevoventa,'0') as canthuevoventa,
+COALESCE(cantpollobbventa,'0') as cantpollobbventa,
+anoplanavicola
+FROM Registro INNER JOIN planproduccionavicola ON Registro.IdRegistro = planproduccionavicola.IdRegistro
+where registro.idparcela = $P{COD_PAR12} and anoplanavicola = '0';]]>
+		</queryString>
+		<field name="supcultavicola" class="java.lang.Double"/>
+		<field name="supinfraestructura" class="java.lang.Double"/>
+		<field name="registrosanitario" class="java.lang.Integer"/>
+		<field name="eclosionpesadas" class="java.lang.Double"/>
+		<field name="eclosionlivianas" class="java.lang.Double"/>
+		<field name="mortalidadparrillero" class="java.lang.Double"/>
+		<field name="posturaponedoras" class="java.lang.Double"/>
+		<field name="cantpolloventa" class="java.lang.Integer"/>
+		<field name="canthuevoventa" class="java.lang.Integer"/>
+		<field name="cantpollobbventa" class="java.lang.Integer"/>
+		<field name="anoplanavicola" class="java.lang.String"/>
+	</subDataset>
+	<subDataset name="UsoActual" uuid="509669c2-202d-4e81-acfd-4711bd3b1cef">
+		<parameter name="CodPar" class="java.lang.String"/>
+		<queryString>
+			<![CDATA[select s.*, r.idparcela
+from Superficiealimentos as s inner join registro as r on s.idregistro = r.idregistro
+where r.idparcela = $P{CodPar}]]>
+		</queryString>
+		<field name="idsupalimentos" class="java.lang.Integer"/>
+		<field name="idregistro" class="java.lang.Integer"/>
+		<field name="supagricola" class="java.lang.Double"/>
+		<field name="supganadera" class="java.lang.Double"/>
+		<field name="supbarbecho" class="java.lang.Double"/>
+		<field name="supdescanso" class="java.lang.Double"/>
+		<field name="supganlegal" class="java.lang.Double"/>
+		<field name="idparcela" class="java.lang.String"/>
+	</subDataset>
+	<subDataset name="planavicola1" uuid="180b02ca-117d-48ad-9c0d-390df146442e">
+		<parameter name="codpar" class="java.lang.String">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<queryString>
+			<![CDATA[SELECT
+COALESCE(supcultavicola,'0') as supcultavicola1,
+COALESCE(supinfraestuctura,'0') as supinfraestructura1,
+COALESCE(registrosanitario,'0') as registrosanitario1,
+COALESCE(eclosionpesadas,'0') as eclosionpesadas1,
+COALESCE(eclosionlivianas,'0') as eclosionlivianas1,
+COALESCE(mortalidadparrillero,'0') as mortalidadparrillero1,
+COALESCE(posturaponedoras,'0')as posturaponedoras1,
+COALESCE(cantpolloventa,'0') as cantpolloventa1,
+COALESCE(canthuevoventa,'0') as canthuevoventa1,
+COALESCE(cantpollobbventa,'0') as cantpollobbventa1,
+anoplanavicola
+FROM Registro INNER JOIN planproduccionavicola ON Registro.IdRegistro = planproduccionavicola.IdRegistro
+where registro.idparcela = $P{codpar} and anoplanavicola = '1';]]>
+		</queryString>
+		<field name="supcultavicola1" class="java.lang.Double"/>
+		<field name="supinfraestructura1" class="java.lang.Double"/>
+		<field name="registrosanitario1" class="java.lang.Integer"/>
+		<field name="eclosionpesadas1" class="java.lang.Double"/>
+		<field name="eclosionlivianas1" class="java.lang.Double"/>
+		<field name="mortalidadparrillero1" class="java.lang.Double"/>
+		<field name="posturaponedoras1" class="java.lang.Double"/>
+		<field name="cantpolloventa1" class="java.lang.Integer"/>
+		<field name="canthuevoventa1" class="java.lang.Integer"/>
+		<field name="cantpollobbventa1" class="java.lang.Integer"/>
+		<field name="anoplanavicola" class="java.lang.String"/>
+	</subDataset>
+	<subDataset name="planavicola2" uuid="0036ce17-17a9-45c3-8a70-e87f86fe2c78">
+		<parameter name="codpar" class="java.lang.String">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<queryString>
+			<![CDATA[SELECT
+COALESCE(supcultavicola,'0') as supcultavicola2,
+COALESCE(supinfraestuctura,'0') as supinfraestructura2,
+COALESCE(registrosanitario,'0') as registrosanitario2,
+COALESCE(eclosionpesadas,'0') as eclosionpesadas2,
+COALESCE(eclosionlivianas,'0') as eclosionlivianas2,
+COALESCE(mortalidadparrillero,'0') as mortalidadparrillero2,
+COALESCE(posturaponedoras,'0')as posturaponedoras2,
+COALESCE(cantpolloventa,'0') as cantpolloventa2,
+COALESCE(canthuevoventa,'0') as canthuevoventa2,
+COALESCE(cantpollobbventa,'0') as cantpollobbventa2,
+anoplanavicola
+FROM Registro INNER JOIN planproduccionavicola ON Registro.IdRegistro = planproduccionavicola.IdRegistro
+where registro.idparcela = $P{codpar} and anoplanavicola = '2';]]>
+		</queryString>
+		<field name="supcultavicola2" class="java.lang.Double"/>
+		<field name="supinfraestructura2" class="java.lang.Double"/>
+		<field name="registrosanitario2" class="java.lang.Integer"/>
+		<field name="eclosionpesadas2" class="java.lang.Double"/>
+		<field name="eclosionlivianas2" class="java.lang.Double"/>
+		<field name="mortalidadparrillero2" class="java.lang.Double"/>
+		<field name="posturaponedoras2" class="java.lang.Double"/>
+		<field name="cantpolloventa2" class="java.lang.Integer"/>
+		<field name="canthuevoventa2" class="java.lang.Integer"/>
+		<field name="cantpollobbventa2" class="java.lang.Integer"/>
+		<field name="anoplanavicola" class="java.lang.Integer"/>
+	</subDataset>
+	<subDataset name="planavicola3" uuid="562ad57e-6402-4476-af04-abc14c56ab17">
+		<parameter name="codpar" class="java.lang.String">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<queryString>
+			<![CDATA[SELECT
+COALESCE(supcultavicola,'0') as supcultavicola3,
+COALESCE(supinfraestuctura,'0') as supinfraestructura3,
+COALESCE(registrosanitario,'0') as registrosanitario3,
+COALESCE(eclosionpesadas,'0') as eclosionpesadas3,
+COALESCE(eclosionlivianas,'0') as eclosionlivianas3,
+COALESCE(mortalidadparrillero,'0') as mortalidadparrillero3,
+COALESCE(posturaponedoras,'0')as posturaponedoras3,
+COALESCE(cantpolloventa,'0') as cantpolloventa3,
+COALESCE(canthuevoventa,'0') as canthuevoventa3,
+COALESCE(cantpollobbventa,'0') as cantpollobbventa3,
+anoplanavicola
+FROM Registro INNER JOIN planproduccionavicola ON Registro.IdRegistro = planproduccionavicola.IdRegistro
+where registro.idparcela = $P{codpar} and anoplanavicola = '3';]]>
+		</queryString>
+		<field name="supcultavicola3" class="java.lang.Double"/>
+		<field name="supinfraestructura3" class="java.lang.Double"/>
+		<field name="registrosanitario3" class="java.lang.Integer"/>
+		<field name="eclosionpesadas3" class="java.lang.Double"/>
+		<field name="eclosionlivianas3" class="java.lang.Double"/>
+		<field name="mortalidadparrillero3" class="java.lang.Double"/>
+		<field name="posturaponedoras3" class="java.lang.Double"/>
+		<field name="cantpolloventa3" class="java.lang.Integer"/>
+		<field name="canthuevoventa3" class="java.lang.Integer"/>
+		<field name="cantpollobbventa3" class="java.lang.Integer"/>
+		<field name="anoplanavicola" class="java.lang.Integer"/>
+	</subDataset>
+	<subDataset name="planavicola4" uuid="564dc599-2c8e-4488-a66a-f0f9defba4e5">
+		<parameter name="codpar" class="java.lang.String">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<queryString>
+			<![CDATA[SELECT
+COALESCE(supcultavicola,'0') as supcultavicola4,
+COALESCE(supinfraestuctura,'0') as supinfraestructura4,
+COALESCE(registrosanitario,'0') as registrosanitario4,
+COALESCE(eclosionpesadas,'0') as eclosionpesadas4,
+COALESCE(eclosionlivianas,'0') as eclosionlivianas4,
+COALESCE(mortalidadparrillero,'0') as mortalidadparrillero4,
+COALESCE(posturaponedoras,'0')as posturaponedoras4,
+COALESCE(cantpolloventa,'0') as cantpolloventa4,
+COALESCE(canthuevoventa,'0') as canthuevoventa4,
+COALESCE(cantpollobbventa,'0') as cantpollobbventa4,
+anoplanavicola
+FROM Registro INNER JOIN planproduccionavicola ON Registro.IdRegistro = planproduccionavicola.IdRegistro
+where registro.idparcela = $P{codpar} and anoplanavicola = '4';]]>
+		</queryString>
+		<field name="supcultavicola4" class="java.lang.Double"/>
+		<field name="supinfraestructura4" class="java.lang.Double"/>
+		<field name="registrosanitario4" class="java.lang.Integer"/>
+		<field name="eclosionpesadas4" class="java.lang.Double"/>
+		<field name="eclosionlivianas4" class="java.lang.Double"/>
+		<field name="mortalidadparrillero4" class="java.lang.Double"/>
+		<field name="posturaponedoras4" class="java.lang.Double"/>
+		<field name="cantpolloventa4" class="java.lang.Integer"/>
+		<field name="canthuevoventa4" class="java.lang.Integer"/>
+		<field name="cantpollobbventa4" class="java.lang.Integer"/>
+		<field name="anoplanavicola" class="java.lang.Integer"/>
+	</subDataset>
+	<subDataset name="planavicola5" uuid="6ed3fa7c-d62f-43ac-ad39-2e15a1a01d58">
+		<parameter name="codpar" class="java.lang.String">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<queryString>
+			<![CDATA[SELECT
+COALESCE(supcultavicola,'0') as supcultavicola5,
+COALESCE(supinfraestuctura,'0') as supinfraestructura5,
+COALESCE(registrosanitario,'0') as registrosanitario5,
+COALESCE(eclosionpesadas,'0') as eclosionpesadas5,
+COALESCE(eclosionlivianas,'0') as eclosionlivianas5,
+COALESCE(mortalidadparrillero,'0') as mortalidadparrillero5,
+COALESCE(posturaponedoras,'0')as posturaponedoras5,
+COALESCE(cantpolloventa,'0') as cantpolloventa5,
+COALESCE(canthuevoventa,'0') as canthuevoventa5,
+COALESCE(cantpollobbventa,'0') as cantpollobbventa5,
+anoplanavicola
+FROM Registro INNER JOIN planproduccionavicola ON Registro.IdRegistro = planproduccionavicola.IdRegistro
+where registro.idparcela = $P{codpar} and anoplanavicola = '5';]]>
+		</queryString>
+		<field name="supcultavicola5" class="java.lang.Double"/>
+		<field name="supinfraestructura5" class="java.lang.Double"/>
+		<field name="registrosanitario5" class="java.lang.Integer"/>
+		<field name="eclosionpesadas5" class="java.lang.Double"/>
+		<field name="eclosionlivianas5" class="java.lang.Double"/>
+		<field name="mortalidadparrillero5" class="java.lang.Double"/>
+		<field name="posturaponedoras5" class="java.lang.Double"/>
+		<field name="cantpolloventa5" class="java.lang.Integer"/>
+		<field name="canthuevoventa5" class="java.lang.Integer"/>
+		<field name="cantpollobbventa5" class="java.lang.Integer"/>
+		<field name="anoplanavicola" class="java.lang.Integer"/>
+	</subDataset>
+	<parameter name="COD_PAR4" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select r.idparcela,
+COALESCE (r.obsregistro,r.obsregistro,'') as obsregistro,
+v.*
+from v_registro as v inner join registro as r on v.idregistro = r.idregistro
+where r.idparcela = $P{COD_PAR4}]]>
+	</queryString>
+	<field name="idparcela" class="java.lang.String"/>
+	<field name="obsregistro" class="java.lang.String"/>
+	<field name="idregistro" class="java.lang.Integer"/>
+	<field name="supdefilegal" class="java.lang.Float"/>
+	<field name="suptpfp" class="java.lang.Float"/>
+	<field name="suptum" class="java.lang.Float"/>
+	<field name="supreftpfp" class="java.lang.Float"/>
+	<field name="supreftum" class="java.lang.Float"/>
+	<field name="supselstpfpref" class="java.lang.Float"/>
+	<field name="supselstpfpfcon" class="java.lang.Float"/>
+	<field name="supselstumref" class="java.lang.Float"/>
+	<field name="supselstumcon" class="java.lang.Float"/>
+	<field name="supmejorastpfp" class="java.lang.Float"/>
+	<field name="supmejorastum" class="java.lang.Float"/>
+	<field name="suppas" class="java.lang.Float"/>
+	<field name="suptpfppas" class="java.lang.Float"/>
+	<field name="suptumpas" class="java.lang.Float"/>
+	<field name="supreftpfppas" class="java.lang.Float"/>
+	<field name="supreftumpas" class="java.lang.Float"/>
+	<field name="supselstpfprefpas" class="java.lang.Float"/>
+	<field name="supselstpfpfconpas" class="java.lang.Float"/>
+	<field name="supselstumrefpas" class="java.lang.Float"/>
+	<field name="supselstumconpas" class="java.lang.Float"/>
+	<field name="supmejorastpfppas" class="java.lang.Float"/>
+	<field name="supmejorastumpas" class="java.lang.Float"/>
+	<field name="supproali" class="java.lang.Float"/>
+	<field name="supalitpfp" class="java.lang.Float"/>
+	<field name="supalitum" class="java.lang.Float"/>
+	<field name="supalitpfppas" class="java.lang.Float"/>
+	<field name="supalitumpas" class="java.lang.Float"/>
+	<group name="last">
+		<groupExpression><![CDATA[$F{idregistro}]]></groupExpression>
+		<groupFooter>
+			<band height="16"/>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="11" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="7" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="8" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="193" splitType="Stretch">
+			<rectangle>
+				<reportElement uuid="6cc35fc2-5e88-4493-99d3-551c94351df7" x="65" y="9" width="181" height="35"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="bd2ab13c-2424-4702-89fb-a3c7ab8f5b63" x="17" y="45" width="534" height="78"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="e1e49c79-3dd4-4be7-ad93-21a091bfe9b7" x="25" y="135" width="454" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sistemas de Produccion Avicola en el Predio (Anual)]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement uuid="b0e44cde-f2d7-402a-975b-919e40a14f81" key="table 9" style="table 9" x="25" y="155" width="523" height="28"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="SistemasProduct" uuid="9e1cb68f-a38c-42c8-ba72-e320d325de5e">
+						<datasetParameter name="COD_PAR11">
+							<datasetParameterExpression><![CDATA[$F{idparcela}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="292" uuid="6a65ed2c-93c6-4333-b659-b3242efa0070">
+						<jr:tableHeader style="table 9_TH" height="13" rowSpan="1">
+							<staticText>
+								<reportElement uuid="e1d4cf94-4a36-4cff-8e5e-81358682884a" x="0" y="0" width="292" height="13"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="9"/>
+								</textElement>
+								<text><![CDATA[SISTEMAS DE PRODUCCION AVICOLA]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table 9_TD" height="14" rowSpan="1">
+							<textField>
+								<reportElement uuid="8f2737ce-8164-417a-bfcc-c93cc3f98499" x="0" y="0" width="292" height="13"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="9"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{nombrecodificador}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="244" uuid="36c89bab-601b-4b61-93f6-b19c08d67e36">
+						<jr:tableHeader style="table 9_TH" height="13" rowSpan="1">
+							<staticText>
+								<reportElement uuid="9887a35a-2d21-476b-a7e0-4f92a4731bd9" x="0" y="0" width="237" height="13"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="9"/>
+								</textElement>
+								<text><![CDATA[CANTIDAD DE AVES EN EL PREDIO]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table 9_TD" height="14" rowSpan="1">
+							<textField>
+								<reportElement uuid="dbdac3e4-0e68-44ce-a8ef-e8dcdd20b1ef" x="0" y="0" width="237" height="13"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="9"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{cantidadproduccion}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<textField>
+				<reportElement uuid="775dc4a4-2421-46f9-afdf-dff0f27236cf" x="201" y="105" width="45" height="18"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{supalitumpas}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="44a07520-40c6-445a-ab34-5ee81f775625" x="162" y="104" width="39" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{supalitpfppas}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement uuid="65c1fb4a-2c3d-4363-abb3-53326aef49a1" x="201" y="45" width="1" height="78"/>
+			</line>
+			<staticText>
+				<reportElement uuid="b832602a-840d-4e6a-a0ab-27f556509125" x="110" y="46" width="51" height="57" backcolor="#99FF99"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Sup. Prod. de Alimentos en TUM (Ha)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="30a59828-7a98-4941-a650-67a748b862f5" x="202" y="45" width="44" height="59"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Sup. Prod. Ali. PAS EN TUM (Ha)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="97f4a700-86dd-46f2-8127-6e43345a1950" x="17" y="45" width="48" height="59" backcolor="#99FF99"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Sup. Total de Prod. Alimentos (Ha)]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="05d7c3ee-7b56-40dd-ab7a-b193498e2f27" x="66" y="105" width="43" height="18"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{supalitpfp}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="1f095563-d9be-4680-b98b-e5d9c22b311d" x="163" y="29" width="83" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{suppas}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="30a59828-7a98-4941-a650-67a748b862f5" x="162" y="44" width="39" height="59"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Sup. Prod. Ali. PAS EN TPFP (Ha)]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="ae4393f4-d363-42fd-8e15-19ab778ddadd" x="66" y="29" width="92" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{supdefilegal}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement uuid="f0dad725-113b-4f6c-99fd-f24842d80503" x="246" y="74" width="304" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="b7b5721d-fdae-442e-92ed-bcb13b83a6da" x="16" y="104" width="230" height="1"/>
+			</line>
+			<textField>
+				<reportElement uuid="08292285-d929-47b2-b312-7cc3a3e0ef3f" x="111" y="105" width="49" height="18"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{supalitum}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement uuid="f15b43d9-7624-4a5a-a544-c4e8a8dfaee9" x="66" y="29" width="180" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="a1b734e9-ff6c-4cf3-acb1-1077ef67c30d" x="109" y="45" width="1" height="77"/>
+			</line>
+			<staticText>
+				<reportElement uuid="bf15a58d-ac1e-4246-a073-14b46286fe54" x="253" y="44" width="295" height="29"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Uso Actual en Areas Deforestadas Ilegales (Ha)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a1948cbb-a24e-411c-9c99-9e8f1a489365" x="66" y="44" width="43" height="59" backcolor="#99FF99"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Sup. Prod. Alimentos en TPFP (Ha)]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="08d908ab-4f5e-4b51-966a-833054f5cbc2" x="17" y="105" width="48" height="18"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{supproali}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement uuid="a1b734e9-ff6c-4cf3-acb1-1077ef67c30d" x="246" y="45" width="1" height="79"/>
+			</line>
+			<line>
+				<reportElement uuid="a1b734e9-ff6c-4cf3-acb1-1077ef67c30d" x="64" y="46" width="1" height="77"/>
+			</line>
+			<componentElement>
+				<reportElement uuid="8cc63f4b-bd3a-4ce4-a9ac-2ba717818d90" key="table" style="table 5_TD" x="246" y="73" width="304" height="50"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="UsoActual" uuid="e97ff8b7-e92b-4964-9812-21be69616a3c">
+						<datasetParameter name="CodPar">
+							<datasetParameterExpression><![CDATA[$F{idparcela}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="77" uuid="559b7d3b-2283-4ad5-a6b3-36b4445b0f69">
+						<jr:tableHeader style="table_TH" height="32" rowSpan="1">
+							<staticText>
+								<reportElement uuid="9911c13d-786b-41ba-826e-358bdc368097" x="0" y="0" width="77" height="32"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<text><![CDATA[Agricola (Ha)]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table_TD" height="18" rowSpan="1">
+							<textField>
+								<reportElement uuid="26a964a4-8b34-491d-915f-637dc9b714f5" x="0" y="0" width="77" height="18"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{supagricola}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="78" uuid="f78595df-c2c5-46f9-b87b-21154473d373">
+						<jr:tableHeader style="table_TH" height="32" rowSpan="1">
+							<staticText>
+								<reportElement uuid="65721e0e-a75e-4172-95ed-a7b7a1edb6b7" x="0" y="0" width="78" height="32"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<text><![CDATA[Ganadero (Ha)]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table_TD" height="18" rowSpan="1">
+							<textField>
+								<reportElement uuid="a036350d-8535-4b10-b344-05cb612d240f" x="0" y="0" width="78" height="18"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{supganadera}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="76" uuid="cce6f5e2-5209-44c3-9739-d22ea0a17230">
+						<jr:tableHeader style="table_TH" height="32" rowSpan="1">
+							<staticText>
+								<reportElement uuid="c61c67b0-2dde-4ced-8209-7bea0522afdc" x="0" y="0" width="75" height="32"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<text><![CDATA[Barbecho (Ha)]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table_TD" height="18" rowSpan="1">
+							<textField>
+								<reportElement uuid="79ba63fc-5795-4805-8df9-9b3fb3bd61a0" x="0" y="0" width="75" height="18"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{supbarbecho}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="73" uuid="240dc60e-4989-4dee-90e6-a4012badbbaa">
+						<jr:tableHeader style="table_TH" height="32" rowSpan="1">
+							<staticText>
+								<reportElement uuid="e21d6868-9f82-451c-b6ba-3433dc25bc53" x="0" y="0" width="73" height="32"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<text><![CDATA[Descanso (Ha)]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table_TD" height="18" rowSpan="1">
+							<textField>
+								<reportElement uuid="65c9e7a5-2fe9-4273-86fd-f0eda1647851" x="0" y="0" width="73" height="18"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{supdescanso}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<staticText>
+				<reportElement uuid="c573e962-70f6-494e-8897-d4094da071c6" x="66" y="9" width="92" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Sup. Def. Ilegal (Ha):]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="65c1fb4a-2c3d-4363-abb3-53326aef49a1" x="160" y="9" width="1" height="114"/>
+			</line>
+			<staticText>
+				<reportElement uuid="c573e962-70f6-494e-8897-d4094da071c6" x="163" y="9" width="84" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Sup. con PAS (Ha):]]></text>
+			</staticText>
+		</band>
+		<band height="319">
+			<staticText>
+				<reportElement uuid="e4ab7c31-6a16-40d5-8075-6f5d48ee1d1b" x="180" y="13" width="371" height="14"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Plan de Produccion Avicola en 5 años Sistema Mejorado]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement uuid="2ed542ff-73d1-4c76-91be-9c8ecea2f8ae" key="table 14" style="table 8_CH" mode="Transparent" x="10" y="41" width="153" height="267" backcolor="#FFFFFF"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="situactualavicola" uuid="e72a54bf-c463-4dab-8c6c-a58c9d7f3688">
+						<datasetParameter name="COD_PAR12">
+							<datasetParameterExpression><![CDATA[$F{idparcela}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="123" uuid="3dfb9bd8-54e2-4019-9058-456e54f0e624">
+						<jr:detailCell style="table 8_CH" height="266" rowSpan="1">
+							<staticText>
+								<reportElement uuid="4089d028-94b9-42bf-a644-904a9b063f14" style="table 8_CH" x="4" y="0" width="119" height="14"/>
+								<textElement verticalAlignment="Middle">
+									<font size="6" isBold="true"/>
+								</textElement>
+								<text><![CDATA[En Area Deforestada Ilegal y/o PAS]]></text>
+							</staticText>
+							<staticText>
+								<reportElement uuid="66e4a8df-77c4-45ae-9f01-5ff0b48f41d1" style="table 8_CH" x="4" y="13" width="119" height="25"/>
+								<textElement verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<text><![CDATA[Superficie de cultivos para la Alimentacion Avicola (opcional) (Ha) ]]></text>
+							</staticText>
+							<staticText>
+								<reportElement uuid="ab8588fd-9af0-4a2e-aa84-6ee844343675" style="table 8_CH" x="4" y="56" width="119" height="23"/>
+								<textElement verticalAlignment="Middle">
+									<font size="8" isBold="false"/>
+								</textElement>
+								<text><![CDATA[Superficie total de infraestructura productiva en el predio (ha)]]></text>
+							</staticText>
+							<staticText>
+								<reportElement uuid="650e7456-2eff-4403-9212-ff19f6a07d42" style="table 8_CH" x="4" y="78" width="119" height="23"/>
+								<textElement verticalAlignment="Middle">
+									<font size="8" isBold="false"/>
+								</textElement>
+								<text><![CDATA[Registro Sanitario]]></text>
+							</staticText>
+							<staticText>
+								<reportElement uuid="43db13a1-c6a5-4c7c-81ff-d6fce8c2b06f" style="table 8_CH" x="4" y="101" width="119" height="23"/>
+								<textElement verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<text><![CDATA[Porcentaje de eclosion (80% base) Reproductoras PESADAS]]></text>
+							</staticText>
+							<staticText>
+								<reportElement uuid="49cd1e9e-1c44-4d57-9f2b-c6e7cca5bf94" style="table 8_CH" x="4" y="124" width="119" height="24"/>
+								<textElement verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<text><![CDATA[Porcentaje de eclosión (30%) Reproductoras LIVIANAS]]></text>
+							</staticText>
+							<staticText>
+								<reportElement uuid="15a2849c-fb20-472e-b4bb-dec095416de9" style="table 8_CH" x="4" y="172" width="119" height="24"/>
+								<textElement verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<text><![CDATA[Porcentaje Mortalidad (10% base) PARRILLEROS]]></text>
+							</staticText>
+							<staticText>
+								<reportElement uuid="84bf34b2-05e1-4686-98e8-b7e5c3b9bd06" style="table 8_CH" x="4" y="220" width="119" height="22"/>
+								<textElement verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<text><![CDATA[Porcentaje Posturas (80%) PONEDORAS]]></text>
+							</staticText>
+							<staticText>
+								<reportElement uuid="fb924358-e859-4e01-9dcd-8110b2b4b781" style="table 8_CH" x="4" y="196" width="119" height="24"/>
+								<textElement verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<text><![CDATA[Cantidad de Pollos a la venta/año]]></text>
+							</staticText>
+							<staticText>
+								<reportElement uuid="1b393f66-3d37-4492-86d0-1706b56174c7" style="table 8_CH" x="4" y="242" width="119" height="24"/>
+								<textElement verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<text><![CDATA[Cantidad de huevos a la venta/año]]></text>
+							</staticText>
+							<staticText>
+								<reportElement uuid="722da740-c3bf-4367-95a6-c59adc9cf53e" style="table 8_CH" x="4" y="148" width="119" height="24"/>
+								<textElement verticalAlignment="Middle">
+									<font size="8" isBold="false"/>
+								</textElement>
+								<text><![CDATA[Cantidad de pollos BB a la venta/año]]></text>
+							</staticText>
+							<line>
+								<reportElement uuid="1d3fde88-0f85-4b58-86a0-8a8130d092f9" style="table 8_CH" x="0" y="242" width="123" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="c7b13705-9fff-44e3-bdb0-8ba9f0023416" style="table 8_CH" x="0" y="220" width="123" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="09977e37-3d5b-4608-87ab-c9fed138b858" style="table 8_CH" x="0" y="196" width="123" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="10662a70-d4ef-4b77-b7b0-9a327da3be52" style="table 8_CH" x="0" y="102" width="123" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="d6b87e75-0ca8-4a31-a889-511b242fd01e" style="table 8_CH" x="0" y="171" width="123" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="51dcfa73-3135-4993-90f9-6940ce608a0c" style="table 14_TH" x="0" y="13" width="123" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="470d9c35-972d-4373-a638-600666572d36" style="table 8_CH" x="0" y="122" width="123" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="b47f6974-473a-4004-98ab-70b6d2cc4a70" style="table 8_CH" x="0" y="148" width="123" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="97b185c4-a5c4-4fe1-8b73-06b0c1716034" style="table 8_CH" x="0" y="78" width="123" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="cfe7bba7-3040-4cd6-b0ff-c101d3add636" style="table 8_CH" x="0" y="38" width="123" height="1"/>
+							</line>
+							<staticText>
+								<reportElement uuid="63678c12-0ef3-4e3a-92eb-f9756e9c2db2" style="table 8_CH" x="4" y="38" width="119" height="19"/>
+								<textElement verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[En la Totalidad de Predio:]]></text>
+							</staticText>
+							<line>
+								<reportElement uuid="e08bc7f2-3db7-4774-8eae-bca6d6f74053" style="table 8_CH" x="0" y="56" width="123" height="1"/>
+							</line>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="29" uuid="9f476589-c3f5-4bf9-acd9-e9b7332594b8">
+						<jr:detailCell style="table 8_CH" height="266" rowSpan="1">
+							<line>
+								<reportElement uuid="93d49544-1959-49f2-8ea2-9a02b33d63c6" style="table 8_CH" x="0" y="220" width="29" height="1" backcolor="#FFFFFF"/>
+							</line>
+							<line>
+								<reportElement uuid="44ec53fd-f1c3-441a-80e8-3d7bee9a469e" style="table 8_CH" mode="Transparent" x="0" y="196" width="29" height="1" backcolor="#FFFFFF"/>
+							</line>
+							<line>
+								<reportElement uuid="c73a7c74-780b-4113-aa4b-d0216e0cd004" style="table 8_CH" mode="Transparent" x="0" y="148" width="29" height="1" backcolor="#FFFFFF"/>
+							</line>
+							<line>
+								<reportElement uuid="cc8463dd-20dd-40b4-a9df-50e02699c1ed" style="table 8_CH" mode="Transparent" x="0" y="171" width="29" height="1" backcolor="#FFFFFF"/>
+							</line>
+							<line>
+								<reportElement uuid="fc54d675-2bb9-4b33-b43f-3eee0463f993" style="table 8_CH" mode="Transparent" x="0" y="122" width="29" height="1" backcolor="#FFFFFF"/>
+							</line>
+							<line>
+								<reportElement uuid="4548cd99-617d-4108-a459-88cc53418c40" style="table 8_CH" mode="Transparent" x="0" y="102" width="29" height="1" backcolor="#FFFFFF"/>
+							</line>
+							<line>
+								<reportElement uuid="eb8e3bad-061f-4903-b9dc-70963006af16" style="table 8_CH" mode="Transparent" x="0" y="78" width="29" height="1" backcolor="#FFFFFF"/>
+							</line>
+							<line>
+								<reportElement uuid="03ed31ab-c87d-47d7-9848-621520266ab1" style="table 8_CH" mode="Transparent" x="0" y="56" width="29" height="1" backcolor="#FFFFFF"/>
+							</line>
+							<line>
+								<reportElement uuid="31dd1cd5-43da-43a4-80c2-4b6036361500" style="table 8_CH" mode="Transparent" x="0" y="38" width="29" height="1" backcolor="#FFFFFF"/>
+							</line>
+							<line>
+								<reportElement uuid="f309a477-ad6e-4e54-a4ab-8874ec9837c8" style="table 8_CH" mode="Transparent" x="0" y="13" width="29" height="1" backcolor="#FFFFFF"/>
+							</line>
+							<textField>
+								<reportElement uuid="567c2150-f894-4991-a0ed-f2f38926ab7e" style="table 8_CH" mode="Transparent" x="0" y="13" width="29" height="26" backcolor="#FFFFFF"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="6"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{supcultavicola}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="1b542b0d-0b61-4279-8514-071769fbee14" style="table 8_CH" mode="Transparent" x="0" y="57" width="29" height="22" backcolor="#FFFFFF"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="6"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{supinfraestructura}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="02057b61-c36e-4cb9-bd3e-783014ab1f5e" style="table 8_CH" mode="Transparent" x="0" y="79" width="28" height="22" backcolor="#FFFFFF"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="6"/>
+								</textElement>
+								<textFieldExpression><![CDATA[(
+$F{registrosanitario}.intValue() == 0 ? "":
+ ($F{registrosanitario}.intValue() == 1? "Vigente" :
+     ($F{registrosanitario}.intValue() == 2? "Vencido" :
+        ($F{registrosanitario}.intValue() == 3? "Adecuacion" :
+        ($F{registrosanitario}.intValue() == 4? "Sin Registro" :
+
+   ($F{registrosanitario}.intValue() == 5? "Renovacion" :
+       ($F{registrosanitario}.intValue() == 6? "Aprobacion" :
+           ($F{registrosanitario}.intValue() == 7? "Inicio del Tramite" :
+     "")))))))
+)]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="669f1249-b809-4c71-9614-f4d1a5604759" style="table 8_CH" mode="Transparent" x="0" y="103" width="28" height="19" backcolor="#FFFFFF"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="6"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{eclosionpesadas}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="5c7f9dab-ff9e-495a-a2c2-6a6d00ac98df" style="table 8_CH" mode="Transparent" x="0" y="124" width="29" height="24" backcolor="#FFFFFF"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="6"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{eclosionlivianas}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="e9e14757-7d02-43c8-85f4-a3dab97f9253" style="table 8_CH" mode="Transparent" x="0" y="172" width="29" height="24" backcolor="#FFFFFF"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="6"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{mortalidadparrillero}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="100c301f-95ce-4261-bafb-d93d67672edd" style="table 8_CH" mode="Transparent" x="0" y="221" width="28" height="22" backcolor="#FFFFFF"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="6"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{posturaponedoras}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="429fbcbf-dcbb-4e96-b936-1e92e062382a" style="table 8_CH" mode="Transparent" x="0" y="197" width="29" height="22" backcolor="#FFFFFF"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="6"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{cantpolloventa}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="e02250a2-5872-476a-9d02-e331692c965d" style="table 8_CH" mode="Transparent" x="0" y="242" width="29" height="23" backcolor="#FFFFFF"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="6"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{canthuevoventa}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="3624285f-b157-4e8a-9973-b54402b69131" style="table 8_CH" mode="Transparent" x="0" y="149" width="29" height="23" backcolor="#FFFFFF"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="6"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{cantpollobbventa}]]></textFieldExpression>
+							</textField>
+							<staticText>
+								<reportElement uuid="7077ce9e-d95f-42a6-91a5-65279ca59256" style="table 8_CH" mode="Transparent" x="0" y="38" width="28" height="18" backcolor="#FFFFFF"/>
+								<textElement>
+									<font size="6"/>
+								</textElement>
+								<text><![CDATA[]]></text>
+							</staticText>
+							<line>
+								<reportElement uuid="214f4d72-94e5-4077-8be7-7ec1d698e1c8" style="table 8_CH" mode="Transparent" x="0" y="242" width="29" height="1" backcolor="#FFFFFF"/>
+							</line>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<staticText>
+				<reportElement uuid="e4ab7c31-6a16-40d5-8075-6f5d48ee1d1b" x="10" y="27" width="153" height="14"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Situacion  Actual Avicola]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement uuid="2ed542ff-73d1-4c76-91be-9c8ecea2f8ae" key="table 14" style="table 8_CH" mode="Transparent" x="180" y="41" width="94" height="267"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="planavicola1" uuid="e72a54bf-c463-4dab-8c6c-a58c9d7f3688">
+						<datasetParameter name="codpar">
+							<datasetParameterExpression><![CDATA[$F{idparcela}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="93" uuid="3dfb9bd8-54e2-4019-9058-456e54f0e624">
+						<jr:detailCell style="table 14_TD" height="266" rowSpan="1">
+							<staticText>
+								<reportElement uuid="4089d028-94b9-42bf-a644-904a9b063f14" style="table 8_CH" mode="Opaque" x="3" y="0" width="90" height="14"/>
+								<textElement verticalAlignment="Middle">
+									<font size="7" isBold="true"/>
+								</textElement>
+								<text><![CDATA[En Area Deforestada Ilegal y/o PAS]]></text>
+							</staticText>
+							<staticText>
+								<reportElement uuid="66e4a8df-77c4-45ae-9f01-5ff0b48f41d1" style="table 8_CH" mode="Opaque" x="3" y="14" width="90" height="23"/>
+								<textElement verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<text><![CDATA[]]></text>
+							</staticText>
+							<staticText>
+								<reportElement uuid="ab8588fd-9af0-4a2e-aa84-6ee844343675" style="table 8_CH" mode="Opaque" x="3" y="56" width="90" height="23"/>
+								<textElement verticalAlignment="Middle">
+									<font size="8" isBold="false"/>
+								</textElement>
+								<text><![CDATA[]]></text>
+							</staticText>
+							<staticText>
+								<reportElement uuid="650e7456-2eff-4403-9212-ff19f6a07d42" style="table 8_CH" mode="Opaque" x="3" y="78" width="90" height="23"/>
+								<textElement verticalAlignment="Middle">
+									<font size="7" isBold="false"/>
+								</textElement>
+								<text><![CDATA[Registro Sanitario]]></text>
+							</staticText>
+							<staticText>
+								<reportElement uuid="43db13a1-c6a5-4c7c-81ff-d6fce8c2b06f" style="table 8_CH" mode="Opaque" x="3" y="101" width="90" height="23"/>
+								<textElement verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<text><![CDATA[Porcentaje de eclosion Reproductoras PESADAS]]></text>
+							</staticText>
+							<staticText>
+								<reportElement uuid="49cd1e9e-1c44-4d57-9f2b-c6e7cca5bf94" style="table 8_CH" mode="Opaque" x="3" y="124" width="90" height="24"/>
+								<textElement verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<text><![CDATA[Porcentaje de eclosión Reproductoras LIVIANAS]]></text>
+							</staticText>
+							<staticText>
+								<reportElement uuid="15a2849c-fb20-472e-b4bb-dec095416de9" style="table 8_CH" mode="Opaque" x="3" y="172" width="90" height="24"/>
+								<textElement verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<text><![CDATA[Porcentaje Mortalidad (%) PARRILLEROS]]></text>
+							</staticText>
+							<staticText>
+								<reportElement uuid="84bf34b2-05e1-4686-98e8-b7e5c3b9bd06" style="table 8_CH" mode="Opaque" x="3" y="220" width="90" height="22"/>
+								<textElement verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<text><![CDATA[Porcentaje Posturas (%) PONEDORAS]]></text>
+							</staticText>
+							<staticText>
+								<reportElement uuid="fb924358-e859-4e01-9dcd-8110b2b4b781" style="table 8_CH" mode="Opaque" x="3" y="196" width="90" height="24"/>
+								<textElement verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<text><![CDATA[Cantidad de Pollos a la venta/año]]></text>
+							</staticText>
+							<staticText>
+								<reportElement uuid="1b393f66-3d37-4492-86d0-1706b56174c7" style="table 8_CH" mode="Opaque" x="3" y="242" width="90" height="24"/>
+								<textElement verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<text><![CDATA[Cantidad de huevos a la venta/año]]></text>
+							</staticText>
+							<staticText>
+								<reportElement uuid="722da740-c3bf-4367-95a6-c59adc9cf53e" style="table 8_CH" mode="Opaque" x="3" y="148" width="90" height="24"/>
+								<textElement verticalAlignment="Middle">
+									<font size="7" isBold="false"/>
+								</textElement>
+								<text><![CDATA[Cantidad de pollos BB a la venta/año]]></text>
+							</staticText>
+							<line>
+								<reportElement uuid="1d3fde88-0f85-4b58-86a0-8a8130d092f9" mode="Opaque" x="2" y="242" width="91" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="c7b13705-9fff-44e3-bdb0-8ba9f0023416" mode="Opaque" x="2" y="220" width="91" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="09977e37-3d5b-4608-87ab-c9fed138b858" mode="Opaque" x="2" y="196" width="91" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="10662a70-d4ef-4b77-b7b0-9a327da3be52" mode="Opaque" x="2" y="101" width="91" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="d6b87e75-0ca8-4a31-a889-511b242fd01e" mode="Opaque" x="2" y="171" width="91" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="51dcfa73-3135-4993-90f9-6940ce608a0c" mode="Opaque" x="2" y="13" width="91" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="470d9c35-972d-4373-a638-600666572d36" mode="Opaque" x="2" y="122" width="91" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="b47f6974-473a-4004-98ab-70b6d2cc4a70" mode="Opaque" x="2" y="148" width="91" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="97b185c4-a5c4-4fe1-8b73-06b0c1716034" mode="Opaque" x="2" y="78" width="91" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="cfe7bba7-3040-4cd6-b0ff-c101d3add636" mode="Opaque" x="2" y="37" width="91" height="1"/>
+							</line>
+							<staticText>
+								<reportElement uuid="63678c12-0ef3-4e3a-92eb-f9756e9c2db2" style="table 8_CH" mode="Opaque" x="3" y="38" width="90" height="17"/>
+								<textElement verticalAlignment="Middle">
+									<font size="7" isBold="true"/>
+								</textElement>
+								<text><![CDATA[En la Totalidad de Predio:]]></text>
+							</staticText>
+							<line>
+								<reportElement uuid="e08bc7f2-3db7-4774-8eae-bca6d6f74053" mode="Opaque" x="2" y="55" width="91" height="1"/>
+							</line>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<componentElement>
+				<reportElement uuid="2ed542ff-73d1-4c76-91be-9c8ecea2f8ae" key="table 14" style="table 8_CH" x="274" y="41" width="46" height="267"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="planavicola1" uuid="e72a54bf-c463-4dab-8c6c-a58c9d7f3688">
+						<datasetParameter name="codpar">
+							<datasetParameterExpression><![CDATA[$F{idparcela}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="44" uuid="9f476589-c3f5-4bf9-acd9-e9b7332594b8">
+						<jr:detailCell style="table 8_CH" height="266" rowSpan="1">
+							<line>
+								<reportElement uuid="93d49544-1959-49f2-8ea2-9a02b33d63c6" style="table 8_CH" x="0" y="37" width="44" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="44ec53fd-f1c3-441a-80e8-3d7bee9a469e" style="table 8_CH" x="0" y="13" width="44" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="c73a7c74-780b-4113-aa4b-d0216e0cd004" style="table 8_CH" x="0" y="55" width="44" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="cc8463dd-20dd-40b4-a9df-50e02699c1ed" style="table 8_CH" x="0" y="78" width="44" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="fc54d675-2bb9-4b33-b43f-3eee0463f993" style="table 8_CH" x="0" y="101" width="44" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="4548cd99-617d-4108-a459-88cc53418c40" style="table 8_CH" x="0" y="122" width="44" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="eb8e3bad-061f-4903-b9dc-70963006af16" style="table 8_CH" x="0" y="148" width="44" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="03ed31ab-c87d-47d7-9848-621520266ab1" style="table 8_CH" x="0" y="171" width="44" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="31dd1cd5-43da-43a4-80c2-4b6036361500" style="table 8_CH" x="0" y="196" width="44" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="f309a477-ad6e-4e54-a4ab-8874ec9837c8" style="table 8_CH" x="0" y="220" width="44" height="1"/>
+							</line>
+							<textField>
+								<reportElement uuid="02057b61-c36e-4cb9-bd3e-783014ab1f5e" style="table 8_CH" x="0" y="79" width="44" height="22"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[(
+$F{registrosanitario1}.intValue() == 0 ? "":
+ ($F{registrosanitario1}.intValue() == 1? "Vigente" :
+     ($F{registrosanitario1}.intValue() == 2? "Vencido" :
+        ($F{registrosanitario1}.intValue() == 3? "Adecuacion" :
+        ($F{registrosanitario1}.intValue() == 4? "Sin Registro" :
+
+   ($F{registrosanitario1}.intValue() == 5? "Renovacion" :
+       ($F{registrosanitario1}.intValue() == 6? "Aprobacion" :
+           ($F{registrosanitario1}.intValue() == 7? "Inicio del Tramite" :
+     "")))))))
+)]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="669f1249-b809-4c71-9614-f4d1a5604759" style="table 8_CH" x="0" y="102" width="44" height="21"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="9"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{eclosionpesadas1}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="5c7f9dab-ff9e-495a-a2c2-6a6d00ac98df" style="table 8_CH" x="0" y="125" width="44" height="24"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="9"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{eclosionlivianas1}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="e9e14757-7d02-43c8-85f4-a3dab97f9253" style="table 8_CH" x="0" y="172" width="44" height="24"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="9"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{mortalidadparrillero1}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="100c301f-95ce-4261-bafb-d93d67672edd" style="table 8_CH" x="0" y="221" width="44" height="21"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="9"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{posturaponedoras1}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="429fbcbf-dcbb-4e96-b936-1e92e062382a" style="table 8_CH" x="0" y="197" width="44" height="23"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="9"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{cantpolloventa1}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="e02250a2-5872-476a-9d02-e331692c965d" style="table 8_CH" x="0" y="243" width="44" height="23"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="9"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{canthuevoventa1}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="3624285f-b157-4e8a-9973-b54402b69131" style="table 8_CH" x="0" y="149" width="44" height="22"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="9"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{cantpollobbventa1}]]></textFieldExpression>
+							</textField>
+							<staticText>
+								<reportElement uuid="7077ce9e-d95f-42a6-91a5-65279ca59256" style="table 8_CH" x="0" y="1" width="44" height="13"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[2014]]></text>
+							</staticText>
+							<line>
+								<reportElement uuid="214f4d72-94e5-4077-8be7-7ec1d698e1c8" style="table 8_CH" x="0" y="242" width="44" height="1"/>
+							</line>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<componentElement>
+				<reportElement uuid="2ed542ff-73d1-4c76-91be-9c8ecea2f8ae" key="table 14" style="table 8_CH" x="320" y="41" width="46" height="267"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="planavicola2" uuid="e72a54bf-c463-4dab-8c6c-a58c9d7f3688">
+						<datasetParameter name="codpar">
+							<datasetParameterExpression><![CDATA[$F{idparcela}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="44" uuid="9f476589-c3f5-4bf9-acd9-e9b7332594b8">
+						<jr:detailCell style="table 8_CH" height="266" rowSpan="1">
+							<line>
+								<reportElement uuid="93d49544-1959-49f2-8ea2-9a02b33d63c6" style="table 8_CH" x="0" y="37" width="44" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="44ec53fd-f1c3-441a-80e8-3d7bee9a469e" style="table 8_CH" x="0" y="13" width="44" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="c73a7c74-780b-4113-aa4b-d0216e0cd004" style="table 8_CH" x="0" y="55" width="44" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="cc8463dd-20dd-40b4-a9df-50e02699c1ed" style="table 8_CH" x="0" y="78" width="44" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="fc54d675-2bb9-4b33-b43f-3eee0463f993" style="table 8_CH" x="0" y="101" width="44" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="4548cd99-617d-4108-a459-88cc53418c40" style="table 8_CH" x="0" y="122" width="44" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="eb8e3bad-061f-4903-b9dc-70963006af16" style="table 8_CH" x="0" y="148" width="44" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="03ed31ab-c87d-47d7-9848-621520266ab1" style="table 8_CH" x="0" y="171" width="44" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="31dd1cd5-43da-43a4-80c2-4b6036361500" style="table 8_CH" x="0" y="196" width="44" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="f309a477-ad6e-4e54-a4ab-8874ec9837c8" style="table 8_CH" x="0" y="220" width="44" height="1"/>
+							</line>
+							<textField>
+								<reportElement uuid="02057b61-c36e-4cb9-bd3e-783014ab1f5e" style="table 8_CH" x="0" y="79" width="44" height="22"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[(
+$F{registrosanitario2}.intValue() == 0 ? "":
+ ($F{registrosanitario2}.intValue() == 1? "Vigente" :
+     ($F{registrosanitario2}.intValue() == 2? "Vencido" :
+        ($F{registrosanitario2}.intValue() == 3? "Adecuacion" :
+        ($F{registrosanitario2}.intValue() == 4? "Sin Registro" :
+
+   ($F{registrosanitario2}.intValue() == 5? "Renovacion" :
+       ($F{registrosanitario2}.intValue() == 6? "Aprobacion" :
+           ($F{registrosanitario2}.intValue() == 7? "Inicio del Tramite" :
+     "")))))))
+)]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="669f1249-b809-4c71-9614-f4d1a5604759" style="table 8_CH" x="0" y="102" width="44" height="21"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="9"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{eclosionpesadas2}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="5c7f9dab-ff9e-495a-a2c2-6a6d00ac98df" style="table 8_CH" x="0" y="125" width="44" height="24"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="9"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{eclosionlivianas2}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="e9e14757-7d02-43c8-85f4-a3dab97f9253" style="table 8_CH" x="0" y="172" width="44" height="24"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="9"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{mortalidadparrillero2}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="100c301f-95ce-4261-bafb-d93d67672edd" style="table 8_CH" x="0" y="221" width="44" height="21"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="9"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{posturaponedoras2}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="429fbcbf-dcbb-4e96-b936-1e92e062382a" style="table 8_CH" x="0" y="197" width="44" height="23"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="9"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{cantpolloventa2}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="e02250a2-5872-476a-9d02-e331692c965d" style="table 8_CH" x="0" y="243" width="44" height="23"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="9"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{canthuevoventa2}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="3624285f-b157-4e8a-9973-b54402b69131" style="table 8_CH" x="0" y="149" width="44" height="22"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="9"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{cantpollobbventa2}]]></textFieldExpression>
+							</textField>
+							<staticText>
+								<reportElement uuid="7077ce9e-d95f-42a6-91a5-65279ca59256" style="table 8_CH" x="0" y="1" width="44" height="13"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[2015]]></text>
+							</staticText>
+							<line>
+								<reportElement uuid="214f4d72-94e5-4077-8be7-7ec1d698e1c8" style="table 8_CH" x="0" y="242" width="44" height="1"/>
+							</line>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<componentElement>
+				<reportElement uuid="2ed542ff-73d1-4c76-91be-9c8ecea2f8ae" key="table 14" style="table 8_CH" x="367" y="41" width="46" height="267"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="planavicola3" uuid="e72a54bf-c463-4dab-8c6c-a58c9d7f3688">
+						<datasetParameter name="codpar">
+							<datasetParameterExpression><![CDATA[$F{idparcela}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="44" uuid="9f476589-c3f5-4bf9-acd9-e9b7332594b8">
+						<jr:detailCell style="table 8_CH" height="266" rowSpan="1">
+							<line>
+								<reportElement uuid="93d49544-1959-49f2-8ea2-9a02b33d63c6" x="0" y="37" width="44" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="44ec53fd-f1c3-441a-80e8-3d7bee9a469e" x="0" y="13" width="44" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="c73a7c74-780b-4113-aa4b-d0216e0cd004" x="0" y="55" width="44" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="cc8463dd-20dd-40b4-a9df-50e02699c1ed" x="0" y="78" width="44" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="fc54d675-2bb9-4b33-b43f-3eee0463f993" x="0" y="101" width="44" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="4548cd99-617d-4108-a459-88cc53418c40" x="0" y="122" width="44" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="eb8e3bad-061f-4903-b9dc-70963006af16" x="0" y="148" width="44" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="03ed31ab-c87d-47d7-9848-621520266ab1" x="0" y="171" width="44" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="31dd1cd5-43da-43a4-80c2-4b6036361500" x="0" y="196" width="44" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="f309a477-ad6e-4e54-a4ab-8874ec9837c8" x="0" y="220" width="44" height="1"/>
+							</line>
+							<textField>
+								<reportElement uuid="02057b61-c36e-4cb9-bd3e-783014ab1f5e" x="0" y="79" width="44" height="22"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[(
+$F{registrosanitario3}.intValue() == 0 ? "":
+ ($F{registrosanitario3}.intValue() == 1? "Vigente" :
+     ($F{registrosanitario3}.intValue() == 2? "Vencido" :
+        ($F{registrosanitario3}.intValue() == 3? "Adecuacion" :
+        ($F{registrosanitario3}.intValue() == 4? "Sin Registro" :
+
+   ($F{registrosanitario3}.intValue() == 5? "Renovacion" :
+       ($F{registrosanitario3}.intValue() == 6? "Aprobacion" :
+           ($F{registrosanitario3}.intValue() == 7? "Inicio del Tramite" :
+     "")))))))
+)]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="669f1249-b809-4c71-9614-f4d1a5604759" x="0" y="102" width="44" height="21"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="9"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{eclosionpesadas3}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="5c7f9dab-ff9e-495a-a2c2-6a6d00ac98df" x="0" y="125" width="44" height="24"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="9"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{eclosionlivianas3}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="e9e14757-7d02-43c8-85f4-a3dab97f9253" x="0" y="172" width="44" height="24"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="9"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{mortalidadparrillero3}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="100c301f-95ce-4261-bafb-d93d67672edd" x="0" y="221" width="44" height="21"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="9"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{posturaponedoras3}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="429fbcbf-dcbb-4e96-b936-1e92e062382a" x="0" y="197" width="44" height="23"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="9"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{cantpolloventa3}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="e02250a2-5872-476a-9d02-e331692c965d" x="0" y="243" width="44" height="23"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="9"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{canthuevoventa3}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="3624285f-b157-4e8a-9973-b54402b69131" x="0" y="149" width="44" height="22"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="9"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{cantpollobbventa3}]]></textFieldExpression>
+							</textField>
+							<staticText>
+								<reportElement uuid="7077ce9e-d95f-42a6-91a5-65279ca59256" x="0" y="1" width="44" height="13"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[2016]]></text>
+							</staticText>
+							<line>
+								<reportElement uuid="214f4d72-94e5-4077-8be7-7ec1d698e1c8" x="0" y="242" width="44" height="1"/>
+							</line>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<componentElement>
+				<reportElement uuid="2ed542ff-73d1-4c76-91be-9c8ecea2f8ae" key="table 14" style="table 8_CH" x="413" y="41" width="46" height="267"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="planavicola4" uuid="e72a54bf-c463-4dab-8c6c-a58c9d7f3688">
+						<datasetParameter name="codpar">
+							<datasetParameterExpression><![CDATA[$F{idparcela}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="44" uuid="9f476589-c3f5-4bf9-acd9-e9b7332594b8">
+						<jr:detailCell style="table 8_CH" height="266" rowSpan="1">
+							<line>
+								<reportElement uuid="93d49544-1959-49f2-8ea2-9a02b33d63c6" x="0" y="37" width="44" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="44ec53fd-f1c3-441a-80e8-3d7bee9a469e" x="0" y="13" width="44" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="c73a7c74-780b-4113-aa4b-d0216e0cd004" x="0" y="55" width="44" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="cc8463dd-20dd-40b4-a9df-50e02699c1ed" x="0" y="78" width="44" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="fc54d675-2bb9-4b33-b43f-3eee0463f993" x="0" y="101" width="44" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="4548cd99-617d-4108-a459-88cc53418c40" x="0" y="122" width="44" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="eb8e3bad-061f-4903-b9dc-70963006af16" x="0" y="148" width="44" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="03ed31ab-c87d-47d7-9848-621520266ab1" x="0" y="171" width="44" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="31dd1cd5-43da-43a4-80c2-4b6036361500" x="0" y="196" width="44" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="f309a477-ad6e-4e54-a4ab-8874ec9837c8" x="0" y="220" width="44" height="1"/>
+							</line>
+							<textField>
+								<reportElement uuid="02057b61-c36e-4cb9-bd3e-783014ab1f5e" x="0" y="79" width="44" height="22"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[(
+$F{registrosanitario4}.intValue() == 0 ? "":
+ ($F{registrosanitario4}.intValue() == 1? "Vigente" :
+     ($F{registrosanitario4}.intValue() == 2? "Vencido" :
+        ($F{registrosanitario4}.intValue() == 3? "Adecuacion" :
+        ($F{registrosanitario4}.intValue() == 4? "Sin Registro" :
+
+   ($F{registrosanitario4}.intValue() == 5? "Renovacion" :
+       ($F{registrosanitario4}.intValue() == 6? "Aprobacion" :
+           ($F{registrosanitario4}.intValue() == 7? "Inicio del Tramite" :
+     "")))))))
+)]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="669f1249-b809-4c71-9614-f4d1a5604759" x="0" y="102" width="44" height="21"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="9"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{eclosionpesadas4}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="5c7f9dab-ff9e-495a-a2c2-6a6d00ac98df" x="0" y="125" width="44" height="24"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="9"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{eclosionlivianas4}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="e9e14757-7d02-43c8-85f4-a3dab97f9253" x="0" y="172" width="44" height="24"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="9"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{mortalidadparrillero4}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="100c301f-95ce-4261-bafb-d93d67672edd" x="0" y="221" width="44" height="21"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="9"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{posturaponedoras4}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="429fbcbf-dcbb-4e96-b936-1e92e062382a" x="0" y="197" width="44" height="23"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="9"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{cantpolloventa4}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="e02250a2-5872-476a-9d02-e331692c965d" x="0" y="243" width="44" height="23"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="9"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{canthuevoventa4}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="3624285f-b157-4e8a-9973-b54402b69131" x="0" y="149" width="44" height="22"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="9"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{cantpollobbventa4}]]></textFieldExpression>
+							</textField>
+							<staticText>
+								<reportElement uuid="7077ce9e-d95f-42a6-91a5-65279ca59256" x="0" y="1" width="44" height="13"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[2017]]></text>
+							</staticText>
+							<line>
+								<reportElement uuid="214f4d72-94e5-4077-8be7-7ec1d698e1c8" x="0" y="242" width="44" height="1"/>
+							</line>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<componentElement>
+				<reportElement uuid="2ed542ff-73d1-4c76-91be-9c8ecea2f8ae" key="table 14" style="table 14" x="458" y="41" width="47" height="267"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="planavicola1" uuid="e72a54bf-c463-4dab-8c6c-a58c9d7f3688">
+						<datasetParameter name="codpar">
+							<datasetParameterExpression><![CDATA[$F{idparcela}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="47" uuid="9f476589-c3f5-4bf9-acd9-e9b7332594b8">
+						<jr:detailCell style="table 14_TD" height="266" rowSpan="1">
+							<line>
+								<reportElement uuid="93d49544-1959-49f2-8ea2-9a02b33d63c6" x="0" y="37" width="45" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="44ec53fd-f1c3-441a-80e8-3d7bee9a469e" x="0" y="13" width="45" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="c73a7c74-780b-4113-aa4b-d0216e0cd004" x="0" y="55" width="45" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="cc8463dd-20dd-40b4-a9df-50e02699c1ed" x="0" y="78" width="45" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="fc54d675-2bb9-4b33-b43f-3eee0463f993" x="0" y="101" width="45" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="4548cd99-617d-4108-a459-88cc53418c40" x="0" y="122" width="45" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="eb8e3bad-061f-4903-b9dc-70963006af16" x="0" y="148" width="45" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="03ed31ab-c87d-47d7-9848-621520266ab1" x="0" y="171" width="45" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="31dd1cd5-43da-43a4-80c2-4b6036361500" x="0" y="196" width="45" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="f309a477-ad6e-4e54-a4ab-8874ec9837c8" x="0" y="220" width="45" height="1"/>
+							</line>
+							<textField isBlankWhenNull="true">
+								<reportElement uuid="02057b61-c36e-4cb9-bd3e-783014ab1f5e" x="0" y="79" width="45" height="22"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[]]></textFieldExpression>
+							</textField>
+							<textField isBlankWhenNull="true">
+								<reportElement uuid="669f1249-b809-4c71-9614-f4d1a5604759" x="0" y="102" width="45" height="21"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="9"/>
+								</textElement>
+								<textFieldExpression><![CDATA[]]></textFieldExpression>
+							</textField>
+							<textField isBlankWhenNull="true">
+								<reportElement uuid="5c7f9dab-ff9e-495a-a2c2-6a6d00ac98df" x="0" y="125" width="45" height="24"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="9"/>
+								</textElement>
+								<textFieldExpression><![CDATA[]]></textFieldExpression>
+							</textField>
+							<textField isBlankWhenNull="true">
+								<reportElement uuid="e9e14757-7d02-43c8-85f4-a3dab97f9253" x="0" y="172" width="45" height="24"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="9"/>
+								</textElement>
+								<textFieldExpression><![CDATA[]]></textFieldExpression>
+							</textField>
+							<textField isBlankWhenNull="true">
+								<reportElement uuid="100c301f-95ce-4261-bafb-d93d67672edd" x="0" y="221" width="45" height="21"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="9"/>
+								</textElement>
+								<textFieldExpression><![CDATA[]]></textFieldExpression>
+							</textField>
+							<textField isBlankWhenNull="true">
+								<reportElement uuid="429fbcbf-dcbb-4e96-b936-1e92e062382a" x="0" y="197" width="45" height="23"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="9"/>
+								</textElement>
+								<textFieldExpression><![CDATA[]]></textFieldExpression>
+							</textField>
+							<textField isBlankWhenNull="true">
+								<reportElement uuid="e02250a2-5872-476a-9d02-e331692c965d" x="0" y="243" width="45" height="23"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="9"/>
+								</textElement>
+								<textFieldExpression><![CDATA[]]></textFieldExpression>
+							</textField>
+							<textField isBlankWhenNull="true">
+								<reportElement uuid="3624285f-b157-4e8a-9973-b54402b69131" x="0" y="149" width="45" height="22"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="9"/>
+								</textElement>
+								<textFieldExpression><![CDATA[]]></textFieldExpression>
+							</textField>
+							<staticText>
+								<reportElement uuid="7077ce9e-d95f-42a6-91a5-65279ca59256" x="0" y="1" width="45" height="13"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[2016]]></text>
+							</staticText>
+							<line>
+								<reportElement uuid="214f4d72-94e5-4077-8be7-7ec1d698e1c8" x="0" y="242" width="45" height="1"/>
+							</line>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<componentElement>
+				<reportElement uuid="2ed542ff-73d1-4c76-91be-9c8ecea2f8ae" key="table 14" style="table 8_CH" x="505" y="41" width="46" height="267"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="planavicola5" uuid="e72a54bf-c463-4dab-8c6c-a58c9d7f3688">
+						<datasetParameter name="codpar">
+							<datasetParameterExpression><![CDATA[$F{idparcela}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="44" uuid="9f476589-c3f5-4bf9-acd9-e9b7332594b8">
+						<jr:detailCell style="table 8_CH" height="266" rowSpan="1">
+							<line>
+								<reportElement uuid="93d49544-1959-49f2-8ea2-9a02b33d63c6" style="table 8_CH" x="0" y="36" width="44" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="44ec53fd-f1c3-441a-80e8-3d7bee9a469e" style="table 8_CH" x="0" y="12" width="44" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="c73a7c74-780b-4113-aa4b-d0216e0cd004" style="table 8_CH" x="0" y="54" width="44" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="cc8463dd-20dd-40b4-a9df-50e02699c1ed" style="table 8_CH" x="0" y="77" width="44" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="fc54d675-2bb9-4b33-b43f-3eee0463f993" style="table 8_CH" x="0" y="100" width="44" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="4548cd99-617d-4108-a459-88cc53418c40" style="table 8_CH" x="0" y="121" width="44" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="eb8e3bad-061f-4903-b9dc-70963006af16" style="table 8_CH" x="0" y="147" width="44" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="03ed31ab-c87d-47d7-9848-621520266ab1" style="table 8_CH" x="0" y="170" width="44" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="31dd1cd5-43da-43a4-80c2-4b6036361500" style="table 8_CH" x="0" y="195" width="44" height="1"/>
+							</line>
+							<line>
+								<reportElement uuid="f309a477-ad6e-4e54-a4ab-8874ec9837c8" style="table 8_CH" x="0" y="219" width="44" height="1"/>
+							</line>
+							<textField>
+								<reportElement uuid="02057b61-c36e-4cb9-bd3e-783014ab1f5e" style="table 8_CH" x="0" y="78" width="44" height="22"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[(
+$F{registrosanitario5}.intValue() == 0 ? "":
+ ($F{registrosanitario5}.intValue() == 1? "Vigente" :
+     ($F{registrosanitario5}.intValue() == 2? "Vencido" :
+        ($F{registrosanitario5}.intValue() == 3? "Adecuacion" :
+        ($F{registrosanitario5}.intValue() == 4? "Sin Registro" :
+
+   ($F{registrosanitario5}.intValue() == 5? "Renovacion" :
+       ($F{registrosanitario5}.intValue() == 6? "Aprobacion" :
+           ($F{registrosanitario5}.intValue() == 7? "Inicio del Tramite" :
+     "")))))))
+)]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="669f1249-b809-4c71-9614-f4d1a5604759" style="table 8_CH" x="0" y="101" width="44" height="21"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="9"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{eclosionpesadas5}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="5c7f9dab-ff9e-495a-a2c2-6a6d00ac98df" style="table 8_CH" x="0" y="124" width="44" height="24"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="9"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{eclosionlivianas5}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="e9e14757-7d02-43c8-85f4-a3dab97f9253" style="table 8_CH" x="0" y="171" width="44" height="24"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="9"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{mortalidadparrillero5}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="100c301f-95ce-4261-bafb-d93d67672edd" style="table 8_CH" x="0" y="220" width="44" height="21"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="9"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{posturaponedoras5}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="429fbcbf-dcbb-4e96-b936-1e92e062382a" style="table 8_CH" x="0" y="196" width="44" height="23"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="9"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{cantpolloventa5}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="e02250a2-5872-476a-9d02-e331692c965d" style="table 8_CH" x="0" y="242" width="44" height="23"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="9"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{canthuevoventa5}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="3624285f-b157-4e8a-9973-b54402b69131" style="table 8_CH" x="0" y="148" width="44" height="22"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="9"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{cantpollobbventa5}]]></textFieldExpression>
+							</textField>
+							<staticText>
+								<reportElement uuid="7077ce9e-d95f-42a6-91a5-65279ca59256" style="table 8_CH" x="0" y="0" width="44" height="13"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[2018]]></text>
+							</staticText>
+							<line>
+								<reportElement uuid="214f4d72-94e5-4077-8be7-7ec1d698e1c8" style="table 8_CH" x="0" y="241" width="44" height="1"/>
+							</line>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<staticText>
+				<reportElement uuid="75eba32c-460f-4f0e-a3e8-911fb31d89ef" x="458" y="27" width="47" height="14"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Ejecutado]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="9" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="18" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="8" splitType="Stretch"/>
+	</summary>
+</jasperReport>

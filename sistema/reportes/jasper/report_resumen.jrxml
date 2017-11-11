@@ -1,0 +1,822 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report_predios" language="groovy" pageWidth="1008" pageHeight="612" orientation="Landscape" columnWidth="968" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a8a5627a-8be8-4649-9fda-6a8484382c9c">
+	<property name="ireport.zoom" value="0.8264462809917368"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="134"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="New Dataset contador predios" uuid="5d77d8b8-690f-4362-a5d0-b1c73e783545">
+		<parameter name="par_estado" class="java.lang.String">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<queryString>
+			<![CDATA[select estado ,count(estado) from view_report_predios_habilitados
+GROUP BY estado]]>
+		</queryString>
+		<field name="estado" class="java.lang.String"/>
+		<field name="count" class="java.lang.Long"/>
+	</subDataset>
+	<subDataset name="New Dataset total predios" uuid="10a4eba7-8f28-43c1-b76b-9d59013c10e3">
+		<queryString>
+			<![CDATA[select count(estado) from view_report_predios_habilitados]]>
+		</queryString>
+		<field name="count" class="java.lang.Long"/>
+	</subDataset>
+	<subDataset name="New Dataset superficies" uuid="0e54b75d-35c4-41ac-a5e2-a500dbf1c981">
+		<queryString>
+			<![CDATA[SELECT
+count(r_general.idregistro) as count_t,
+round((SUM(r_general.suppredio))::numeric(15,4), 4) as suppredio_t,
+  round((SUM(r_general.supdefilegal))::numeric(15,4), 4)as supdefilegal_t,
+ round((SUM(r_general.suptpfp))::numeric(15,4), 4) as suptpfp_t,
+  round((SUM(r_general.supreftpfp))::numeric(15,4), 4)as supreftpfp_t,
+  round((SUM(r_general.supalitpfp))::numeric(15,4), 4)as supalitpfp_t,
+  round((SUM(r_general.supselstpfp))::numeric(15,4), 4)as supselstpfp_t,
+ round((SUM(r_general.suptum))::numeric(15,4), 4)as suptum_t,
+ round((SUM(r_general.supalitum))::numeric(15,4), 4) as supalitum_t,
+  round((SUM(r_general.supselstum))::numeric(15,4), 4)as supselstum_t,
+ round((SUM(r_general.supmejoras))::numeric(15,4), 4)as supmejoras_t,
+ round((SUM(r_general.suppas))::numeric(15,4), 4) as suppas_t,
+  round((SUM(r_general.supselspas))::numeric(15,4), 4)as supselspas_t,
+  round((SUM(r_general.supalipas))::numeric(15,4), 4)as supalipas_t,
+ round((SUM(r_general.supprodali))::numeric(15,4), 4) as supprodali_t
+FROM r_general]]>
+		</queryString>
+		<field name="count_t" class="java.lang.Long"/>
+		<field name="suppredio_t" class="java.math.BigDecimal"/>
+		<field name="supdefilegal_t" class="java.math.BigDecimal"/>
+		<field name="suptpfp_t" class="java.math.BigDecimal"/>
+		<field name="supreftpfp_t" class="java.math.BigDecimal"/>
+		<field name="supalitpfp_t" class="java.math.BigDecimal"/>
+		<field name="supselstpfp_t" class="java.math.BigDecimal"/>
+		<field name="suptum_t" class="java.math.BigDecimal"/>
+		<field name="supalitum_t" class="java.math.BigDecimal"/>
+		<field name="supselstum_t" class="java.math.BigDecimal"/>
+		<field name="supmejoras_t" class="java.math.BigDecimal"/>
+		<field name="suppas_t" class="java.math.BigDecimal"/>
+		<field name="supselspas_t" class="java.math.BigDecimal"/>
+		<field name="supalipas_t" class="java.math.BigDecimal"/>
+		<field name="supprodali_t" class="java.math.BigDecimal"/>
+	</subDataset>
+	<subDataset name="New Dataset supsel conservar" uuid="b3045b2b-8db8-4730-b1d8-4fa6b61fbe24">
+		<queryString>
+			<![CDATA[select
+codificadores.nombrecodificador as tipo_sel,
+round((SUM(superficiesel.supseltpfp))::numeric(15,4), 4)+ round((SUM(superficiesel.supseltum))::numeric(15,4), 4)as supsel,
+ round((SUM(superficiesel.supselpas))::numeric(15,4), 4) as supselpas
+ from superficiesel, codificadores
+where superficiesel.idtiposel=codificadores.idcodificadores and superficiesel.idtiposel=106
+group by codificadores.nombrecodificador]]>
+		</queryString>
+		<field name="tipo_sel" class="java.lang.String"/>
+		<field name="supsel" class="java.math.BigDecimal"/>
+		<field name="supselpas" class="java.math.BigDecimal"/>
+	</subDataset>
+	<subDataset name="New Dataset supsel restituir" uuid="275de916-038d-492c-98bf-318aa86f23d2">
+		<queryString>
+			<![CDATA[select
+codificadores.nombrecodificador as tipo_sel,
+round((SUM(superficiesel.supseltpfp))::numeric(15,4), 4)+ round((SUM(superficiesel.supseltum))::numeric(15,4), 4)as supsel,
+ round((SUM(superficiesel.supselpas))::numeric(15,4), 4) as supselpas
+ from superficiesel, codificadores
+where superficiesel.idtiposel=codificadores.idcodificadores and superficiesel.idtiposel=105
+group by codificadores.nombrecodificador]]>
+		</queryString>
+		<field name="tipo_sel" class="java.lang.String"/>
+		<field name="supsel" class="java.math.BigDecimal"/>
+		<field name="supselpas" class="java.math.BigDecimal"/>
+	</subDataset>
+	<subDataset name="New Dataset suprestotal" uuid="8ce8f527-ba1d-4595-9592-29d54d7891a5">
+		<queryString>
+			<![CDATA[select sum(supreftpfp_t) from view_total_superficies]]>
+		</queryString>
+		<field name="sum" class="java.math.BigDecimal"/>
+	</subDataset>
+	<subDataset name="New Dataset total pagos" uuid="df3d136c-dc55-43f4-a9b7-cab7d29000ab">
+		<queryString>
+			<![CDATA[select view_total_pagos.montodeposito,view_total_preliquidacion.pre_montototalbs,
+ view_total_preliquidacion.pre_montototalbs - view_total_pagos.montodeposito as por_recaudar
+from view_total_pagos ,view_total_preliquidacion]]>
+		</queryString>
+		<field name="montodeposito" class="java.math.BigDecimal"/>
+		<field name="pre_montototalbs" class="java.math.BigDecimal"/>
+		<field name="por_recaudar" class="java.math.BigDecimal"/>
+	</subDataset>
+	<queryString>
+		<![CDATA[select view_total_pagos.montodeposito,view_total_preliquidacion.pre_montototalbs,
+ view_total_preliquidacion.pre_montototalbs - view_total_pagos.montodeposito as por_recaudar
+from view_total_pagos ,view_total_preliquidacion]]>
+	</queryString>
+	<field name="montodeposito" class="java.math.BigDecimal"/>
+	<field name="pre_montototalbs" class="java.math.BigDecimal"/>
+	<field name="por_recaudar" class="java.math.BigDecimal"/>
+	<variable name="count_1" class="java.lang.Long" calculation="First">
+		<variableExpression><![CDATA[]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="66" splitType="Stretch">
+			<image>
+				<reportElement uuid="bb196fa5-4a28-49b0-89e6-89415ee08658" x="0" y="1" width="78" height="65"/>
+				<imageExpression><![CDATA["C:\\xampp\\htdocs\\PPARB\\sistema\\reportes\\reportes\\1_bolivia.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="ceebef54-f1f1-4d97-be8c-82e2de70fa16" x="388" y="1" width="200" height="64"/>
+				<imageExpression><![CDATA["C:\\xampp\\htdocs\\PPARB\\sistema\\reportes\\reportes\\2_mdryt.jpg"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="8f97c695-0e0d-4c34-b25f-6adf0669bb37" x="786" y="0" width="182" height="65"/>
+				<imageExpression><![CDATA["C:\\xampp\\htdocs\\PPARB\\sistema\\reportes\\reportes\\3_abt.png"]]></imageExpression>
+			</image>
+			<line>
+				<reportElement uuid="3e0bcedc-2939-4235-aa18-f3d1aaf1bb97" x="0" y="65" width="968" height="1"/>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="5" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="399" splitType="Stretch">
+			<componentElement>
+				<reportElement uuid="27ef7db2-e179-4db2-9388-3e1c3ed4d95c" key="table 1" style="table 1" x="60" y="58" width="851" height="15" isRemoveLineWhenBlank="true"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="New Dataset contador predios" uuid="e6a1998d-a4b0-4c25-a1ca-a358249ec8b2">
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="535" uuid="92f33812-169a-48fe-93b1-d0e30c5e6678">
+						<jr:detailCell style="table 1_TD" height="16" rowSpan="1">
+							<textField>
+								<reportElement uuid="658e2c24-9d57-4d35-b274-a0d49f1ed452" x="16" y="0" width="135" height="15"/>
+								<textElement verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA["TOTAL " +$F{estado}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="179" uuid="833f3ba2-4599-4e9a-b61f-05409bfddf2b">
+						<jr:detailCell style="table 1_TD" height="16" rowSpan="1">
+							<textField>
+								<reportElement uuid="093dc325-8c5d-4bf1-8242-4381c020c214" x="44" y="0" width="74" height="15"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{count}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="128" uuid="1512675d-51a3-4d9c-b3e5-ceefed0d1994">
+						<jr:detailCell style="table_TD" height="16" rowSpan="1">
+							<staticText>
+								<reportElement uuid="67bebe0b-82b2-4f68-a4fe-16dc6845e9ef" x="21" y="0" width="92" height="15"/>
+								<textElement verticalAlignment="Middle"/>
+								<text><![CDATA[Predios]]></text>
+							</staticText>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<componentElement>
+				<reportElement uuid="27ef7db2-e179-4db2-9388-3e1c3ed4d95c" key="table 1" style="table 1" x="60" y="138" width="851" height="15" isRemoveLineWhenBlank="true"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="New Dataset total predios" uuid="e6a1998d-a4b0-4c25-a1ca-a358249ec8b2">
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="535" uuid="92f33812-169a-48fe-93b1-d0e30c5e6678">
+						<jr:detailCell style="table 1_TD" height="16" rowSpan="1">
+							<textField>
+								<reportElement uuid="658e2c24-9d57-4d35-b274-a0d49f1ed452" x="16" y="0" width="135" height="15"/>
+								<textElement verticalAlignment="Middle">
+									<font isBold="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA["TOTAL REGISTRADOS"]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="179" uuid="833f3ba2-4599-4e9a-b61f-05409bfddf2b">
+						<jr:detailCell style="table 1_TD" height="16" rowSpan="1">
+							<textField>
+								<reportElement uuid="093dc325-8c5d-4bf1-8242-4381c020c214" x="44" y="0" width="74" height="15"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font isBold="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{count}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="128" uuid="1512675d-51a3-4d9c-b3e5-ceefed0d1994">
+						<jr:detailCell style="table_TD" height="16" rowSpan="1">
+							<staticText>
+								<reportElement uuid="67bebe0b-82b2-4f68-a4fe-16dc6845e9ef" x="21" y="0" width="92" height="15"/>
+								<textElement verticalAlignment="Middle">
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[Predios]]></text>
+							</staticText>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<componentElement>
+				<reportElement uuid="27ef7db2-e179-4db2-9388-3e1c3ed4d95c" key="table 1" style="table 1" x="60" y="168" width="851" height="15" isRemoveLineWhenBlank="true"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="New Dataset superficies" uuid="e6a1998d-a4b0-4c25-a1ca-a358249ec8b2">
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="535" uuid="92f33812-169a-48fe-93b1-d0e30c5e6678">
+						<jr:detailCell style="table 1_TD" height="15" rowSpan="1">
+							<staticText>
+								<reportElement uuid="85b82973-aba4-48a3-b1ed-482c13a7171c" x="0" y="0" width="535" height="15"/>
+								<textElement/>
+								<text><![CDATA[SUPERFICIE TOTAL PREDIOS REGISTRADOS]]></text>
+							</staticText>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="179" uuid="833f3ba2-4599-4e9a-b61f-05409bfddf2b">
+						<jr:detailCell style="table 1_TD" height="15" rowSpan="1">
+							<textField>
+								<reportElement uuid="093dc325-8c5d-4bf1-8242-4381c020c214" x="44" y="0" width="74" height="15"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{suppredio_t}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="128" uuid="1512675d-51a3-4d9c-b3e5-ceefed0d1994">
+						<jr:detailCell style="table_TD" height="15" rowSpan="1">
+							<staticText>
+								<reportElement uuid="67bebe0b-82b2-4f68-a4fe-16dc6845e9ef" x="21" y="0" width="92" height="15"/>
+								<textElement verticalAlignment="Middle"/>
+								<text><![CDATA[Ha.]]></text>
+							</staticText>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<componentElement>
+				<reportElement uuid="27ef7db2-e179-4db2-9388-3e1c3ed4d95c" key="table 1" style="table 1" x="60" y="183" width="851" height="15" isRemoveLineWhenBlank="true"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="New Dataset superficies" uuid="e6a1998d-a4b0-4c25-a1ca-a358249ec8b2">
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="535" uuid="92f33812-169a-48fe-93b1-d0e30c5e6678">
+						<jr:detailCell style="table 1_TD" height="15" rowSpan="1">
+							<staticText>
+								<reportElement uuid="85b82973-aba4-48a3-b1ed-482c13a7171c" x="0" y="0" width="535" height="15"/>
+								<textElement/>
+								<text><![CDATA[TOTAL SUPERFICIE DE DESMONTE SIN AUTORIZACION 1996-2011 (ha)
+]]></text>
+							</staticText>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="179" uuid="833f3ba2-4599-4e9a-b61f-05409bfddf2b">
+						<jr:detailCell style="table 1_TD" height="15" rowSpan="1">
+							<textField>
+								<reportElement uuid="093dc325-8c5d-4bf1-8242-4381c020c214" x="44" y="0" width="74" height="15"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{supdefilegal_t}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="128" uuid="1512675d-51a3-4d9c-b3e5-ceefed0d1994">
+						<jr:detailCell style="table_TD" height="15" rowSpan="1">
+							<staticText>
+								<reportElement uuid="67bebe0b-82b2-4f68-a4fe-16dc6845e9ef" x="21" y="0" width="92" height="15"/>
+								<textElement verticalAlignment="Middle"/>
+								<text><![CDATA[Ha.]]></text>
+							</staticText>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<componentElement>
+				<reportElement uuid="27ef7db2-e179-4db2-9388-3e1c3ed4d95c" key="table 1" style="table 1" x="60" y="198" width="851" height="15" isRemoveLineWhenBlank="true"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="New Dataset superficies" uuid="e6a1998d-a4b0-4c25-a1ca-a358249ec8b2">
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="535" uuid="92f33812-169a-48fe-93b1-d0e30c5e6678">
+						<jr:detailCell style="table 1_TD" height="15" rowSpan="1">
+							<staticText>
+								<reportElement uuid="85b82973-aba4-48a3-b1ed-482c13a7171c" x="0" y="0" width="535" height="15"/>
+								<textElement/>
+								<text><![CDATA[SUPERFICIE TOTAL DESMONTE EN TPFP
+]]></text>
+							</staticText>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="179" uuid="833f3ba2-4599-4e9a-b61f-05409bfddf2b">
+						<jr:detailCell style="table 1_TD" height="15" rowSpan="1">
+							<textField>
+								<reportElement uuid="093dc325-8c5d-4bf1-8242-4381c020c214" x="44" y="0" width="74" height="15"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{suptpfp_t}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="128" uuid="1512675d-51a3-4d9c-b3e5-ceefed0d1994">
+						<jr:detailCell style="table_TD" height="15" rowSpan="1">
+							<staticText>
+								<reportElement uuid="67bebe0b-82b2-4f68-a4fe-16dc6845e9ef" x="21" y="0" width="92" height="15"/>
+								<textElement verticalAlignment="Middle"/>
+								<text><![CDATA[Ha.]]></text>
+							</staticText>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<componentElement>
+				<reportElement uuid="27ef7db2-e179-4db2-9388-3e1c3ed4d95c" key="table 1" style="table 1" x="60" y="213" width="851" height="15" isRemoveLineWhenBlank="true"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="New Dataset superficies" uuid="e6a1998d-a4b0-4c25-a1ca-a358249ec8b2">
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="535" uuid="92f33812-169a-48fe-93b1-d0e30c5e6678">
+						<jr:detailCell style="table 1_TD" height="15" rowSpan="1">
+							<staticText>
+								<reportElement uuid="85b82973-aba4-48a3-b1ed-482c13a7171c" x="0" y="0" width="535" height="15"/>
+								<textElement/>
+								<text><![CDATA[SUPERFICIE TOTAL DESMONTE EN TUM
+]]></text>
+							</staticText>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="179" uuid="833f3ba2-4599-4e9a-b61f-05409bfddf2b">
+						<jr:detailCell style="table 1_TD" height="15" rowSpan="1">
+							<textField>
+								<reportElement uuid="093dc325-8c5d-4bf1-8242-4381c020c214" x="44" y="0" width="74" height="15"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{suptum_t}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="128" uuid="1512675d-51a3-4d9c-b3e5-ceefed0d1994">
+						<jr:detailCell style="table_TD" height="15" rowSpan="1">
+							<staticText>
+								<reportElement uuid="67bebe0b-82b2-4f68-a4fe-16dc6845e9ef" x="21" y="0" width="92" height="15"/>
+								<textElement verticalAlignment="Middle"/>
+								<text><![CDATA[Ha.]]></text>
+							</staticText>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<componentElement>
+				<reportElement uuid="27ef7db2-e179-4db2-9388-3e1c3ed4d95c" key="table 1" style="table 1" x="60" y="228" width="851" height="15" isRemoveLineWhenBlank="true"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="New Dataset superficies" uuid="e6a1998d-a4b0-4c25-a1ca-a358249ec8b2">
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="535" uuid="92f33812-169a-48fe-93b1-d0e30c5e6678">
+						<jr:detailCell style="table 1_TD" height="15" rowSpan="1">
+							<staticText>
+								<reportElement uuid="85b82973-aba4-48a3-b1ed-482c13a7171c" x="0" y="0" width="535" height="15"/>
+								<textElement/>
+								<text><![CDATA[SUPERFICIE TOTAL EN PAS]]></text>
+							</staticText>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="179" uuid="833f3ba2-4599-4e9a-b61f-05409bfddf2b">
+						<jr:detailCell style="table 1_TD" height="15" rowSpan="1">
+							<textField>
+								<reportElement uuid="093dc325-8c5d-4bf1-8242-4381c020c214" x="44" y="0" width="74" height="15"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{suppas_t}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="128" uuid="1512675d-51a3-4d9c-b3e5-ceefed0d1994">
+						<jr:detailCell style="table_TD" height="15" rowSpan="1">
+							<staticText>
+								<reportElement uuid="67bebe0b-82b2-4f68-a4fe-16dc6845e9ef" x="21" y="0" width="92" height="15"/>
+								<textElement verticalAlignment="Middle"/>
+								<text><![CDATA[Ha.]]></text>
+							</staticText>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<componentElement>
+				<reportElement uuid="27ef7db2-e179-4db2-9388-3e1c3ed4d95c" key="table 1" style="table 1" x="60" y="243" width="851" height="15" isRemoveLineWhenBlank="true"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="New Dataset superficies" uuid="e6a1998d-a4b0-4c25-a1ca-a358249ec8b2">
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="535" uuid="92f33812-169a-48fe-93b1-d0e30c5e6678">
+						<jr:detailCell style="table 1_TD" height="15" rowSpan="1">
+							<staticText>
+								<reportElement uuid="85b82973-aba4-48a3-b1ed-482c13a7171c" x="0" y="0" width="535" height="15"/>
+								<textElement/>
+								<text><![CDATA[SUPERFICIE COMPROMETIDA A LA PRODUCCION DE ALIMENTOS
+]]></text>
+							</staticText>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="179" uuid="833f3ba2-4599-4e9a-b61f-05409bfddf2b">
+						<jr:detailCell style="table 1_TD" height="15" rowSpan="1">
+							<textField>
+								<reportElement uuid="093dc325-8c5d-4bf1-8242-4381c020c214" x="44" y="0" width="74" height="15"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{supprodali_t}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="128" uuid="1512675d-51a3-4d9c-b3e5-ceefed0d1994">
+						<jr:detailCell style="table_TD" height="15" rowSpan="1">
+							<staticText>
+								<reportElement uuid="67bebe0b-82b2-4f68-a4fe-16dc6845e9ef" x="21" y="0" width="92" height="15"/>
+								<textElement verticalAlignment="Middle"/>
+								<text><![CDATA[Ha.]]></text>
+							</staticText>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<componentElement>
+				<reportElement uuid="27ef7db2-e179-4db2-9388-3e1c3ed4d95c" key="table 1" style="table 1" x="60" y="258" width="851" height="15" isRemoveLineWhenBlank="true"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="New Dataset supsel conservar" uuid="e6a1998d-a4b0-4c25-a1ca-a358249ec8b2">
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="535" uuid="92f33812-169a-48fe-93b1-d0e30c5e6678">
+						<jr:detailCell style="table 1_TD" height="15" rowSpan="1">
+							<staticText>
+								<reportElement uuid="85b82973-aba4-48a3-b1ed-482c13a7171c" x="0" y="0" width="535" height="15"/>
+								<textElement/>
+								<text><![CDATA[SUPERFICIE SELS A CONSERVAR]]></text>
+							</staticText>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="179" uuid="833f3ba2-4599-4e9a-b61f-05409bfddf2b">
+						<jr:detailCell style="table 1_TD" height="15" rowSpan="1">
+							<textField>
+								<reportElement uuid="093dc325-8c5d-4bf1-8242-4381c020c214" x="44" y="0" width="74" height="15"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{supsel}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="128" uuid="1512675d-51a3-4d9c-b3e5-ceefed0d1994">
+						<jr:detailCell style="table_TD" height="15" rowSpan="1">
+							<staticText>
+								<reportElement uuid="67bebe0b-82b2-4f68-a4fe-16dc6845e9ef" x="21" y="0" width="92" height="15"/>
+								<textElement verticalAlignment="Middle"/>
+								<text><![CDATA[Ha.]]></text>
+							</staticText>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<componentElement>
+				<reportElement uuid="27ef7db2-e179-4db2-9388-3e1c3ed4d95c" key="table 1" style="table 1" x="60" y="273" width="851" height="15" isRemoveLineWhenBlank="true"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="New Dataset supsel restituir" uuid="e6a1998d-a4b0-4c25-a1ca-a358249ec8b2">
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="535" uuid="92f33812-169a-48fe-93b1-d0e30c5e6678">
+						<jr:detailCell style="table 1_TD" height="15" rowSpan="1">
+							<staticText>
+								<reportElement uuid="85b82973-aba4-48a3-b1ed-482c13a7171c" x="0" y="0" width="535" height="15"/>
+								<textElement/>
+								<text><![CDATA[SUPERFICIE SELS A REFORESTAR]]></text>
+							</staticText>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="179" uuid="833f3ba2-4599-4e9a-b61f-05409bfddf2b">
+						<jr:detailCell style="table 1_TD" height="15" rowSpan="1">
+							<textField>
+								<reportElement uuid="093dc325-8c5d-4bf1-8242-4381c020c214" x="44" y="0" width="74" height="15"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{supsel}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="128" uuid="1512675d-51a3-4d9c-b3e5-ceefed0d1994">
+						<jr:detailCell style="table_TD" height="15" rowSpan="1">
+							<staticText>
+								<reportElement uuid="67bebe0b-82b2-4f68-a4fe-16dc6845e9ef" x="21" y="0" width="92" height="15"/>
+								<textElement verticalAlignment="Middle"/>
+								<text><![CDATA[Ha.]]></text>
+							</staticText>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<componentElement>
+				<reportElement uuid="27ef7db2-e179-4db2-9388-3e1c3ed4d95c" key="table 1" style="table 1" x="60" y="288" width="851" height="15" isRemoveLineWhenBlank="true"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="New Dataset supsel restituir" uuid="e6a1998d-a4b0-4c25-a1ca-a358249ec8b2">
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="535" uuid="92f33812-169a-48fe-93b1-d0e30c5e6678">
+						<jr:detailCell style="table 1_TD" height="15" rowSpan="1">
+							<staticText>
+								<reportElement uuid="85b82973-aba4-48a3-b1ed-482c13a7171c" x="0" y="0" width="535" height="15"/>
+								<textElement/>
+								<text><![CDATA[SUPRFICIE SELS A REFORESTAR EN PAS]]></text>
+							</staticText>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="179" uuid="833f3ba2-4599-4e9a-b61f-05409bfddf2b">
+						<jr:detailCell style="table 1_TD" height="15" rowSpan="1">
+							<textField>
+								<reportElement uuid="093dc325-8c5d-4bf1-8242-4381c020c214" x="44" y="0" width="74" height="15"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{supselpas}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="128" uuid="1512675d-51a3-4d9c-b3e5-ceefed0d1994">
+						<jr:detailCell style="table_TD" height="15" rowSpan="1">
+							<staticText>
+								<reportElement uuid="67bebe0b-82b2-4f68-a4fe-16dc6845e9ef" x="21" y="0" width="92" height="15"/>
+								<textElement verticalAlignment="Middle"/>
+								<text><![CDATA[Ha.]]></text>
+							</staticText>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<componentElement>
+				<reportElement uuid="27ef7db2-e179-4db2-9388-3e1c3ed4d95c" key="table 1" style="table 1" x="60" y="318" width="851" height="15" isRemoveLineWhenBlank="true"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="New Dataset suprestotal" uuid="e6a1998d-a4b0-4c25-a1ca-a358249ec8b2">
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="535" uuid="92f33812-169a-48fe-93b1-d0e30c5e6678">
+						<jr:detailCell style="table 1_TD" height="15" rowSpan="1">
+							<staticText>
+								<reportElement uuid="85b82973-aba4-48a3-b1ed-482c13a7171c" x="0" y="0" width="535" height="15"/>
+								<textElement>
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[SUPERFICIE COMPROMETIDA A  RESTITUCION DE BOSQUES]]></text>
+							</staticText>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="179" uuid="833f3ba2-4599-4e9a-b61f-05409bfddf2b">
+						<jr:detailCell style="table 1_TD" height="15" rowSpan="1">
+							<textField>
+								<reportElement uuid="093dc325-8c5d-4bf1-8242-4381c020c214" x="44" y="0" width="74" height="15"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font isBold="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{sum}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="128" uuid="1512675d-51a3-4d9c-b3e5-ceefed0d1994">
+						<jr:detailCell style="table_TD" height="15" rowSpan="1">
+							<staticText>
+								<reportElement uuid="67bebe0b-82b2-4f68-a4fe-16dc6845e9ef" x="21" y="0" width="92" height="15"/>
+								<textElement verticalAlignment="Middle">
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[Ha.]]></text>
+							</staticText>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<componentElement>
+				<reportElement uuid="27ef7db2-e179-4db2-9388-3e1c3ed4d95c" key="table 1" style="table 1" x="60" y="303" width="851" height="15" isRemoveLineWhenBlank="true"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="New Dataset superficies" uuid="e6a1998d-a4b0-4c25-a1ca-a358249ec8b2">
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="535" uuid="92f33812-169a-48fe-93b1-d0e30c5e6678">
+						<jr:detailCell style="table 1_TD" height="15" rowSpan="1">
+							<staticText>
+								<reportElement uuid="85b82973-aba4-48a3-b1ed-482c13a7171c" x="0" y="0" width="535" height="15"/>
+								<textElement/>
+								<text><![CDATA[Superficie a  Restituir 10% TPFP]]></text>
+							</staticText>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="179" uuid="833f3ba2-4599-4e9a-b61f-05409bfddf2b">
+						<jr:detailCell style="table 1_TD" height="15" rowSpan="1">
+							<textField>
+								<reportElement uuid="093dc325-8c5d-4bf1-8242-4381c020c214" x="44" y="0" width="74" height="15"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{supreftpfp_t}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="128" uuid="1512675d-51a3-4d9c-b3e5-ceefed0d1994">
+						<jr:detailCell style="table_TD" height="15" rowSpan="1">
+							<staticText>
+								<reportElement uuid="67bebe0b-82b2-4f68-a4fe-16dc6845e9ef" x="21" y="0" width="92" height="15"/>
+								<textElement verticalAlignment="Middle"/>
+								<text><![CDATA[Ha.]]></text>
+							</staticText>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<componentElement>
+				<reportElement uuid="27ef7db2-e179-4db2-9388-3e1c3ed4d95c" key="table 1" style="table 1" x="60" y="351" width="851" height="15" isRemoveLineWhenBlank="true"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="New Dataset total pagos" uuid="e6a1998d-a4b0-4c25-a1ca-a358249ec8b2">
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="535" uuid="92f33812-169a-48fe-93b1-d0e30c5e6678">
+						<jr:detailCell style="table 1_TD" height="15" rowSpan="1">
+							<staticText>
+								<reportElement uuid="85b82973-aba4-48a3-b1ed-482c13a7171c" x="0" y="0" width="535" height="15"/>
+								<textElement>
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[MONTO A RECAUDAR EN BOLIVIANOS]]></text>
+							</staticText>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="179" uuid="833f3ba2-4599-4e9a-b61f-05409bfddf2b">
+						<jr:detailCell style="table 1_TD" height="15" rowSpan="1">
+							<textField>
+								<reportElement uuid="093dc325-8c5d-4bf1-8242-4381c020c214" x="44" y="0" width="74" height="15"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font isBold="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{pre_montototalbs}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="128" uuid="1512675d-51a3-4d9c-b3e5-ceefed0d1994">
+						<jr:detailCell style="table_TD" height="15" rowSpan="1">
+							<staticText>
+								<reportElement uuid="67bebe0b-82b2-4f68-a4fe-16dc6845e9ef" x="21" y="0" width="92" height="15"/>
+								<textElement verticalAlignment="Middle">
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[Bs.]]></text>
+							</staticText>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<componentElement>
+				<reportElement uuid="27ef7db2-e179-4db2-9388-3e1c3ed4d95c" key="table 1" style="table 1" x="60" y="366" width="851" height="15" isRemoveLineWhenBlank="true"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="New Dataset total pagos" uuid="e6a1998d-a4b0-4c25-a1ca-a358249ec8b2">
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="535" uuid="92f33812-169a-48fe-93b1-d0e30c5e6678">
+						<jr:detailCell style="table 1_TD" height="15" rowSpan="1">
+							<staticText>
+								<reportElement uuid="85b82973-aba4-48a3-b1ed-482c13a7171c" x="0" y="0" width="535" height="15"/>
+								<textElement>
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[MONTO TOTAL RECAUDADO EN BOLIVIANOS]]></text>
+							</staticText>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="179" uuid="833f3ba2-4599-4e9a-b61f-05409bfddf2b">
+						<jr:detailCell style="table 1_TD" height="15" rowSpan="1">
+							<textField>
+								<reportElement uuid="093dc325-8c5d-4bf1-8242-4381c020c214" x="44" y="0" width="74" height="15"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font isBold="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{montodeposito}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="128" uuid="1512675d-51a3-4d9c-b3e5-ceefed0d1994">
+						<jr:detailCell style="table_TD" height="15" rowSpan="1">
+							<staticText>
+								<reportElement uuid="67bebe0b-82b2-4f68-a4fe-16dc6845e9ef" x="21" y="0" width="92" height="15"/>
+								<textElement verticalAlignment="Middle">
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[Bs.]]></text>
+							</staticText>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<componentElement>
+				<reportElement uuid="27ef7db2-e179-4db2-9388-3e1c3ed4d95c" key="table 1" style="table 1" x="60" y="381" width="851" height="15" isRemoveLineWhenBlank="true"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="New Dataset total pagos" uuid="e6a1998d-a4b0-4c25-a1ca-a358249ec8b2">
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="535" uuid="92f33812-169a-48fe-93b1-d0e30c5e6678">
+						<jr:detailCell style="table 1_TD" height="15" rowSpan="1">
+							<staticText>
+								<reportElement uuid="85b82973-aba4-48a3-b1ed-482c13a7171c" x="0" y="0" width="535" height="15"/>
+								<textElement>
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[MONTO POR RECAUDAR EN BOLIVIANOS]]></text>
+							</staticText>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="179" uuid="833f3ba2-4599-4e9a-b61f-05409bfddf2b">
+						<jr:detailCell style="table 1_TD" height="15" rowSpan="1">
+							<textField>
+								<reportElement uuid="093dc325-8c5d-4bf1-8242-4381c020c214" x="44" y="0" width="74" height="15"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font isBold="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{por_recaudar}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="128" uuid="1512675d-51a3-4d9c-b3e5-ceefed0d1994">
+						<jr:detailCell style="table_TD" height="15" rowSpan="1">
+							<staticText>
+								<reportElement uuid="67bebe0b-82b2-4f68-a4fe-16dc6845e9ef" x="21" y="0" width="92" height="15"/>
+								<textElement verticalAlignment="Middle">
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[Bs.]]></text>
+							</staticText>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<staticText>
+				<reportElement uuid="50d91746-197f-4123-acc8-182712398713" x="274" y="0" width="369" height="46"/>
+				<textElement textAlignment="Center">
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[PROGRAMA DE PRODUCCION DE ALIMENTOS
+Y RESTITUCION DE BOSQUES
+]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="6" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="26" splitType="Stretch">
+			<textField>
+				<reportElement uuid="69c67a32-df6a-45cd-bae9-27b023c985f3" x="847" y="5" width="80" height="20"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement uuid="dd9b0fbb-1a92-4ca3-a2b7-a5b3f4a9f9b6" x="928" y="5" width="40" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement uuid="4e866cb4-5ea0-4a20-a39c-f6f11464cce5" x="0" y="4" width="963" height="1"/>
+			</line>
+			<staticText>
+				<reportElement uuid="6cedac9d-6aff-4136-ab9f-387fe0bdc4d5" x="29" y="6" width="26" height="20"/>
+				<textElement/>
+				<text><![CDATA[Al: ]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement uuid="b0524d1c-1441-40b2-90e7-4a729be61e21" x="55" y="6" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

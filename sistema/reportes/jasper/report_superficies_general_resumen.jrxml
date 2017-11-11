@@ -1,0 +1,736 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report_superficies_resumen" language="groovy" pageWidth="1008" pageHeight="612" orientation="Landscape" columnWidth="968" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a8a5627a-8be8-4649-9fda-6a8484382c9c">
+	<property name="ireport.zoom" value="0.9090909090909116"/>
+	<property name="ireport.x" value="14"/>
+	<property name="ireport.y" value="156"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="New Dataset TOTAL SUPERFICIES" uuid="aa979c58-b04d-4b83-8fbe-f6d068153ca9">
+		<queryString>
+			<![CDATA[SELECT
+count(r_general.idregistro) as count_t,
+round((SUM(r_general.suppredio))::numeric(15,4), 4) as suppredio_t,
+  round((SUM(r_general.supdefilegal))::numeric(15,4), 4)as supdefilegal_t,
+ round((SUM(r_general.suptpfp))::numeric(15,4), 4) as suptpfp_t,
+  round((SUM(r_general.supreftpfp))::numeric(15,4), 4)as supreftpfp_t,
+  round((SUM(r_general.supalitpfp))::numeric(15,4), 4)as supalitpfp_t,
+  round((SUM(r_general.supselstpfp))::numeric(15,4), 4)as supselstpfp_t,
+ round((SUM(r_general.suptum))::numeric(15,4), 4)as suptum_t,
+ round((SUM(r_general.supalitum))::numeric(15,4), 4) as supalitum_t,
+  round((SUM(r_general.supselstum))::numeric(15,4), 4)as supselstum_t,
+ round((SUM(r_general.supmejoras))::numeric(15,4), 4)as supmejoras_t,
+ round((SUM(r_general.suppas))::numeric(15,4), 4) as suppas_t,
+  round((SUM(r_general.supselspas))::numeric(15,4), 4)as supselspas_t,
+  round((SUM(r_general.supalipas))::numeric(15,4), 4)as supalipas_t,
+ round((SUM(r_general.supprodali))::numeric(15,4), 4) as supprodali_t
+FROM r_general]]>
+		</queryString>
+		<field name="count_t" class="java.lang.Long"/>
+		<field name="suppredio_t" class="java.math.BigDecimal"/>
+		<field name="supdefilegal_t" class="java.math.BigDecimal"/>
+		<field name="suptpfp_t" class="java.math.BigDecimal"/>
+		<field name="supreftpfp_t" class="java.math.BigDecimal"/>
+		<field name="supalitpfp_t" class="java.math.BigDecimal"/>
+		<field name="supselstpfp_t" class="java.math.BigDecimal"/>
+		<field name="suptum_t" class="java.math.BigDecimal"/>
+		<field name="supalitum_t" class="java.math.BigDecimal"/>
+		<field name="supselstum_t" class="java.math.BigDecimal"/>
+		<field name="supmejoras_t" class="java.math.BigDecimal"/>
+		<field name="suppas_t" class="java.math.BigDecimal"/>
+		<field name="supselspas_t" class="java.math.BigDecimal"/>
+		<field name="supalipas_t" class="java.math.BigDecimal"/>
+		<field name="supprodali_t" class="java.math.BigDecimal"/>
+	</subDataset>
+	<subDataset name="dataset_superficies_estado" uuid="2499e0aa-9513-4c5d-8a5b-93932ebcef55">
+		<queryString>
+			<![CDATA[SELECT
+  r_general.estado,count(estado),
+
+round((SUM(r_general.suppredio))::numeric(15,4), 4) as suppredio,
+  round((SUM(r_general.supdefilegal))::numeric(15,4), 4)as supdefilegal,
+ round((SUM(r_general.suptpfp))::numeric(15,4), 4) as suptpfp,
+  round((SUM(r_general.supreftpfp))::numeric(15,4), 4)as supreftpfp,
+  round((SUM(r_general.supalitpfp))::numeric(15,4), 4)as supalitpfp,
+  round((SUM(r_general.supselstpfp))::numeric(15,4), 4)as supselstpfp,
+ round((SUM(r_general.suptum))::numeric(15,4), 4)as suptum,
+ round((SUM(r_general.supalitum))::numeric(15,4), 4) as supalitum,
+  round((SUM(r_general.supselstum))::numeric(15,4), 4)as supselstum,
+ round((SUM(r_general.supmejoras))::numeric(15,4), 4)as supmejoras,
+ round((SUM(r_general.suppas))::numeric(15,4), 4) as suppas,
+  round((SUM(r_general.supselspas))::numeric(15,4), 4)as supselspas,
+  round((SUM(r_general.supalipas))::numeric(15,4), 4)as supalipas,
+ round((SUM(r_general.supprodali))::numeric(15,4), 4) as supprodali
+FROM r_general
+ group by estado]]>
+		</queryString>
+		<field name="estado" class="java.lang.String"/>
+		<field name="count" class="java.lang.Long"/>
+		<field name="suppredio" class="java.math.BigDecimal"/>
+		<field name="supdefilegal" class="java.math.BigDecimal"/>
+		<field name="suptpfp" class="java.math.BigDecimal"/>
+		<field name="supreftpfp" class="java.math.BigDecimal"/>
+		<field name="supalitpfp" class="java.math.BigDecimal"/>
+		<field name="supselstpfp" class="java.math.BigDecimal"/>
+		<field name="suptum" class="java.math.BigDecimal"/>
+		<field name="supalitum" class="java.math.BigDecimal"/>
+		<field name="supselstum" class="java.math.BigDecimal"/>
+		<field name="supmejoras" class="java.math.BigDecimal"/>
+		<field name="suppas" class="java.math.BigDecimal"/>
+		<field name="supselspas" class="java.math.BigDecimal"/>
+		<field name="supalipas" class="java.math.BigDecimal"/>
+		<field name="supprodali" class="java.math.BigDecimal"/>
+	</subDataset>
+	<queryString>
+		<![CDATA[SELECT
+count(r_general.idregistro) as count_t,
+round((SUM(r_general.suppredio))::numeric(15,4), 4) as suppredio_t,
+  round((SUM(r_general.supdefilegal))::numeric(15,4), 4)as supdefilegal_t,
+ round((SUM(r_general.suptpfp))::numeric(15,4), 4) as suptpfp_t,
+  round((SUM(r_general.supreftpfp))::numeric(15,4), 4)as supreftpfp_t,
+  round((SUM(r_general.supalitpfp))::numeric(15,4), 4)as supalitpfp_t,
+  round((SUM(r_general.supselstpfp))::numeric(15,4), 4)as supselstpfp_t,
+ round((SUM(r_general.suptum))::numeric(15,4), 4)as suptum_t,
+ round((SUM(r_general.supalitum))::numeric(15,4), 4) as supalitum_t,
+  round((SUM(r_general.supselstum))::numeric(15,4), 4)as supselstum_t,
+ round((SUM(r_general.supmejoras))::numeric(15,4), 4)as supmejoras_t,
+ round((SUM(r_general.suppas))::numeric(15,4), 4) as suppas_t,
+  round((SUM(r_general.supselspas))::numeric(15,4), 4)as supselspas_t,
+  round((SUM(r_general.supalipas))::numeric(15,4), 4)as supalipas_t,
+ round((SUM(r_general.supprodali))::numeric(15,4), 4) as supprodali_t
+FROM r_general]]>
+	</queryString>
+	<field name="count_t" class="java.lang.Long"/>
+	<field name="suppredio_t" class="java.math.BigDecimal"/>
+	<field name="supdefilegal_t" class="java.math.BigDecimal"/>
+	<field name="suptpfp_t" class="java.math.BigDecimal"/>
+	<field name="supreftpfp_t" class="java.math.BigDecimal"/>
+	<field name="supalitpfp_t" class="java.math.BigDecimal"/>
+	<field name="supselstpfp_t" class="java.math.BigDecimal"/>
+	<field name="suptum_t" class="java.math.BigDecimal"/>
+	<field name="supalitum_t" class="java.math.BigDecimal"/>
+	<field name="supselstum_t" class="java.math.BigDecimal"/>
+	<field name="supmejoras_t" class="java.math.BigDecimal"/>
+	<field name="suppas_t" class="java.math.BigDecimal"/>
+	<field name="supselspas_t" class="java.math.BigDecimal"/>
+	<field name="supalipas_t" class="java.math.BigDecimal"/>
+	<field name="supprodali_t" class="java.math.BigDecimal"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="66" splitType="Stretch">
+			<image>
+				<reportElement uuid="b86fb967-86e9-4dee-955f-7433964fed93" x="0" y="4" width="78" height="58"/>
+				<imageExpression><![CDATA["C:\\xampp\\htdocs\\PPARB\\sistema\\reportes\\reportes\\1_bolivia.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="ec078079-56e5-4798-89e1-b96d0ad26a6b" x="382" y="4" width="161" height="58"/>
+				<imageExpression><![CDATA["C:\\xampp\\htdocs\\PPARB\\sistema\\reportes\\reportes\\2_mdryt.jpg"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="45b51855-86a1-4e63-b046-4d6200c5a883" x="778" y="4" width="185" height="58"/>
+				<imageExpression><![CDATA["C:\\xampp\\htdocs\\PPARB\\sistema\\reportes\\reportes\\3_abt.png"]]></imageExpression>
+			</image>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch">
+			<line>
+				<reportElement uuid="3e0bcedc-2939-4235-aa18-f3d1aaf1bb97" x="0" y="-1" width="968" height="1"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="432" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="50d91746-197f-4123-acc8-182712398713" x="288" y="-1" width="351" height="32"/>
+				<textElement>
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Resumen de Superficies de predios]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement uuid="dd745266-be02-4a0d-bd71-48b4cd0ee426" key="table 1" style="table 1" x="5" y="31" width="963" height="82"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="dataset_superficies_estado" uuid="034175da-adc5-4ee7-a02e-1077ae415764">
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="90" uuid="7da3b51f-ba7e-483f-a214-c48d1627bf60">
+						<jr:columnHeader style="table 1_CH" height="35" rowSpan="1">
+							<staticText>
+								<reportElement uuid="677ee91f-1601-4a42-9f59-1f20f3bb62f6" x="0" y="0" width="90" height="30"/>
+								<textElement>
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[ESTADO]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 1_TD" height="21" rowSpan="1">
+							<textField>
+								<reportElement uuid="849ff4eb-2da8-462e-ab6c-9813c65591b0" x="0" y="0" width="90" height="20"/>
+								<textElement>
+									<font size="9" isBold="false"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{estado}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="31" uuid="acaf99a2-f3a7-43c4-9744-81d8ec866efc">
+						<jr:columnHeader style="table 1_CH" height="35" rowSpan="1">
+							<staticText>
+								<reportElement uuid="c8dad617-1ee7-4d7b-a4b4-472122a101c1" x="0" y="0" width="30" height="30"/>
+								<textElement>
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[CANT]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 1_TD" height="21" rowSpan="1">
+							<textField>
+								<reportElement uuid="65db9ede-6da0-4a7b-8dc4-70cea3b8a46f" x="0" y="0" width="30" height="20"/>
+								<textElement textAlignment="Right">
+									<font size="9" isBold="false"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{count}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="60" uuid="c009f8b8-5b6d-45ad-bbe8-366816c3db7d">
+						<jr:columnHeader style="table 1_CH" height="35" rowSpan="1">
+							<staticText>
+								<reportElement uuid="f5d160e1-6f58-42e1-bd4e-611915dd7224" x="0" y="0" width="60" height="30"/>
+								<textElement>
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[SUP. DEF. ILEGAL]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 1_TD" height="21" rowSpan="1">
+							<textField>
+								<reportElement uuid="392e372a-b488-4fd9-8e76-507575dea028" x="0" y="0" width="60" height="20"/>
+								<textElement textAlignment="Right">
+									<font size="9" isBold="false"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{supdefilegal}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="60" uuid="7a33c212-f4f5-4fde-9a36-4b3f82326f60">
+						<jr:columnHeader style="table 1_CH" height="35" rowSpan="1">
+							<staticText>
+								<reportElement uuid="ae5ee4da-ae03-4d6b-ba94-a5e382116a5e" x="0" y="0" width="60" height="30"/>
+								<textElement>
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[SUP. TPFP]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 1_TD" height="21" rowSpan="1">
+							<textField>
+								<reportElement uuid="673bff7d-d76a-4152-b324-827fb4b1d3fe" x="0" y="0" width="60" height="20"/>
+								<textElement textAlignment="Right">
+									<font size="9" isBold="false"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{suptpfp}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="60" uuid="871496d3-71e6-4f9f-af0f-71d2984be73c">
+						<jr:columnHeader style="table_CH" height="35" rowSpan="1">
+							<staticText>
+								<reportElement uuid="ae5ee4da-ae03-4d6b-ba94-a5e382116a5e" x="0" y="0" width="60" height="35"/>
+								<textElement>
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[SUP. REF. TPFP]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table_TD" height="21" rowSpan="1">
+							<textField>
+								<reportElement uuid="cd114cc7-047b-490f-bc75-1028c50b2979" x="0" y="0" width="60" height="20"/>
+								<textElement textAlignment="Right">
+									<font size="9" isBold="false"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{supreftpfp}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="60" uuid="c816c416-28cd-4eb5-9458-fb721f98c604">
+						<jr:columnHeader style="table 1_CH" height="35" rowSpan="1">
+							<staticText>
+								<reportElement uuid="e2f5fe3d-75a8-4652-8b2b-f19be2d289f3" x="0" y="0" width="60" height="30"/>
+								<textElement>
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[SUP. ALI TPFP]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table_TD" height="21" rowSpan="1">
+							<textField>
+								<reportElement uuid="1e18232f-5e00-48b0-90c9-d455f3bbdf06" x="0" y="0" width="60" height="20"/>
+								<textElement textAlignment="Right">
+									<font size="9" isBold="false"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{supalitpfp}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="60" uuid="59f00cdb-8a04-4ee6-a844-3f90b182a626">
+						<jr:columnHeader style="table 1_CH" height="35" rowSpan="1">
+							<staticText>
+								<reportElement uuid="3901ccb6-2a6c-493c-9540-75cc32a09cfc" x="0" y="0" width="60" height="30"/>
+								<textElement>
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[SUP. SELS TPFP]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table_TD" height="21" rowSpan="1">
+							<textField>
+								<reportElement uuid="aec01835-4649-4fe6-92f6-11beb7d8782d" x="0" y="0" width="60" height="20"/>
+								<textElement textAlignment="Right">
+									<font size="9" isBold="false"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{supselstpfp}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="60" uuid="441be7ce-2190-4ff1-a776-39df1b4ece18">
+						<jr:columnHeader style="table 1_CH" height="35" rowSpan="1">
+							<staticText>
+								<reportElement uuid="fca68965-ba06-4bd2-b4f4-838961c58187" x="0" y="0" width="60" height="30"/>
+								<textElement>
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[SUP. TUM]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table_TD" height="21" rowSpan="1">
+							<textField>
+								<reportElement uuid="7e36b70c-d9ef-4ce3-bddc-e0e1b86d9e77" x="0" y="0" width="60" height="20"/>
+								<textElement textAlignment="Right">
+									<font size="9" isBold="false"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{suptum}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="60" uuid="06776052-3a17-48c2-90a2-a54ea0a91cdd">
+						<jr:columnHeader style="table 1_CH" height="35" rowSpan="1">
+							<staticText>
+								<reportElement uuid="d8b8d26d-9815-4f62-bfa3-6b23bc568f3d" x="0" y="0" width="60" height="30"/>
+								<textElement>
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[SUP. ALI TUM]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table_TD" height="21" rowSpan="1">
+							<textField>
+								<reportElement uuid="c55e1c9c-859c-4e0e-a220-7cd1e4f5092c" x="0" y="0" width="60" height="20"/>
+								<textElement textAlignment="Right">
+									<font size="9" isBold="false"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{supalitum}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="60" uuid="bbfc1c51-bbd2-4588-8b60-c851fb5c322b">
+						<jr:columnHeader style="table 1_CH" height="35" rowSpan="1">
+							<staticText>
+								<reportElement uuid="51a5afde-9ec5-43d6-9ace-76850074d05d" x="0" y="0" width="60" height="30"/>
+								<textElement>
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[SUP. SELS TUM]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table_TD" height="21" rowSpan="1">
+							<textField>
+								<reportElement uuid="41159dec-31ab-4e5b-9487-dcb6c6c760f3" x="0" y="0" width="60" height="20"/>
+								<textElement textAlignment="Right">
+									<font size="9" isBold="false"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{supselstum}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="60" uuid="24e27df4-2812-46c3-8cdf-7e2ec799e8fb">
+						<jr:columnHeader style="table 1_CH" height="35" rowSpan="1">
+							<staticText>
+								<reportElement uuid="1ae9f6b7-2133-41c3-b54a-0f304903654b" x="0" y="0" width="60" height="30"/>
+								<textElement>
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[SUP. PAS]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table_TD" height="21" rowSpan="1">
+							<textField>
+								<reportElement uuid="f492604c-fa2d-4556-b8d9-17564c0304a0" x="0" y="0" width="60" height="20"/>
+								<textElement textAlignment="Right">
+									<font size="9" isBold="false"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{suppas}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="60" uuid="600dbb2f-0eca-4539-82f0-b1c6a7d78310">
+						<jr:columnHeader style="table 1_CH" height="35" rowSpan="1">
+							<staticText>
+								<reportElement uuid="532c4ca4-475c-4cec-b691-b92651608cf4" x="0" y="0" width="60" height="30"/>
+								<textElement>
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[SUP SELS PAS]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table_TD" height="21" rowSpan="1">
+							<textField>
+								<reportElement uuid="cd114cc7-047b-490f-bc75-1028c50b2979" x="0" y="0" width="60" height="20"/>
+								<textElement textAlignment="Right">
+									<font size="9" isBold="false"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{supselspas}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="60" uuid="ef1cb742-5021-421d-bcee-511cb4e2b07e">
+						<jr:columnHeader style="table_CH" height="35" rowSpan="1">
+							<staticText>
+								<reportElement uuid="532c4ca4-475c-4cec-b691-b92651608cf4" x="0" y="0" width="60" height="30"/>
+								<textElement>
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[SUP.  ALI. PAS]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table_TD" height="21" rowSpan="1">
+							<textField>
+								<reportElement uuid="cd114cc7-047b-490f-bc75-1028c50b2979" x="0" y="0" width="60" height="20"/>
+								<textElement textAlignment="Right">
+									<font size="9" isBold="false"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{supalipas}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="60" uuid="44a1fb8b-fb72-435a-9419-532ab5ff5220">
+						<jr:columnHeader style="table_CH" height="35" rowSpan="1">
+							<staticText>
+								<reportElement uuid="532c4ca4-475c-4cec-b691-b92651608cf4" x="0" y="0" width="60" height="30"/>
+								<textElement>
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[SUP PROD ALI]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table_TD" height="21" rowSpan="1">
+							<textField>
+								<reportElement uuid="cd114cc7-047b-490f-bc75-1028c50b2979" x="0" y="0" width="60" height="20"/>
+								<textElement textAlignment="Right">
+									<font size="9" isBold="false"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{supprodali}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="b6d5e265-4009-4d78-a8cb-f1fb61e73e6b">
+						<jr:columnHeader height="35" rowSpan="1">
+							<staticText>
+								<reportElement uuid="532c4ca4-475c-4cec-b691-b92651608cf4" x="0" y="0" width="90" height="30"/>
+								<textElement textAlignment="Center">
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[TOTAL]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table_TD" height="21" rowSpan="1">
+							<textField>
+								<reportElement uuid="cd114cc7-047b-490f-bc75-1028c50b2979" x="0" y="0" width="90" height="20"/>
+								<textElement textAlignment="Right">
+									<font isBold="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{suppredio}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<pie3DChart>
+				<chart>
+					<reportElement uuid="cf2069ad-7d16-4143-a471-9f62f709801b" x="133" y="204" width="713" height="226"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<pieDataset>
+					<dataset>
+						<datasetRun subDataset="dataset_superficies_estado" uuid="4ca7c5ad-3d26-4774-9d2c-3f094c8fe8c2"/>
+					</dataset>
+					<keyExpression><![CDATA[$F{count}]]></keyExpression>
+					<valueExpression><![CDATA[$F{count}]]></valueExpression>
+					<labelExpression><![CDATA[$F{estado}]]></labelExpression>
+				</pieDataset>
+				<pie3DPlot>
+					<plot/>
+					<itemLabel/>
+				</pie3DPlot>
+			</pie3DChart>
+			<staticText>
+				<reportElement uuid="50d91746-197f-4123-acc8-182712398713" x="446" y="192" width="86" height="32"/>
+				<textElement>
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Grafico]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement uuid="dd745266-be02-4a0d-bd71-48b4cd0ee426" key="table 1" style="table 1" x="5" y="170" width="963" height="24"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="New Dataset TOTAL SUPERFICIES" uuid="034175da-adc5-4ee7-a02e-1077ae415764">
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="90" uuid="7da3b51f-ba7e-483f-a214-c48d1627bf60">
+						<jr:detailCell style="table 1_TD" height="20" rowSpan="1">
+							<staticText>
+								<reportElement uuid="944d1639-82dc-49b1-bf1a-66052d550305" x="0" y="0" width="90" height="20"/>
+								<textElement>
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[TOTAL]]></text>
+							</staticText>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="31" uuid="acaf99a2-f3a7-43c4-9744-81d8ec866efc">
+						<jr:detailCell style="table 1_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement uuid="65db9ede-6da0-4a7b-8dc4-70cea3b8a46f" x="0" y="0" width="30" height="20"/>
+								<textElement textAlignment="Right">
+									<font size="9" isBold="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{count_t}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="60" uuid="c009f8b8-5b6d-45ad-bbe8-366816c3db7d">
+						<jr:detailCell style="table 1_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement uuid="392e372a-b488-4fd9-8e76-507575dea028" x="0" y="0" width="60" height="20"/>
+								<textElement textAlignment="Right">
+									<font size="9" isBold="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{supdefilegal_t}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="60" uuid="7a33c212-f4f5-4fde-9a36-4b3f82326f60">
+						<jr:detailCell style="table 1_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement uuid="673bff7d-d76a-4152-b324-827fb4b1d3fe" x="0" y="0" width="60" height="20"/>
+								<textElement textAlignment="Right">
+									<font size="9" isBold="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{suptpfp_t}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="60" uuid="871496d3-71e6-4f9f-af0f-71d2984be73c">
+						<jr:detailCell style="table_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement uuid="cd114cc7-047b-490f-bc75-1028c50b2979" x="0" y="0" width="60" height="20"/>
+								<textElement textAlignment="Right">
+									<font size="9" isBold="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{supreftpfp_t}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="60" uuid="c816c416-28cd-4eb5-9458-fb721f98c604">
+						<jr:detailCell style="table 1_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement uuid="1e18232f-5e00-48b0-90c9-d455f3bbdf06" x="0" y="0" width="60" height="20"/>
+								<textElement textAlignment="Right">
+									<font size="9" isBold="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{supalitpfp_t}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="60" uuid="59f00cdb-8a04-4ee6-a844-3f90b182a626">
+						<jr:detailCell style="table 1_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement uuid="aec01835-4649-4fe6-92f6-11beb7d8782d" x="0" y="0" width="60" height="20"/>
+								<textElement textAlignment="Right">
+									<font size="9" isBold="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{supselstpfp_t}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="60" uuid="441be7ce-2190-4ff1-a776-39df1b4ece18">
+						<jr:detailCell style="table 1_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement uuid="7e36b70c-d9ef-4ce3-bddc-e0e1b86d9e77" x="0" y="0" width="60" height="20"/>
+								<textElement textAlignment="Right">
+									<font size="9" isBold="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{suptum_t}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="60" uuid="06776052-3a17-48c2-90a2-a54ea0a91cdd">
+						<jr:detailCell style="table 1_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement uuid="c55e1c9c-859c-4e0e-a220-7cd1e4f5092c" x="0" y="0" width="60" height="20"/>
+								<textElement textAlignment="Right">
+									<font size="9" isBold="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{supalitum_t}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="60" uuid="bbfc1c51-bbd2-4588-8b60-c851fb5c322b">
+						<jr:detailCell style="table 1_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement uuid="41159dec-31ab-4e5b-9487-dcb6c6c760f3" x="0" y="0" width="60" height="20"/>
+								<textElement textAlignment="Right">
+									<font size="9" isBold="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{supselstum_t}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="60" uuid="24e27df4-2812-46c3-8cdf-7e2ec799e8fb">
+						<jr:detailCell style="table_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement uuid="f492604c-fa2d-4556-b8d9-17564c0304a0" x="0" y="0" width="60" height="20"/>
+								<textElement textAlignment="Right">
+									<font size="9" isBold="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{suppas_t}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="60" uuid="600dbb2f-0eca-4539-82f0-b1c6a7d78310">
+						<jr:detailCell style="table_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement uuid="cd114cc7-047b-490f-bc75-1028c50b2979" x="0" y="0" width="60" height="20"/>
+								<textElement textAlignment="Right">
+									<font size="9" isBold="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{supselspas_t}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="60" uuid="ef1cb742-5021-421d-bcee-511cb4e2b07e">
+						<jr:detailCell style="table_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement uuid="cd114cc7-047b-490f-bc75-1028c50b2979" x="0" y="0" width="60" height="20"/>
+								<textElement textAlignment="Right">
+									<font size="9" isBold="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{supalipas_t}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="60" uuid="44a1fb8b-fb72-435a-9419-532ab5ff5220">
+						<jr:detailCell style="table_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement uuid="cd114cc7-047b-490f-bc75-1028c50b2979" x="0" y="0" width="60" height="20"/>
+								<textElement textAlignment="Right">
+									<font size="9" isBold="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{supprodali_t}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="b6d5e265-4009-4d78-a8cb-f1fb61e73e6b">
+						<jr:detailCell style="table_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement uuid="cd114cc7-047b-490f-bc75-1028c50b2979" x="0" y="0" width="90" height="20"/>
+								<textElement textAlignment="Right">
+									<font isBold="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{suppredio_t}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="4" splitType="Stretch">
+			<line>
+				<reportElement uuid="4e866cb4-5ea0-4a20-a39c-f6f11464cce5" x="0" y="0" width="963" height="1"/>
+			</line>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="6" splitType="Stretch"/>
+	</summary>
+</jasperReport>
