@@ -226,7 +226,11 @@
 							        break;            
 							}
 
-							
+
+
+
+							///
+							///
 							
 							if(primero==true & i==0){
 								cambiar_Año(obj[i].año);
