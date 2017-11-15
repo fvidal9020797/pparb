@@ -23,3 +23,16 @@
 .modal-body{
 	height: 170px;
 }
+.img_gif_please_wait{
+	width: 50px;
+}
+.textarea_e_informe_eval_observaciones{
+	width: 100%;
+    height: 150px;
+}
+.btn_habilitado_anho_monitoreo{
+	background-color: #75af73;
+}
+.btn_focus_anho_monitoreo{
+	background-color: #032c02;
+}

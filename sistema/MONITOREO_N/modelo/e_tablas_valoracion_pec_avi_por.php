@@ -1,4 +1,4 @@
-<?php
+ <?php
 include_once('../../config/Conexion.php');
 include_once('error.php');
 class e_tablas_valoracion_pec_avi_por{
@@ -9,7 +9,6 @@ class e_tablas_valoracion_pec_avi_por{
 	public $fojas;
 	public $tipoactividad;
 	public $estado;
-	public $observacion;
 	function insertar(e_tablas_valoracion_pec_avi_por $e_tablas_valoracion_pec_avi_por){
 		$Con=Conexion::create();
 		$cn=$Con->getConexion();
@@ -20,8 +19,7 @@ class e_tablas_valoracion_pec_avi_por{
 				idevaluacionespecifica,
 				ponderacion,fojas,
 				tipoactividad, 
-				estado,
-				observacion
+				estado
 			)
 			values(
 				".$e_tablas_valoracion_pec_avi_por->idinformeevaluacion.",
@@ -29,14 +27,18 @@ class e_tablas_valoracion_pec_avi_por{
 				".$e_tablas_valoracion_pec_avi_por->ponderacion.",
 				'".$e_tablas_valoracion_pec_avi_por->fojas."',
 				".$e_tablas_valoracion_pec_avi_por->tipoactividad.",
-				".$e_tablas_valoracion_pec_avi_por->estado.",
-				'".$e_tablas_valoracion_pec_avi_por->observacion."')";
+				".$e_tablas_valoracion_pec_avi_por->estado.")";
 		pg_query($cn,$Sql);
 	}
 	function obtener(e_tablas_valoracion_pec_avi_por $e_tablas_valoracion_pec_avi_por){
 		$Con=Conexion::create();
 		$cn=$Con->getConexion();
-		$Sql="SELECT * FROM  monitoreo.e_tablas_valoracion_pec_avi_por WHERE idinformeevaluacion=".$e_tablas_valoracion_pec_avi_por->idinformeevaluacion;
+		$Sql="
+			SELECT * 
+			FROM  monitoreo.e_tablas_valoracion_pec_avi_por 
+			WHERE 
+				idinformeevaluacion=".$e_tablas_valoracion_pec_avi_por->idinformeevaluacion." and
+				tipoactividad=".$e_tablas_valoracion_pec_avi_por->tipoactividad;
 		$Result=pg_query($cn,$Sql);
 		if(pg_num_rows($Result)>0){
 			$index=0;
@@ -50,7 +52,6 @@ class e_tablas_valoracion_pec_avi_por{
 				$e_tablas_valoracion_pec_avi_por->fojas=$row[4];
 				$e_tablas_valoracion_pec_avi_por->tipoactividad=$row[5];
 				$e_tablas_valoracion_pec_avi_por->estado=$row[6];
-				$e_tablas_valoracion_pec_avi_por->observacion=$row[7];
 				$listObj[$index]=$e_tablas_valoracion_pec_avi_por;
 				$index++;
 			}
@@ -66,7 +67,12 @@ class e_tablas_valoracion_pec_avi_por{
 	function eliminar(e_tablas_valoracion_pec_avi_por $e_tablas_valoracion_pec_avi_por){
 		$Con=Conexion::create();
 		$cn=$Con->getConexion();
-		$Sql="delete from monitoreo.e_tablas_valoracion_pec_avi_por where idinformeevaluacion=".$e_tablas_valoracion_pec_avi_por->idinformeevaluacion;
+		$Sql="
+			delete 
+			from monitoreo.e_tablas_valoracion_pec_avi_por 
+			where 
+				idinformeevaluacion=".$e_tablas_valoracion_pec_avi_por->idinformeevaluacion." and
+				tipoactividad=".$e_tablas_valoracion_pec_avi_por->tipoactividad;
 		pg_query($cn,$Sql);
 	}
 }

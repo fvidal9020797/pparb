@@ -1,6 +1,5 @@
 <?php
 session_start();
-//show_source("evaluacion.php");
 ?>
 <html>
 <head>
@@ -95,6 +94,7 @@ session_start();
 			}
 		}
 		function tag_vertical(tagid){
+			//bloquearPantalla();
 			$("#div_eval_ganadera").css({"display":"none"});
 			$("#div_eval_agricola").css({"display":"none"});
 			$("#div_eval_mixta").css({"display":"none"});
@@ -102,9 +102,9 @@ session_start();
 			switch (tagid){
 				case '1':
 					tipoActividad=70;//agricola
-					cargar_tabla_evaluacion_agricola();
 					$("#div_eval_agricola").css({"display":"block"});
 					document.getElementById("idanexos").appendChild(document.getElementById("div_eval_agricola"));
+					cargar_tabla_evaluacion_agricola();
 				break;
 				case '2':
 					tipoActividad=71;//ganadera
@@ -126,6 +126,7 @@ session_start();
 			}
 		}
 		function cargar_evaluacion_mixta(){
+			bloquearPantalla();
 			$.ajax({
 				url:'controlador/e_puntuacion_informe_evaluacion.php',
 			    type:'POST',
@@ -133,7 +134,6 @@ session_start();
 			    	parametro:'2:'+idinformeevaluacion
 			    },
 			    success: function (json){
-			    	eliminarFilasTablas();
 			    	var listObj=JSON.parse(json);
 			    	var isGanaderaLechera=false;
 			    	for (var i = 0; i < listObj.length; i++) { listObj[i].actividad=="101" ? isGanaderaLechera=true : isGanaderaLechera;};
@@ -170,10 +170,12 @@ session_start();
 					    element.innerHTML=listObj[i].valoracion;
 					    listObj[i].actividad=="101" ? rows0.insertCell(3).appendChild(element) : rows0.insertCell(4).appendChild(element);
 			    	};
+			    	desbloquearPantalla();
 			    }
 			});
 		}
 		function cargar_tabla_evaluacion_ganadera_lechera(){
+			bloquearPantalla();
 			$.ajax({
 				url:'controlador/evaluacion_general.php',
 			    type:'POST',
@@ -183,6 +185,7 @@ session_start();
 			    success: function (json){
 			    	obtenerSuperficieGanaderaLechera();
 			    	construir_tabla_ganadera(json);
+			    	desbloquearPantalla();
 			    }
 			});
 		}
@@ -194,17 +197,21 @@ session_start();
 			    	parametro:'1:'+idreg
 			    },
 			    success: function(json){
+			    	bloquearPantalla();
 					var listObj=JSON.parse(json);
 					superficieGanadera=listObj[0].supganadera;
+					desbloquearPantalla();
 			    }
 			});
 		}
-		function cargar_tabla_evaluacion_agricola(){
+		 function cargar_tabla_evaluacion_agricola(){
 			obtenerSuperficieAgricola();
-			result=cargar_cabezera_tabla_evaluacion_agricola();
-			cargar_cuerpos_tabla_evaluacion_agricola(result);
+			//result=cargar_cabezera_tabla_evaluacion_agricola();
+			//cargar_cuerpos_tabla_evaluacion_agricola(result);
+			//cargarObservaciones();
 		}
 		function obtenerSuperficieAgricola(){
+			bloquearPantalla();
 			$.ajax({
 				url:'controlador/ll_monitoreo_superficie_agricola.php',
 			    type:'POST',
@@ -212,8 +219,11 @@ session_start();
 			    	parametro:'2:'+idmonitoreo
 			    },
 			    success: function(json){
+			    	
 					var listObj=JSON.parse(json);
 					superficieAgricola=listObj[0].sup_prod_agricola;
+					cargar_cabezera_tabla_evaluacion_agricola();
+					
 			    }
 			});
 		}
@@ -222,13 +232,11 @@ session_start();
 			$.ajax({
 	    		url:'controlador/evaluacion_general.php',
 			    type:'POST',
-			    async:false,
 			    data:{
 			    	parametro:'1:'+tipoPropiedad+":"+tipoActividad
 			    },
 			    success: function (json){
-			    	$.blockUI({ css: { backgroundColor: '#f00', color: '#fff'} });
-			    	eliminarFilasTablas();			
+			    	//eliminarFilasTablas();			
 			    	var listObj=JSON.parse(json);
 			    	var table = document.getElementById('tablaAgricola');
 			    	var rows0 = table.insertRow(table.rows.length);
@@ -274,20 +282,19 @@ session_start();
 				    var element = document.createElement("label");
 				  	element.innerHTML="Ponderacion";
 				    cell.appendChild(element);
+				    cargar_cuerpos_tabla_evaluacion_agricola(listaIdEspecifica);
 			    }
 			});	
-			return listaIdEspecifica;
+			
 		}
 		function cargar_cuerpos_tabla_evaluacion_agricola(listaIdEspecifica){
 			$.ajax({
 				url:'controlador/ll_monitoreo_agricola.php',
 			    type:'POST',
-			    async:false,
 			    data:{
 			    	parametro:'1:'+idmonitoreo+":"+año
 			    },
 			    success: function (json){
-			    	$.blockUI({ css: { backgroundColor: '#f00', color: '#fff'} });
 			    	var listObj=JSON.parse(json);
 			    	var campañas=obtenerCampañas(listObj);
 			    	var table = document.getElementById('tablaAgricola');
@@ -431,6 +438,7 @@ session_start();
 						};
 			    		table.appendChild(eBody);
 			    	};
+			    	var eBody=document.createElement("tbody");
 			    	var row = table.insertRow(table.rows.length);
 			    	var cell = row.insertCell(0);
 			    	cell.setAttribute("colspan",listaIdEspecifica.length+3);
@@ -438,6 +446,7 @@ session_start();
 					element.innerHTML="TOTAL";
 					cell.appendChild(element);
 					row.appendChild(cell);
+					eBody.appendChild(row);
 
 					var cell = row.insertCell(1);
 			   		var element = document.createElement("label");
@@ -446,11 +455,31 @@ session_start();
 					cell.appendChild(element);
 					row.appendChild(cell);
 					eBody.appendChild(row);
-				    cargarDatosTablaEvalGanadera();	
+
+					var row = table.insertRow(table.rows.length);
+			    	var cell = row.insertCell(0);
+			    	cell.setAttribute("colspan","11");
+			    	var element = document.createElement("label");
+			    	element.innerHTML="Observaciones";
+			   		element.setAttribute("for","textarea_e_informe_eval_observaciones");
+					cell.appendChild(element);
+					row.appendChild(cell);
+
+			   		var element = document.createElement("textarea");
+			   		element.setAttribute("class","textarea_e_informe_eval_observaciones");
+			   		element.setAttribute("id","textarea_e_informe_eval_observaciones");
+					cell.appendChild(element);
+					row.appendChild(cell);
+					eBody.appendChild(row);
+					table.appendChild(eBody);
+				    cargarDatosTablaEvalGanadera();
+				    cargarObservaciones();
+				    desbloquearPantalla();
 			    }
 			});	
 		}
 		function construir_tabla_ganadera(json){
+			bloquearPantalla();
 			var listObjGral=JSON.parse(json);
 			var table = document.getElementById('table_eval_ganadera');
 			for (var i = 0; i < listObjGral.length; i++) {
@@ -488,10 +517,6 @@ session_start();
 							    element.setAttribute("onkeypress","return isfloat(event, this,"+listObjGral[i].list_evaluacion_especifica[j].valoracion+")");
 							    element.setAttribute("onchange","sumarDatosTabla()");
 							    cell.appendChild(element);
-							    var cell = row.insertCell(4);
-							    var element = document.createElement("textarea");
-							    element.setAttribute("id","obs_"+listObjGral[i].list_evaluacion_especifica[j].idevaluacionespecifica);
-							    cell.appendChild(element);
 						    }else{
 						    	var cell = row.insertCell(1);
 							    var element = document.createElement("textarea");
@@ -502,10 +527,6 @@ session_start();
 							    element.setAttribute("id","porc_"+listObjGral[i].list_evaluacion_especifica[j].idevaluacionespecifica);
 							    element.setAttribute("onkeypress","return isfloat(event, this,"+parseInt(parseInt(listObjGral[i].list_evaluacion_especifica[0].valoracion)+parseInt(listObjGral[i].list_evaluacion_especifica[1].valoracion) + parseInt(listObjGral[i].list_evaluacion_especifica[2].valoracion))+","+true+")");
 							    element.setAttribute("onchange","sumarDatosTabla()");
-							    cell.appendChild(element);
-							    var cell = row.insertCell(3);
-							    var element = document.createElement("textarea");
-							    element.setAttribute("id","obs_"+listObjGral[i].list_evaluacion_especifica[j].idevaluacionespecifica);
 							    cell.appendChild(element);
 						    }
 						}else{
@@ -539,10 +560,6 @@ session_start();
 							}
 							element.setAttribute("onchange","sumarDatosTabla()");
 						    cell.appendChild(element);
-						    var cell = row.insertCell(6);
-						    var element = document.createElement("textarea");
-						    element.setAttribute("id","obs_"+listObjGral[i].list_evaluacion_especifica[j].idevaluacionespecifica);
-						    cell.appendChild(element);
 						}
 					};
 				}else{
@@ -573,10 +590,6 @@ session_start();
 				    element.setAttribute("onkeypress","return isfloat(event, this,"+listObjGral[i].list_evaluacion_especifica[0].valoracion+")");
 				    element.setAttribute("onchange","sumarDatosTabla()");
 				    cell.appendChild(element);
-				    var cell = row.insertCell(6);
-				    var element = document.createElement("textarea");
-				    element.setAttribute("id","obs_"+listObjGral[i].list_evaluacion_especifica[0].idevaluacionespecifica);
-				    cell.appendChild(element);
 				}
 			};
 			var row = table.insertRow(table.rows.length);
@@ -589,14 +602,32 @@ session_start();
 		    var element = document.createElement("label");
 		    element.setAttribute("id","idPuntuacionFinal");
 	    	cell.appendChild(element);
+
+	    	var row = table.insertRow(table.rows.length);
+		    var cell = row.insertCell(0);
+		    cell.setAttribute("colspan",6);
+		    var element = document.createElement("label");
+		    element.innerHTML="Observaciones";
+		    element.setAttribute("for","textarea_e_informe_eval_observaciones");
+	    	cell.appendChild(element);
+
+			var row = table.insertRow(table.rows.length);
+	    	var cell = row.insertCell(0);
+	    	 cell.setAttribute("colspan",6);
+		    var element = document.createElement("textarea");
+		    element.setAttribute("class","textarea_e_informe_eval_observaciones");
+		    element.setAttribute("id","textarea_e_informe_eval_observaciones");
+	    	cell.appendChild(element);
 	    	cargarTablaValoracionPecAviPor();
+	    	cargarObservaciones();
+	    	desbloquearPantalla();
 		}
 		function guardarDatosTablaGanLec(){
 			var array="";
 			 $.each($('#table_eval_ganadera tbody tr'),function(){
 		        var txtarea = $(this).find("textarea");
 		        var txtareaAux;
-		        if(txtarea.length>0){
+		        if(txtarea.length>0 && txtarea.attr('id')!="textarea_e_informe_eval_observaciones"){
 		        	txtareaAux=txtarea[1];
 		        	array=array+txtarea.attr('id').split("_")[1]+"¬"+$(txtarea[0]).val()+"¬";
 		        }
@@ -605,20 +636,19 @@ session_start();
 		        	if($(txtinput).val().trim()==""){
 		        		$(txtinput).val("0");
 		        	}
-		        	array=array+$(txtinput).val()+"¬";
-		        }
-		        if(txtarea.length>0){
-		        	array=array+$(txtareaAux).val()+":"
+		        	array=array+$(txtinput).val()+":";
 		        }
 	    	});
 			var subsplit=array.split(":");
 			EliminarTablaValoracionPecAviPor();
 			for (var i = 0; i < subsplit.length-1; i++) {
 				var _subsplit=subsplit[i];
-				insertarTablaValoracionPecAviPor(_subsplit.split("¬")[0],_subsplit.split("¬")[2],_subsplit.split("¬")[1],tipoActividad,_subsplit.split("¬")[3]);
+				insertarTablaValoracionPecAviPor(_subsplit.split("¬")[0],_subsplit.split("¬")[2],_subsplit.split("¬")[1],tipoActividad);
 			};
+			insertarObservaciones(tipoActividad, $("#textarea_e_informe_eval_observaciones").val());
 			guardarTotalActividades(tipoActividad, $("#idPuntuacionFinal").text(), superficieGanadera);
     	}
+
     	function cargarOficina(){
     		$.ajax({
 				url:'controlador/codificadores.php',
@@ -716,14 +746,15 @@ session_start();
 			    }
 			});
     	}
-    	function insertarTablaValoracionPecAviPor(id_eval_esp, ponderacion, fojas, tipoactividad,observacion){
+    	function insertarTablaValoracionPecAviPor(id_eval_esp, ponderacion, fojas, tipoactividad){
     		$.ajax({
 				url:'controlador/e_tablas_valoracion_pec_avi_por.php',
 			    type:'POST',
 			    data:{
-			    	parametro:'1:'+idinformeevaluacion+":"+id_eval_esp+":"+ponderacion+":"+fojas+":"+tipoactividad+":"+observacion
+			    	parametro:'1:'+idinformeevaluacion+":"+id_eval_esp+":"+ponderacion+":"+fojas+":"+tipoactividad
 			    },
 			    success: function(json){
+			    	console.log(json);
 			    }
 			});
     	}
@@ -733,33 +764,54 @@ session_start();
 			    type:'POST',
 			    async:false,
 			    data:{
-			    	parametro:'3:'+idinformeevaluacion
+			    	parametro:'3:'+idinformeevaluacion+":"+tipoActividad
 			    },
 			    success: function(json){
 			    }
 			});
     	}
     	function cargarTablaValoracionPecAviPor(){
+    		
     		$.ajax({
 				url:'controlador/e_tablas_valoracion_pec_avi_por.php',
 			    type:'POST',
 			    data:{
-			    	parametro:'2:'+idinformeevaluacion
+			    	parametro:'2:'+idinformeevaluacion+":"+tipoActividad
 			    },
 			    success: function(json){
+			    	bloquearPantalla();
 			    	var obj=JSON.parse(json);
 			    	var idPuntuacionFinal=0;
 			    	for (var i = 0; i < obj.length; i++) {
 			    		$("#txt_"+obj[i].idevaluacionespecifica).val(obj[i].fojas);
 			    		$("#porc_"+obj[i].idevaluacionespecifica).val(obj[i].ponderacion);
-			    		$("#obs_"+obj[i].idevaluacionespecifica).val(obj[i].observacion);
 			    		idPuntuacionFinal+=parseFloat(obj[i].ponderacion);
+			    		if(idPuntuacionFinal>100){
+			    			idPuntuacionFinal=100;
+			    		}
 			    	};
 			    	document.getElementById("idPuntuacionFinal").innerHTML=idPuntuacionFinal;
+			    	desbloquearPantalla();
 			    }
 			});
     	}
+    	function cargarObservaciones(){
+		    $.ajax({
+				url:'controlador/e_informe_evaluacion_observaciones.php',
+			    type:'POST',
+			    data:{
+			    	parametro:'2:'+idinformeevaluacion+":"+tipoActividad
+			    },
+			    success: function(json){
+			    	bloquearPantalla();
+			    	var obj=JSON.parse(json);
+			    	$("#textarea_e_informe_eval_observaciones").val(obj.observaciones);
+			    	desbloquearPantalla();
+			    }
+			});		
+    	}
     	function eliminarFilasTablas() {
+
     		try{//ganadera lechera
     		var i=0;
     		$.each($('#table_eval_ganadera tbody tr'),function(){
@@ -785,6 +837,7 @@ session_start();
     			i++;
 	    	});
     		}catch(err){}
+    		//desbloquearPantalla();
 
     	}
     	function isfloat(event, element, limite, alt) {// funcionamiento normal
@@ -1042,6 +1095,19 @@ session_start();
     		guardarPonderacionAgricola(arrayDatosPonderacion);
     		guardarMonitoreoAgricola(arrayValoracion);
     		guardarTotalActividades(tipoActividad, $("#nota_total").text(), superficieAgricola);
+    		insertarObservaciones(tipoActividad, $("#textarea_e_informe_eval_observaciones").val());
+    	}
+    	function insertarObservaciones(tipoactividad, observaciones){
+    		$.ajax({
+				url:'controlador/e_informe_evaluacion_observaciones.php',
+			    type:'POST',
+			    data:{
+			    	parametro:'1:'+idinformeevaluacion+":"+tipoactividad+":"+observaciones
+			    },
+			    success: function(json){
+			    	console.log(json);
+			    }
+			});
     	}
     	function guardarTotalActividades(actividad, notaTotal, superficieActividad){
     		$.ajax({
@@ -1051,7 +1117,6 @@ session_start();
 			    	parametro:'1:'+idinformeevaluacion+":"+tipoActividad+":"+notaTotal+":"+superficieActividad
 			    },
 			    success: function(json){
-			    	debugger;
 			    	console.log(json);
 			    }
 			});
@@ -1096,15 +1161,14 @@ session_start();
 			};
     	}
     	function cargarDatosTablaEvalGanadera(){
-    		$.blockUI({ css: { backgroundColor: '#f00', color: '#fff'} });
     		$.ajax({
 				url:'controlador/e_tabla_valoracion_agricola.php',
 			    type:'POST',
-			    async:false,
 			    data:{
 			    	parametro:'2:'+idinformeevaluacion
 			    },
 			    success: function(json){
+			    	bloquearPantalla();
 			    	var listObj=JSON.parse(json);
 			    	for (var i = 0; i < listObj.length; i++) {
 			    		$("#pon_"+listObj[i].idevaluacionespecif+"_"+listObj[i].idcultivo).val(listObj[i].puntuacion);
@@ -1112,7 +1176,6 @@ session_start();
 			    		$("#prod_"+listObj[i].idevaluacionespecif+"_"+listObj[i].idcultivo).val(listObj[i].produccion);
 			    		var x=document.getElementById("total_"+listObj[i].idcultivo).hasAttribute("name");
 			    		if(!document.getElementById("total_"+listObj[i].idcultivo).hasAttribute("name")){
-			    			$.blockUI({ css: { backgroundColor: '#f00', color: '#fff'} });
 			    			$.ajax({
 								url:'controlador/e_tabla_ponderacion_agricola.php',
 							    type:'POST',
@@ -1126,12 +1189,11 @@ session_start();
 										document.getElementById("total_"+listObjAux[0].idcultivo).setAttribute("name",listObjAux[0].idcultivo+"_"+listObjAux[0].ponderacion+"_"+listObjAux[0].porcponderacion+"_"+listObjAux[0].campana+"_"+listObjAux[0].comprometido);
 										document.getElementById(listObjAux[0].idcultivo+"_"+listObjAux[0].comprometido.trim()+"_"+listObjAux[0].campana.trim()).setAttribute("class","glyphicon glyphicon-ok");
 									}
-									$.unblockUI();
 							    }
 							});
 			    		}
 			    	};
-			    	$.unblockUI();
+			    	desbloquearPantalla();
 			    }
 			});
 			actulizar_ponderaciones_tabla_agricola();
@@ -1140,7 +1202,6 @@ session_start();
 
     	}
     	function abrirModal(element){
-    		$.blockUI({ css: { backgroundColor: '#f00', color: '#fff'} });
     		vaciarModal();
     		$(element).attr('name').split("_")[1] == 'C' ?  $("#compro").text("Comprometido"): $("#compro").text("No Comprometido");
     		$("#idcamp").text($(element).attr('name').split("_")[2]);
@@ -1159,7 +1220,6 @@ session_start();
     		}
     		$("#cult").text($(element).attr('name').split("_")[1] == 'C' ?  $(element).text()+"(Comprometido)" :$(element).text()+ "(No Comprometido)");
     		$("#var_campa").text($(element).attr('name').split("_")[3]);
-    		$.blockUI({ css: { backgroundColor: '#f00', color: '#fff'} });
     		$.ajax({
 				url:'controlador/ll_monitoreo_agricola.php',
 			    type:'POST',
@@ -1195,7 +1255,6 @@ session_start();
 			}
 			$("#porc_sup").text(parseFloat(($("#sup_ccultivo").text())/parseFloat($("#sup_compro_agri").text())*100)+"%")
 			document.getElementById("btnCalcularModal").setAttribute("onclick","calcularModal('"+$(element).attr('name')+"','"+$("#porc_valoracion").val()+"','"+$("#porc_pond").text()+"')"); 
-			$.unblockUI();
     	}
     	function ActualizarPorcentaje(){
     		var por_sup=parseFloat($("#porc_sup").text());
@@ -1211,7 +1270,6 @@ session_start();
 		    $("#var_campa").text("");  
 		}
 		function actulizar_ponderaciones_tabla_agricola(){
-			$.blockUI({ css: { backgroundColor: '#f00', color: '#fff'} });
 			var x=0;
 			$("#nota_total").text("0");
 			$.each($('#tablaAgricola tbody tr'),function(){
@@ -1247,10 +1305,7 @@ session_start();
     					}
     				};
     			}
-    			$.unblockUI();
-    			
-	    	});
-			
+	    	});			
 		}
 		function calcularModal(name_element,porc_valoracion, porc_pond){
 			document.getElementById("total_"+name_element.split("_")[0]).setAttribute("name",name_element.split("_")[0]+"_"+$("#porc_valoracion").val()+"_"+$("#porc_pond").text()+"_"+$("#idcamp").text()+"_"+$("#idcompr").text());
@@ -1321,6 +1376,7 @@ session_start();
 					            <ul id="ul_actividades" class="nav nav-tabs tabs-left" style="cursor: pointer;"></ul>
 							</div>
 							<div id="idanexos" class="col-sm-8" style="width: 82.66668%"></div>
+
 						</div>
 					</div>
 				</div>
@@ -1365,7 +1421,6 @@ session_start();
 				<td colspan="2">E. Especifica</td>
 				<td rowspan="2">Folio</td>
 				<td rowspan="2">%</td>
-				<td rowspan="2">Observacion</td>
 			</tr>
 			<tr>
 				<td>Parametro</td>
@@ -1374,6 +1429,10 @@ session_start();
 				<td>%</td>
 			</tr>
     	</table>
+    	<!-- <div>
+    		<label for="textarea_e_informe_eval_observaciones">Observaciones</label>
+    		<textarea id="textarea_e_informe_eval_observaciones" class="textarea_e_informe_eval_observaciones"></textarea>
+    	</div> -->
     	<button id="btnGuardadoGanaderaLechera" type="button" onclick="guardarDatosTablaGanLec()" class="btn btn-primary">Modificar y Guardar</button>
     </div>
     <div id="div_eval_mixta" class="" style="display:none">
@@ -1393,6 +1452,7 @@ session_start();
     	<table id="tablaAgricola" border="1"></table>
     	<button id="btnGuardadoAgricola" type="button" onclick=LeerTablaAgricola() class="btn btn-primary">Modificar y Guardar</button>  
     </div>
+    
     <div class="modal fade" id="myModal" role="dialog">
 	    <div class="modal-dialog">
 	      	<div class="modal-content">

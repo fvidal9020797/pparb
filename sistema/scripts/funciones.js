@@ -894,8 +894,25 @@ function SumaVerticalG(nombre) {
 				alert(e);
 			}
 }
-///////////////////////////////////Plan de Pagos//////////////////////////////////////////
+///////////////////////////////////BLOQUEAR Y DESBLOQUEAR PANTALLA//////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////
+
+function bloquearPantalla(){
+	//$.blockUI({ message: '<h1><img src="vista/images/giphy.gif" class="img_gif_please_wait" /> Just a moment...</h1>' });
+	$.blockUI({
+		css:{ 
+			backgroundColor: '#f00', 
+			color: '#fff',
+			draggable:false
+		},
+		onOverlayClick: $.unblockUI
+	});  
+	
+}
+function desbloquearPantalla(){
+	$.unblockUI();
+}
+
 
 
 
