@@ -80,47 +80,6 @@
 				    btn.innerHTML=parseInt(parseInt(2013)+parseInt(i+1));
 				    cell.appendChild(btn);
 			    };
-			    // var cell0 = row.insertCell(0);
-			    // var element0 = document.createElement("button");
-			    // element0.setAttribute("style","width:100%;");
-			    // element0.setAttribute("id","año1");
-			    // element0.setAttribute("disabled",true);
-			    // element0.setAttribute("onclick","cambiar_Año('1'); año_activo();");
-			    // element0.innerHTML="2014";
-			    // cell0.appendChild(element0);
-			    // var cell1 = row.insertCell(1);
-			    // var element1 = document.createElement("button");
-			    // element1.setAttribute("style","width:100%; ");
-			    // element1.setAttribute("id","año2");
-			    // element1.setAttribute("disabled",true);
-			    // element1.setAttribute("onclick","cambiar_Año('2'); año_activo();");
-			    // element1.innerHTML="2015";
-			    // cell1.appendChild(element1);
-			    // var cell2 = row.insertCell(2);
-			    // var element2 = document.createElement("button");
-			    // cell2.appendChild(element2);
-			    // element2.setAttribute("style","width:100%; ");
-			    // element2.setAttribute("id","año3");
-			    // element2.setAttribute("disabled",true);
-			    // element2.setAttribute("onclick","cambiar_Año('3'); año_activo()");
-			    // element2.innerHTML="2016";
-			    // cell2.appendChild(element2);
-			    // var cell3 = row.insertCell(3);
-			    // var element3 = document.createElement("button");
-			    // element3.setAttribute("style","width:100%; ");
-			    // element3.setAttribute("disabled",true);
-			    // element3.setAttribute("onclick","cambiar_Año('4'); año_activo();");
-			    // element3.setAttribute("id","año4");
-			    // element3.innerHTML="2017";
-			    // cell3.appendChild(element3);
-			    // var cell4 = row.insertCell(4);
-			    // var element4 = document.createElement("button");
-			    // element4.setAttribute("style","width:100%; ");
-			    // element4.setAttribute("id","año5");
-			    // element4.setAttribute("disabled",true);
-			    // element4.setAttribute("onclick","cambiar_Año('5');año_activo();");
-			    // element4.innerHTML="2018";
-			    // cell4.appendChild(element4);
 			}else{
 				var table = document.getElementById('anhos');
 			    var row = table.insertRow(table.rows.length);
@@ -134,46 +93,6 @@
 				    btn.innerHTML=parseInt(parseInt(2013)+parseInt(i+3));
 				    cell.appendChild(btn);
 			    };
-			    // var cell0 = row.insertCell(0);
-			    // var element0 = document.createElement("button");
-			   	// element0.setAttribute("style","width:100%;");
-			    // element0.setAttribute("id","año3");
-			    // element0.setAttribute("disabled",true);
-			    // element0.setAttribute("onclick","cambiar_Año('3');año_activo();");
-			    // element0.innerHTML="2016";
-			    // cell0.appendChild(element0);
-			    // var cell1 = row.insertCell(1);
-			    // var element1 = document.createElement("button");
-			    // element1.setAttribute("style","width:100%;");
-			    // element1.setAttribute("id","año4");
-			    // element1.setAttribute("disabled",true);
-			    // element1.setAttribute("onclick","cambiar_Año('4');año_activo();");
-			    // element1.innerHTML="2017";
-			    // cell1.appendChild(element1);
-			    // var cell2 = row.insertCell(2);
-			    // var element2 = document.createElement("button");
-			    // element2.setAttribute("style","width:100%;");
-			    // element2.setAttribute("id","año5");
-			    // element2.setAttribute("disabled",true);
-			    // element2.setAttribute("onclick","cambiar_Año('5');año_activo();");
-			    // element2.innerHTML="2018";
-			    // cell2.appendChild(element2);
-			    // var cell3 = row.insertCell(3);
-			    // var element3 = document.createElement("button");
-			    // element3.setAttribute("style","width:100%; ");
-			    //  element3.setAttribute("id","año6");
-			    // element3.setAttribute("disabled",true);
-			    // element3.setAttribute("onclick","cambiar_Año('6');año_activo();");
-			    // element3.innerHTML="2019";
-			    // cell3.appendChild(element3);
-			    // var cell4 = row.insertCell(4);
-			    // var element4 = document.createElement("button");
-			    // element4.setAttribute("style","width:100%; ");
-			    // element4.setAttribute("id","año7");
-			    // element4.setAttribute("disabled",true);
-			    // element4.setAttribute("onclick","cambiar_Año('7');año_activo();");
-			    // element4.innerHTML="2020";
-			    // cell4.appendChild(element4);
 			}
 		}
 		function mostraranhos(){
@@ -191,47 +110,33 @@
 				    		switch(obj[i].año) {
 							    case '1':
 							        document.getElementById("año1").removeAttribute("disabled");
-							        document.getElementById("año1").setAttribute("class","btn_habilitado_anho_monitoreo");
 							        primero=true;
 							        break;
 							    case '2':
 							         document.getElementById("año2").removeAttribute("disabled");
-							         document.getElementById("año2").setAttribute("class","btn_habilitado_anho_monitoreo");
 							         primero=true;
 							        break;
 							    case '3':
 							         document.getElementById("año3").removeAttribute("disabled");
-							         document.getElementById("año3").setAttribute("class","btn_habilitado_anho_monitoreo");
 							         primero=true;
 							        break;
 							    case '4':
 							         document.getElementById("año4").removeAttribute("disabled");
-							         document.getElementById("año4").setAttribute("class","btn_habilitado_anho_monitoreo");
 							         primero=true;
 							        break;        
 							    case '5':
 							         document.getElementById("año5").removeAttribute("disabled");
-							         document.getElementById("año5").setAttribute("class","btn_habilitado_anho_monitoreo");
 							         primero=true;
 							        break;
 							    case '6':
 							         document.getElementById("año5").removeAttribute("disabled");
-							         document.getElementById("año5").setAttribute("class","btn_habilitado_anho_monitoreo");
 							         primero=true;
 							        break;  
 							    case '7':
 							         document.getElementById("año5").removeAttribute("disabled");
-							         document.getElementById("año5").setAttribute("class","btn_habilitado_anho_monitoreo");
 							         primero=true;
 							        break;            
 							}
-
-
-
-
-							///
-							///
-							
 							if(primero==true & i==0){
 								cambiar_Año(obj[i].año);
 								año_activo();
@@ -244,67 +149,67 @@
 		function año_activo(){//background-color: #f4f4f4;
 			switch(año) {
 			    case '1':
-			    	document.getElementById("año1").setAttribute("class","btn_focus_anho_monitoreo");
-			    	document.getElementById("año2").setAttribute("class","btn_habilitado_anho_monitoreo");
-			    	document.getElementById("año3").setAttribute("class","btn_habilitado_anho_monitoreo");
-			    	document.getElementById("año4").setAttribute("class","btn_habilitado_anho_monitoreo");
-			    	document.getElementById("año5").setAttribute("class","btn_habilitado_anho_monitoreo");
-			    	document.getElementById("año6").setAttribute("class","btn_habilitado_anho_monitoreo");
-			    	document.getElementById("año7").setAttribute("class","btn_habilitado_anho_monitoreo");
+			    	$("#año1").attr("class","btn_focus_anho_monitoreo");
++			    	$("#año2").attr("class","btn_habilitado_anho_monitoreo");
++			    	$("#año3").attr("class","btn_habilitado_anho_monitoreo");
++			    	$("#año4").attr("class","btn_habilitado_anho_monitoreo");
++			    	$("#año5").attr("class","btn_habilitado_anho_monitoreo");
++			    	$("#año6").attr("class","btn_habilitado_anho_monitoreo");
++			    	$("#año7").attr("class","btn_habilitado_anho_monitoreo");
 			        break;
 			    case '2':
-			    	document.getElementById("año2").setAttribute("class","btn_focus_anho_monitoreo");
-			    	document.getElementById("año1").setAttribute("class","btn_habilitado_anho_monitoreo");
-			    	document.getElementById("año3").setAttribute("class","btn_habilitado_anho_monitoreo");
-			    	document.getElementById("año4").setAttribute("class","btn_habilitado_anho_monitoreo");
-			    	document.getElementById("año5").setAttribute("class","btn_habilitado_anho_monitoreo");
-			    	document.getElementById("año6").setAttribute("class","btn_habilitado_anho_monitoreo");
-			    	document.getElementById("año7").setAttribute("class","btn_habilitado_anho_monitoreo");
+			    	$("#año2").attr("class","btn_focus_anho_monitoreo");
++			    	$("#año1").attr("class","btn_habilitado_anho_monitoreo");
++			    	$("#año3").attr("class","btn_habilitado_anho_monitoreo");
++			    	$("#año4").attr("class","btn_habilitado_anho_monitoreo");
++			    	$("#año5").attr("class","btn_habilitado_anho_monitoreo");
++			    	$("#año6").attr("class","btn_habilitado_anho_monitoreo");
++			    	$("#año7").attr("class","btn_habilitado_anho_monitoreo");
 			        break;
 			    case '3':
-			    	document.getElementById("año3").setAttribute("class","btn_focus_anho_monitoreo");
-			    	document.getElementById("año1").setAttribute("class","btn_habilitado_anho_monitoreo");
-			    	document.getElementById("año2").setAttribute("class","btn_habilitado_anho_monitoreo");
-			    	document.getElementById("año4").setAttribute("class","btn_habilitado_anho_monitoreo");
-			    	document.getElementById("año5").setAttribute("class","btn_habilitado_anho_monitoreo");
-			    	document.getElementById("año6").setAttribute("class","btn_habilitado_anho_monitoreo");
-			    	document.getElementById("año7").setAttribute("class","btn_habilitado_anho_monitoreo");
+		    		$("#año3").attr("class","btn_focus_anho_monitoreo");
++			    	$("#año1").attr("class","btn_habilitado_anho_monitoreo");
++			    	$("#año2").attr("class","btn_habilitado_anho_monitoreo");
++			    	$("#año4").attr("class","btn_habilitado_anho_monitoreo");
++			    	$("#año5").attr("class","btn_habilitado_anho_monitoreo");
++			    	$("#año6").attr("class","btn_habilitado_anho_monitoreo");
++			    	$("#año7").attr("class","btn_habilitado_anho_monitoreo");
 			        break;
 			    case '4':
-			    	document.getElementById("año4").setAttribute("class","btn_focus_anho_monitoreo");
-			    	document.getElementById("año1").setAttribute("class","btn_habilitado_anho_monitoreo");
-			    	document.getElementById("año2").setAttribute("class","btn_habilitado_anho_monitoreo");
-			    	document.getElementById("año3").setAttribute("class","btn_habilitado_anho_monitoreo");
-			    	document.getElementById("año5").setAttribute("class","btn_habilitado_anho_monitoreo");
-			    	document.getElementById("año6").setAttribute("class","btn_habilitado_anho_monitoreo");
-			    	document.getElementById("año7").setAttribute("class","btn_habilitado_anho_monitoreo");
+			    	$("#año4").attr("class","btn_focus_anho_monitoreo");
++			    	$("#año1").attr("class","btn_habilitado_anho_monitoreo");
++			    	$("#año2").attr("class","btn_habilitado_anho_monitoreo");
++			    	$("#año3").attr("class","btn_habilitado_anho_monitoreo");
++			    	$("#año5").attr("class","btn_habilitado_anho_monitoreo");
++			    	$("#año6").attr("class","btn_habilitado_anho_monitoreo");
++			    	$("#año7").attr("class","btn_habilitado_anho_monitoreo");
 			        break;        
 			    case '5':
-			    	document.getElementById("año5").setAttribute("class","btn_focus_anho_monitoreo");
-			    	document.getElementById("año1").setAttribute("class","btn_habilitado_anho_monitoreo");
-			    	document.getElementById("año2").setAttribute("class","btn_habilitado_anho_monitoreo");
-			    	document.getElementById("año3").setAttribute("class","btn_habilitado_anho_monitoreo");
-			    	document.getElementById("año4").setAttribute("class","btn_habilitado_anho_monitoreo");
-			    	document.getElementById("año6").setAttribute("class","btn_habilitado_anho_monitoreo");
-			    	document.getElementById("año7").setAttribute("class","btn_habilitado_anho_monitoreo");
+			    	$("#año5").attr("class","btn_focus_anho_monitoreo");
++			    	$("#año1").attr("class","btn_habilitado_anho_monitoreo");
++			    	$("#año2").attr("class","btn_habilitado_anho_monitoreo");
++			    	$("#año3").attr("class","btn_habilitado_anho_monitoreo");
++			    	$("#año4").attr("class","btn_habilitado_anho_monitoreo");
++			    	$("#año6").attr("class","btn_habilitado_anho_monitoreo");
++			    	$("#año7").attr("class","btn_habilitado_anho_monitoreo");
 			        break;   
 			    case '6':
-			    	document.getElementById("año6").setAttribute("class","btn_focus_anho_monitoreo");
-			    	document.getElementById("año1").setAttribute("class","btn_habilitado_anho_monitoreo");
-			    	document.getElementById("año2").setAttribute("class","btn_habilitado_anho_monitoreo");
-			    	document.getElementById("año3").setAttribute("class","btn_habilitado_anho_monitoreo");
-			    	document.getElementById("año4").setAttribute("class","btn_habilitado_anho_monitoreo");
-			    	document.getElementById("año5").setAttribute("class","btn_habilitado_anho_monitoreo");
-			    	document.getElementById("año7").setAttribute("class","btn_habilitado_anho_monitoreo");
+			    	$("#año6").attr("class","btn_focus_anho_monitoreo");
++			    	$("#año1").attr("class","btn_habilitado_anho_monitoreo");
++			    	$("#año2").attr("class","btn_habilitado_anho_monitoreo");
++			    	$("#año3").attr("class","btn_habilitado_anho_monitoreo");
++			    	$("#año4").attr("class","btn_habilitado_anho_monitoreo");
++			    	$("#año5").attr("class","btn_habilitado_anho_monitoreo");
++			    	$("#año7").attr("class","btn_habilitado_anho_monitoreo");
 			        break;   
 			    case '7':
-			    	document.getElementById("año7").setAttribute("class","btn_focus_anho_monitoreo");
-			    	document.getElementById("año1").setAttribute("class","btn_habilitado_anho_monitoreo");
-			    	document.getElementById("año2").setAttribute("class","btn_habilitado_anho_monitoreo");
-			    	document.getElementById("año3").setAttribute("class","btn_habilitado_anho_monitoreo");
-			    	document.getElementById("año4").setAttribute("class","btn_habilitado_anho_monitoreo");
-			    	document.getElementById("año5").setAttribute("class","btn_habilitado_anho_monitoreo");
-			    	document.getElementById("año6").setAttribute("class","btn_habilitado_anho_monitoreo");
+			    	$("#año5").attr("class","btn_focus_anho_monitoreo");
++			    	$("#año1").attr("class","btn_habilitado_anho_monitoreo");
++			    	$("#año2").attr("class","btn_habilitado_anho_monitoreo");
++			    	$("#año3").attr("class","btn_habilitado_anho_monitoreo");
++			    	$("#año4").attr("class","btn_habilitado_anho_monitoreo");
++			    	$("#año5").attr("class","btn_habilitado_anho_monitoreo");
++			    	$("#año6").attr("class","btn_habilitado_anho_monitoreo");
 			        break;   
 			} 
 		}
@@ -480,39 +385,11 @@
 			                	<p class="form-control-static" id="tipo_prop" ></p>              
 			                	<label class="col-xs-4 control-label">Tipo de actividad:</label>
 			                	<p class="form-control-static" id="tipo_act"></p>             
-			                	        
 			              </div>
 			            </div>
-		          </div>
+		          	</div>
 		        </fieldset>
 			</div>
-
-
-
-		<!-- 	<div class="row" align="center">
-				<table border="1">
-					<tbody>
-						<tr>
-							<td><label>Informe tecinco del predio</label></td>
-							<td><label id="nom_pre"></label></td>
-							<td><label>Codigo de registro</label></td>
-							<td><label id="cod_reg"></label></td>
-						</tr>
-						<tr>
-							<td><label>Superficie total del predio</label></td>
-							<td><label id="sup_total"></label></td>
-							<td><label>Superficie de produccion de alimentos</label></td>
-							<td><label id="sup_prod_alim"></label></td>
-						</tr>
-						<tr>
-							<td><label>Tipo de propiedad</label></td>
-							<td><label id="tipo_prop"></label></td>
-							<td><label>Tipo de actividad programa</label></td>
-							<td><label id="tipo_act"></label></td>
-						</tr>
-					</tbody>
-				</table>
-			</div> -->
 			<div class="row" align="center">
 				<table id="anhos" style="width:100%; text-align: center;" border="1"></table>
 			</div>
@@ -523,6 +400,5 @@
 		</div>
 	</div>
 	<div id="contenedorprincipal" style="overflow-y: scroll;height: 100%;"></div>
-	
 </body>
 </html>

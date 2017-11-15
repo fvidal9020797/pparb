@@ -32,7 +32,16 @@
 }
 .btn_habilitado_anho_monitoreo{
 	background-color: #75af73;
+	color:#FFF;
 }
 .btn_focus_anho_monitoreo{
 	background-color: #032c02;
+	color:#FFF;
+}
+.form_horizontal_eval{
+	display: flex;
+}
+.textarea_e_informe_eval{
+	width: 100%;
+    height: 100px;
 }

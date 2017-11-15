@@ -30,13 +30,22 @@ session_start();
 		function mostrarActividades(){
 			var ul = document.getElementById('ul_actividades');
 			switch (actividad){
+				case 'Agricola':
+					var li = document.createElement("li");
+					li.setAttribute("class","active");
+					var a=document.createElement("a");
+					a.setAttribute("data-toggle","tab");
+					a.setAttribute("onclick","tag_vertical('1')");
+					a.innerHTML= actividad;
+					li.appendChild(a);
+					ul.appendChild(li);
+				break;
 				case 'Ganadera':
 					var li = document.createElement("li");
 					li.setAttribute("class","active");
 					var a=document.createElement("a");
 					a.setAttribute("data-toggle","tab");
-					a.setAttribute("href","#ganadera1");
-					a.setAttribute("onclick","tag_vertical('1')");
+					a.setAttribute("onclick","tag_vertical('2')");
 					a.innerHTML= actividad;
 					li.appendChild(a);
 					ul.appendChild(li);
@@ -46,7 +55,6 @@ session_start();
 					li.setAttribute("class","active");
 					var a=document.createElement("a");
 					a.setAttribute("data-toggle","tab");
-					a.setAttribute("href","#ganadera1");
 					a.setAttribute("onclick","tag_vertical('3')");
 					a.innerHTML= actividad;
 					li.appendChild(a);
@@ -94,7 +102,6 @@ session_start();
 			}
 		}
 		function tag_vertical(tagid){
-			//bloquearPantalla();
 			$("#div_eval_ganadera").css({"display":"none"});
 			$("#div_eval_agricola").css({"display":"none"});
 			$("#div_eval_mixta").css({"display":"none"});
@@ -219,7 +226,6 @@ session_start();
 			    	parametro:'2:'+idmonitoreo
 			    },
 			    success: function(json){
-			    	
 					var listObj=JSON.parse(json);
 					superficieAgricola=listObj[0].sup_prod_agricola;
 					cargar_cabezera_tabla_evaluacion_agricola();
@@ -472,7 +478,7 @@ session_start();
 					row.appendChild(cell);
 					eBody.appendChild(row);
 					table.appendChild(eBody);
-				    cargarDatosTablaEvalGanadera();
+				    cargarDatosTablaEvalAgricola();
 				    cargarObservaciones();
 				    desbloquearPantalla();
 			    }
@@ -1160,7 +1166,7 @@ session_start();
 				});
 			};
     	}
-    	function cargarDatosTablaEvalGanadera(){
+    	function cargarDatosTablaEvalAgricola(){
     		$.ajax({
 				url:'controlador/e_tabla_valoracion_agricola.php',
 			    type:'POST',
@@ -1193,10 +1199,11 @@ session_start();
 							});
 			    		}
 			    	};
+			    	actulizar_ponderaciones_tabla_agricola();
 			    	desbloquearPantalla();
 			    }
 			});
-			actulizar_ponderaciones_tabla_agricola();
+			
     	}
     	function guardarPuntuacionTotal(){
 
@@ -1270,6 +1277,7 @@ session_start();
 		    $("#var_campa").text("");  
 		}
 		function actulizar_ponderaciones_tabla_agricola(){
+
 			var x=0;
 			$("#nota_total").text("0");
 			$.each($('#tablaAgricola tbody tr'),function(){
@@ -1320,45 +1328,46 @@ session_start();
 			<div class="row" align="center">
 				<h3>INFORME DE EVALUACION DEL REPORTE DE CUMPLIMIENTO INDIVIDUAL ANUAL</h3>
 				<div class="row">
-					<div class="col-sm-2">
-						<label>Oficina</label>	
-					</div>
-					<div class="col-sm-5">
-						<select id="select_oficina" class="form-control">
-  							<option value="" selected disabled>Oficinas</option>
-						</select>		
-					</div>
-					<div class="col-sm-2">
-						<label>Cite</label>	
-					</div>
-					<div class="col-sm-2">
-  						<label id="cite"></label>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-sm-2">
-						<label>Fecha</label>
-					</div>
-					<div class="col-sm-5">
-						<input type="text" id="fecha_evaluacion" class="form-control" placeholder="Fecha">
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-sm-4">
-						<button id="btnGenerarCite" type="button" onclick="insertarInformeEvaluacion()" class="btn btn-primary">Generar</button>
-					</div>
-				</div>
+	            	<div class="col-sm-4">
+	             		<div class="form-horizontal"> 
+	             		    <div class="form_horizontal_eval">        
+		                  		<label class="col-sm-3 control-label">Oficina:</label>
+		                  		<div>
+		                  			<select id="select_oficina" class="form-control">
+	  									<option value="" selected disabled>Oficinas</option>
+									</select>
+		                  		</div>
+		                  	</div>	
+	              		</div>
+	            	</div>
+		            <div class="col-sm-4">
+		              	<div class="form-horizontal">               
+		              		<div class="form_horizontal_eval">
+			                	<label class="col-sm-3 control-label">Fecha:</label>
+			                	<input type="text" id="fecha_evaluacion" class="form-control" placeholder="Fecha">             
+		                	</div>
+		             	</div>
+		            </div>
+		            <div class="col-sm-4">
+		              	<div class="form-horizontal">       
+		              		<div class="form_horizontal_eval">
+		              			<label class="col-sm-3 control-label">Cite:</label>
+		                		<p class="form-control-static" id="cite"></p>  
+		              		 </div>   
+		              	</div>
+		            </div>
+	          	</div>
 			</div>
 			<div class="row">
 				<div class="col-sm-5">
 					<div class="checkbox">
-					    <label><input id="check1" type="checkbox" value="" data-toggle="collapse" data-target="#demo1" >Análisis Técnico de la Carpeta</label>
+					    <label><input id="check1" type="checkbox" value="" data-toggle="collapse" data-target="#demo1">Análisis Técnico</label>
 					</div>
 				</div>
 				<div class="col-sm-12">
 					<div class="row">
 						<div id="demo1" class="collapse out">
-						  	<textarea style="width:100%" onkeypress="return isfloat(event, this, 10);" onchange="sumarDatosTabla()"></textarea>
+						  	<textarea style="width:100%" class="textarea_e_informe_eval"></textarea>
 						</div>
 					</div>
 				</div>
@@ -1366,7 +1375,7 @@ session_start();
 			<div class="row">
 				<div class="col-sm-6">
 					<div class="checkbox">
-					    <label><input id="check2" type="checkbox" value=""  data-toggle="collapse" data-target="#demo2"  >Anexos</label>
+					    <label><input id="check2" type="checkbox" value=""  data-toggle="collapse" data-target="#demo2" >Anexos</label>
 					</div>
 				</div>
 				<div id="demo2" class="collapse out">
@@ -1376,7 +1385,6 @@ session_start();
 					            <ul id="ul_actividades" class="nav nav-tabs tabs-left" style="cursor: pointer;"></ul>
 							</div>
 							<div id="idanexos" class="col-sm-8" style="width: 82.66668%"></div>
-
 						</div>
 					</div>
 				</div>
@@ -1384,13 +1392,13 @@ session_start();
 			<div class="row">
 				<div class="col-sm-6">
 					<div class="checkbox">
-					    <label><input id="check3" type="checkbox" value=""  data-toggle="collapse" data-target="#demo3"  >Análisis Técnico de la Carpeta</label>
+					    <label><input id="check3" type="checkbox" value=""  data-toggle="collapse" data-target="#demo3"  >Conclusiones</label>
 					</div>
 				</div>
 				<div class="col-sm-12" >
 					<div class="row">
 						<div id="demo3" class="collapse out">
-						  	<textarea style="width:100%" ></textarea>
+						  	<textarea style="width:100%" class="textarea_e_informe_eval"></textarea>
 						</div>
 					</div>
 				</div>
@@ -1398,13 +1406,13 @@ session_start();
 			<div class="row">
 				<div class="col-sm-6">
 					<div class="checkbox" >
-					    <label><input id="check4" type="checkbox" value="" data-toggle="collapse" data-target="#demo4"  >Análisis Técnico de la Carpeta</label>
+					    <label><input id="check4" type="checkbox" value="" data-toggle="collapse" data-target="#demo4"  >Recomendaciones</label>
 					</div>
 				</div>
 				<div class="col-sm-12" >
 					<div class="row">
 						<div id="demo4" class="collapse out">
-						  	<textarea style="width:100%"></textarea>
+						  	<textarea style="width:100%" class="textarea_e_informe_eval"></textarea>
 						</div>
 					</div>
 				</div>
