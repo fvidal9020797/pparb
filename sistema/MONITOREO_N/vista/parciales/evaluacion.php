@@ -1062,7 +1062,7 @@ session_start();
 			var arrayPonderacion=[];
     		var indexCampaña=0;
     		var indexComprometido=0;
-    		for (var i = 0; i < arrayMult.length; i++) {
+    		for (var i = 0; i < arrayMult.length-1; i++) {
     			var array=[];
     			if(arrayMult[i].length==1 && arrayMult[i+1].length==1 && arrayMult[i+2].length==1){
     				indexCampaña=i;
