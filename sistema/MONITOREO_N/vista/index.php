@@ -11,11 +11,15 @@
 	<link rel="stylesheet" href="vista/css/bootstrap.vertical-tabs.css">
 	<link rel="stylesheet" href="vista/css/datepicker.css">
 	<link rel="stylesheet" href="vista/css/style1.css">
+	<link rel="stylesheet" href="../libraries/alertify/themes/alertify.core.css">
+	<link rel="stylesheet" href="../libraries/alertify/themes/alertify.default.css" id="toggleCSS">
 	<script src="vista/js/jquery-2.1.4.min.js"></script>
 	<script src="vista/js/bootstrap.min.js"></script>
 	<script src="vista/js/bootstrap-datepicker.js"></script>
 	<script src="vista/js/jquery.blockUI.js"></script>
 	<script type="text/javascript" src="../scripts/funciones.js"></script>
+	<script type="text/javascript" src="../libraries/alertify/lib/alertify.min.js"></script>
+	<script src="vista/js/html2canvas.min.js"></script>
 	<script type="text/javascript">
 		var año=0;// año del boton
 		var actividad="";// actividad: mixta, agropecuaria
@@ -146,7 +150,7 @@
 			    }
 			});
 		}
-		function año_activo(){//background-color: #f4f4f4;
+		function año_activo(){
 			switch(año) {
 			    case '1':
 			    	$("#año1").attr("class","btn_focus_anho_monitoreo");

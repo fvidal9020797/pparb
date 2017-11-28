@@ -2370,7 +2370,7 @@ if (($_POST["tarea"] == "cargarcombosreporte") )
          $docregi = pg_query($cn,$sql_grupo2);
 
         $sql_subgrupo = " select f.idfuncionario,  coalesce(p.nombre1, '') || ' ' || coalesce(p.nombre2, '') || ' ' || coalesce(p.apellidopat, '') || ' ' || coalesce(p.apellidomat,'' , '')    AS nombre_nompleto
-	from funcionario f join persona p on p.idpersona=f.idpersona where f.estadofun='A'  and (financiamiento='UCAB' or financiamiento='VDRA') order by p.nombre1 asc ;";
+	from funcionario f join persona p on p.idpersona=f.idpersona where  f.idfuncionario!=171 and f.estadofun='A'  and (financiamiento='UCAB' or financiamiento='VDRA') order by p.nombre1 asc ;";
           $docressub = pg_query($cn,$sql_subgrupo);
           //  $docressub2 = pg_query($cn,$sql_subgrupo);
 

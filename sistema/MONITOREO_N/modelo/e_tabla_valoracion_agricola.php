@@ -12,6 +12,7 @@ class e_tabla_valoracion_agricola{
 	public $comprometido;
 	public $campana;
 	public $estado;
+	public $img;
 	function obtener(e_tabla_valoracion_agricola $e_tabla_valoracion_agricola){
 		$Con=Conexion::create();
 		$cn=$Con->getConexion();
@@ -96,6 +97,12 @@ class e_tabla_valoracion_agricola{
 			where
 				idinformeevaluacion=".$e_tabla_valoracion_agricola->idinformeevaluacion."";
 		pg_query($cn,$Sql);
+	}
+	function ModificarGuardarImagenEvaluacionAgricola(e_tabla_valoracion_agricola $e_tabla_valoracion_agricola){
+		$e_tabla_valoracion_agricola->img=str_replace('data:image/png;base64,', '', $e_tabla_valoracion_agricola->img);
+		$e_tabla_valoracion_agricola->img = str_replace(' ', '+',$e_tabla_valoracion_agricola->img);
+		$source=base64_decode($e_tabla_valoracion_agricola->img);
+		file_put_contents("../vista/images/imagen_evaluacion_agricola/".$e_tabla_valoracion_agricola->idinformeevaluacion.'.png', $source);
 	}
 }
 ?>

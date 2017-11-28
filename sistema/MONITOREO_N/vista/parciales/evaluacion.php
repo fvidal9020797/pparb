@@ -213,9 +213,6 @@ session_start();
 		}
 		 function cargar_tabla_evaluacion_agricola(){
 			obtenerSuperficieAgricola();
-			//result=cargar_cabezera_tabla_evaluacion_agricola();
-			//cargar_cuerpos_tabla_evaluacion_agricola(result);
-			//cargarObservaciones();
 		}
 		function obtenerSuperficieAgricola(){
 			bloquearPantalla();
@@ -226,10 +223,15 @@ session_start();
 			    	parametro:'2:'+idmonitoreo
 			    },
 			    success: function(json){
-					var listObj=JSON.parse(json);
-					superficieAgricola=listObj[0].sup_prod_agricola;
-					cargar_cabezera_tabla_evaluacion_agricola();
-					
+			    	try{
+			    		var listObj=JSON.parse(json);
+			    		if(Object.keys(listObj).length==2) throw listObj.mensaje;
+						superficieAgricola=listObj[0].sup_prod_agricola;
+						cargar_cabezera_tabla_evaluacion_agricola();
+					}catch(e){
+						desbloquearPantalla();
+						msgError(e);
+					}
 			    }
 			});
 		}
@@ -242,7 +244,6 @@ session_start();
 			    	parametro:'1:'+tipoPropiedad+":"+tipoActividad
 			    },
 			    success: function (json){
-			    	//eliminarFilasTablas();			
 			    	var listObj=JSON.parse(json);
 			    	var table = document.getElementById('tablaAgricola');
 			    	var rows0 = table.insertRow(table.rows.length);
@@ -250,7 +251,12 @@ session_start();
 						var cell = rows0.insertCell(i);
 				    	cell.setAttribute("rowspan","3");
 					    var element = document.createElement("label");
-					    i==0 ? element.innerHTML="Campaña":element.innerHTML="Cultivo";
+					    if(i==0){
+					    	element.innerHTML="Campaña";
+					    	element.setAttribute("style","display:none");
+					    }else{
+					    	element.innerHTML="Cultivo";	
+					    }
 					    cell.appendChild(element);
 			    	};
 				    var cell = rows0.insertCell(2);
@@ -283,15 +289,20 @@ session_start();
 						    cell.appendChild(element);
 						  	listaIdEspecifica.push(new Array(listObj[i].list_evaluacion_especifica[j].idevaluacionespecifica,listObj[i].list_evaluacion_especifica[j].valoracion));
 					    };
+					    if(i==listObj.length-1){
+					    	var cell = rows0.insertCell(rows0.cells.length);
+					    	cell.setAttribute("rowspan","3");
+						    var element = document.createElement("label");
+						    element.setAttribute("id","txtponderacionAgricola");
+						    element.setAttribute("class","txtponderacionAgricola");
+						  	element.innerHTML="Ponderacion";
+						    cell.appendChild(element);
+					    }
 			    	};
-			    	var cell = rows2.insertCell(rows2.cells.length);
-				    var element = document.createElement("label");
-				  	element.innerHTML="Ponderacion";
-				    cell.appendChild(element);
+			    	
 				    cargar_cuerpos_tabla_evaluacion_agricola(listaIdEspecifica);
 			    }
 			});	
-			
 		}
 		function cargar_cuerpos_tabla_evaluacion_agricola(listaIdEspecifica){
 			$.ajax({
@@ -308,34 +319,47 @@ session_start();
 			    		var eBody=document.createElement("tbody");
 			    		var row = table.insertRow(table.rows.length);
 			    		var cell = row.insertCell(0);
-			    		var eBtn=document.createElement("input");
-			    		eBtn.setAttribute("type","button");
+			    		cell.setAttribute("colspan","11");
+			    		var h4=document.createElement("span");
+
+			    		var check=document.createElement("input");
+			    		check.setAttribute("type","checkbox");
+			    		check.setAttribute("data-toggle","collapse");
+			    		check.setAttribute("checked",true);
+			    		check.setAttribute("data-target","#"+campañas[i][0]);
 			    		switch(campañas[i][0]){
 			    			case 'V':
-			    				eBtn.setAttribute("value","Verano");
-			    				eBtn.setAttribute("name",campañas[i][0]);
+			    				check.setAttribute("value","Verano");
+			    				check.setAttribute("name",campañas[i][0]);
 			    			break;
 			    			case 'I':
-			    				eBtn.setAttribute("value","Invierno");
-			    				eBtn.setAttribute("name",campañas[i][0]);
+			    				check.setAttribute("value","Invierno");
+			    				check.setAttribute("name",campañas[i][0]);
 			    			break;
 			    			case 'P':
-			    				eBtn.setAttribute("value","Perenne");
-			    				eBtn.setAttribute("name",campañas[i][0]);
+			    				check.setAttribute("value","Perenne");
+			    				check.setAttribute("name",campañas[i][0]);
 			    			break;
 			    		}
-			    		cell.appendChild(eBtn);
+			    		h4.appendChild(check);
+			    		h4.innerHTML+=check.value;
+			    		cell.appendChild(h4);
 			    		row.appendChild(cell);
 			    		eBody.appendChild(row);
 			    		table.appendChild(eBody);
 			    		var eBody=document.createElement("tbody");
+			    		eBody.setAttribute("id",campañas[i][0]);
+			    		eBody.setAttribute("class","out collapse in");
 						var tipo=EsComprometido(listObj, campañas[i][0]);
 						for (var j = 0; j < tipo.length; j++) {
 							var row = table.insertRow(table.rows.length);
+							row.setAttribute("class","row_comprometido_evaluacion_agricola");
 		    				var element = document.createElement("label");
 				    		var cell = row.insertCell(0);
+				    		cell.setAttribute("colspan","11");
 				    		row.appendChild(cell);
-				    		element.innerHTML=tipo[j].trim()+"omprometido";
+				    		tipo[j].trim()=="C" ? element.innerHTML="Comprometido" : element.innerHTML="No Comprometido";
+				    		//element.innerHTML=tipo[j].trim()+"omprometido";
 				    		element.setAttribute("name",tipo[j].trim());
 	 						cell.appendChild(element);
 	 						row.appendChild(cell);
@@ -411,7 +435,6 @@ session_start();
 			 										element.setAttribute("id","pon_"+listaIdEspecifica[o][0]+"_"+idCultivo);
 			 										element.setAttribute("onchange","actulizar_ponderaciones_tabla_agricola()");
 			 										element.setAttribute("onkeypress","return isfloat(event, this,"+listaIdEspecifica[o][1]+")");
-
 			 									break;
 			 									case 1:
 			 										element.setAttribute("class","inputAgricolaFojas");
@@ -431,6 +454,7 @@ session_start();
 					 						eBody.appendChild(row);
 					 						primero=false;
 					 						if(n==0 && o==listaIdEspecifica.length-1){
+					 							//var cell = row.insertCell(o);
 					 							var element = document.createElement("label");
 					 							element.setAttribute("id","total_"+idCultivo);
 					 							element.innerHTML="0";
@@ -466,6 +490,7 @@ session_start();
 			    	var cell = row.insertCell(0);
 			    	cell.setAttribute("colspan","11");
 			    	var element = document.createElement("label");
+			    	element.setAttribute("id","txt_e_informe_eval_observaciones");
 			    	element.innerHTML="Observaciones";
 			   		element.setAttribute("for","textarea_e_informe_eval_observaciones");
 					cell.appendChild(element);
@@ -629,30 +654,35 @@ session_start();
 	    	desbloquearPantalla();
 		}
 		function guardarDatosTablaGanLec(){
-			var array="";
-			 $.each($('#table_eval_ganadera tbody tr'),function(){
-		        var txtarea = $(this).find("textarea");
-		        var txtareaAux;
-		        if(txtarea.length>0 && txtarea.attr('id')!="textarea_e_informe_eval_observaciones"){
-		        	txtareaAux=txtarea[1];
-		        	array=array+txtarea.attr('id').split("_")[1]+"¬"+$(txtarea[0]).val()+"¬";
-		        }
-		        var txtinput = $(this).find("input");  
-		        if(txtinput.length>0){
-		        	if($(txtinput).val().trim()==""){
-		        		$(txtinput).val("0");
-		        	}
-		        	array=array+$(txtinput).val()+":";
-		        }
-	    	});
-			var subsplit=array.split(":");
-			EliminarTablaValoracionPecAviPor();
-			for (var i = 0; i < subsplit.length-1; i++) {
-				var _subsplit=subsplit[i];
-				insertarTablaValoracionPecAviPor(_subsplit.split("¬")[0],_subsplit.split("¬")[2],_subsplit.split("¬")[1],tipoActividad);
-			};
-			insertarObservaciones(tipoActividad, $("#textarea_e_informe_eval_observaciones").val());
-			guardarTotalActividades(tipoActividad, $("#idPuntuacionFinal").text(), superficieGanadera);
+			try{
+				var array="";
+				 $.each($('#table_eval_ganadera tbody tr'),function(){
+			        var txtarea = $(this).find("textarea");
+			        var txtareaAux;
+			        if(txtarea.length>0 && txtarea.attr('id')!="textarea_e_informe_eval_observaciones"){
+			        	txtareaAux=txtarea[1];
+			        	array=array+txtarea.attr('id').split("_")[1]+"¬"+$(txtarea[0]).val()+"¬";
+			        }
+			        var txtinput = $(this).find("input");  
+			        if(txtinput.length>0){
+			        	if($(txtinput).val().trim()==""){
+			        		$(txtinput).val("0");
+			        	}
+			        	array=array+$(txtinput).val()+":";
+			        }
+		    	});
+				var subsplit=array.split(":");
+				EliminarTablaValoracionPecAviPor();
+				for (var i = 0; i < subsplit.length-1; i++) {
+					var _subsplit=subsplit[i];
+					insertarTablaValoracionPecAviPor(_subsplit.split("¬")[0],_subsplit.split("¬")[2],_subsplit.split("¬")[1],tipoActividad);
+				};
+				insertarObservaciones(tipoActividad, $("#textarea_e_informe_eval_observaciones").val());
+				guardarTotalActividades(tipoActividad, $("#idPuntuacionFinal").text().replace("(*)"," "), superficieGanadera);
+				msgSuccess();
+			}catch (err){
+				msgError(err);
+			}
     	}
 
     	function cargarOficina(){
@@ -715,8 +745,10 @@ session_start();
 			    	if(Object.keys(obj).length!=2){
 			    		$("#btnGenerarCite").css({"display":"none"});
 						idinformeevaluacion=obj.idinformeevaluacion;
-			    		var cite=document.getElementById("cite");
-			    		cite.innerHTML=obj.cite;
+						$("#cite").text(obj.cite);
+						$("#anaTecnico").text(obj.analisistecnico);
+						$("#conclusiones").text(obj.conclusiones);
+						$("#recomendaciones").text(obj.recomendaciones);
 			    		var fecha_evaluacion=document.getElementById("fecha_evaluacion");
 			    		fecha_evaluacion.value=obj.fechainforme.split("-")[2]+"/"+obj.fechainforme.split("-")[1]+"/"+obj.fechainforme.split("-")[0];
 			    		var select = document.getElementById('select_oficina');
@@ -1029,84 +1061,94 @@ session_start();
     		return array= array.filter((v, i, a) => a.indexOf(v) === i);
     	}
     	function LeerTablaAgricola(){
-    		var x=0;
-    		var arrayMult=[];
-    		$.each($('#tablaAgricola tbody tr'),function(){
-    			x++;
-    			if(x>3){
-    				var listInput = $(this).find("input");
-    				var listlabel = $(this).find("label");
-    				if(listInput.length==1 && listlabel.length==0){
-    					var array=[];
-    					array.push($(listInput[0]).attr('name'));
-    					arrayMult.push(array);
-    				}else if(listInput.length==0 && listlabel.length==1){
-    					var array=[];
-    					array.push($(listlabel[0]).attr('name'));
-    					arrayMult.push(array);
-    				}else if(listInput.length>5 && listlabel.length==3 || listlabel.length==1 ){
-    					if(listlabel.length==3){
-    						var array=[];
-	    					array.push($(listlabel[0]).attr('name').split("_")[0]);
+    		try{
+	    		var x=0;
+	    		var arrayMult=[];
+	    		$.each($('#tablaAgricola tbody tr'),function(){
+	    			x++;
+	    			if(x>3){
+	    				var listInput = $(this).find("input");
+	    				var listlabel = $(this).find("label");
+	    				if(listInput.length==1 && listlabel.length==0){
+	    					var array=[];
+	    					array.push($(listInput[0]).attr('name'));
 	    					arrayMult.push(array);
-    					}
-						var array=[];
-    					for (var i = 0; i < listInput.length; i++) {
-	    					array.push($(listInput[i]).attr('id'));
-    					};
-    					arrayMult.push(array);
-    				}
-    			}
-	    	});
-			var arrayValoracion=[];
-			var arrayPonderacion=[];
-    		var indexCampaña=0;
-    		var indexComprometido=0;
-    		for (var i = 0; i < arrayMult.length-1; i++) {
-    			var array=[];
-    			if(arrayMult[i].length==1 && arrayMult[i+1].length==1 && arrayMult[i+2].length==1){
-    				indexCampaña=i;
-    				indexComprometido=i+1;
-    				i=i+2;
-    			}else if(arrayMult[i].length==1 && arrayMult[i+1].length==1 && arrayMult[i+2].length>1){
-					indexComprometido=i;
-					i=i+1;
-    			}
-    			array.push(arrayMult[indexCampaña][0]);
-    			array.push(arrayMult[indexComprometido][0]);
-				if(arrayMult[i].length==1 && arrayMult[i+1].length>1){
-    				array.push(arrayMult[i][0].split("_")[0]);		
-    			}
-    			for (var j = 0; j < arrayMult[i+1].length; j++) {
-    				var arrayaux=array.slice();
-    				arrayaux.push(arrayMult[i+1][j].split("_")[1]);	
-    				arrayaux.push($("#"+arrayMult[i+1][j]).val());
-    				arrayaux.push($("#"+arrayMult[i+2][j]).val());
-    				arrayaux.push($("#"+arrayMult[i+3][j]).val());
-    				arrayValoracion.push(arrayaux);
-    			};
-    			i=i+3;
-    		};
-    		//Recoger datos  Ponderacion	
-    		var arrayAux=[];
-    		var arrayDatosPonderacion=[];
-    		for (var i = 0; i < arrayValoracion.length; i++) arrayAux[i]=arrayValoracion[i][2];
-    		arrayAux = arrayAux.filter((v, i, a) => a.indexOf(v) === i);
-    		for (var i = 0; i < arrayAux.length; i++) {
-    			var datosTotal=$("#total_"+arrayAux[i]).attr('name');
-    			if(datosTotal!==undefined){
-    				arrayDatosPonderacion.push(new Array(datosTotal.split("_")[0],datosTotal.split("_")[2],datosTotal.split("_")[1],$("#total_"+arrayAux[i]).text(),datosTotal.split("_")[3],datosTotal.split("_")[4]));
-    			}	
-    		};
-    		guardarPonderacionAgricola(arrayDatosPonderacion);
-    		guardarMonitoreoAgricola(arrayValoracion);
-    		guardarTotalActividades(tipoActividad, $("#nota_total").text(), superficieAgricola);
-    		insertarObservaciones(tipoActividad, $("#textarea_e_informe_eval_observaciones").val());
+	    				}else if(listInput.length==0 && listlabel.length==1){
+	    					var array=[];
+	    					array.push($(listlabel[0]).attr('name'));
+	    					arrayMult.push(array);
+	    				}else if(listInput.length>5 && listlabel.length==3 || listlabel.length==1 ){
+	    					if(listlabel.length==3){
+	    						var array=[];
+		    					array.push($(listlabel[0]).attr('name').split("_")[0]);
+		    					arrayMult.push(array);
+	    					}
+							var array=[];
+	    					for (var i = 0; i < listInput.length; i++) {
+		    					array.push($(listInput[i]).attr('id'));
+	    					};
+	    					arrayMult.push(array);
+	    				}
+	    			}
+		    	});
+		    	
+				var arrayValoracion=[];
+				var arrayPonderacion=[];
+	    		var indexCampaña=0;
+	    		var indexComprometido=0;
+	    		for (var i = 0; i < arrayMult.length-1; i++) {
+	    			var array=[];
+	    			if(arrayMult[i].length==1 && arrayMult[i+1].length==1 && arrayMult[i+2].length==1){
+	    				indexCampaña=i;
+	    				indexComprometido=i+1;
+	    				i=i+2;
+	    			}else if(arrayMult[i].length==1 && arrayMult[i+1].length==1 && arrayMult[i+2].length>1){
+						indexComprometido=i;
+						i=i+1;
+	    			}
+	    			array.push(arrayMult[indexCampaña][0]);
+	    			array.push(arrayMult[indexComprometido][0]);
+					if(arrayMult[i].length==1 && arrayMult[i+1].length>1){
+	    				array.push(arrayMult[i][0].split("_")[0]);		
+	    			}
+	    			for (var j = 0; j < arrayMult[i+1].length; j++) {
+	    				var arrayaux=array.slice();
+	    				arrayaux.push(arrayMult[i+1][j].split("_")[1]);	
+	    				$("#"+arrayMult[i+1][j]).val()!=""? arrayaux.push($("#"+arrayMult[i+1][j]).val()) : arrayaux.push("0"); 
+	    				arrayaux.push($("#"+arrayMult[i+2][j]).val());
+	    				arrayaux.push($("#"+arrayMult[i+3][j]).val());
+	    				arrayValoracion.push(arrayaux);
+	    			};
+	    			i=i+3;
+	    		};
+	    		//Recoger datos  Ponderacion	
+	    		var arrayAux=[];
+	    		var arrayDatosPonderacion=[];
+	    		for (var i = 0; i < arrayValoracion.length; i++) arrayAux[i]=arrayValoracion[i][2];
+	    		arrayAux = arrayAux.filter((v, i, a) => a.indexOf(v) === i);
+	    		for (var i = 0; i < arrayAux.length; i++) {
+	    			var datosTotal=$("#total_"+arrayAux[i]).attr('name');
+	    			if(datosTotal!==undefined){
+	    				arrayDatosPonderacion.push(new Array(datosTotal.split("_")[0],datosTotal.split("_")[2],datosTotal.split("_")[1],$("#total_"+arrayAux[i]).text(),datosTotal.split("_")[3],datosTotal.split("_")[4]));
+	    			}else{
+	    				throw "Debe llenar el porcentaje de ponderación de todos los cultivos";
+	    			}
+	    		};
+	    		guardarPonderacionAgricola(arrayDatosPonderacion);
+	    		guardarMonitoreoAgricola(arrayValoracion);
+	    		guardarTotalActividades(tipoActividad, $("#nota_total").text().replace("(*)","0"), superficieAgricola);
+	    		insertarObservaciones(tipoActividad, $("#textarea_e_informe_eval_observaciones").val());
+	    		capturarImagenAgricola();
+	    		msgSuccess();
+	    	}catch(err){
+	    		msgError(err);
+	    	}
     	}
     	function insertarObservaciones(tipoactividad, observaciones){
     		$.ajax({
 				url:'controlador/e_informe_evaluacion_observaciones.php',
 			    type:'POST',
+			    async:false,
 			    data:{
 			    	parametro:'1:'+idinformeevaluacion+":"+tipoactividad+":"+observaciones
 			    },
@@ -1119,6 +1161,7 @@ session_start();
     		$.ajax({
 				url:'controlador/e_puntuacion_informe_evaluacion.php',
 			    type:'POST',
+			    async:false,
 			    data:{
 			    	parametro:'1:'+idinformeevaluacion+":"+tipoActividad+":"+notaTotal+":"+superficieActividad
 			    },
@@ -1133,6 +1176,7 @@ session_start();
     			$.ajax({
 					url:'controlador/e_tabla_valoracion_agricola.php',
 				    type:'POST',
+				    async:false,
 				    data:{
 				    	parametro:'1:'+idinformeevaluacion+":"+ListArray[i][3]+":"+ListArray[i][2]+":"+ListArray[i][4]+":"+ListArray[i][5]+":"+ListArray[i][6]+":"+ListArray[i][1]+":"+ListArray[i][0]
 				    },
@@ -1200,6 +1244,7 @@ session_start();
 			    		}
 			    	};
 			    	actulizar_ponderaciones_tabla_agricola();
+
 			    	desbloquearPantalla();
 			    }
 			});
@@ -1277,7 +1322,6 @@ session_start();
 		    $("#var_campa").text("");  
 		}
 		function actulizar_ponderaciones_tabla_agricola(){
-
 			var x=0;
 			$("#nota_total").text("0");
 			$.each($('#tablaAgricola tbody tr'),function(){
@@ -1290,6 +1334,7 @@ session_start();
     						if(i==0){
     							$("#total_"+$(listInput[i]).attr("id").split("_")[2]).text("0");
     						}
+    						$(listInput[i]).val()=="" ? $(listInput[i]).val("0"): $(listInput[i]).val();
     						var val_in=$(listInput[i]).val();
     						var total_cult=$("#total_"+$(listInput[i]).attr("id").split("_")[2]).text();
     						$("#total_"+$(listInput[i]).attr("id").split("_")[2]).text(parseFloat(parseFloat(val_in)+parseFloat(total_cult)));
@@ -1300,14 +1345,14 @@ session_start();
     							if(total_cul_name===undefined){
     								$("#total_"+$(listInput[i]).attr('id').split('_')[2]).text("0");
     							}else{
-									$("#total_"+$(listInput[i]).attr('id').split('_')[2]).text(parseFloat(total_cult*parseFloat(total_cul_name.split("_")[2]))); 								
+									$("#total_"+$(listInput[i]).attr('id').split('_')[2]).text(parseFloat(total_cult*parseFloat(total_cul_name.split("_")[2])).toFixed(2)); 								
     							}
     							total_cult=$("#total_"+$(listInput[i]).attr('id').split('_')[2]).text();
     							var nota_total=$("#nota_total").text();
     							if(parseFloat(nota_total)+parseFloat(total_cult)>100){
-    								$("#nota_total").text("100");		
+    								$("#nota_total").text("100(*)");		
     							}else{
-    								$("#nota_total").text(parseFloat(nota_total)+parseFloat(total_cult));
+    								$("#nota_total").text(parseFloat(nota_total)+parseFloat(total_cult)+"(*)");
     							}
     						}
     					}
@@ -1319,6 +1364,79 @@ session_start();
 			document.getElementById("total_"+name_element.split("_")[0]).setAttribute("name",name_element.split("_")[0]+"_"+$("#porc_valoracion").val()+"_"+$("#porc_pond").text()+"_"+$("#idcamp").text()+"_"+$("#idcompr").text());
 			document.getElementsByName(name_element)[0].setAttribute("class","glyphicon glyphicon-ok");
 			actulizar_ponderaciones_tabla_agricola();
+		}
+		function modificarDatosEvaluacion(){
+			$.ajax({
+				url:'controlador/e_informe_evaluacion_rcia.php',
+			    type:'POST',
+			    data:{
+			    	parametro:'3:'+idinformeevaluacion+":"+$("#anaTecnico").val()+":"+$("#conclusiones").val()+":"+$("#recomendaciones").val()
+			    },
+			    success: function(json){
+					console.log(json);
+			    }
+			});
+		}
+		function msgSuccess(){
+			reset();
+			alertify.set({ delay: 2000 });
+			alertify.success("Correcto");
+			return false;
+		}
+		function msgError(msg){
+			reset();
+			alertify.set({ delay: 5000 });
+			alertify.error(msg);
+			return false;
+		}
+		function reset () {
+			$("#toggleCSS").attr("href", "../libraries/alertify/themes/alertify.default.css");
+			alertify.set({
+				labels : {
+					ok     : "OK",
+					cancel : "Cancel"
+				},
+				delay : 5000,
+				buttonReverse : false,
+				buttonFocus   : "ok"
+			});
+		}
+		function capturarImagenAgricola(){
+
+			var second=0;
+			for (var i = 0; i < 2; i++) {
+			html2canvas(document.getElementById('tablaAgricola'), {
+				onrendered (canvas) {
+					$("#check1").focus();
+					$("#txtponderacionAgricola").removeClass("txtponderacionAgricola");
+				    var image = canvas.toDataURL('image/png');
+					canvas.setAttribute("id","img"+second);
+					$("#txt_e_informe_eval_observaciones").addClass("hide");
+					$("#textarea_e_informe_eval_observaciones").addClass("hide");
+					document.body.appendChild(canvas);
+					if(second!=0){
+						$("#img0").remove();
+						$("#img1").remove();
+						$.ajax({
+						url:'controlador/e_tabla_valoracion_agricola.php',
+						    type:'POST',
+						    async:false,
+						    data:{
+						    	parametro:'4:'+idinformeevaluacion+":"+image
+						    },
+						    success: function(json){
+								console.log(json);
+						    }
+						});
+						$("#txtponderacionAgricola").addClass("txtponderacionAgricola");
+						$("#txt_e_informe_eval_observaciones").removeClass("hide");
+						$("#textarea_e_informe_eval_observaciones").removeClass("hide");
+						$("#textarea_e_informe_eval_observaciones").focus();
+					}
+					second++;
+				}
+ 			});
+ 			};
 		}
 	</script>
 </head>
@@ -1338,6 +1456,7 @@ session_start();
 									</select>
 		                  		</div>
 		                  	</div>	
+
 	              		</div>
 	            	</div>
 		            <div class="col-sm-4">
@@ -1353,6 +1472,7 @@ session_start();
 		              		<div class="form_horizontal_eval">
 		              			<label class="col-sm-3 control-label">Cite:</label>
 		                		<p class="form-control-static" id="cite"></p>  
+		                			<button id="btnGenerarCite" type="button" onclick="insertarInformeEvaluacion()" class="btn btn-primary">Generar Cite</button>
 		              		 </div>   
 		              	</div>
 		            </div>
@@ -1367,7 +1487,7 @@ session_start();
 				<div class="col-sm-12">
 					<div class="row">
 						<div id="demo1" class="collapse out">
-						  	<textarea style="width:100%" class="textarea_e_informe_eval"></textarea>
+						  	<textarea id="anaTecnico" style="width:100%" class="textarea_e_informe_eval"></textarea>
 						</div>
 					</div>
 				</div>
@@ -1398,7 +1518,7 @@ session_start();
 				<div class="col-sm-12" >
 					<div class="row">
 						<div id="demo3" class="collapse out">
-						  	<textarea style="width:100%" class="textarea_e_informe_eval"></textarea>
+						  	<textarea id="conclusiones" style="width:100%" class="textarea_e_informe_eval"></textarea>
 						</div>
 					</div>
 				</div>
@@ -1412,13 +1532,13 @@ session_start();
 				<div class="col-sm-12" >
 					<div class="row">
 						<div id="demo4" class="collapse out">
-						  	<textarea style="width:100%" class="textarea_e_informe_eval"></textarea>
+						  	<textarea id="recomendaciones" style="width:100%" class="textarea_e_informe_eval"></textarea>
 						</div>
 					</div>
 				</div>
 			</div>
 			<div class="row">
-				<button id="btnGuardadoInforme" type="button" onclick="test11()" class="btn btn-primary">Guardarwsss</button>
+				<button id="btnGuardadoInforme" type="button" onclick="modificarDatosEvaluacion()" class="btn btn-primary">Guardar</button>
 			</div>
 		</div>
 	</div>
@@ -1437,11 +1557,7 @@ session_start();
 				<td>%</td>
 			</tr>
     	</table>
-    	<!-- <div>
-    		<label for="textarea_e_informe_eval_observaciones">Observaciones</label>
-    		<textarea id="textarea_e_informe_eval_observaciones" class="textarea_e_informe_eval_observaciones"></textarea>
-    	</div> -->
-    	<button id="btnGuardadoGanaderaLechera" type="button" onclick="guardarDatosTablaGanLec()" class="btn btn-primary">Modificar y Guardar</button>
+    	<button id="btnGuardadoGanaderaLechera" type="button" onclick="guardarDatosTablaGanLec()" class="btn btn-primary">Guardar Anexo</button>
     </div>
     <div id="div_eval_mixta" class="" style="display:none">
     	<table id="table_mixta" border="1">
@@ -1458,9 +1574,8 @@ session_start();
     </div>
     <div id="div_eval_agricola" style="display:none">
     	<table id="tablaAgricola" border="1"></table>
-    	<button id="btnGuardadoAgricola" type="button" onclick=LeerTablaAgricola() class="btn btn-primary">Modificar y Guardar</button>  
+    	<button id="btnGuardadoAgricola" type="button" onclick=LeerTablaAgricola() class="btn btn-primary">Guardar Anexo</button>  
     </div>
-    
     <div class="modal fade" id="myModal" role="dialog">
 	    <div class="modal-dialog">
 	      	<div class="modal-content">
@@ -1524,5 +1639,6 @@ session_start();
 	      	</div>
 	    </div>
     </div>
+    <div id="img" class=""></div>
 </body>
 </html>	

@@ -21,6 +21,18 @@ class e_informe_evaluacion_rcia{
 		$Sql="insert into monitoreo.e_informe_evaluacion_rcia (idmonitoreo,idoficina,cite,fechainforme,estado)values(".$e_informe_evaluacion_rcia->idmonitoreo.",".$e_informe_evaluacion_rcia->idoficina.",'".$e_informe_evaluacion_rcia->cite."','".$e_informe_evaluacion_rcia->fechainforme."',".$e_informe_evaluacion_rcia->estado.")";
 		pg_query($cn,$Sql);
 	}
+	function modificar(e_informe_evaluacion_rcia $e_informe_evaluacion_rcia){
+		$Con=Conexion::create();
+		$cn=$Con->getConexion();
+		$Sql="
+			update monitoreo.e_informe_evaluacion_rcia 
+			set 
+				analisistecnico='".$e_informe_evaluacion_rcia->analisistecnico."',
+				conclusiones='".$e_informe_evaluacion_rcia->conclusiones."',
+				recomendaciones='".$e_informe_evaluacion_rcia->recomendaciones."'
+			where idinformeevaluacion=".$e_informe_evaluacion_rcia->idinformeevaluacion."";
+		pg_query($cn,$Sql);
+	}
 	function obtener(e_informe_evaluacion_rcia $e_informe_evaluacion_rcia){
 		$Con=Conexion::create();
 		$cn=$Con->getConexion();

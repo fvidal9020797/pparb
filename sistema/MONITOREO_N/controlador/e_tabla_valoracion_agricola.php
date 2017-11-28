@@ -36,6 +36,18 @@ switch ($parametro[0]) {
 			$e_tabla_valoracion_agricola->idinformeevaluacion=$parametro[1];
 			$e_tabla_valoracion_agricola->eliminar($e_tabla_valoracion_agricola);
 		break;
+		case '4':
+			include_once('../modelo/e_tabla_valoracion_agricola.php');
+			// $data=$parametro[1].":".$parametro[2];
+			// $data=str_replace('data:image/png;base64,', '', $data);
+			// $data = str_replace(' ', '+', $data);
+			// $source=base64_decode($data);
+			// file_put_contents('asd.png', $source);
+			$e_tabla_valoracion_agricola=new e_tabla_valoracion_agricola();
+			$e_tabla_valoracion_agricola->idinformeevaluacion=$parametro[1];
+			$e_tabla_valoracion_agricola->img=$parametro[2].":".$parametro[3];
+			$e_tabla_valoracion_agricola->ModificarGuardarImagenEvaluacionAgricola($e_tabla_valoracion_agricola);
+		break;
 	default:
 		break;
 }

@@ -109,7 +109,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/sistema/config/config.php';
                                           </div>
                                          <div  style="width: 50%;" >
                                               <select  onchange="javascript:cargarnamesub();" id="cbosubgrupo" name="cbosubgrupo" >
-                                                  <option>Elegir..</option> 
+                                                  <option>Elegir...</option> 
                                               </select> 
                                           </div>                                                               
                                  </div>
@@ -195,11 +195,11 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/sistema/config/config.php';
                             
                                 <div class="row uniform 50%">
                                     <div  style="width: 30%; text-align: right;" >
-                                               <span>Personal:</span> 
+                                               <span>Personal::</span> 
                                           </div>
                                          <div  style="width: 50%;" >
                                               <select  onchange="javascript:cargarnamepersonal();" id="cboPersonal" name="cboPersonal" >
-                                                  <option>Elegir..</option> 
+                                                  <option>Elegir...</option> 
                                               </select> 
                                           </div>                                                               
                                  </div>

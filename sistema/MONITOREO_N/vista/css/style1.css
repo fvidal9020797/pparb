@@ -45,3 +45,14 @@
 	width: 100%;
     height: 100px;
 }
+.alertify-log-custom {
+	background: blue;
+}
+.row_comprometido_evaluacion_agricola{
+	text-align: center;
+}
+.txtponderacionAgricola{
+	writing-mode: vertical-rl;
+	transform: rotate(180deg);
+}
+
